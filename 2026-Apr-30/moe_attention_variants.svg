@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>MoE attention variants — April 2026</title>
+  <desc>Four architectural patterns for combining mixture-of-experts with attention: classic dense attention + MoE FFN, SwitchHead MoE projections, attention-router experts (Yuan 2.0-M32), and HyperMoE collaboration via inactive-expert hidden states</desc>
+
+  <style>
+    .stroke   { stroke: #6b7280; stroke-width: 1.4; fill: none; }
+    .arrow    { stroke: #6b7280; stroke-width: 1.4; fill: none; marker-end: url(#tri); }
+    .label    { fill: #374151; }
+    .title    { font-weight: 700; font-size: 14px; fill: #111827; }
+    .panel    { fill: none; stroke: #94a3b8; stroke-dasharray: 4 4; }
+    .ffn      { fill: #2563eb; stroke: #1e3a8a; }
+    .attn     { fill: #16a34a; stroke: #14532d; }
+    .router   { fill: #ea580c; stroke: #9a3412; }
+    .hyper    { fill: #9333ea; stroke: #6b21a8; }
+    .ghost    { fill: #475569; stroke: #1f2937; opacity: 0.55; }
+    .nodeText { fill: #ffffff; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      .label { fill: #e5e7eb; }
+      .title { fill: #f3f4f6; }
+      .panel { stroke: #64748b; }
+      .stroke, .arrow { stroke: #94a3b8; }
+    }
+  </style>
+
+  <defs>
+    <marker id="tri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- Panel 1 — Classic MoE: dense attention + sparse FFN -->
+  <rect class="panel" x="20" y="20" width="425" height="230" rx="10"/>
+  <text class="title" x="32" y="44">A. Classic MoE — sparse FFN, dense attention</text>
+
+  <rect class="attn" x="50" y="80" width="130" height="46" rx="6"/>
+  <text class="nodeText" x="115" y="108" text-anchor="middle">Dense attention</text>
+
+  <rect class="ffn" x="220" y="60" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="220" y="100" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="220" y="140" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="220" y="180" width="80" height="32" rx="6" opacity="0.4"/>
+  <text class="nodeText" x="260" y="80" text-anchor="middle">Expert 1</text>
+  <text class="nodeText" x="260" y="120" text-anchor="middle">Expert 2</text>
+  <text class="nodeText" x="260" y="160" text-anchor="middle">Expert 3</text>
+  <text class="nodeText" x="260" y="200" text-anchor="middle">Expert 4</text>
+
+  <rect class="router" x="340" y="100" width="80" height="46" rx="6"/>
+  <text class="nodeText" x="380" y="128" text-anchor="middle">Top-k</text>
+
+  <line class="arrow" x1="180" y1="103" x2="218" y2="76"/>
+  <line class="arrow" x1="180" y1="103" x2="218" y2="116"/>
+  <line class="arrow" x1="180" y1="103" x2="218" y2="156"/>
+  <line class="arrow" x1="180" y1="103" x2="218" y2="196"/>
+  <line class="arrow" x1="302" y1="76"  x2="338" y2="118"/>
+  <line class="arrow" x1="302" y1="116" x2="338" y2="120"/>
+  <line class="arrow" x1="302" y1="156" x2="338" y2="124"/>
+  <text class="label" x="32" y="232">Sparsity is in the FFN; attention runs full Q/K/V every layer.</text>
+
+  <!-- Panel 2 — SwitchHead: MoE inside attention projections -->
+  <rect class="panel" x="475" y="20" width="425" height="230" rx="10"/>
+  <text class="title" x="487" y="44">B. SwitchHead — MoE inside Q/K/V projections</text>
+
+  <rect class="ffn" x="520" y="80" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="520" y="120" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="520" y="160" width="80" height="32" rx="6" opacity="0.4"/>
+  <text class="nodeText" x="560" y="100" text-anchor="middle">Q-expert 1</text>
+  <text class="nodeText" x="560" y="140" text-anchor="middle">Q-expert 2</text>
+  <text class="nodeText" x="560" y="180" text-anchor="middle">Q-expert 3</text>
+
+  <rect class="ffn" x="630" y="80" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="630" y="120" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="630" y="160" width="80" height="32" rx="6" opacity="0.4"/>
+  <text class="nodeText" x="670" y="100" text-anchor="middle">K-expert 1</text>
+  <text class="nodeText" x="670" y="140" text-anchor="middle">K-expert 2</text>
+  <text class="nodeText" x="670" y="180" text-anchor="middle">K-expert 3</text>
+
+  <rect class="ffn" x="740" y="80" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="740" y="120" width="80" height="32" rx="6"/>
+  <rect class="ffn" x="740" y="160" width="80" height="32" rx="6" opacity="0.4"/>
+  <text class="nodeText" x="780" y="100" text-anchor="middle">V-expert 1</text>
+  <text class="nodeText" x="780" y="140" text-anchor="middle">V-expert 2</text>
+  <text class="nodeText" x="780" y="180" text-anchor="middle">V-expert 3</text>
+
+  <rect class="attn" x="540" y="200" width="260" height="36" rx="6"/>
+  <text class="nodeText" x="670" y="223" text-anchor="middle">Attention (sparse Q·K → V)</text>
+
+  <text class="label" x="487" y="258">Sparse projections collapse FLOPs without changing the attention math.</text>
+
+  <!-- Panel 3 — Attention-Router (Yuan 2.0-M32) -->
+  <rect class="panel" x="20" y="270" width="425" height="230" rx="10"/>
+  <text class="title" x="32" y="294">C. Attention-Router — query-aware expert selection</text>
+
+  <rect class="attn" x="50" y="330" width="130" height="46" rx="6"/>
+  <text class="nodeText" x="115" y="358" text-anchor="middle">Token query</text>
+
+  <rect class="router" x="210" y="312" width="120" height="80" rx="8"/>
+  <text class="nodeText" x="270" y="345" text-anchor="middle">Attention</text>
+  <text class="nodeText" x="270" y="365" text-anchor="middle">router</text>
+  <text class="nodeText" x="270" y="383" text-anchor="middle" font-size="11">(Q·K_expert)</text>
+
+  <rect class="ffn" x="360" y="300" width="70" height="30" rx="6"/>
+  <rect class="ffn" x="360" y="338" width="70" height="30" rx="6"/>
+  <rect class="ffn" x="360" y="376" width="70" height="30" rx="6"/>
+  <rect class="ffn" x="360" y="414" width="70" height="30" rx="6" opacity="0.4"/>
+  <text class="nodeText" x="395" y="319" text-anchor="middle">Expert A</text>
+  <text class="nodeText" x="395" y="357" text-anchor="middle">Expert B</text>
+  <text class="nodeText" x="395" y="395" text-anchor="middle">Expert C</text>
+  <text class="nodeText" x="395" y="433" text-anchor="middle">Expert D</text>
+
+  <line class="arrow" x1="180" y1="353" x2="208" y2="353"/>
+  <line class="arrow" x1="332" y1="335" x2="358" y2="315"/>
+  <line class="arrow" x1="332" y1="353" x2="358" y2="353"/>
+  <line class="arrow" x1="332" y1="371" x2="358" y2="391"/>
+  <text class="label" x="32" y="478">Routing weights come from attention scores between the token query and per-expert key vectors — replaces classical linear router gates.</text>
+
+  <!-- Panel 4 — HyperMoE: implicit expert collaboration -->
+  <rect class="panel" x="475" y="270" width="425" height="230" rx="10"/>
+  <text class="title" x="487" y="294">D. HyperMoE — inactive experts whisper into active outputs</text>
+
+  <rect class="ffn" x="510" y="320" width="90" height="30" rx="6"/>
+  <text class="nodeText" x="555" y="339" text-anchor="middle">Active 1</text>
+  <rect class="ffn" x="510" y="358" width="90" height="30" rx="6"/>
+  <text class="nodeText" x="555" y="377" text-anchor="middle">Active 2</text>
+
+  <rect class="ghost" x="510" y="400" width="90" height="26" rx="6"/>
+  <rect class="ghost" x="510" y="430" width="90" height="26" rx="6"/>
+  <rect class="ghost" x="510" y="460" width="90" height="26" rx="6"/>
+  <text class="nodeText" x="555" y="416" text-anchor="middle" font-size="11">Inactive</text>
+  <text class="nodeText" x="555" y="446" text-anchor="middle" font-size="11">Inactive</text>
+  <text class="nodeText" x="555" y="476" text-anchor="middle" font-size="11">Inactive</text>
+
+  <rect class="hyper" x="650" y="400" width="120" height="46" rx="6"/>
+  <text class="nodeText" x="710" y="427" text-anchor="middle">HyperNet</text>
+
+  <line class="arrow" x1="600" y1="412" x2="649" y2="420"/>
+  <line class="arrow" x1="600" y1="442" x2="649" y2="425"/>
+  <line class="arrow" x1="600" y1="472" x2="649" y2="430"/>
+
+  <rect class="attn" x="800" y="320" width="100" height="68" rx="6"/>
+  <text class="nodeText" x="850" y="350" text-anchor="middle">Modulated</text>
+  <text class="nodeText" x="850" y="370" text-anchor="middle">output</text>
+
+  <line class="arrow" x1="600" y1="335" x2="800" y2="346"/>
+  <line class="arrow" x1="600" y1="373" x2="800" y2="360"/>
+  <line class="arrow" x1="770" y1="423" x2="800" y2="378"/>
+
+  <text class="label" x="487" y="500">Inactive experts contribute lightweight modulation (no full forward pass), recovering some of their capacity for free.</text>
+</svg>

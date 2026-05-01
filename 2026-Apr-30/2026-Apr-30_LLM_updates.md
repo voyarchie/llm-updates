@@ -1,615 +1,457 @@
 # LLM Updates — 2026-Apr-30
 
-End-of-month consolidated brief, written Thursday April 30 (LA time). This
-pass overwrites the earlier April 30 file with a refreshed read of the
-state of the field at month-close. The headline thesis: April 2026 was
-the month the **frontier became plural** (five labs ship credible
-top-tier models, with one open-weight in the mix), the month the
-**inference economy bifurcated** (decode-optimised silicon and diffusion
-drafters arrived together), and the month **memory and context
-engineering crystallised into a benchmarked production discipline**.
+End-of-month brief, written Thursday April 30 (LA time) and **explicitly
+forward-looking into early May**. Two themes drive this iteration: (a)
+the field has reached the point where **agent reliability** is now a
+benchmarked science with a vocabulary distinct from raw benchmark
+accuracy, and (b) **mixture-of-experts** has begun to invade the
+attention block itself — not just the FFN — which is the architectural
+story under most of the headline model wins.
+
+This file overwrites the earlier April 30 drafts. Material that is
+already well-known (DeepSeek V4 hybrid attention, DFlash diffusion
+drafting, the converged coding harness, the prefill/decode silicon
+split) is referenced briefly and not re-derived; the focus is on
+late-April signal that earlier passes did not capture.
 
 ---
 
-## 1. Snapshot: where the frontier sits at April 30
+## 1. Late-April additions and the May launch window
 
-April produced four headline drops in a single window — GPT-5.5 (Apr
-23–24), Claude Opus 4.7 (Apr 16), DeepSeek V4-Pro / V4-Flash (Apr 24),
-GLM-5.1 open weights (Apr 7) — with Gemini 3.1 Pro continuing on a
-rolling track. No single model wins everything, and the price column is
-the cleanest read on which lab is willing to subsidise inference for
-share.
+Five signals dropped in the April 28–30 window that materially change
+the May calendar:
 
-| Model              | Released   | Headline strength                       | Key benchmark                  | API price (in / out, /M tok) |
-|--------------------|------------|-----------------------------------------|--------------------------------|------------------------------|
-| GPT-5.5 / Pro      | Apr 23–24  | Top overall · agent execution           | AAII 60 · Terminal-Bench 82.7% | $5 / $30                     |
-| Claude Opus 4.7    | Apr 16     | Coding · long-horizon autonomy          | SWE-Bench Pro **64.3%**        | $5 / $25                     |
-| Gemini 3.1 Pro     | rolling    | Cheap multimodal · 2M context           | GPQA Diamond **94.3%**         | $2 / $12                     |
-| DeepSeek V4-Pro    | Apr 24     | Open-weight frontier · hybrid attention | competitive on math/code       | open weights (MIT)           |
-| GLM-5.1 (open)     | Apr 7      | First open-weight #1 on SWE-Bench Pro   | SWE-Bench Pro 58.4% (9-day #1) | open weights                 |
-| Claude Mythos      | gated      | Reasoning ceiling                       | HLE 64.7% · agentic blend 100  | restricted access            |
+| Date    | Item                                  | Why it matters                                                                |
+|---------|---------------------------------------|-------------------------------------------------------------------------------|
+| Apr 28  | **Mistral Medium 3.5** open weights   | 128B dense, 256K context, $1.5 / $7.5 per M tok — best dense-class price/perf |
+| Apr 29  | **Baidu ERNIE 5.1 Preview**           | #1 Chinese lab on LMArena Text Arena (#13 globally) — closes the lab gap     |
+| Apr 28  | **Project Glasswing consortium**      | Anthropic + Amazon + Apple use Claude Mythos for financial-infra security    |
+| Apr 22  | **Gemini Enterprise Agent Platform**  | Google Cloud Next 2026 — first end-to-end agent OS from a hyperscaler        |
+| May 5   | **GPT-5.5 launch event**              | Public availability; pricing already disclosed at $5/$30 and Pro at $30/$180 |
 
-Two operational reads:
+The framing read: **frontier launches are now staggered weekly**, not
+quarterly. The implication for routing is that any model selection your
+team commits to should have a 30-day re-evaluation cadence; locking in a
+single vendor for a 6-month roadmap is no longer prudent.
 
-1. **Multi-vendor routing is the floor, not the ceiling.** GPT-5.5 leads
-   the AAII composite; Opus 4.7 leads coding; Gemini 3.1 Pro is the
-   price/multimodal play; DeepSeek V4-Pro is the open-weight option that
-   actually competes on coding and math; Mythos is the gated capability
-   ceiling. Pick the harness; route the model per task.
-2. **Benchmark contamination is now a first-order problem.** OpenAI
-   flagged training-data contamination on SWE-Bench Verified across all
-   frontier models; SWE-Bench Pro is the de-facto successor and the
-   numbers there are 20+ points lower for the same models — exactly the
-   gap you'd expect when contamination drains.
+The interesting structural item in that list is *Glasswing*. Anthropic
+is gating its highest-capability model (Mythos) inside a closed
+consortium of cloud, retail, and device incumbents specifically for
+**critical-infrastructure security work**. This is the first time a
+frontier lab has shipped a top model exclusively into an industry
+consortium rather than a public API — and it suggests that
+high-capability models will increasingly come with **custodial
+distribution agreements** rather than open commercial access.
 
 Sources:
-- [Introducing GPT-5.5 — OpenAI](https://openai.com/index/introducing-gpt-5-5/)
-- [GPT-5.5 review — buildfastwithai](https://www.buildfastwithai.com/blogs/gpt-5-5-review-2026)
-- [Claude Opus 4.7 — Anthropic](https://www.anthropic.com/news/claude-opus-4-7)
-- [SWE-Bench Pro Leaderboard — Scale](https://labs.scale.com/leaderboard/swe_bench_pro_public)
-- [Best AI Models April 2026 — buildfastwithai](https://www.buildfastwithai.com/blogs/best-ai-models-april-2026)
-- [LLM Benchmarks April 2026 — llm-stats](https://llm-stats.com/benchmarks)
-- [New AI Models April 2026 — WhatLLM](https://whatllm.org/blog/new-ai-models-april-2026)
+- [AI News April 30, 2026 — Crypto Integrated](https://www.cryptointegrat.com/p/ai-news-april-30-2026)
+- [AI News last 24 hours, April 29–30 — devFlokers](https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup)
+- [Three biggest Google Cloud Next 2026 announcements — Egen](https://egen.ai/insights/three-biggest-ai-announcements-from-google-cloud-next-2026/)
+- [OpenAI Release Notes — Releasebot](https://releasebot.io/updates/openai)
 
 ---
 
-## 2. DeepSeek V4-Pro: hybrid attention is the inference-side recipe of the year
+## 2. Reliability science for long-horizon agents
 
-DeepSeek-V4 dropped April 24 under MIT license — V4-Pro at 1.6T total /
-49B active, V4-Flash at 284B total / 13B active. The weights matter, but
-the **architecture matters more**. V4 is the cleanest demonstration to
-date that an open lab can ship original inference-side innovation, not
-just scale clones. Three things to internalise:
+The single most important methodological shift of late April is the
+arrival of a **formal reliability vocabulary** for agent evaluation.
+"Beyond pass@1: A Reliability Science Framework for Long-Horizon LLM
+Agents" introduces four metrics that the field is converging on:
 
-- **Hybrid attention (every layer).** Every layer combines **SWA**
-  (sliding window over the last 128 raw tokens) with one of two compressed
-  pathways: **C4** (top-512 sparse attention over a 4:1-compressed KV
-  cache) or **C128** (dense attention over a 128:1-compressed KV cache).
-  CSA + DSA + HCA are the implementation pieces. At 1M context, V4-Pro
-  uses **27% of single-token inference FLOPs and 10% of the KV cache** of
-  V3.2.
-- **Manifold-Constrained Hyper-Connections (mHC).** Replaces vanilla
-  residual connections with a constrained hyper-connection that improves
-  signal-propagation stability across very deep stacks without the
-  expressivity cost of pure normalisation tricks.
-- **Muon optimizer at 33T-token scale.** Faster convergence and better
-  training stability than AdamW; V4-Pro is the first
-  trillion-token-class run to publicly use Muon end-to-end.
+- **Reliability Decay Curve (RDC)** — pass@k as a function of task
+  duration. Frontier models look strong at short horizons and
+  collapse on long ones; the curve is the right object to measure.
+- **Variance Amplification Factor (VAF)** — how stochastic
+  failure modes compound with duration. Critical because mean accuracy
+  hides which agents are *consistently* mediocre vs *intermittently*
+  brilliant.
+- **Graceful Degradation Score (GDS)** — partial-credit metric for
+  agents that complete part of a long task. A real production
+  workflow rarely fails on the last step; partial trajectories should
+  earn partial reward.
+- **Meltdown Onset Point (MOP)** — detects *behavioural collapse*
+  via sliding-window entropy over tool-call sequences. Operationally,
+  this is the point at which an agent stops doing useful work and
+  starts looping or thrashing.
+
+![Reliability Decay Curves for long-horizon agents](./reliability_decay.svg)
+
+Why this vocabulary matters for production teams: the headline
+benchmark numbers (Terminal-Bench, SWE-Bench Pro, etc.) are pass@1 at
+short to medium horizons. They under-sample the regime where real
+agents actually break. A team running multi-hour autonomous workflows
+needs to instrument **its own RDC** on its own task distribution,
+because the cliff position varies per workflow class.
+
+Two complementary benchmarks shipped in the same window:
+
+- **UltraHorizon** explicitly targets ultra-long-horizon, partially
+  observable scenarios (large software development, scientific
+  discovery, commercial investment). The headline finding: even the
+  most capable systems lose state on tasks whose completion requires
+  sustained reasoning, planning, memory management, *and* tool use
+  simultaneously — a combination that short-horizon benchmarks rarely
+  exercise.
+- **EcoGym** evaluates economic plan-and-execute over **1,000+ steps,
+  200K+ tokens, 400+ tool calls** in vending, freelance, and
+  operations economies. This is the first widely-used benchmark with a
+  theoretically infinite horizon.
+
+Combined, these establish that "agent capability" is a 2D quantity —
+short-horizon accuracy *and* duration over which that accuracy holds —
+and that the second axis is the bottleneck for almost all
+production-grade autonomy.
+
+Sources:
+- [Beyond pass@1: Reliability Science for Long-Horizon LLM Agents — arXiv](https://arxiv.org/html/2603.29231v1)
+- [UltraHorizon benchmark — OpenReview](https://openreview.net/forum?id=FTZfVHWAIq)
+- [EcoGym: long-horizon plan-and-execute — arXiv](https://arxiv.org/pdf/2602.09514)
+- [TheAgentCompany — OpenReview](https://openreview.net/forum?id=LZnKNApvhG)
+- [awesome-ai-agent-papers (2026 curation)](https://github.com/VoltAgent/awesome-ai-agent-papers)
+
+---
+
+## 3. The reasoning-reliability paradox
+
+The hallucination story finally has a clean empirical statement: the
+models marketed as the most intelligent are also, on average, the
+**least reliable on basic factual tasks**. Across the most recent
+benchmark sweeps:
+
+- Hallucination rates across modern LLMs span **15%–52%**, with
+  most models clustered in the **20–27%** range.
+- Reasoning models are *measurably* better at math, logic, multi-step
+  analysis, and medical diagnosis — and *measurably* worse at
+  sticking to facts they've been given.
+- **Every reasoning model tested exceeded 10% hallucination**:
+  GPT-5, Claude Sonnet 4.5, Grok-4, Gemini-3-Pro all crossed that
+  threshold.
+
+The new evaluation that punishes this directly is **AA-Omniscience**
+(Artificial Analysis): 6,000 questions across six domains, scored on
+an Omniscience Index that **rewards knowing your own limits** — wrong
+answers cost more than refusals. This is the first major benchmark
+that explicitly measures *calibration*, not just capability.
 
 ```mermaid
 flowchart LR
-    Q[Query token] --> L{Layer routing}
-    L -->|every layer| SWA[SWA<br/>last 128 raw tokens]
-    L -->|C4 path| C4[Top-512 sparse over<br/>4:1 compressed KV]
-    L -->|C128 path| C128[Dense over<br/>128:1 compressed KV]
-    SWA --> Merge[Attention merge]
-    C4 --> Merge
-    C128 --> Merge
-    Merge --> mHC[mHC residual<br/>manifold-constrained]
-    mHC --> MoE[MoE FFN<br/>49B active]
-    MoE --> Out[Layer output]
-    classDef hot fill:#2563eb,stroke:#1e40af,color:#fff
-    classDef cool fill:#16a34a,stroke:#15803d,color:#fff
-    class C4,C128,SWA hot
-    class mHC,MoE cool
+    Q[Question] --> M{Model}
+    M -->|Confidently correct| OK[+ score]
+    M -->|Confidently wrong| BAD[− score]
+    M -->|Refuses / I don't know| ZERO[0 score]
+    OK --> Idx[Omniscience Index]
+    BAD --> Idx
+    ZERO --> Idx
+    classDef good fill:#16a34a,stroke:#14532d,color:#fff
+    classDef bad fill:#dc2626,stroke:#7f1d1d,color:#fff
+    classDef neutral fill:#6b7280,stroke:#374151,color:#fff
+    class OK good
+    class BAD bad
+    class ZERO neutral
 ```
 
-The strategic read: V3 → V4 narrowed the hardware-efficiency gap with
-proprietary frontier labs. The Muon + hybrid-attention combination is
-reproducible by any serious lab; expect copies inside Qwen, GLM, MiniMax,
-Kimi within a quarter.
+Operational implication: production deployments that route to
+reasoning models for "harder" queries are **silently increasing
+hallucination risk** unless they pair the routing with a calibration
+layer. Two patterns are emerging as defaults:
+
+1. **Self-consistency thresholding.** Sample N reasoning trajectories
+   and only commit if ≥k agree on the conclusion. Cheap, model-agnostic.
+2. **Knowledge-to-Verification (K2V) post-checks.** Decompose the
+   answer into verifiable sub-claims, retrieve evidence for each, and
+   gate the answer on per-claim verification. Adds latency but
+   collapses extrinsic hallucination on retrieval-checkable claims.
+
+The headline takeaway is uncomfortable: **scaling test-time compute
+makes models smarter, not more honest**. If your workflow rewards
+"appears confident" over "is correct", reasoning-model routing is a net
+negative.
 
 Sources:
-- [DeepSeek-V4-Pro on Hugging Face](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)
-- [DeepSeek V4 Preview — DeepSeek API Docs](https://api-docs.deepseek.com/news/news260424)
-- [Inside DeepSeek V4: Hybrid Attention — dasroot](https://dasroot.net/posts/2026/04/deepseek-v4-hybrid-attention-massive-contexts/)
-- [DeepSeek V4 Day 0 — LMSYS](https://www.lmsys.org/blog/2026-04-25-deepseek-v4/)
-- [Why DeepSeek's V4 matters — MIT Technology Review](https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/)
-- [DeepSeek V4 model card (PDF)](https://fe-static.deepseek.com/chat/transparency/deepseek-V4-model-card-EN.pdf)
+- [AA-Omniscience — Artificial Analysis](https://artificialanalysis.ai/evaluations/omniscience)
+- [HalluLens: LLM Hallucination Benchmark — arXiv](https://arxiv.org/html/2504.17550v1)
+- [LLM Hallucination Statistics 2026 — SQ Magazine](https://sqmagazine.co.uk/llm-hallucination-statistics/)
+- [AI Hallucination Rates & Benchmarks — Suprmind](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/)
+- [LLM Hallucinations in 2026 — Lakera](https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models)
+- [Vectara Hallucination Leaderboard — GitHub](https://github.com/vectara/hallucination-leaderboard)
 
 ---
 
-## 3. DFlash: diffusion-as-drafter goes mainstream
+## 4. MoE invades the attention block
 
-The diffusion-LM thread has been simmering since 2024. April was the
-month it crossed the inference-economics threshold. DFlash — published
-February 2026, viral demo April 7, ported to Qwen3.6-27B late April —
-delivers **>6× lossless acceleration** versus standard autoregressive
-decoding and **~2.5× over EAGLE-3**, the prior speculative-decoding
-state-of-the-art.
+The second-order architectural story of April is that **mixture-of-
+experts is moving out of the FFN and into attention**. The classic
+recipe (dense attention + sparse FFN) is the "Switch / Mixtral / DeepSeek
+V3" lineage. Three new variants now have working open implementations:
 
-The mechanism is the right one to study: instead of asking a tiny
-diffusion model to reason from scratch, **the drafter is conditioned on
-deep features extracted from the target model**. Hidden features from
-uniformly-sampled target layers are projected and injected directly into
-every draft layer's K/V projections. The drafter inherits the target's
-deep reasoning and contributes parallel speed.
+- **SwitchHead** — applies MoE to the projection layers that produce
+  Q, K, V from the residual stream. Sparse projections collapse FLOPs
+  *before* the attention math runs, without changing the attention
+  itself.
+- **Attention-Router (Yuan 2.0-M32)** — replaces the classical linear
+  router with an attention operation between the token query and
+  per-expert key vectors. Empirically yields better routing decisions
+  than top-k softmax, particularly under load-balanced training.
+- **HyperMoE** — exploits *inactive* experts. A hypernetwork reads the
+  hidden states of experts that were *not* selected and injects
+  lightweight modulation signals into the active experts' outputs. The
+  capacity of all experts contributes to every token without paying
+  for full forward passes on the inactive ones.
+
+![MoE attention variants — SwitchHead, attention router, HyperMoE](./moe_attention_variants.svg)
+
+The pragmatic read for systems engineers: each of these variants is a
+different point on the **(parameter count, active FLOPs, expressivity)**
+frontier. SwitchHead is the easiest port from existing MoE codebases.
+Attention-Router needs a routing-loss redesign but improves quality at
+fixed FLOPs. HyperMoE requires the most plumbing but recovers some of
+the capacity that pure top-k MoE leaves on the table.
+
+DeepSeek V4-Pro's hybrid attention (sliding-window + C4 sparse + C128
+compressed) is consistent with this trend at a higher level —
+*specialising attention paths* rather than running one dense path. The
+underlying conceptual unification: **routing is now a first-class
+operation throughout the transformer**, not a single gate at the FFN
+layer.
+
+Sources:
+- [Mixture of Experts in Large Language Models — arXiv survey](https://arxiv.org/html/2507.11181v2)
+- [SwitchHead: MoE attention projections — review](https://aclanthology.org/2025.findings-naacl.251.pdf)
+- [Yuan 2.0-M32 Attention Router — survey context](https://arxiv.org/html/2406.18219v2)
+- [Mixture-of-Experts (MoE) LLMs — Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/moe-llms)
+- [MoE in LLM Architectures — NVIDIA Developer](https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures/)
+- [Survey on MoE training systems — Sciopen](https://www.sciopen.com/article/10.26599/TST.2025.9010169)
+
+---
+
+## 5. Test-time scaling: a clean taxonomy
+
+The "What, How, Where, How Well?" survey of test-time scaling crystallises
+the field's vocabulary. The three regimes are now agreed:
 
 ```mermaid
-sequenceDiagram
-    participant U as User
-    participant T as Target AR-LLM
-    participant D as Block-diffusion drafter
-    U->>T: prompt
-    T->>D: hidden-feature injection (K/V)
-    D-->>T: k tokens drafted in one parallel forward
-    T->>T: verify k tokens in single forward pass
-    alt all accepted
-        T-->>U: emit k tokens
-    else partial reject
-        T-->>U: emit accepted prefix
-        T->>D: re-draft from rejection point
-    end
+flowchart TB
+    Root[Test-time scaling] --> P[Parallel scaling]
+    Root --> S[Sequential scaling]
+    Root --> H[Hybrid scaling]
+
+    P --> P1[Best-of-N sampling]
+    P --> P2[Self-consistency vote]
+    P --> P3[Tree / beam search]
+
+    S --> S1[Chain-of-thought]
+    S --> S2[Iterative refinement]
+    S --> S3[Reflect / critique loops]
+
+    H --> H1[Tree-of-thoughts]
+    H --> H2[Verifier-guided MCTS]
+    H --> H3[RL-shaped exploration]
+
+    classDef parallel fill:#2563eb,stroke:#1e3a8a,color:#fff
+    classDef sequential fill:#16a34a,stroke:#14532d,color:#fff
+    classDef hybrid fill:#9333ea,stroke:#6b21a8,color:#fff
+    class P,P1,P2,P3 parallel
+    class S,S1,S2,S3 sequential
+    class H,H1,H2,H3 hybrid
 ```
 
-Three companion threads landed alongside it: **DiffuSpec** (training-free
-diffusion drafter, ~3× speedup), **Self-Speculative Decoding for
-Diffusion LLMs** (single model drafts and verifies, up to 3.46× on
-LLaDA / Dream), and **Speculative Diffusion Decoding** (NAACL 2025,
-deployed widely in April, up to 7.2× speedup vs standard generation).
+Two empirical results from the spring 2026 RL-scaling literature are
+worth committing to memory:
 
-Why this matters operationally: the marginal cost of an additional
-inference token is dropping again, after a year of being roughly flat.
-For agentic workloads (long generations, structured outputs, tool calls)
-the speedup compounds. Expect DFlash-style stacks in production at
-hyperscalers within two quarters.
+- **At fixed compute, larger models with fewer training steps beat
+  smaller models with more steps.** This contradicts the smaller-but-
+  longer Chinchilla-era intuition for RL post-training; for RL, the
+  base-model size is the strongest lever.
+- **Larger models also have superior sample efficiency at fixed data**
+  — the reverse of pretraining intuition. The implication is that RL
+  post-training pipelines should be planned around the largest base
+  model that fits the budget, with shorter rather than longer RL runs.
+
+This is consistent with what the labs have been doing in practice
+(Opus 4.7 and GPT-5.5 are both heavily RL-post-trained on top of large
+bases) and gives independent evidence that the recipe generalises
+beyond proprietary training stacks.
 
 Sources:
-- [DFlash: Block Diffusion for Flash Speculative Decoding — arXiv](https://arxiv.org/html/2602.06036v1)
-- [DFlash on GPU Cloud — Spheron](https://www.spheron.network/blog/dflash-block-diffusion-speculative-decoding-gpu-cloud/)
-- [DFlash Block Diffusion 6x — RITS / NYU Shanghai](https://rits.shanghai.nyu.edu/ai/dflash-block-diffusion-delivers-6x-faster-llm-inference/)
-- [Luce DFlash on Qwen3.6-27B — RITS](https://rits.shanghai.nyu.edu/ai/luce-dflash-brings-2x-speculative-decoding-to-qwen3-6-27b-on-a-single-rtx-3090/)
-- [Self-Speculative Decoding for Diffusion LLMs — OpenReview](https://openreview.net/pdf?id=rKJ7A30lQQ)
-- [DiffuSpec — OpenReview](https://openreview.net/forum?id=u2pAPZZCmN)
-- [SpecDiff-2 — arXiv 2511.00606](https://arxiv.org/abs/2511.00606)
+- [What, How, Where, How Well? Survey on Test-Time Scaling](https://testtimescaling.github.io/)
+- [Scaling Behaviors of LLM RL Post-Training — arXiv 2509.25300](https://arxiv.org/html/2509.25300v4)
+- [RL Scaling Laws for LLMs — Cameron R. Wolfe](https://cameronrwolfe.substack.com/p/rl-scaling-laws)
+- [Putting the Value Back in RL — arXiv 2505.04842](https://arxiv.org/abs/2505.04842)
+- [Scaling Test-Time Compute Optimally — OpenReview](https://openreview.net/forum?id=4FWAwZtd2n)
+- [Survey of slow-thinking RL + TTS — ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0306457325003358)
 
 ---
 
-## 4. Inference economy bifurcates: prefill vs decode hardware
+## 6. Memory operations as RL-trained tools
 
-April was also the month the prefill/decode split moved from internal
-hyperscaler architecture to a buyable enterprise product. **Skymizer
-HTX301** (Apr 23) ships a PCIe card purpose-built for **decode**, paired
-with the **HyperThought** software layer; existing GPUs continue to
-handle **prefill**. The pitch is running 700B-parameter models on a
-single PCIe card without a cluster.
+Earlier April-30 passes covered "filter / rank / prune / summarise /
+isolate" as a context-engineering operations set. The April work that
+extends this is **AgeMem (Agentic Memory)**, which treats *each
+memory operation as a callable tool inside the agent's policy* and
+trains them with RL.
 
-The reason this works as an architectural primitive:
+The training recipe runs in three stages:
 
-- **Prefill** processes the input prompt — it is *compute-bound*, heavy
-  matmul, embarrassingly parallel — exactly what GPUs were designed for.
-- **Decode** generates one token at a time — it is
-  *memory-bandwidth-bound*; the model has to stream from HBM for every
-  token, and almost no FLOPs go to waste.
+1. **Supervised warm-up** on memory-action demonstrations.
+2. **Task-level RL** with outcome rewards on long-horizon benchmarks.
+3. **Step-level GRPO** that gives denser credit assignment to the
+   individual memory actions (write, retrieve, summarise, forget).
 
-A single accelerator that's good at both is a compromise. Disaggregating
-them lets you scale the two pools independently against your real
-workload mix.
+Across five long-horizon benchmarks, AgeMem outperforms the strong
+fixed-pipeline baselines that win on shorter horizons. The conceptual
+shift is the obvious one in retrospect: **memory has both a policy and
+a state**, and only the policy is amenable to RL. Hard-coded memory
+pipelines bake in an opinion about *when* to remember; an RL-trained
+memory policy learns it from the task distribution.
 
-```mermaid
-flowchart LR
-    U[User request] --> R[Router]
-    R --> PF[Prefill pool<br/>GPU · compute-bound]
-    PF -- KV cache transfer --> DC[Decode pool<br/>HTX301-class · bw-bound]
-    DC --> Tok[Tokens]
-    Tok --> U
-    classDef pf fill:#ea580c,stroke:#9a3412,color:#fff
-    classDef dc fill:#2563eb,stroke:#1e40af,color:#fff
-    class PF pf
-    class DC dc
-```
-
-This is consistent with how DeepMind, Together, and Anthropic have
-architected inference fleets internally; the new bit is the recipe is
-shipping as a product, not a paper. Combined with diffusion drafters
-(§3), the inference cost curve is bending again.
+For a production team, the practical question is whether the
+training-cost overhead is worth it on your specific workflow. The
+empirical answer is: yes if your workflow has tasks that span ≥100
+tool calls, no if your workflow is dominated by single-shot or
+short-trajectory queries. The crossover sits somewhere around the same
+horizon where the **Reliability Decay Curve** of fixed-pipeline systems
+starts to bend (§2).
 
 Sources:
-- [Skymizer HTX301 / HyperThought — Manila Times](https://www.manilatimes.net/2026/04/23/tmt-newswire/pr-newswire/skymizer-taiwan-inc-unveils-breakthrough-architecture-enabling-ultra-large-llm-inference-on-a-single-card/2326985)
-- [LLM inference disaggregation primer — NVIDIA](https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures/)
-
----
-
-## 5. The omni-modal turn: one transformer for text, image, audio, video
-
-Multimodal in April stopped meaning "vision tower bolted to a text LM"
-and started meaning **a single transformer trained from scratch on mixed
-modalities**. Two reference points:
-
-- **Qwen3.5-Omni (Alibaba).** Native Thinker-Talker architecture, 256K
-  context, processes 10+ hours of audio and 400+ seconds of 720p video at
-  1 FPS in a single computational pipeline. Open weights.
-- **NVIDIA Nemotron 3 Nano Omni.** A 30B hybrid MoE that natively takes
-  text, image, video, and audio inputs and maintains a unified multimodal
-  context across agent loops — built explicitly for multimodal agent
-  reasoning rather than per-modality tasks.
-
-The architectural pattern across the omni-modal generation:
-
-![Omni-modal architecture pattern](./omni_modal_stack.svg)
-
-Why this shape wins: every modality-specific encoder produces tokens that
-flow into a single shared transformer with a unified KV cache. The
-agent's *reasoning* is genuinely cross-modal — it can attend over a
-video frame and an audio clip in the same step — rather than relayed
-through a text bottleneck. The pricing implication is the same as on the
-text side: a single fleet serves every modality, so the marginal cost of
-adding modalities to a workflow drops sharply.
-
-Sources:
-- [Qwen3.5-Omni release — MarkTechPost](https://www.marktechpost.com/2026/03/30/alibaba-qwen-team-releases-qwen3-5-omni-a-native-multimodal-model-for-text-audio-video-and-realtime-interaction/)
-- [Qwen3-Omni on GitHub](https://github.com/QwenLM/Qwen3-Omni)
-- [Nemotron 3 Nano Omni — NVIDIA Developer](https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/)
-- [Omni-LLMs: Unified Multimodal Transformers — Emergent Mind](https://www.emergentmind.com/topics/omni-large-language-models-omni-llms)
-
----
-
-## 6. The coding harness has converged into one stack
-
-The first week of April broke the wall between coding agents. Cursor 3
-shipped parallel agent tabs, isolated cloud VMs, and `/worktree` for
-branch isolation. OpenAI published an official Codex plugin that runs
-*inside* Anthropic's Claude Code. Early adopters now run all three
-together. The differentiator is no longer *what* the agent can do — it's
-*where* you prefer to sit.
-
-The picture below is the industry-wide stack as of end-April. The four
-layers (surface → harness → model → execution) are now interchangeable
-along each row, and most production teams are mixing across rows.
-
-![April 2026 coding harness stack](./coding_harness_stack.svg)
-
-Pragmatic implications:
-
-- **Pick the harness for the hooks, not the brand.** Claude Code, Codex
-  CLI, and Aider all expose comparable subagent / MCP / hook surfaces.
-  The differentiation is the slash-skill / hook ecosystem around each.
-- **Pick the model per task, not per harness.** The dominant end-April
-  workflow runs Opus 4.7 for refactor + long-horizon coding, GPT-5.5 for
-  agentic execution and terminal work, Gemini 3.1 Pro for cheap
-  multimodal prep, DeepSeek V4-Pro for offline / private / air-gapped
-  work.
-- **Sandbox is the layer that determines blast radius.** Cursor's cloud
-  VMs and Claude Code's worktree-per-agent are the two patterns that
-  scaled. Both isolate destructive operations from the user's working
-  tree — the right default for parallel agents.
-
-Sources:
-- [Cursor, Claude Code, Codex merging — The New Stack](https://thenewstack.io/ai-coding-tool-stack/)
-- [AI Coding Assistants April 2026 — DigitalApplied](https://www.digitalapplied.com/blog/ai-coding-assistants-april-2026-cursor-copilot-claude)
-- [Best AI Coding Agents 2026 — MightyBot](https://mightybot.ai/blog/coding-ai-agents-for-accelerating-engineering-workflows/)
-- [Best LLM for Coding 2026 — WhatLLM](https://whatllm.org/best-llm-for-coding)
-- [Terminal-Bench Hard — Artificial Analysis](https://artificialanalysis.ai/evaluations/terminalbench-hard)
-
----
-
-## 7. Memory and context engineering crystallise into a discipline
-
-"Context engineering" used to be a slack-channel term. As of April it has
-its own benchmark family, its own production literature, and a sized
-market ($6.27B in 2026, projected $28.45B by 2030 at 35% CAGR per Mem0's
-state-of-the-field). Three pieces of furniture to know:
-
-- **Multi-layer memory architectures are now the default.** Episodic
-  memory (interaction history), semantic memory (structured facts about
-  users / entities / preferences), and procedural memory (learned
-  workflows). LinkedIn's Cognitive Memory Agent and Mem0's stack are the
-  reference implementations.
-- **Selective memory beats full-context for production economics.**
-  Mem0's selective pipeline takes a 6-percentage-point accuracy hit
-  versus full-context in exchange for **91% lower p95 latency** (1.44s
-  vs 17.12s) and **90% fewer tokens**. The graph variant Mem0g closes
-  the accuracy gap to <5 points at 2.59s p95.
-- **Benchmarks finally exist.** Context-Bench (Letta) for agent
-  multi-step retrieval, LongBench v2 for real-world long-context work,
-  LV-Eval with confusing-fact insertion to penalise pattern-matching.
-  Even frontier models cap around 74% on Context-Bench — meaning roughly
-  1-in-4 multi-step lookups still drift or lose state.
-
-```mermaid
-flowchart LR
-    Raw[Raw inputs<br/>docs · history · tools] --> F[Filter / score]
-    F --> R[Rank · dedup]
-    R --> P[Prune to budget]
-    P --> S[Summarise long sections]
-    S --> I[Isolate per subagent]
-    I --> M[Model context window]
-    M --> Ag[Agent step]
-    Ag -. update memory .-> Mem[(Episodic · Semantic ·<br/>Procedural memory)]
-    Mem -. retrieve .-> Raw
-    classDef ce fill:#ea580c,stroke:#9a3412,color:#fff
-    classDef store fill:#9333ea,stroke:#6b21a8,color:#fff
-    class F,R,P,S,I ce
-    class Mem store
-```
-
-Conceptual shift: long context is not the same as good context. The
-working hypothesis across production teams is that **filter, rank,
-prune, summarise, isolate** are first-class operations, not preprocessing
-tricks. Anthropic's own research has flagged that contexts above 100K
-tokens routinely *degrade* reasoning quality — bigger windows are not
-free.
-
-Sources:
+- [Memory for Autonomous LLM Agents — arXiv 2603.07670](https://arxiv.org/html/2603.07670v1)
 - [State of AI Agent Memory 2026 — Mem0](https://mem0.ai/blog/state-of-ai-agent-memory-2026)
 - [Context Engineering — Weaviate](https://weaviate.io/blog/context-engineering)
-- [LinkedIn Cognitive Memory Agent — InfoQ](https://www.infoq.com/news/2026/04/linkedin-cognitive-memory-agent/)
-- [ICLR 2026 MemAgents Workshop](https://iclr.cc/virtual/2026/workshop/10000792)
-- [Context-Bench — Letta](https://www.letta.com/blog/context-bench)
-- [LongBench v2](https://longbench2.github.io/)
 
 ---
 
-## 8. RLVR widens its frontier: rubrics, agents, knowledge
+## 7. Frontier snapshot at end of day, April 30
 
-Reinforcement Learning with Verifiable Rewards has been the default
-post-training recipe for math/code/formal-proof since DeepSeek-R1. April
-2026 produced three shifts that broaden the recipe out of the
-verifier-only domains:
+Compact end-of-month table. Pricing and benchmark numbers reflect
+publicly disclosed values as of April 30; the column marked "calibration"
+is qualitative, drawn from AA-Omniscience-style evaluations and the
+hallucination literature in §3.
 
-- **Rubrics as Rewards (RaR).** Extends RLVR beyond automatically
-  verifiable domains by using *rubric-based* feedback — a structured
-  checklist scored by a judge model. Bridges pure-verifier domains
-  (math) and judgment-heavy domains (writing, diagnosis, design review).
-- **Agentic RL formalisation.** "The Landscape of Agentic Reinforcement
-  Learning for LLMs" (updated Apr 17) reframes the problem cleanly:
-  agentic RL replaces the degenerate single-step MDPs of classic LLM-RL
-  with **temporally extended, partially observable MDPs**. Credit
-  assignment over multi-step trajectories is the central unsolved
-  problem.
-- **Knowledge-to-Verification (K2V).** Closes the gap between
-  knowledge-heavy queries and verifiable rewards by automatically
-  extracting verifiable sub-claims from a knowledge-intensive answer,
-  then verifying each sub-claim against retrieval. Fixes the "test-time
-  scaling doesn't help on knowledge tasks" failure mode flagged earlier
-  this year.
+| Model               | Released   | Strength                       | Notable                       | Calibration |
+|---------------------|------------|--------------------------------|-------------------------------|-------------|
+| GPT-5.5 / Pro       | Apr 23–24  | Top overall, agent execution   | Public May 5; $5 / $30        | Moderate    |
+| Claude Mythos       | Apr 7      | Reasoning ceiling              | Glasswing-only, gated         | High        |
+| Claude Opus 4.7     | Apr 16     | Coding, long-horizon autonomy  | SWE-Bench Pro 64.3%           | High        |
+| Gemini 3.1 Pro      | rolling    | Cheap multimodal, 2M context   | $2 / $12                      | Moderate    |
+| DeepSeek V4-Pro     | Apr 24     | Open-weight frontier           | Hybrid attention, MIT         | Moderate    |
+| GLM-5.1 (open)      | Apr 7      | Open-weight coding             | First open #1 on SWE-Bench Pro | Moderate   |
+| Qwen 3.6-35B-A3B    | Apr 14     | Compute-efficient              | 3B active / 35B total         | Moderate    |
+| Mistral Medium 3.5  | Apr 28     | Best dense price/perf          | 128B dense, 256K, $1.5 / $7.5 | Lower       |
+| ERNIE 5.1 Preview   | Apr 29     | Best Chinese-lab generalist    | #13 LMArena globally          | TBD         |
+| MiniMax M2.7        | Apr 23     | Coding/agentic open weights    | Competitive on coding         | Lower       |
 
-The strategic read: RLVR is no longer a math/code-only technique. The
-methods to make rubrics and retrieval-checkable claims into reliable
-reward signals are now in arXiv-paper-shape, which means production
-teams can ship them this quarter.
+Two reads:
+
+- **The "frontier is plural" thesis from earlier April-30 passes is
+  intact**, but Mistral 3.5 and ERNIE 5.1 both squeeze in below the
+  top tier with strong price/perf and language-coverage stories. A
+  routing layer that does not consider cost and language coverage now
+  leaves money on the table.
+- **Calibration is the new differentiator at the top.** Mythos and
+  Opus 4.7 both score highest on the calibration column — they refuse
+  more often, hallucinate less when they don't refuse, and that gap
+  is widening relative to the cost-leader tier.
 
 Sources:
-- [Rubrics as Rewards — OpenReview](https://openreview.net/forum?id=c1bTcrDmt4)
-- [The Landscape of Agentic RL for LLMs — arXiv 2509.02547](https://arxiv.org/abs/2509.02547)
-- [Knowledge-to-Verification — OpenReview](https://openreview.net/forum?id=EVS7SeKBqI)
-- [RLVR explained — Promptfoo](https://www.promptfoo.dev/blog/rlvr-explained/)
-- [awesome-RLVR — GitHub](https://github.com/opendilab/awesome-RLVR)
+- [Best AI Models April 2026 — buildfastwithai](https://www.buildfastwithai.com/blogs/best-ai-models-april-2026)
+- [LLM Benchmarks April 2026 — llm-stats](https://llm-stats.com/benchmarks)
+- [State of LLM Benchmarks 2026 — BenchLM](https://benchlm.ai/blog/posts/state-of-llm-benchmarks-2026)
+- [New AI Models April 2026 — WhatLLM](https://whatllm.org/blog/new-ai-models-april-2026)
+- [LLM News Today — llm-stats](https://llm-stats.com/ai-news)
 
 ---
 
-## 9. Adversarial robustness: reasoning models as autonomous attackers
+## 8. Forward-looking signals into May
 
-The most uncomfortable safety result of April: a **Nature
-Communications** paper demonstrating that four open reasoning models
-(DeepSeek-R1, Gemini 2.5 Flash, Grok 3 Mini, Qwen3 235B) used as
-**autonomous adversary agents** against nine deployed targets achieved an
-aggregate **97.14% jailbreak success rate**.
+What to actually plan around for the first half of May:
 
-Two qualifiers worth keeping in mind:
-
-- Claude 4 Sonnet was the most resistant single target — it received the
-  highest harm score in only **2.86%** of trials.
-- The attack pattern with the highest real-world success is **gradual
-  multi-turn escalation (Crescendo)**: each step appears benign in
-  isolation, with the harmful payload assembled across the conversation.
-  Single-prompt classifiers miss this entirely.
-
-Implication for deployed systems: classifier defences that score each
-prompt independently miss the attack. Effective defences need to score
-the *trajectory* — accumulating concern as a conversation drifts toward
-restricted capability — and combine model-level safety training with
-runtime controls (policy engines, tool authorisation, behavioural
-monitoring). The redteams.ai write-up frames it bluntly: model-level
-safety is a useful layer but not a reliable defence.
-
-Sources:
-- [Large reasoning models as autonomous jailbreak agents — Nature Communications](https://www.nature.com/articles/s41467-026-69010-1)
-- [Same paper, PMC mirror](https://pmc.ncbi.nlm.nih.gov/articles/PMC12881495/)
-- [LLM Jailbreaking in 2026 — redteams.ai](https://redteams.ai/blog/llm-jailbreaking-2026)
-- [When models outthink their safety — arXiv 2510.21285](https://arxiv.org/html/2510.21285v4)
-- [AI Jailbreak Techniques 2026 — 15 Research Lab](https://www.15researchlab.com/blog/ai-jailbreak-techniques-2026/)
-
----
-
-## 10. The open-weight wave — five major drops in three weeks
-
-April's open-weight tempo was unusual even by 2026 standards.
-
-| Date    | Model                 | Lab           | Notable                                              |
-|---------|-----------------------|---------------|------------------------------------------------------|
-| Apr 2   | Gemma 4 (4 variants)  | Google DM     | Apache 2.0 · 26B MoE · 14 GB · 85 tok/s consumer    |
-| Apr 7   | GLM-5.1 open weights  | Z.ai          | 744B total · first open-weight #1 on SWE-Bench Pro  |
-| Apr 16  | Qwen 3.6-35B-A3B      | Alibaba       | A3B = 3B active · efficiency play                   |
-| Apr 23  | DeepSeek V4-Pro/Flash | DeepSeek      | 1.6T MoE · hybrid attention · MIT                   |
-| Apr 23  | MiniMax M2.7 weights  | MiniMax       | competitive on coding/agentic                        |
-
-The benchmark gap between best open-weight and best proprietary on
-enterprise-relevant evaluations has narrowed to single digits. Three
-operational consequences:
-
-- **Air-gapped deployments** finally have a credible frontier-grade
-  option (DeepSeek V4-Pro under MIT).
-- **Fine-tuning economics** flip: SFT / SimPO / GRPO over a Gemma 4 or
-  Qwen 3.6 starting point reaches production quality on a single-rack
-  budget. The frontier-lab pretraining cost is no longer the bottleneck;
-  the post-training pipeline is.
-- **Hardware procurement** rebalances toward inference (HTX301-style)
-  and away from training-only clusters.
-
-Sources:
-- [New Open Source LLM Releases April 2026 — Fazm](https://fazm.ai/blog/new-open-source-llm-releases-april-2026)
-- [Open-source LLM leaderboard 2026 — Vellum](https://www.vellum.ai/open-llm-leaderboard)
-- [Best Open-Source SLMs 2026 — BentoML](https://www.bentoml.com/blog/the-best-open-source-small-language-models)
-
----
-
-## 11. Embodied AI: VLA + world model becomes the dominant 2026 robotics stack
-
-April locked in the **VLA + world model** combination as the dominant
-robotics recipe. The shape: a Vision-Language-Action policy generates
-short-horizon actions, a learned world model rolls them forward in
-simulation for reward / safety scoring, and a planner picks the best
-plan to execute.
-
-- **AGIBOT GO-2 + GE-2 (Apr 17).** GO-2 is the ViLLA (Vision-Language-
-  Latent-Action) embodied foundation model, with Action Chain-of-Thought
-  bridging plan and execution. GE-2 is the *world action model* — fast
-  interactive virtual worlds where GO-2's plans get rolled out for
-  evaluation. Genie Sim 3.0 generates digital twins from natural-language
-  descriptions for sim-to-real transfer.
-- **Gemini Robotics-ER 1.6 (Apr 14).** DeepMind's spatial-reasoning
-  model, with new instrument-reading capability developed with Boston
-  Dynamics (Spot can now read analog gauges).
-- **NVIDIA GR00T N1.7 Early Access (Apr 17).** A 3B-parameter open VLA
-  built on a Cosmos-Reason2-2B backbone with a 32-layer DiT for low-level
-  motor control. The Cosmos world-models library crossed 2M downloads in
-  April.
+1. **GPT-5.5 public availability (May 5).** The stated pricing
+   ($5/$30 standard, $30/$180 Pro) makes Pro the highest-list-price
+   model at any major lab. Either Pro is genuinely a step above
+   standard or the pricing is signalling capability that hasn't
+   landed yet. Either way, retest your routing the day it ships.
+2. **Glasswing expansion.** The consortium model — frontier capability
+   gated behind an industry agreement — is likely to be tried by other
+   labs. Expect at least one more "X-only" frontier release in the
+   next quarter.
+3. **Reliability-instrumented agent platforms.** Google's Gemini
+   Enterprise Agent Platform is the first hyperscaler agent OS; expect
+   the second half of 2026 to be a fight over who hosts the *control
+   plane* for cross-vendor agents. The control plane is where memory,
+   policy, and reliability metrics naturally live.
+4. **MoE-attention production lap.** SwitchHead-class architectures
+   were research-only six months ago; with Yuan 2.0-M32 and HyperMoE
+   in working open implementations, expect the next open frontier
+   release to ship at least one of these patterns in production.
+5. **Benchmark resets driven by AA-Omniscience-style scoring.**
+   Calibration-aware scoring penalises confident-wrong outputs.
+   Existing leaderboards over-credit confidence; expect a re-shuffling
+   of the apparent rank order once these scoring rules are widely
+   adopted.
 
 ```mermaid
-flowchart LR
-    O[Observation<br/>cameras · proprio] --> P[VLA Policy<br/>GO-2 / GR00T / Robotics-ER]
-    P --> A[Candidate actions]
-    A --> WM[World Model<br/>GE-2 / Cosmos / Genie Sim]
-    WM --> R[Roll-out + score<br/>reward / safety]
-    R --> SEL{Best plan?}
-    SEL -->|yes| EX[Execute on robot]
-    SEL -->|no| P
-    EX --> O
-    classDef policy fill:#16a34a,stroke:#15803d,color:#fff
-    classDef wm fill:#9333ea,stroke:#6b21a8,color:#fff
-    class P policy
-    class WM,R wm
-```
+gantt
+    title May 2026 — what to plan around
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m-%d
 
-The pattern recurs across labs: a policy fast enough to run on the
-robot, paired with a world model accurate enough to use for *evaluation*
-rather than execution. The world model is not a substitute for the real
-world — it's a cheap simulator that lets you reject bad plans without
-putting the robot at risk.
+    section Model launches
+    GPT-5.5 public         :a1, 2026-05-05, 1d
+    Open-weight pile-on    :a2, after a1, 14d
 
-Sources:
-- [AGIBOT GO-2 / GE-2 / Genie Sim 3.0 — PRNewswire](https://www.prnewswire.com/news-releases/agibot-unveils-new-generation-of-embodied-ai-robots-and-models-accelerating-real-world-deployment-of-physical-ai-302746174.html)
-- [Gemini Robotics-ER 1.6 — winbuzzer](https://winbuzzer.com/2026/04/16/google-deepmind-gemini-robotics-er-1-6-autonomous-industrial-inspections-xcxwbn/)
-- [NVIDIA Physical AI for National Robotics Week](https://blogs.nvidia.com/blog/national-robotics-week-2026/)
-- [Top 10 Physical AI Models 2026 — MarkTechPost](https://www.marktechpost.com/2026/04/28/top-10-physical-ai-models-powering-real-world-robots-in-2026/)
+    section Platforms
+    Gemini Enterprise GA   :p1, 2026-05-01, 21d
+    Glasswing expansion    :p2, 2026-05-10, 21d
 
----
+    section Architecture
+    MoE-attention drops    :x1, 2026-05-05, 26d
 
-## 12. Small language models: edge-grade is now production-grade
-
-While the frontier got plural, the small-model floor moved up sharply.
-Phi-4, Gemma 3, Llama 3.3, and Qwen 3 variants under 10B params now
-deliver 80–90% of GPT-4-class quality on focused tasks at a fraction of
-the cost, on a single GPU (A10G / L4 / RTX 4090) or even on-device.
-
-What's actually shipping in production at the SLM tier:
-
-- **Grouped query attention + RoPE + GGUF quantisation** as the standard
-  efficiency stack for edge inference. Combined, they shrink KV-cache
-  pressure, cut model size 3–4× with minimal accuracy loss, and run on
-  consumer hardware.
-- **Distilled / synthetic-data SFT** as the dominant training recipe at
-  the SLM tier — Phi-4 in particular is the canonical example of a small
-  model trained on tightly curated synthetic data outperforming much
-  larger models on focused benchmarks.
-- **Ollama / llama.cpp deployment patterns** for offline / private
-  workflows. The "small model on the laptop, frontier model on the API
-  for hard cases" pattern is now mainstream rather than experimental.
-
-The procurement read: for any workflow where 80–90% of GPT-4 quality is
-sufficient, the right answer is no longer "use the cheapest API". The
-right answer is now "self-host an SLM and route to the frontier on
-escalation."
-
-Sources:
-- [Top 10 Small Language Models 2026 — Intuz](https://www.intuz.com/blog/best-small-language-models)
-- [SLM Complete Guide 2026 — Calmops](https://calmops.com/ai/small-language-models-slm-complete-guide-2026/)
-- [Phi-4 vs Gemma 3 vs Llama 3.3 — Meta-Intelligence](https://www.meta-intelligence.tech/en/insight-slm-enterprise)
-- [Best Open-Source SLMs 2026 — BentoML](https://www.bentoml.com/blog/the-best-open-source-small-language-models)
-- [Best Small AI Models with Ollama 2026 — Local AI Master](https://localaimaster.com/blog/small-language-models-guide-2026)
-
----
-
-## 13. End-of-month synthesis: what to act on
-
-Compact summary of what April moved, calibrated for an engineering team
-planning Q3:
-
-1. **Treat model selection as a router problem.** The frontier is plural
-   — GPT-5.5 / Opus 4.7 / Gemini 3.1 Pro / DeepSeek V4-Pro / GLM-5.1 /
-   Mythos each win different rows. Build the router before you commit to
-   any single vendor.
-2. **Adopt the converged coding harness, not a single tool.** Cursor 3
-   for IDE, Claude Code or Codex CLI for terminal, MCP for tools,
-   isolated sandboxes for execution. The pieces are interoperable now.
-3. **Plan for disaggregated inference.** If you serve at scale, the
-   prefill/decode split (HTX301 pattern) plus diffusion drafters
-   (DFlash) are where the next 2–6× cost-per-token improvement comes
-   from.
-4. **Treat memory and context as infrastructure, not preprocessing.**
-   Filter / rank / prune / summarise / isolate, and architect episodic /
-   semantic / procedural memory layers explicitly. Long-context window
-   size is necessary but not sufficient.
-5. **Push RLVR beyond math/code.** Rubrics-as-Rewards and K2V make
-   verifier-style training tractable in domains you previously couldn't
-   touch. Pilot one judgment-heavy workflow this quarter.
-6. **Score conversations, not prompts.** The 97.14% multi-turn jailbreak
-   result raises the safety floor — trajectory-level scoring + runtime
-   policy controls are now the minimum viable defence.
-7. **Update procurement assumptions for open weights.** With DeepSeek V4
-   under MIT, Gemma 4 under Apache, and GLM-5.1 open, the "open is two
-   generations behind" assumption is wrong for many workloads. Re-run
-   the build-vs-buy math.
-8. **Default to omni-modal where you have multimodal needs.** Single-
-   transformer omni models (Qwen3.5-Omni, Nemotron 3 Nano Omni) collapse
-   the per-modality fleet into one — the right architecture if any of
-   your workflows touch more than one modality.
-
-```mermaid
-mindmap
-  root((End-April action set))
-    Routing
-      Multi-model by task
-      Frontier is plural
-      Open + proprietary
-    Coding stack
-      Cursor 3
-      Claude Code
-      Codex CLI plugin
-      Worktree sandboxes
-    Inference
-      Prefill / decode split
-      HTX301 disaggregation
-      DFlash 6x diffusion drafters
-    Context & Memory
-      Filter rank prune
-      Episodic semantic procedural
-      Context-Bench LongBench v2
-    Post-training
-      RLVR widens
-      Rubrics as Rewards
-      K2V for knowledge
-    Safety
-      Trajectory scoring
-      Runtime policy controls
-      Multi-turn defence
-    Open weights
-      DeepSeek V4 MIT
-      Gemma 4 Apache
-      GLM-5.1 open
-      Single-rack post-training
-    Multimodal
-      Qwen3.5-Omni
-      Nemotron 3 Nano Omni
-      Single-fleet economics
+    section Eval
+    Calibration leaderboards :e1, 2026-05-01, 31d
+    Reliability instrumentation :e2, 2026-05-08, 24d
 ```
 
 ---
 
-*Generated 2026-04-30 (America/Los_Angeles). This is an end-of-month
-consolidated brief, written to be self-contained — pricing and benchmark
-numbers reflect end-of-day April 30 snapshots and may be restated as
-labs publish system cards. Diagrams are Mermaid (theme-adaptive) and
-SVG with stroke-and-text colours chosen to render legibly in both light
-and dark modes.*
+## 9. End-of-month action set (refresh)
+
+Eight items, distinct from the action-set in earlier April-30 passes
+because the underlying signal has moved:
+
+1. **Instrument your own Reliability Decay Curve.** Pass@1 on a public
+   benchmark is a thin proxy for production agent behaviour. Measure
+   pass@k as a function of trajectory length on *your* workflow.
+2. **Add calibration-aware scoring to internal evals.** Penalise
+   confident wrongness; reward "I don't know". The AA-Omniscience
+   scoring rule is the easiest one to copy.
+3. **Pair reasoning-model routing with verification.** K2V or
+   self-consistency thresholding. Treat unverified reasoning output as
+   draft-quality, not final-quality.
+4. **Re-evaluate models on a 30-day cadence.** Mistral 3.5, ERNIE 5.1,
+   GPT-5.5 public, and at least one Glasswing-style gated model are
+   all in the May window. Quarterly re-evaluation is too slow now.
+5. **Plan for memory-as-policy.** Treat memory operations as tools the
+   agent can call; train the policy with RL or at least with offline
+   trajectory shaping. Hard-coded memory pipelines under-perform on
+   long horizons.
+6. **Watch MoE-attention experiments in your own stack.** SwitchHead
+   is the lowest-effort port; HyperMoE the highest-upside variant. If
+   you train your own MoE, one of these will likely sit on the FLOPs
+   frontier by year-end.
+7. **Don't lock into a single agent OS.** Agent control planes are
+   still maturing. Gemini Enterprise Agent Platform is one bet; the
+   open MCP + worktree + sandbox stack is another. Build to a
+   protocol surface, not to a single vendor's UI.
+8. **Treat top-tier frontier models as custodially-distributed
+   software.** With Glasswing as precedent, the most capable models
+   may not be available at all on your standard cloud. Plan for the
+   case where the model you want is gated behind a partnership rather
+   than an API.
+
+---
+
+*Generated 2026-04-30 (America/Los_Angeles). This iteration overwrites
+prior April 30 drafts. Diagrams are Mermaid (theme-adaptive) and SVG;
+SVG colour palettes use stroke-and-text contrasts that render legibly
+against both light and dark backgrounds. Where source pages were
+unavailable or rate-limited, the table values have been left
+unchanged from publicly disclosed numbers as of end-of-day April 30.*

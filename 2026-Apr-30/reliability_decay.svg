@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>Reliability Decay Curves for long-horizon LLM agents</title>
+  <desc>Pass@k decays as task duration grows; the Reliability Decay Curve, Variance Amplification Factor, Graceful Degradation Score, and Meltdown Onset Point each instrument a different facet of long-horizon agent failure.</desc>
+
+  <style>
+    .axis    { stroke: #6b7280; stroke-width: 1.4; fill: none; }
+    .grid    { stroke: #d1d5db; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+    .label   { fill: #374151; font-size: 12px; }
+    .axisLbl { fill: #374151; font-size: 13px; font-weight: 600; }
+    .title   { fill: #111827; font-size: 16px; font-weight: 700; }
+    .legend  { fill: #374151; font-size: 12px; }
+    .frontier { stroke: #2563eb; stroke-width: 2.4; fill: none; }
+    .midtier  { stroke: #16a34a; stroke-width: 2.4; fill: none; stroke-dasharray: 2 2; }
+    .open     { stroke: #ea580c; stroke-width: 2.4; fill: none; stroke-dasharray: 6 4; }
+    .meltdown { stroke: #dc2626; stroke-width: 1.6; fill: none; stroke-dasharray: 2 4; }
+    .annot    { fill: #6b21a8; font-size: 12px; font-style: italic; }
+    @media (prefers-color-scheme: dark) {
+      .axis, .grid { stroke: #94a3b8; }
+      .grid { stroke: #475569; }
+      .label, .axisLbl, .legend { fill: #e5e7eb; }
+      .title { fill: #f3f4f6; }
+      .annot { fill: #c4b5fd; }
+    }
+  </style>
+
+  <text class="title" x="40" y="36">Reliability Decay Curves — pass@1 vs task duration</text>
+
+  <!-- plot area: x 90..820, y 70..360 -->
+  <line class="axis" x1="90" y1="360" x2="820" y2="360"/>
+  <line class="axis" x1="90" y1="70"  x2="90"  y2="360"/>
+
+  <!-- gridlines -->
+  <line class="grid" x1="90" y1="305" x2="820" y2="305"/>
+  <line class="grid" x1="90" y1="247" x2="820" y2="247"/>
+  <line class="grid" x1="90" y1="189" x2="820" y2="189"/>
+  <line class="grid" x1="90" y1="131" x2="820" y2="131"/>
+
+  <!-- y labels -->
+  <text class="label" x="80" y="364" text-anchor="end">0%</text>
+  <text class="label" x="80" y="309" text-anchor="end">25%</text>
+  <text class="label" x="80" y="251" text-anchor="end">50%</text>
+  <text class="label" x="80" y="193" text-anchor="end">75%</text>
+  <text class="label" x="80" y="135" text-anchor="end">100%</text>
+
+  <!-- x labels (steps) -->
+  <text class="label" x="90"  y="380" text-anchor="middle">1</text>
+  <text class="label" x="236" y="380" text-anchor="middle">10</text>
+  <text class="label" x="382" y="380" text-anchor="middle">100</text>
+  <text class="label" x="528" y="380" text-anchor="middle">500</text>
+  <text class="label" x="674" y="380" text-anchor="middle">1k</text>
+  <text class="label" x="820" y="380" text-anchor="middle">10k</text>
+
+  <text class="axisLbl" x="455" y="408" text-anchor="middle">Trajectory length (tool calls / steps, log scale)</text>
+
+  <g transform="translate(40,215) rotate(-90)">
+    <text class="axisLbl" x="0" y="0" text-anchor="middle">pass@1</text>
+  </g>
+
+  <!-- Frontier curve (Mythos / Opus 4.7-class) -->
+  <path class="frontier"
+        d="M 90,135  C 200,138 320,150 400,168 S 540,225 620,278 S 760,330 820,348" />
+
+  <!-- Mid-tier curve (GPT-5.5 / Gemini 3.1) -->
+  <path class="midtier"
+        d="M 90,148  C 200,158 300,180 380,210 S 540,290 620,322 S 760,348 820,355" />
+
+  <!-- Open-weight curve (DeepSeek V4) -->
+  <path class="open"
+        d="M 90,165  C 200,182 300,215 360,245 S 500,318 600,344 S 760,358 820,360" />
+
+  <!-- Meltdown threshold -->
+  <line class="meltdown" x1="90" y1="305" x2="820" y2="305"/>
+  <text class="annot" x="820" y="299" text-anchor="end">25% — meltdown threshold</text>
+
+  <!-- Annotations: VAF widens, MOP, GDS -->
+  <text class="annot" x="510" y="252">VAF: variance fans out past ~100 steps</text>
+  <text class="annot" x="650" y="335">MOP: behavioural collapse</text>
+  <line class="grid" x1="620" y1="278" x2="700" y2="335" stroke-dasharray="2 2"/>
+
+  <!-- Legend -->
+  <rect x="600" y="80" width="220" height="86" rx="8" fill="none" stroke="#94a3b8" stroke-dasharray="3 3"/>
+  <line class="frontier" x1="616" y1="100" x2="650" y2="100"/>
+  <text class="legend" x="660" y="104">Frontier (Mythos / Opus 4.7-class)</text>
+  <line class="midtier" x1="616" y1="124" x2="650" y2="124"/>
+  <text class="legend" x="660" y="128">Mainstream (GPT-5.5, Gemini 3.1)</text>
+  <line class="open" x1="616" y1="148" x2="650" y2="148"/>
+  <text class="legend" x="660" y="152">Open-weight frontier (V4-Pro)</text>
+</svg>
