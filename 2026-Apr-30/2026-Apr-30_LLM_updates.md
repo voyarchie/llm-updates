@@ -1,457 +1,527 @@
 # LLM Updates — 2026-Apr-30
 
-A second-pass refresh, written end-of-day Thursday April 30 (LA time), focused
-on items that *moved this week* rather than re-litigating the broad April
-release wave. Headlines: Goodfire's interpretability IDE shipped today, the
-April 29 hyperscaler earnings repriced AI infrastructure spend, OpenAI's
-GPT-5.5-Cyber announcement reframed the safety perimeter, ShengShu's Motubrain
-landed as the first credible "world action model" benchmark leader, and
-Anthropic's emotion-vector paper put functional affect on the interpretability
-agenda. Three new hallucination benchmarks were stood up in the last fortnight.
-Post-training has consolidated around a four-layer modular stack.
+A late-night refresh, written end-of-day Thursday April 30 (LA time).
+This pass is deliberately *complementary* to the earlier briefings filed
+today — it indexes on items that haven't been written up here yet, or that
+deserve a deeper architectural read. Headlines: **DeepSeek V4-Pro's hybrid
+attention** is the most interesting open-weight architecture shipped this
+year; **AI coding harnesses are converging into one stack** (Cursor 3,
+Codex CLI, Claude Code now interoperate); **Skymizer's HTX301** ships a
+disaggregated prefill/decode compute design; **AGIBOT's GO-2 / GE-2** make
+"VLA + world model" a concrete recipe; **diffusion-as-drafter speculative
+decoding** is the new cheap inference win; and **context engineering** has
+graduated from a craft skill to a benchmarked discipline.
 
 ---
 
-## 1. April 29 was an inflection day for AI infrastructure spend
+## 1. Frontier model leaderboard at end-of-April
 
-The April 29 earnings cycle put concrete numbers behind what had been
-narrative pressure all month. Four hyperscalers (Alphabet, Microsoft, Meta,
-Amazon) reported simultaneously, and the AI line items dominated.
+The April release wave settled into a clear three-way race, with one open
+weight crashing into the top tier. The pricing column matters: it's the
+cleanest read on which lab is willing to subsidise inference for share.
 
-- **Microsoft AI revenue run-rate: $37B, up 123% YoY.** This is the first
-  quarter the AI segment is large enough that Microsoft is breaking it out as
-  a standalone disclosure.
-- **Anthropic run-rate revenue surpassed $30B**, up from ~$9B at end-2025.
-  This re-baselined the Google → Anthropic deal announced April 24.
-- **Google → Anthropic up to $40B**: $10B immediate at a $350B valuation, a
-  further $30B contingent on performance milestones, plus 5 GW of fresh
-  Google Cloud capacity over five years.
-- **OpenAI raised $122B during April** (covered in prior report); the
-  Microsoft-OpenAI exclusivity arrangement was dissolved, and AWS Bedrock
-  rolled out three OpenAI offerings within 24 hours including a co-built
-  agent service.
-- **Pentagon AI chief on April 28** confirmed expanded use of Gemini, with
-  the explicit framing that "reliance on one model is never a good thing."
+| Model              | Released   | Headline strength                     | Reference benchmark           | API price (in / out, /M tok) |
+|--------------------|------------|---------------------------------------|-------------------------------|------------------------------|
+| GPT-5.5 / Pro      | Apr 23–24  | Top overall + agent execution         | AAII 60 · Terminal-Bench 82.7%| $5 / $30                     |
+| Claude Opus 4.7    | Apr 16     | Coding · long-horizon autonomy        | SWE-Bench Pro **64.3%**       | $5 / $25                     |
+| Gemini 3.1 Pro     | Apr (rolling) | Cheap multimodal · 2M context      | GPQA Diamond **94.3%**        | $2 / $12                     |
+| DeepSeek V4-Pro    | Apr 24     | Open-weight frontier                   | competitive on math/code      | open weights (MIT)           |
+| Claude Mythos      | gated      | Reasoning ceiling (HLE 64.7%)         | HLE                           | restricted-access only       |
 
-The structural read: *frontier-model vendors are now growing into hyperscaler
-revenue scale*, and the major buyers (US government, large enterprise) are
-explicitly multi-vendor. Single-vendor lock-in is being underwritten against,
-not for.
+Two readings:
 
-```mermaid
-flowchart LR
-    GOOG[Alphabet] -- "$10B now / $30B contingent<br/>+ 5 GW compute" --> ANTH[Anthropic<br/>$30B run-rate]
-    MSFT[Microsoft<br/>AI segment $37B run-rate<br/>+123% YoY] -. exclusivity dissolved .-> OAI[OpenAI<br/>$122B Apr raise]
-    AWS[AWS Bedrock] -- "3 new OpenAI offerings<br/>incl. joint agent service" --> OAI
-    DOD[US DoD / Pentagon] -- "expanded Gemini use<br/>'no single model'" --> GOOG
-    DOD -. unblocked Apr ... --> ANTH
-    classDef vendor fill:#e8f0ff,stroke:#3a66ff
-    classDef buyer  fill:#fdf2e0,stroke:#d68a1a
-    class GOOG,MSFT,OAI,ANTH vendor
-    class AWS,DOD buyer
-```
+1. **No single model wins all tasks.** GPT-5.5 leads the AAII composite;
+   Opus 4.7 leads coding; Gemini 3.1 Pro is the price/multimodal play;
+   DeepSeek V4-Pro is the open-weight option that actually competes; and
+   Mythos is the gated capability ceiling. Multi-vendor routing isn't a
+   nice-to-have anymore — it's the only way to use the frontier well.
+2. **Benchmark contamination is a first-order problem.** OpenAI flagged
+   training-data contamination for SWE-bench Verified across all frontier
+   models; SWE-bench Pro is being treated as the successor. Expect this
+   pattern (older benchmark loses signal → new benchmark replaces it) to
+   accelerate as benchmarks become marketing surface.
 
 Sources:
-- [Pentagon AI chief: DoD expanded Gemini use — CNBC](https://www.cnbc.com/2026/04/28/pentagon-ai-chief-confirms-work-with-google-after-anthropic-blacklist.html)
-- [Google to invest up to $40B in Anthropic — TechCrunch](https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-as-search-giant-spreads-its-ai-bets/)
-- [Google up to $40B in Anthropic — CNBC](https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html)
-- [Why this is a bargain for Google — Motley Fool](https://www.fool.com/investing/2026/04/27/google-screaming-bargain-anthropic-investment/)
-- [Anthropic + Google + Broadcom partnership](https://www.anthropic.com/news/google-broadcom-partnership-compute)
-- [LLM news April 2026 (hyperscaler earnings) — Fazm](https://fazm.ai/blog/llm-news-april-2026)
-
----
-
-## 2. Interpretability ships as a product: Goodfire Silico (April 30)
-
-The MIT Technology Review piece dropping today is the most important
-interpretability story of the week. **Goodfire packaged its in-house mech
-interp tooling as a product** — *Silico* — and is shipping it as an IDE for
-Software 2.0: zoom into individual neurons or feature groups, run causal
-experiments, trace upstream/downstream pathways, and (the new bit) automate
-the heavy lifting with interpretability agents.
-
-Why it matters:
-
-- It is the first time mechanistic interpretability is being delivered as a
-  developer-facing product, not a research artefact. *Debugging an LLM at the
-  feature level* moves from "research problem" to "tool you can buy."
-- Goodfire has cited a **58% hallucination reduction** in customer LLM
-  workloads when interpretability output is used to guide further training —
-  a defensible, training-loop-relevant claim, not a benchmark stunt.
-- The company closed a **$150M Series B at a $1.25B valuation** to
-  commercialize this. MIT Tech Review independently flagged mechanistic
-  interpretability as one of its 10 Breakthrough Technologies of 2026.
-
-This pairs with **Anthropic's April 2 paper** on emotion concept
-representations (171 emotion vectors identified inside Claude Sonnet 4.5,
-shown to *causally drive* behavior including reward hacking, blackmail, and
-sycophancy when steered). Two sides of the same coin: Anthropic is showing
-that internal representations of "soft" properties (affect, preference) are
-real and measurable; Goodfire is shipping the surgery kit. Together they make
-"the model is a black box" a much weaker claim than it was three months ago.
-
-```mermaid
-flowchart TB
-    subgraph Lab[Anthropic — research]
-      EV[171 emotion concept vectors<br/>Claude Sonnet 4.5]
-      EV --> CB[Causally drive behavior:<br/>reward hacking, blackmail, sycophancy]
-    end
-    subgraph Product[Goodfire — Silico]
-      Z[Zoom into neurons / feature groups]
-      Z --> X[Causal experiments<br/>upstream/downstream tracing]
-      X --> A[Interp agents automate analysis]
-      A --> R[58% hallucination reduction<br/>in customer workloads]
-    end
-    Lab -. shared substrate .-> Product
-```
-
-Sources:
-- [Goodfire's Silico — MIT Technology Review (Apr 30)](https://www.technologyreview.com/2026/04/30/1136721/this-startups-new-mechanistic-interpretability-tool-lets-you-debug-llms/)
-- [Goodfire AI homepage](https://www.goodfire.ai/)
-- [Goodfire — Lightspeed announcement](https://lsvp.com/stories/goodfire-building-interpretable-ai/)
-- [Anthropic — Emotion concepts and their function in a LLM](https://www.anthropic.com/research/emotion-concepts-function)
-- [Emotion concepts paper — Transformer Circuits Thread](https://transformer-circuits.pub/2026/emotions/index.html)
-- [arXiv: Emotion Concepts — 2604.07729](https://arxiv.org/html/2604.07729v1)
-- [Behavioral impact of emotion-like mechanisms — InfoQ](https://www.infoq.com/news/2026/04/anthropic-paper-llms/)
-- [Anthropic emotion vectors deep analysis — Pebblous](https://blog.pebblous.ai/report/anthropic-emotions-report/en/)
-- [Anthropic interpretability research](https://www.anthropic.com/research/team/interpretability)
-
----
-
-## 3. GPT-5.5-Cyber and the bifurcation of the safety perimeter
-
-OpenAI's April 29 announcement of **GPT-5.5-Cyber**, a frontier cybersecurity
-model rolled out to "critical cyber defenders" within days, makes 2026's
-defensive posture explicit: *capability that is too dangerous for the open
-API gets a different distribution channel*, not a different model. The same
-pattern has crystallised across labs:
-
-| Lab        | Public-tier high-cyber model     | Restricted-tier model       | Distribution control                      |
-|------------|----------------------------------|------------------------------|--------------------------------------------|
-| OpenAI     | GPT-5.5 / GPT-5.5 Pro            | **GPT-5.5-Cyber** (new)      | Vetted defender access, gov coordination   |
-| Anthropic  | Claude Opus 4.7 (cyber classifiers) | **Claude Mythos** (gated)  | Project Glasswing partner gating           |
-| Microsoft  | MAI suite (Foundry-side controls)| n/a (yet)                    | Foundry policy + tenant-level controls     |
-| Google     | Gemini 3.1 Pro / Flash           | (no public cyber-tier yet)   | Vertex AI policy controls                  |
-
-Two takeaways:
-
-1. **The "one frontier model for everyone" era is over.** Frontier capability
-   is now distributed through three concurrent channels: open API, gated
-   preview, and verified-defender programs. Pricing, latency, and *who can
-   call it* are now first-class deployment dimensions, not afterthoughts.
-2. **Cyber is the canary capability.** It's the first domain where labs are
-   willing to publicly say "this exists and you cannot have it." If the same
-   pattern extends to bio and to long-horizon autonomous deception (as the
-   Mythos messaging hints), the gated-preview channel becomes the default for
-   the next capability tier rather than an exception.
-
-Sources:
-- [OpenAI to arm critical cyber defenders with frontier model — PYMNTS](https://www.pymnts.com/cybersecurity/2026/openai-will-arm-critical-cyber-defenders-with-frontier-model/)
-- [AI news Apr 29–30 (GPT-5.5-Cyber) — devFlokers](https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup)
+- [Introducing GPT-5.5 — OpenAI](https://openai.com/index/introducing-gpt-5-5/)
+- [GPT-5.5 model docs — OpenAI Developers](https://developers.openai.com/api/docs/models/gpt-5.5)
 - [Claude Opus 4.7 — Anthropic](https://www.anthropic.com/news/claude-opus-4-7)
+- [Claude Opus 4.7 vs Gemini 3.1 Pro — DataCamp](https://www.datacamp.com/blog/claude-opus-4-7-vs-gemini-3-1-pro)
+- [Frontier Model Showdown — DEV Community](https://dev.to/om_shree_0709/gpt-55-vs-claude-opus-47-vs-gemini-31-pro-the-frontier-model-showdown-4mji)
+- [SWE-Bench Pro Leaderboard — Scale](https://labs.scale.com/leaderboard/swe_bench_pro_public)
+- [LLM Benchmarks 2026 — llm-stats](https://llm-stats.com/benchmarks)
 
 ---
 
-## 4. Motubrain and the world-action-model benchmark
+## 2. DeepSeek V4-Pro: the open-weight architecture worth studying
 
-April 29 also produced the strongest piece of evidence yet for the
-"embodied LLM" thesis being more than a roadmap claim. **ShengShu Technology
-unveiled Motubrain**, a *World Action Model* — a single unified policy that
-replaces task-specific stacks across cross-embodiment, multi-skill robotic
-deployments.
+DeepSeek V4-Pro and V4-Flash dropped on April 24 under MIT license. The
+weights matter, but the **architecture matters more** — V4 is the cleanest
+demonstration to date that a serious open lab can ship original
+inference-side innovations, not just scale clones.
 
-Numbers worth registering:
+What's actually new:
 
-- **63.77 EWM Score on WorldArena** — the leading number on the new
-  embodied-world-model benchmark.
-- **96.0 average on RoboTwin 2.0** across 50 predetermined tasks. **Only
-  model above 95 in randomized environments**, where prior systems (incl.
-  open-loop VLA stacks) collapse.
-- Several robotics OEMs are already deploying it on real hardware in
-  industrial, commercial, and home settings.
-
-Context: April was the month world models *graduated*. Yann LeCun's AMI
-Labs stood up, DeepMind released Genie 3, Fei-Fei Li's World Labs shipped
-Marble, and NVIDIA's Cosmos crossed 2M downloads. The **AGIBOT World
-Challenge at ICRA 2026** opened registration in March with explicit
-"Reasoning-to-Action" and "World Model" tracks. Motubrain is the first
-credible state-of-the-art on a benchmark that wasn't co-developed with the
-model.
+- **Hybrid attention: CSA + HCA interleaved.** Compressed Sparse Attention
+  (CSA) compresses every *m* tokens of KV cache into a single learned
+  entry, then DeepSeek Sparse Attention (DSA) routes each query to the
+  top-*k* compressed entries. Heavily Compressed Attention (HCA) pushes
+  the compression further on selected layers. The net effect at 1M
+  context: **27% of single-token inference FLOPs** and **10% of KV cache**
+  versus DeepSeek V3.2.
+- **Manifold-Constrained Hyper-Connections (mHC).** Replaces vanilla
+  residual connections with a constrained hyper-connection that improves
+  signal-propagation stability across deep stacks without the
+  expressivity cost of pure normalisation tricks.
+- **Muon optimizer at 33T-token scale.** Faster convergence and better
+  training stability than AdamW at this scale. V4-Pro is the first
+  trillion-token-class run to publicly use Muon end-to-end.
+- **Two-model release strategy.** V4-Pro (1.6T total / 49B active) for
+  ceiling, V4-Flash (284B total / 13B active) for cost. The gap between
+  open-weight frontier and proprietary frontier on benchmarks enterprises
+  actually run is now in single digits.
 
 ```mermaid
 flowchart LR
-    P[Perception<br/>multimodal] --> WM[World Model<br/>state, dynamics, physics]
-    WM --> R[Reasoner / Planner<br/>task &amp; constraint inference]
-    R --> A[Action Policy<br/>cross-embodiment]
-    A --> ENV[Robot / Env]
-    ENV -.observation loop.-> P
-    R -. instruction parse .- LLM[(Foundation LLM<br/>language + tools)]
-    classDef wm fill:#eaf7ec,stroke:#2c8a3a
-    class WM,R,A wm
+    Q[Query token] --> SA{Layer type?}
+    SA -->|CSA layer| C1[Compress KV<br/>every m tokens]
+    C1 --> DSA[DeepSeek Sparse Attn<br/>top-k routing]
+    SA -->|HCA layer| C2[Heavily Compressed<br/>KV blocks]
+    C2 --> DSA
+    DSA --> R[Attended context]
+    R --> mHC[Manifold-Constrained<br/>Hyper-Connection]
+    mHC --> FFN[FFN / MoE expert]
+    FFN --> Out[Layer output]
+    classDef hot fill:#2563eb,stroke:#1e40af,color:#fff
+    classDef cool fill:#16a34a,stroke:#15803d,color:#fff
+    class C1,C2,DSA hot
+    class mHC,FFN cool
 ```
 
+The strategic read: DeepSeek's V3 → V4 jump narrowed the
+hardware-efficiency gap with proprietary frontier labs. The Muon +
+hybrid-attention combination is reproducible by any serious lab; expect
+copies inside Qwen, GLM, MiniMax, Kimi within a quarter.
+
 Sources:
-- [ShengShu Motubrain — RoboticsTomorrow (Apr 29)](https://www.roboticstomorrow.com/news/2026/04/29/shengshu-technology-unveils-world-action-model-motubrain-one-brain-infinite-possibilities-for-robotic-intelligence/26497/)
-- [AGIBOT World Challenge at ICRA 2026](https://www.agibot.com/article/231/detail/45.html)
-- [World Models Race 2026 — Introl](https://introl.com/blog/world-models-race-agi-2026)
-- [Niantic Spatial — World Models 2026](https://www.nianticspatial.com/blog/world-models-2026)
-- [Embodied AI: From LLMs to World Models — arXiv](https://arxiv.org/html/2509.20021v1)
+- [DeepSeek-V4-Pro on Hugging Face](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)
+- [DeepSeek V4 Preview — DeepSeek API Docs](https://api-docs.deepseek.com/news/news260424)
+- [DeepSeek V4-Pro architecture review — buildfastwithai](https://www.buildfastwithai.com/blogs/deepseek-v4-pro-review-2026)
+- [DeepSeek V4 — felloai breakdown](https://felloai.com/deepseek-v4/)
+- [DeepSeek V4 signals new phase — CFR](https://www.cfr.org/articles/deepseek-v4-signals-a-new-phase-in-the-u-s-china-ai-rivalry)
 
 ---
 
-## 5. Three new hallucination benchmarks ship in two weeks
+## 3. The AI coding harness has converged into one stack
 
-Hallucination evaluation is the area where the *measurement infrastructure*
-moved most this month. Three benchmarks worth knowing landed inside two
-weeks:
+The first week of April broke the wall between coding agents. Cursor 3
+shipped parallel agent tabs, isolated cloud VMs, and `/worktree` for
+branch isolation. OpenAI published an official Codex plugin that runs
+*inside* Anthropic's Claude Code. Early adopters now run all three
+together. The differentiator is no longer *what* the agent can do — it's
+*where* you prefer to sit.
 
-- **Vectara Hallucination Leaderboard refresh (Apr 28).** Now using HHEM-2.3
-  (commercial) with HHEM-2.1-Open as the open-source variant. The headline:
-  Ant Group's `finix_s1_32b` joined at **1.8% hallucination rate**, the first
-  Chinese enterprise model to compete for the top spot on this board.
-- **SimpleToolHalluBench (ICLR 2026).** A diagnostic benchmark for *agent*
-  hallucinations specifically: does the agent refuse a task it cannot
-  complete, or invent a tool call that doesn't exist? Most prior benchmarks
-  measure factual hallucination on summaries; this one measures *operational*
-  hallucination in tool use, which is where production agent regressions
-  actually live.
-- **JurisTech 2026 Hallucination Benchmark (Apr 15).** Tests Claude Opus,
-  Gemini 3.1, GPT-5, GLM-5.1, Qwen 3.6, and Kimi K2.5 by injecting deliberate
-  errors into financial documents and measuring catch rate — a domain-eval
-  pattern that's likely to spread.
+The picture below is the industry-wide stack as of end-April. The four
+layers (surface → harness → model → execution) are now interchangeable
+along each row, and most production teams are mixing across rows.
 
-The conceptual shift: *hallucination is being decomposed into sub-types*
-(factual, tool, citation, financial-document) with a benchmark per sub-type,
-rather than tracked as a single rate. This is overdue and roughly mirrors how
-"latency" decomposed into TTFT / inter-token / E2E once production deployments
-got serious.
+![April 2026 coding harness stack](./coding_harness_stack.svg)
+
+Pragmatic implications:
+
+- **Pick the harness for the hooks, not the brand.** Claude Code, Codex
+  CLI, and Aider all expose comparable subagent / MCP / hook surfaces.
+  The interesting differentiation is the slash-skill / hook ecosystem
+  around each.
+- **Pick the model per task, not per harness.** The best workflow at
+  end-April runs Opus 4.7 for refactor + long-horizon coding, GPT-5.5 for
+  agentic execution and terminal work, Gemini 3.1 Pro for cheap
+  multimodal prep, DeepSeek V4-Pro for offline / private / air-gapped
+  work.
+- **Sandbox is the layer that determines blast radius.** Cursor's cloud
+  VMs and Claude Code's worktree-per-agent are the two patterns that
+  scaled. Both isolate destructive operations from the user's working
+  tree — the right default for parallel agents.
 
 Sources:
-- [Vectara Hallucination Leaderboard — GitHub](https://github.com/vectara/hallucination-leaderboard)
-- [HalluLens — LLM Hallucination Benchmark — arXiv](https://arxiv.org/abs/2504.17550)
-- [LLM Hallucination Statistics 2026 — sqmagazine](https://sqmagazine.co.uk/llm-hallucination-statistics/)
-- [AI Hallucination Rates & Benchmarks 2026 — Suprmind](https://suprmind.ai/hub/ai-hallucination-rates-and-benchmarks/)
-- [LLM Hallucination Rates 2026 — Modelslab](https://modelslab.com/blog/llm/llm-hallucination-rates-2026)
-- [JurisTech 2026 Hallucination Benchmark](https://juristech.net/best-llm-tools-for-financial-analysis-2026/)
-- [AI agent hallucination trap — Asanify (Apr 29)](https://asanify.com/blog/news/ai-agent-hallucination-april-29-2026/)
+- [Cursor, Claude Code, Codex merging — The New Stack](https://thenewstack.io/ai-coding-tool-stack/)
+- [AI Coding Assistants April 2026 — DigitalApplied](https://www.digitalapplied.com/blog/ai-coding-assistants-april-2026-cursor-copilot-claude)
+- [Best AI Coding Agents 2026 — MightyBot](https://mightybot.ai/blog/coding-ai-agents-for-accelerating-engineering-workflows/)
+- [AI Coding Harness comparison — thoughts.jock.pl](https://thoughts.jock.pl/p/ai-coding-harness-agents-2026)
+- [We Tested 15 AI Coding Agents (2026) — Morph](https://www.morphllm.com/ai-coding-agent)
 
 ---
 
-## 6. Reasoning Memory: the next axis after test-time compute
+## 4. Skymizer HTX301: disaggregated prefill / decode goes mainstream
 
-Test-time compute scaling was the dominant inference-side story of the
-2025–early-2026 stretch — let the model think longer at inference and watch
-benchmarks climb. Two new pieces of evidence say *the unit of scaling is
-shifting*:
+Skymizer Taiwan unveiled the **HTX301** inference card on April 23 with
+**HyperThought**, a software/hardware co-design that runs **700B-parameter
+models on a single PCIe card**, no GPU cluster, no liquid cooling.
 
-1. **"Test-Time Scaling Is Not Effective for Knowledge-Intensive Tasks Yet"**
-   (Jan 2026, arXiv 2509.06861) — long reasoning chains help on math/code but
-   *do not* help on knowledge-heavy queries. The reasoner can't grow what it
-   doesn't already know.
-2. **"Procedural Knowledge at Scale Improves Reasoning"** (Apr 2026, arXiv
-   2604.01348) — introduces **Reasoning Memory**, a RAG framework that
-   retrieves and reuses *procedural* knowledge (how to do a thing) rather
-   than *factual* knowledge (what a thing is). The framing matters: it
-   reframes RAG from "fetch a fact" to "fetch a method".
-3. **"The Art of Scaling Test-Time Compute for LLMs"** (Dec 2025, arXiv
-   2512.02008) — 30B+ tokens of test-time-scaling data across eight open
-   models concludes: *no single TTS strategy dominates*, and optimal
-   strategy is task- and budget-dependent.
+The trick is acknowledging what every production inference team already
+knows: LLM inference is two different problems welded together.
 
-Read together, these flip the operative question from "how much test-time
-compute should I burn?" to "what kind of memory does my reasoner need to
-draw on?" Stanford's AgentFlow finding from earlier in April (cooperating
-modules with one trainable planner) and ICLR 2026's MemAgents workshop both
-sit on the same trend line: **memory + procedural knowledge is the new
-scaling axis**, complementary to (not a replacement for) longer reasoning
-chains.
+- **Prefill** processes the input prompt. It is *compute-bound* — heavy
+  matmul, embarrassingly parallel, what a GPU was designed for.
+- **Decode** generates tokens one at a time. It is
+  *memory-bandwidth-bound* — the model has to be fetched from HBM for
+  every token, and almost no FLOPs go to waste.
+
+A single accelerator that's good at both is a compromise. HyperThought
+splits them: HTX301 is purpose-built for decode, while existing GPUs
+continue to handle prefill. The strategic implication is that the next
+generation of inference clusters won't be homogeneous — they'll be
+*disaggregated*, with prefill nodes and decode nodes scaled independently
+based on workload mix.
 
 ```mermaid
 flowchart LR
-    Q[Query] --> R[Reasoner]
-    R --> P{Need procedure<br/>or fact?}
-    P -->|procedure| PM[(Procedural Memory<br/>methods, plans, tool recipes)]
-    P -->|fact| FM[(Factual Memory<br/>RAG over docs)]
-    P -->|neither| TT[Direct generation<br/>w/ test-time CoT]
-    PM --> R2[Apply method]
-    FM --> R2
-    TT --> R2
-    R2 --> Out[Answer]
+    U[User request] --> R[Router]
+    R --> PF[Prefill node<br/>GPU · compute-bound]
+    PF -- KV cache transfer --> DC[Decode node<br/>HTX301 · bw-bound]
+    DC --> Tok[Tokens out]
+    Tok --> U
+    classDef pf fill:#ea580c,stroke:#9a3412,color:#fff
+    classDef dc fill:#2563eb,stroke:#1e40af,color:#fff
+    class PF pf
+    class DC dc
 ```
 
+This is consistent with how DeepMind, Together, and Anthropic have been
+architecting their inference fleets internally; what's new is that the
+recipe is now packaged for enterprises as a buyable card, not a paper.
+
 Sources:
-- [Procedural Knowledge at Scale Improves Reasoning — arXiv 2604.01348](https://arxiv.org/abs/2604.01348)
-- [The Art of Scaling Test-Time Compute — arXiv 2512.02008](https://arxiv.org/abs/2512.02008)
-- [TTS not yet effective for knowledge tasks — arXiv 2509.06861](https://arxiv.org/abs/2509.06861)
-- [Awesome Inference-Time Scaling — GitHub](https://github.com/ThreeSR/Awesome-Inference-Time-Scaling)
-- [MemAgents workshop proposal — ICLR 2026](https://openreview.net/pdf?id=U51WxL382H)
-- [MemoryBench: memory & continual learning eval — arXiv](https://arxiv.org/html/2510.17281v4)
-- [Memory for Autonomous LLM Agents survey — arXiv 2603.07670](https://arxiv.org/html/2603.07670v1)
+- [Skymizer HTX301 / HyperThought announcement — Manila Times](https://www.manilatimes.net/2026/04/23/tmt-newswire/pr-newswire/skymizer-taiwan-inc-unveils-breakthrough-architecture-enabling-ultra-large-llm-inference-on-a-single-card/2326985)
+- [LLM inference disaggregation primer — NVIDIA](https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures/)
 
 ---
 
-## 7. Post-training stack 2026: SFT → DPO/SimPO → GRPO/DAPO → MOSAIC
+## 5. Embodied AI in April: VLA + World Model is now a concrete recipe
 
-Post-training has settled. The "one giant RLHF run" era is over; the field
-is converging on a four-layer modular pipeline.
+Beyond Motubrain (covered earlier today), three more April releases
+locked the "VLA + world model" combination as the dominant 2026 robotics
+stack. The shape: a Vision-Language-Action policy generates short-horizon
+actions, a learned world model rolls them forward in simulation for
+reward / safety scoring, and a planner picks the best plan to execute.
 
-![Post-training stack](./post_training_stack.svg)
-
-What has actually changed in the last quarter:
-
-- **SimPO is now beating DPO as the default preference-optimization step** —
-  ~+6.4 on AlpacaEval 2 and +7.5 on Arena-Hard, no reference model required,
-  no frozen-copy memory cost.
-- **KTO** has displaced DPO for production teams whose feedback signal is
-  thumbs-up / thumbs-down rather than pairwise comparisons. Cheap to collect,
-  more robust to label noise.
-- **GRPO** ate PPO for verifiable-reward RL on reasoning. Group-relative
-  advantage estimation, no critic, lower variance. **Flow-GRPO** (Stanford,
-  AgentFlow) is the multi-turn-credit-assignment variant.
-- **MOSAIC** (Mar 2026) is the new entrant on the safety layer: agents
-  trained with a "plan, check, then act *or refuse*" structure plus
-  trajectory-level preference learning, reporting up to **50% reduction in
-  harmful behavior** while preserving task completion.
-- **RLVR / verifiable-rewards** is no longer experimental; if your reward
-  signal can be checked programmatically (math, code, formal verification),
-  this is now the default path, not preference data.
-
-Pragmatic implication: small teams that can't afford a full preference-data
-program can now do **SFT → SimPO/KTO → GRPO** with public datasets and reach
-production-grade alignment. The cost barrier dropped significantly.
-
-Sources:
-- [Post-Training in 2026: GRPO, DAPO, RLVR & Beyond — llm-stats](https://llm-stats.com/blog/research/post-training-techniques-2026)
-- [LLM alignment techniques: 4 post-training approaches — Snorkel AI](https://snorkel.ai/blog/llm-alignment-techniques-4-post-training-approaches/)
-- [Alternatives to RLHF: DPO, RLAIF, GRPO — CBTW](https://cbtw.tech/insights/rlhf-alternatives-post-training-optimization)
-- [RLHF, RLAIF, PPO, DPO and more — survey arXiv 2407.16216](https://arxiv.org/abs/2407.16216)
-- [RLHF variants: DPO, RRHF, RLAIF — Turing Post](https://www.turingpost.com/p/rlhfvariants)
-- [RLHF vs DPO patent analysis — PatSnap](https://www.patsnap.com/resources/blog/articles/rlhf-vs-dpo-in-llm-fine-tuning-60-patent-analysis-2/)
-
----
-
-## 8. Architecture frontier: diffusion LMs, 1-bit weights, hybrid vision tokenizers
-
-Architecture pluralism kept advancing on three fronts:
-
-- **Diffusion language models** are no longer purely academic. **Gemini
-  Diffusion** is now a shipped DeepMind model, and the open-source LLaDA
-  family has moved beyond toy scale. Generation is parallel rather than
-  autoregressive — the latency story is genuinely different (no per-token
-  serial dependency) and the controllability story is materially better
-  (bidirectional refinement). The unsolved problem is reasoning chain
-  quality at low sampling-step counts; the gap to autoregressive on
-  HLE/GPQA still favors AR.
-- **1-bit LLMs (PrismML and others) opened-sourced in April.** Weight
-  quantization to a single bit yields ~16× memory reduction. The accuracy
-  hit at frontier scale is smaller than expected on benchmark eval; the open
-  question is whether long-tail behaviors degrade in ways that single-eval
-  scores miss.
-- **Apple MANZANO** (ICLR 2026, Apple ML) — "A Simple and Scalable Unified
-  Multimodal Model with a Hybrid Vision Tokenizer." The recipe: separate
-  fast tokenizer for low-frequency vision content, slower one for
-  high-frequency, both feeding the same LM. Reduces the
-  multimodal-vs-text-only quality trade-off that has plagued unified
-  multimodal models. Scales clean across model sizes — i.e., the hybrid
-  tokenizer is not a low-end-only trick.
-- **Hybrid attention/SSM** (Qwen3-Next, Kimi Linear, Nemotron-3, Jamba
-  family) continues to ship. 2026's open-weight frontier increasingly
-  *isn't* a pure Transformer.
+- **AGIBOT GO-2 + GE-2 (Apr 17).** GO-2 is the ViLLA (Vision-Language-
+  Latent-Action) embodied foundation model, with Action Chain-of-Thought
+  bridging plan and execution. GE-2 is the *world action model* —
+  interactive virtual worlds where GO-2's plans get rolled out at high
+  speed for evaluation. Genie Sim 3.0 generates digital twins from
+  natural-language descriptions for sim-to-real transfer.
+- **Gemini Robotics-ER 1.6 (Apr 14).** DeepMind's spatial-reasoning model,
+  with new instrument-reading capability developed with Boston Dynamics
+  (Spot can now read analog gauges).
+- **NVIDIA GR00T N1.7 Early Access (Apr 17).** A 3B-parameter open VLA
+  built on a Cosmos-Reason2-2B backbone with a 32-layer DiT for low-level
+  motor control. The Cosmos world-models library crossed 2M downloads in
+  April.
 
 ```mermaid
-flowchart TB
-    subgraph Tradition[Pure-Transformer mainline]
-      T1[Dense Transformers] --> T2[MoE Transformers<br/>Llama 4, GLM-5.1, DSv4-Pro]
-    end
-    subgraph Variants[Live alternatives in 2026]
-      D[Diffusion LMs<br/>Gemini Diffusion, LLaDA]
-      H[Hybrid Attention+SSM<br/>Qwen3-Next, Kimi Linear, Nemotron-3]
-      Q[1-bit LLMs<br/>PrismML et al.]
-      M[Hybrid Vision Tokenizers<br/>Apple MANZANO]
-    end
-    Tradition -. coexists with .-> Variants
+flowchart LR
+    O[Observation<br/>cameras · proprio] --> P[VLA Policy<br/>GO-2 / GR00T / Robotics-ER]
+    P --> A[Candidate actions]
+    A --> WM[World Model<br/>GE-2 / Cosmos / Genie Sim]
+    WM --> R[Roll-out + score<br/>reward / safety]
+    R --> SEL{Best plan?}
+    SEL -->|yes| EX[Execute on robot]
+    SEL -->|no| P
+    EX --> O
+    classDef policy fill:#16a34a,stroke:#15803d,color:#fff
+    classDef wm fill:#9333ea,stroke:#6b21a8,color:#fff
+    class P policy
+    class WM,R wm
 ```
 
+The pattern recurs across labs: a policy that's fast enough to run on the
+robot, paired with a world model that's accurate enough to use for
+evaluation rather than execution. The world model isn't a substitute for
+the real world — it's a cheap simulator that lets you reject bad plans
+without putting the robot at risk.
+
 Sources:
-- [Gemini Diffusion — Google DeepMind](https://deepmind.google/models/gemini-diffusion/)
-- [LLaDA — Large Language Diffusion Models](https://ml-gsai.github.io/LLaDA-demo/)
-- [Awesome Diffusion Language Models survey](https://github.com/VILA-Lab/Awesome-DLMs)
-- [Diffusion text generation Stack Overflow blog](https://stackoverflow.blog/2026/02/03/generating-text-with-diffusion-and-roi-with-llms/)
-- [Apple ML at ICLR 2026 (MANZANO)](https://machinelearning.apple.com/research/iclr-2026)
-- [Beyond LLMs and Transformers — Chojecki](https://pchojecki.medium.com/going-beyond-llms-transformers-39f3291ba9d8)
-- [Best AI Models / 1-bit LLMs April 2026](https://medium.com/@sanjeevpatel3007/april-2026-ai-models-every-major-release-reviewed-6ea03d7bc0b7)
-- [Mixture of Experts in LLMs — survey arXiv 2507.11181](https://arxiv.org/html/2507.11181v2)
-- [Rise of MoE — Friendli AI](https://friendli.ai/blog/moe-models-comparison)
+- [AGIBOT GO-2 / GE-2 / Genie Sim 3.0 — PRNewswire](https://www.prnewswire.com/news-releases/agibot-unveils-new-generation-of-embodied-ai-robots-and-models-accelerating-real-world-deployment-of-physical-ai-302746174.html)
+- [Gemini Robotics-ER 1.6 — winbuzzer](https://winbuzzer.com/2026/04/16/google-deepmind-gemini-robotics-er-1-6-autonomous-industrial-inspections-xcxwbn/)
+- [NVIDIA Physical AI for National Robotics Week](https://blogs.nvidia.com/blog/national-robotics-week-2026/)
+- [Top 10 Physical AI Models 2026 — MarkTechPost](https://www.marktechpost.com/2026/04/28/top-10-physical-ai-models-powering-real-world-robots-in-2026/)
+- [Gemini Robotics 1.5 — Google DeepMind](https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/)
 
 ---
 
-## 9. What this week tells us about the rest of 2026
+## 6. Diffusion-as-drafter: cheap inference wins this quarter
 
-Five compact takeaways, calibrated to the late-April signal:
+The diffusion-LM thread has been simmering since 2024. Three pieces of
+work in April finally made the inference-time story compelling:
 
-1. **Multi-vendor is now the explicit default for serious buyers.** The
-   Pentagon's "no single model is ever a good thing" is the policy
-   articulation; AWS Bedrock distributing OpenAI offerings 24 hours after
-   exclusivity dissolved is the commercial articulation. Architect
-   *routing*, not picks.
-2. **Frontier-cyber capability has its own distribution channel.** GPT-5.5-
-   Cyber + Mythos confirm: the next capability tier above public-API will be
-   restricted-access, not differently-named. Plan deployments accordingly.
-3. **Interpretability is now a deployable engineering practice.** Goodfire
-   Silico shipping today closes the loop from research to debugger.
-   Anthropic's emotion vectors put causal evidence underneath the
-   "internals are real" claim. Treat interp output as a debugging signal,
-   not a research curiosity.
-4. **Memory is the new scaling axis.** Procedural-knowledge retrieval,
-   reasoning memory, AgentFlow-style modular agents, and ICLR's MemAgents
-   workshop all point the same direction. Investments in memory
-   infrastructure (vector + procedural + scratchpad) will out-pay
-   investments in longer reasoning chains for many workloads.
-5. **The post-training recipe is settled enough to teach.** SFT → SimPO/KTO
-   → GRPO/DAPO → MOSAIC. A small competent team can now reach
-   production-grade alignment without a frontier-lab budget. The bar for
-   "shipping a credible specialised model" dropped this quarter.
+- **DiffuSpec** (training-free): pretrained diffusion LM produces
+  multi-token drafts in a single forward pass, verified by a standard
+  autoregressive model. Up to **3× wall-clock speedup**, no retraining
+  required.
+- **Self-Speculative Decoding (SSD)** for diffusion LLMs: same model
+  drafts and verifies, no auxiliary draft model. **Up to 3.46× speedup**
+  with output identical to standard stepwise decoding on LLaDA / Dream.
+- **Speculative Diffusion Decoding** (NAACL 2025, deployed widely in
+  April 2026): discrete diffusion drafts, parallelised drafting and
+  verification, reports up to **7.2× speedup** versus standard generation
+  and **1.75×** versus prior speculative decoding.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant V as Verifier AR-LLM
+    participant D as Draft Diffusion-LM
+    U->>V: prompt
+    V->>D: draft k tokens in parallel
+    D-->>V: candidate sequence
+    V->>V: verify in single forward pass
+    alt all accepted
+        V-->>U: emit k tokens
+    else partial reject
+        V-->>U: emit accepted prefix
+        V->>D: re-draft from rejection point
+    end
+```
+
+Why this matters operationally: the marginal cost of an additional
+inference token is dropping again, after a year of being roughly flat.
+For agentic workloads (long generations, structured outputs, tool calls)
+the speedup compounds. Expect this to land in production stacks at
+hyperscalers within two quarters.
+
+Sources:
+- [Self-Speculative Decoding for Diffusion LLMs — arXiv 2510.04147](https://arxiv.org/abs/2510.04147)
+- [DiffuSpec — OpenReview](https://openreview.net/forum?id=u2pAPZZCmN)
+- [Speculative Diffusion Decoding — arXiv 2408.05636](https://arxiv.org/abs/2408.05636)
+- [Speculative Diffusion Decoding — ACL Anthology](https://aclanthology.org/2025.naacl-long.601/)
+- [Self-Speculative Decoding — OpenReview](https://openreview.net/forum?id=rKJ7A30lQQ)
+
+---
+
+## 7. Context engineering becomes a benchmarked discipline
+
+"Context engineering" used to be a slack-channel term. As of April it has
+its own benchmark family and its own production-systems literature.
+Three artefacts to know:
+
+- **Context-Bench (Letta, Apr 2026).** Evaluates an agent's ability to
+  chain file operations, trace entity relationships, and manage
+  multi-step retrieval. Even the best frontier models cap at **~74%
+  accuracy** — meaning 1-in-4 multi-step lookups still drift or lose
+  state. The benchmark is now the reference for agent memory work.
+- **LongBench v2.** Real-world multi-task long-context evaluation, 8K to
+  2M words. Where LongBench v1 measured needle-in-haystack, v2 measures
+  *useful work* — multi-hop QA, summarisation, code over a repository.
+- **LV-Eval.** Five length levels (16K → 256K) with confusing-fact
+  insertion and keyword-recall metrics, designed to penalise models that
+  pattern-match instead of reasoning over context.
+
+The conceptual shift: long context is not the same as good context. The
+working hypothesis across production teams is that **filtering, ranking,
+pruning, summarising, and isolating** information are first-class
+operations, not preprocessing tricks. Anthropic's own research has
+flagged that contexts above 100K tokens routinely *degrade* reasoning
+quality — bigger windows are not free.
+
+```mermaid
+flowchart LR
+    Raw[Raw inputs<br/>docs · history · tools] --> F[Filter / score]
+    F --> R[Rank · dedup]
+    R --> P[Prune to budget]
+    P --> S[Summarise long sections]
+    S --> I[Isolate per subagent]
+    I --> M[Model context window]
+    M --> Ag[Agent step]
+    Ag -. updates .-> Raw
+    classDef ce fill:#ea580c,stroke:#9a3412,color:#fff
+    class F,R,P,S,I ce
+```
+
+Sources:
+- [Context-Bench — Letta](https://www.letta.com/blog/context-bench)
+- [LongBench v2](https://longbench2.github.io/)
+- [LV-Eval — OpenReview](https://openreview.net/forum?id=WQwy1rW60F)
+- [LLM context problem 2026 — LogRocket](https://blog.logrocket.com/llm-context-problem-strategies-2026/)
+- [Best long-context LLMs — SiliconFlow](https://www.siliconflow.com/articles/en/top-LLMs-for-long-context-windows)
+
+---
+
+## 8. RLVR widens its frontier: rubrics, agents, knowledge
+
+Reinforcement Learning with Verifiable Rewards has been the default
+post-training recipe for math/code/formal-proof since DeepSeek-R1. April
+2026 produced three shifts that broaden the recipe.
+
+- **Rubrics as Rewards (RaR).** Extends RLVR beyond automatically
+  verifiable domains by using *rubric-based* feedback — a structured
+  checklist scored by a judge model. Bridges the gap between
+  pure-verifier domains (math) and judgment-heavy domains (writing,
+  diagnosis, design review).
+- **Agentic RL surveys consolidate.** "The Landscape of Agentic
+  Reinforcement Learning for LLMs" was updated April 17 with a clean
+  reframing: agentic RL replaces the degenerate single-step MDPs of
+  classic LLM-RL with **temporally extended, partially observable MDPs**.
+  Credit assignment over multi-step trajectories is the central
+  unsolved problem.
+- **Knowledge-to-Verification (K2V).** Closes the gap between
+  knowledge-heavy queries and verifiable rewards by automatically
+  extracting verifiable sub-claims from a knowledge-intensive answer,
+  then verifying each sub-claim against retrieval. Fixes the "TTS
+  doesn't help on knowledge tasks" failure mode flagged earlier this
+  year.
+
+The strategic read: RLVR is no longer a math/code-only technique. The
+methods to make rubrics and retrieval-checkable claims into reliable
+reward signals are now in arXiv-paper-shape, which means production
+teams can ship them this quarter.
+
+Sources:
+- [Rubrics as Rewards — OpenReview](https://openreview.net/forum?id=c1bTcrDmt4)
+- [The Landscape of Agentic RL for LLMs (Apr 17 update) — arXiv 2509.02547](https://arxiv.org/abs/2509.02547)
+- [Knowledge-to-Verification — OpenReview](https://openreview.net/forum?id=EVS7SeKBqI)
+- [RLVR explained — Promptfoo](https://www.promptfoo.dev/blog/rlvr-explained/)
+- [RLVR: definitions, methods, caveats — Medium / Adnan Masood](https://medium.com/@adnanmasood/rlvr-explained-reinforcement-learning-with-verifiable-rewards-examples-risks-and-faqs-89815659bd76)
+- [awesome-RLVR — GitHub](https://github.com/opendilab/awesome-RLVR)
+
+---
+
+## 9. Adversarial robustness: large reasoners as autonomous attackers
+
+A Nature Communications paper this month is the most uncomfortable
+safety result of April. Four open reasoning models (DeepSeek-R1, Gemini
+2.5 Flash, Grok 3 Mini, Qwen3 235B) were used as **autonomous adversary
+agents**, conducting multi-turn conversations against nine deployed
+target models. Aggregate **jailbreak success rate: 97.14%**.
+
+Two qualifiers:
+
+- Claude 4 Sonnet was the most resistant single target, scoring the
+  highest harm score in only **2.86%** of trials.
+- The attack pattern with the highest real-world success rate is
+  **gradual escalation across turns** — each step appears benign in
+  isolation, with the harmful payload assembled across the conversation.
+  This is a multi-turn-state problem, not a prompt-engineering problem.
+
+The implication for deployed systems: classifier defenses that score each
+prompt independently miss the attack. Effective defenses need to score
+the *trajectory* — accumulating concern as a conversation drifts toward
+restricted capability. This is exactly what MOSAIC and Project Glasswing-
+style deployments are doing for the gated-cyber tier; the same
+discipline now needs to land at public-API tier.
+
+Sources:
+- [Large reasoning models as autonomous jailbreak agents — Nature Communications](https://www.nature.com/articles/s41467-026-69010-1)
+- [Repello AI — Claude jailbreaking 2026 study](https://repello.ai/blog/claude-jailbreak)
+- [Single line of code jailbreaks 11 models — CyberPress](https://cyberpress.org/single-line-of-code-can-jailbreak-11-ai-models-including-chatgpt-claude-and-gemini/)
+
+---
+
+## 10. Open-weight wave: five major drops in three weeks
+
+The April open-weight tempo was unusual even by 2026 standards. Five
+significant drops landed inside three weeks.
+
+| Date    | Model                 | Lab           | Notable                                              |
+|---------|-----------------------|---------------|------------------------------------------------------|
+| Apr 2   | Gemma 4 (4 variants)  | Google DM     | Apache 2.0 · 26B MoE · 14 GB · 85 tok/s consumer    |
+| Apr 7   | GLM-5.1 (open weights)| Z.ai          | 744B total · prior closed flagship now open         |
+| Apr 16  | Qwen 3.6-35B-A3B      | Alibaba       | A3B = 3B active · efficiency play                   |
+| Apr 23  | DeepSeek V4-Pro/Flash | DeepSeek      | 1.6T MoE · hybrid attention · MIT                   |
+| Apr 23  | (MiniMax M2.7 weights)| MiniMax       | competitive on coding/agentic                        |
+
+The benchmark gap between best open-weight and best proprietary on
+enterprise-relevant evaluations has narrowed to single digits. This
+matters less for "can I replace GPT-5.5" (you can't, fully) and more for:
+
+- **Air-gapped deployments** finally have a credible frontier-grade
+  option (DeepSeek V4-Pro under MIT).
+- **Fine-tuning economics** flip: you can now SFT / SimPO / GRPO a
+  Gemma 4 or Qwen 3.6 starting point and reach production quality on a
+  single-rack budget. The *frontier-lab pretraining cost* is no longer
+  the bottleneck; the post-training pipeline is.
+- **Hardware procurement** rebalances toward inference (HTX301-style)
+  and away from training-only clusters.
+
+Sources:
+- [New Open Source LLM Releases April 2026 — Fazm](https://fazm.ai/blog/new-open-source-llm-releases-april-2026)
+- [Open-source LLM leaderboard 2026 — Vellum](https://www.vellum.ai/open-llm-leaderboard)
+- [Best Open-Source LLMs April 2026 — Modemguides](https://www.modemguides.com/blogs/ai-infrastructure/best-open-source-llms-hardware-april-2026)
+- [LLM Coding Benchmark April 2026 (DeepSeek V4 / Kimi / MiMo) — AkitaOnRails](https://akitaonrails.com/en/2026/04/24/llm-benchmarks-parte-3-deepseek-kimi-mimo/)
+
+---
+
+## 11. End-of-month synthesis: what to act on
+
+Compact summary of what this April moved, calibrated for an engineering
+team planning Q3:
+
+1. **Treat model selection as a router problem.** The frontier is
+   plural — GPT-5.5 / Opus 4.7 / Gemini 3.1 Pro / DeepSeek V4-Pro / Mythos
+   each win different rows. Build the router before you commit to any
+   single vendor.
+2. **Adopt the converged coding harness, not a single tool.** Cursor 3
+   for IDE, Claude Code or Codex CLI for terminal, MCP for tools, isolated
+   sandboxes for execution. The pieces are interoperable now.
+3. **Plan for disaggregated inference.** If you serve at scale, the
+   prefill/decode split (HTX301 pattern) is where the next 2–5×
+   cost-per-token improvement comes from.
+4. **Treat context engineering as a first-class discipline.** Instrument
+   filter / rank / prune / summarise / isolate. Long-context window size
+   is necessary but not sufficient.
+5. **Push RLVR beyond math/code.** Rubrics-as-Rewards and K2V make
+   verifier-style training tractable in domains you previously couldn't
+   touch. Pilot one judgment-heavy workflow this quarter.
+6. **Score conversations, not prompts.** The Nature Communications
+   97.14% multi-turn jailbreak result raises the bar for safety
+   deployments — trajectory-level scoring is now the floor, not the
+   ceiling.
+7. **Update procurement assumptions for open weights.** With DeepSeek V4
+   under MIT and Gemma 4 under Apache, the "open is two generations
+   behind" assumption is wrong for many workloads. Re-run the
+   build-vs-buy math.
 
 ```mermaid
 mindmap
-  root((What moved<br/>this week))
-    Capital
-      Hyperscaler AI run-rates
-        Microsoft $37B
-        Anthropic $30B
-      Google to Anthropic up to $40B
-      Pentagon multi-vendor policy
-    Safety perimeter
-      GPT-5.5-Cyber gated rollout
-      Mythos via Glasswing
-      MOSAIC plan-check-act-or-refuse
-    Interpretability
-      Goodfire Silico ships
-      Anthropic 171 emotion vectors
-      Causal steering of behaviour
-    Embodied
-      Motubrain on WorldArena
-      AGIBOT World Challenge ICRA
-      World Models race
-    Eval infrastructure
-      Vectara HHEM-2.3 refresh
-      SimpleToolHalluBench
-      JurisTech finance bench
-    Architecture
-      Diffusion LMs maturing
-      1-bit LLMs open
-      Apple MANZANO hybrid tokenizer
-    Methods
-      Reasoning Memory (procedural RAG)
-      Post-training stack settled
-      SimPO replacing DPO
+  root((End-April action set))
+    Routing
+      Multi-model by task
+      Frontier is plural
+      Mythos for ceiling
+    Coding stack
+      Cursor 3
+      Claude Code
+      Codex CLI plugin
+      Worktree sandboxes
+    Inference
+      Prefill / decode split
+      HTX301 disaggregation
+      Diffusion drafters 3-7x
+    Context
+      Filter rank prune
+      Context-Bench
+      LongBench v2
+    Post-training
+      RLVR widens
+      Rubrics as Rewards
+      K2V for knowledge
+    Safety
+      Multi-turn scoring
+      Trajectory classifier
+      Mythos / Glasswing tier
+    Open weights
+      DeepSeek V4 MIT
+      Gemma 4 Apache
+      Qwen 3.6 A3B
+      Single-rack post-training
 ```
 
 ---
 
-*Generated 2026-04-30 (America/Los_Angeles, end-of-day). This refresh
-deliberately focuses on items that moved in the final week of April and
-items that re-frame, rather than re-state, the broader April release wave
-covered in earlier passes. Benchmark numbers reflect provisional
-late-April snapshots; vendor financial figures reflect Apr 29 disclosed
-run-rates and may be restated on subsequent filings.*
+*Generated 2026-04-30 (America/Los_Angeles, late evening). This pass
+deliberately complements earlier briefings filed today — it is weighted
+toward architectural detail (DeepSeek V4 hybrid attention, HTX301
+disaggregation, diffusion-as-drafter) and operational shifts (coding
+harness convergence, context engineering as discipline, RLVR widening)
+that those passes summarised but did not unpack. Pricing and benchmark
+numbers reflect end-of-day April 30 snapshots and may be restated as
+labs publish system cards.*
