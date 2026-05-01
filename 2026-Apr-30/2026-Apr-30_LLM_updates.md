@@ -1,243 +1,437 @@
 # LLM Updates — 2026-Apr-30
 
-A structured snapshot of the most notable large language model developments in
-April 2026: model releases, architectural shifts, training and inference
-techniques, and safety/alignment research. Compiled from public sources
-linked at the bottom of each section.
+End-of-month snapshot of where large language models stood at the close of
+April 2026. This refresh focuses on **what's newly verifiable** as April closed
+out — the SWE-bench Pro standings, ICLR 2026 outstanding-paper picks, Stanford
+AgentFlow's emergence as the small-model agent template, MIT's rollout-side
+training acceleration, and the head-to-head positioning of Opus 4.7 / GPT-5.5 /
+Gemini 3.1 Pro that crystallised in the last week of the month. Companion
+context for the broad April release wave is in the prior section of this same
+file's history; this version emphasises late-April benchmarks, research
+results, and the state of competition rather than relisting launches.
 
 ---
 
-## 1. Major Model Releases
+## 1. The Frontier at Month-End: No Single Winner
 
-### Anthropic — Claude Opus 4.7 (Apr 16, 2026)
-- General-availability flagship; positioned as Anthropic's most powerful
-  generally-available model.
-- Lifts a 93-task internal coding benchmark by 13% over Opus 4.6 and solves
-  four tasks neither Opus 4.6 nor Sonnet 4.6 could complete.
-- Substantially better instruction following, higher-resolution vision, and
-  longer-horizon agentic task execution with self-verification.
-- Pricing unchanged from 4.6: $5 / $25 per million input/output tokens.
-- New tokenizer; expect ~1.0–1.35× more tokens per input vs prior models.
-- Available via Claude products, the API, Amazon Bedrock, and Google Cloud.
+By April 29–30, the three Western frontier proprietary models (Claude Opus 4.7
+released Apr 16, GPT-5.5 released Apr 23, Gemini 3.1 Pro carried over from
+February with cumulative updates) had been benchmarked extensively against
+each other. The result is a *specialisation map*, not a leaderboard.
 
-Sources:
-- [Introducing Claude Opus 4.7 — Anthropic](https://www.anthropic.com/news/claude-opus-4-7)
-- [Claude Opus 4.7 — Anthropic](https://www.anthropic.com/claude/opus)
-- [What's new in Claude Opus 4.7 — API Docs](https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-7)
-- [Anthropic releases Claude Opus 4.7 — CNBC](https://www.cnbc.com/2026/04/16/anthropic-claude-opus-4-7-model-mythos.html)
-- [Claude Opus 4.7 GA — GitHub Changelog](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available/)
-- [Opus 4.7 in Amazon Bedrock — AWS](https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/)
+| Capability                      | Best Model           | Score / Note                          |
+|---------------------------------|----------------------|---------------------------------------|
+| SWE-bench Pro (coding agent)    | Claude Mythos (gated)| 77.8% — public Opus 4.7: 64.3%       |
+| SWE-bench Pro, public-tier API  | Claude Opus 4.7      | 64.3% (vs GPT-5.5 58.6%, Gemini 54.2%)|
+| Terminal / command-line tasks   | GPT-5.5              | 82.7% (vs Opus 69.4%, Gemini 68.5%)   |
+| ARC-AGI-2 (abstract reasoning)  | GPT-5.5              | 85.0% (vs Gemini 77.1%, Opus 75.8%)   |
+| Knowledge work (GDPVal-AA)      | Claude Opus 4.7      | 1,753 (vs GPT-5.4 1,674, Gemini 1,314)|
+| 1M-token context, multimodal    | Gemini 3.1 Pro       | text+audio+image+video, MEDIUM thinking|
+| Price/performance, multimodal   | Gemini 3.1 Pro       | leads on cost-per-task at par quality |
 
-### Anthropic — Claude Mythos Preview (Apr 7, 2026, gated)
-- Research preview restricted to ~50 partner organizations under
-  **Project Glasswing**.
-- Strikingly strong at computer-security tasks: autonomous discovery and
-  exploitation of zero-days in major OSes and browsers; multi-stage network
-  attacks in controlled evals.
-- Preview pricing reflects gated access: $25 / $125 per million in/out tokens.
-- Anthropic withheld GA distribution citing dual-use risk; Opus 4.7 ships with
-  cyber misuse classifiers as the public-facing alternative.
+Two structural points are now clear:
 
-Sources:
-- [Claude Mythos Preview — red.anthropic.com](https://red.anthropic.com/2026/mythos-preview/)
-- [Project Glasswing — Anthropic](https://www.anthropic.com/glasswing)
-- [AISI evaluation of Mythos Preview](https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities)
-- [Claude Mythos and the future of cybersecurity — CETaS / Turing](https://cetas.turing.ac.uk/publications/claude-mythos-future-cybersecurity)
-- [SecurityWeek: cybersecurity breakthrough / risk](https://www.securityweek.com/anthropic-unveils-claude-mythos-a-cybersecurity-breakthrough-that-could-also-supercharge-attacks/)
-- [Mythos Preview in Amazon Bedrock](https://aws.amazon.com/about-aws/whats-new/2026/04/amazon-bedrock-claude-mythos/)
+1. **No model wins everywhere.** Selection is *workload-specific*: Opus 4.7
+   for code engineering and tool orchestration, GPT-5.5 for agentic terminal
+   automation and abstract reasoning, Gemini 3.1 Pro for cost-effective
+   multimodal and ultra-long-context.
+2. **The Mythos / Opus split is permanent for now.** Mythos sits ~13 points
+   above public Opus 4.7 on SWE-bench Pro but stays gated through Project
+   Glasswing for cyber-misuse reasons. The frontier is no longer a single
+   public number.
 
-### OpenAI — GPT-5.5 (Apr 23–24, 2026)
-- Successor to GPT-5.4; pitched as OpenAI's "smartest and most intuitive"
-  model with significant gains in agentic coding, computer use, and early
-  scientific research.
-- More token-efficient than GPT-5.4 despite higher per-token pricing — net
-  cost-per-task often lower on agentic workloads.
-- Rolled out to Plus/Pro/Business/Enterprise in ChatGPT and Codex on Apr 23;
-  GPT-5.5 and GPT-5.5 Pro available in the API on Apr 24.
-- Released with OpenAI's strongest preparedness/red-team evaluations to date.
-
-Sources:
-- [Introducing GPT-5.5 — OpenAI](https://openai.com/index/introducing-gpt-5-5/)
-- [GPT-5.5 API Model Page](https://developers.openai.com/api/docs/models/gpt-5.5)
-- [GPT-5.5 System Card — Deployment Safety Hub](https://deploymentsafety.openai.com/gpt-5-5)
-- [OpenAI announces GPT-5.5 — CNBC](https://www.cnbc.com/2026/04/23/openai-announces-latest-artificial-intelligence-model.html)
-- [GPT-5.5 brings OpenAI closer to a "super app" — TechCrunch](https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/)
-
-### Google — Gemma 4 family + Gemini 2.5 line
-- **Gemma 4 (Apr 2, 2026, Apache 2.0):** four open-weight variants targeted at
-  different deployment profiles. The 31B Dense flagship reportedly matches or
-  beats much larger proprietary models on common benchmarks.
-- **Gemini 2.5 Pro / Flash:** native multimodality across text, audio, image,
-  and video; 1M-token context; "thinking" reasoning traces; native tool use.
-  2.5 Flash claims 20–30% lower token usage than the prior generation.
+```mermaid
+quadrantChart
+    title April 2026 Frontier Models — Workload Fit
+    x-axis "Lower Cost" --> "Higher Cost"
+    y-axis "Generalist" --> "Specialist"
+    quadrant-1 "Premium specialists"
+    quadrant-2 "Workhorse specialists"
+    quadrant-3 "Generalist commodities"
+    quadrant-4 "Premium generalists"
+    "Claude Opus 4.7": [0.78, 0.78]
+    "Claude Mythos (gated)": [0.95, 0.92]
+    "GPT-5.5": [0.72, 0.62]
+    "GPT-5.5 Pro": [0.85, 0.55]
+    "Gemini 3.1 Pro": [0.40, 0.45]
+    "Gemini 2.5 Flash": [0.18, 0.30]
+    "DeepSeek V4-Pro": [0.25, 0.70]
+    "GLM-5.1": [0.22, 0.58]
+    "Qwen3.6-35B-A3B": [0.12, 0.40]
+```
 
 Sources:
-- [Gemini 2.5 — Google DeepMind blog](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/)
-- [Gemini 2.5 Pro — DeepMind](https://deepmind.google/en/models/gemini/pro/)
-- [Gemini 2.5 technical report (PDF)](https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf)
-- [Gemini API model list](https://ai.google.dev/gemini-api/docs/models)
-
-### Open-weight releases (April 2026 wave)
-- **Zhipu GLM-5.1** (744B MoE, MIT) and **GLM-5V-Turbo** (vision-to-code).
-- **Alibaba Qwen 3.6-Plus**: 1M context, agentic terminal/GUI workflows.
-- **PrismML Bonsai 8B**: 1-bit quantized for edge deployment.
-- **Microsoft MAI**: foundational speech, voice, and image models.
-- **DeepSeek V4** (March 2026): 236B MoE / 21B active per token; matches or
-  exceeds GPT-4o on 7 of 12 standard benchmarks; the model that pushed many
-  enterprises to take open-source seriously for reasoning workloads.
-- **Llama 4 Scout / Maverick**: 17B active params per forward pass with
-  109B / 400B total weights; Scout ships a 10M-token context window — the
-  largest of any open-weight model.
-
-Sources:
-- [New LLM Releases April 2026 — Fazm](https://fazm.ai/blog/new-llm-releases-april-2026)
-- [New Open-Source LLM Releases April 2026 — Fazm](https://fazm.ai/blog/new-open-source-llm-releases-april-2026)
-- [DeepSeek V3.2 vs Llama 4 vs Qwen 3 — Spheron](https://www.spheron.network/blog/deepseek-vs-llama-4-vs-qwen3/)
-- [Open-Source LLM Leaderboard 2026 — Vellum](https://www.vellum.ai/open-llm-leaderboard)
-- [LLM Coding Benchmark April 2026 — AkitaOnRails](https://akitaonrails.com/en/2026/04/24/llm-benchmarks-parte-3-deepseek-kimi-mimo/)
+- [SWE-bench Pro Leaderboard 2026 — BenchLM](https://benchlm.ai/benchmarks/swePro)
+- [SWE-Bench Pro Public Leaderboard — Scale](https://labs.scale.com/leaderboard/swe_bench_pro_public)
+- [GPT-5.5 vs Opus 4.7 vs Gemini 3.1 Pro — Mohit Aggarwal / Medium](https://medium.com/@mohit15856/gpt-5-5-vs-claude-opus-4-7-vs-gemini-3-1-pro-vs-deepseek-v4-18dafdcf9b5e)
+- [Each wins different races — Cogni Down Under / Medium](https://medium.com/@cognidownunder/openai-gpt-5-5-b6cf7e37668e)
+- [Gemini 3.1 Pro model card — DeepMind](https://deepmind.google/models/model-cards/gemini-3-1-pro/)
+- [Gemini 3.1 Pro launch — Google blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)
+- [LM Council benchmark dashboard](https://lmcouncil.ai/benchmarks)
 
 ---
 
-## 2. Architectural Trends
+## 2. The Open-Source Wave That Closed the Month
 
-### Mixture-of-Experts goes mainstream
-- MoE is now the default for frontier open-weight scale: Llama 4, Qwen 3,
-  DeepSeek V4, GLM-5.1 all activate a small fraction of parameters per token.
-- 2026 research has shifted MoE optimization from purely computation-centric
-  toward workload-centric strategies — hybrid parallel scheduling, fine-grained
-  comm planning, adaptive load balancing, and ML-guided expert routing.
-- Empirical studies up to 5B params show MoEs can beat dense models on
-  *memory* efficiency, not just FLOPs — overturning earlier conventional
-  wisdom.
+April 2026's open-weight cadence was unusual: **five major Chinese-lab releases
+inside three weeks**, plus Google's Gemma 4 and Microsoft's MAI multimodal
+family. By month-end, the gap to proprietary models on coding has effectively
+closed for many practical workloads.
+
+```mermaid
+timeline
+    title April 2026 Major Open-Weight Releases
+    Apr 02 : Google Gemma 4 (Apache 2.0, 4 variants)
+           : Microsoft MAI-Transcribe-1 / MAI-Voice-1 / MAI-Image-2
+    Apr 05 : Meta Llama 4 (Scout 10M ctx, Maverick 17B/400B MoE)
+    Apr 07 : Z.ai GLM-5.1 (754B MoE, MIT license)
+    Apr 08 : Alibaba Qwen 3 lineup (0.6B → 72B)
+    Apr 11 : MiniMax M2.7 (open weights)
+    Apr 16 : Alibaba Qwen3.6-35B-A3B (3.5B active / 35B total)
+    Apr 23 : DeepSeek V4-Pro / V4-Flash
+           : Moonshot Kimi K2.6
+```
+
+What's *new* relative to the earlier April recap:
+
+- **DeepSeek V4-Pro is now the largest open-weight model ever released**,
+  overtaking Kimi K2.6 (1.1T) and GLM-5.1 (744B). V4-Flash ships alongside as
+  the cost-tier variant.
+- **Qwen3.6-35B-A3B** lands the most aggressive sparsity ratio of the
+  generation — only 3.5B active parameters from a 35B total — squarely
+  targeting H100-friendly self-hosting.
+- **GLM-5.1's MIT license is the differentiator.** MoE at 744B params *and*
+  permissive enough for enterprise fine-tuning and commercial deployment is
+  rare; this is the first time it's been credibly open at frontier scale.
+- **Kimi K2.6** focuses upgrades on agentic stability over long sessions
+  rather than headline benchmark gains.
+- **MiniMax M2.5** matches Claude Opus 4.6 at 80.2% / 80.8% on SWE-bench,
+  another data point that the open–closed gap is, for many workloads, gone.
+- **Arena Elo** for the open tier now clusters tightly: GLM-5 at 1451,
+  Kimi K2.5 ~1448, GLM-4.7 ~1445 — human preference has converged.
+
+Microsoft's MAI line is the structural surprise: not an LLM, but a complete
+multimodal stack (transcription, voice, image) explicitly competing with
+OpenAI/Google on Foundry pricing. MAI-Transcribe-1 reports 3.8% average WER
+across 25 languages on FLEURS — beating Whisper-large-v3 across the board —
+at roughly half the GPU cost. MAI-Voice-1 generates 60 s of expressive audio
+in under one second on a single GPU.
 
 Sources:
-- [Mixture of Experts Explained — Hugging Face](https://huggingface.co/blog/moe)
-- [Applying MoE in LLM Architectures — NVIDIA](https://developer.nvidia.com/blog/applying-mixture-of-experts-in-llm-architectures/)
-- [A Survey on Accelerated MoE Training Systems](https://www.sciopen.com/article/10.26599/TST.2025.9010169)
-- [Mixture of Experts in LLMs — arXiv 2507.11181](https://arxiv.org/html/2507.11181v2)
-
-### Hybrid and efficient architectures
-- Beyond pure transformer + MoE: Qwen3-Next, Kimi Linear, and Nemotron 3
-  pursue hybrid attention/state-space designs to cut quadratic cost.
-- "Switchable" modes (Qwen3-235B-A22B): one model with a thinking mode for
-  reasoning and a non-thinking mode for fast dialogue.
-- Native multimodality is now table stakes — text, image, audio, and video in
-  a single model, no separate vision tower.
-
-Sources:
-- [The Big LLM Architecture Comparison — Sebastian Raschka](https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison)
-- [State of LLMs 2025 — Sebastian Raschka](https://magazine.sebastianraschka.com/p/state-of-llms-2025)
-- [LLM architectures overview — Springer](https://link.springer.com/article/10.1007/s42452-025-07668-w)
+- [DeepSeek V4-Pro release coverage — AkitaOnRails](https://akitaonrails.com/en/2026/04/24/llm-benchmarks-parte-3-deepseek-kimi-mimo/)
+- [Open-weight LLMs comparison — BentoML](https://www.bentoml.com/blog/navigating-the-world-of-open-source-large-language-models)
+- [Best open-source LLMs hardware — Modemguides](https://www.modemguides.com/blogs/ai-infrastructure/best-open-source-llms-hardware-april-2026)
+- [GLM-5.1 vs Qwen 3.6 vs Kimi K2.6 vs MiniMax — Atlas Cloud](https://www.atlascloud.ai/blog/guides/kimi-k2-6-vs-glm-5-1-vs-qwen-3-6-plus-vs-minimax-m2-7-coding-2026)
+- [Microsoft MAI launch — Microsoft AI](https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/)
+- [MAI-Transcribe / Voice / Image — Microsoft Foundry blog](https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-mai-transcribe-1-mai-voice-1-and-mai-image-2-in-microsoft-foundry/4507787)
+- [Microsoft direct shot at OpenAI / Google — VentureBeat](https://venturebeat.com/technology/microsoft-launches-3-new-ai-models-in-direct-shot-at-openai-and-google)
 
 ---
 
-## 3. Training, Inference, and Reasoning Techniques
+## 3. ICLR 2026 (April 23–27, Rio): What Actually Won
 
-### Inference-time scaling is where the gains live
-- Across labs, a growing share of capability gains in 2026 comes from
-  inference-time techniques (longer reasoning traces, search, verifiers,
-  tool-use planning) rather than from training larger base models.
-- Categories now include parallel sampling + voting, sequential
-  best-of-N, learned verifiers, and adaptive thinking-budget controllers.
-- Tooling progress (SGLang's RadixAttention for agents; vLLM for cloud
-  serving) is responsible for a meaningful slice of headline benchmark wins.
+The conference closed on April 27 — the outstanding-paper picks and the
+oral-track signal point to where research consensus is heading.
+
+**Outstanding papers:**
+
+1. *Transformers are Inherently Succinct* — Bergsträßer, Cotterell,
+   Widjaja Lin. A theoretical result on how compactly a Transformer can
+   represent concepts versus alternative architectures (RNNs, etc.). It
+   gives a sharper formal explanation for why Transformers dominate beyond
+   "they parallelise well."
+2. *Multi-turn LLM Evaluation* (anonymised in coverage). Designs a scalable
+   evaluation for **multi-turn underspecified-instruction** settings, and
+   measures a sharp degradation in real-world LLM aptitude that single-turn
+   eval suites have been hiding. The committee called out experimental
+   design and methodology specifically.
+3. *The Polar Express: Optimal Matrix Sign Methods and their Application
+   to the Muon Algorithm* — Amsel, Persson, Musco et al.
+
+**Notable orals (LLM-relevant):**
+
+- **AgentFlow** (Stanford, Lu et al.) — see §4.
+- **ParaRNN** — parallel training of nonlinear RNNs, claiming a 665× speedup
+  over the sequential approach. Revives the question of whether non-attention
+  sequence models can be competitive at scale on training cost.
+- **RASLIK** — reframes LLM unlearning as data selection.
+- **TurboQuant** — KV-cache compression via PolarQuant rotation followed by
+  a quantised Johnson–Lindenstrauss projection; significant memory cuts at
+  near-zero quality loss, enabling longer context on the same hardware.
+
+The two structural takeaways:
+
+- *Multi-turn underspecified eval* is now the credibility benchmark — labs
+  that only publish single-turn numbers are increasingly suspect.
+- *Architecture pluralism* is back on the table. Theoretical succinctness
+  results plus credible non-Transformer parallelism (ParaRNN) plus hybrid
+  attention/state-space designs (Qwen3-Next, Kimi Linear, Nemotron 3) make
+  "Transformer wins everything forever" the weaker bet than it was six
+  months ago.
 
 Sources:
-- [Categories of Inference-Time Scaling — Sebastian Raschka (blog)](https://sebastianraschka.com/blog/2026/categories-of-inference-time-scaling.html)
-- [Categories of Inference-Time Scaling — Magazine](https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling)
-- [2026 LLM Inference Framework Guide — StableLearn](https://stable-learn.com/en/llm-inference-framework-guide-2026/)
-
-### KV-cache and memory optimization — TurboQuant (ICLR 2026)
-- Google's TurboQuant compresses KV cache via a two-step pipeline:
-  PolarQuant vector rotation → Quantized Johnson–Lindenstrauss projection.
-- Significant reductions in KV memory overhead with limited quality loss,
-  enabling longer contexts on the same hardware.
-
-### Alignment training — SPPO
-- New alignment objective combines PPO's training efficiency with
-  sequence-level optimization for stability, addressing brittleness in
-  conventional token-level RLHF.
-
-### Autonomous research — AI Scientist-v2
-- The first paper from an end-to-end autonomous research agent
-  (hypothesize → experiment → write) was accepted at a major ML venue,
-  on hyperparameter optimization for vision transformers.
-
-Sources:
-- [LLM News April 2026 — Fazm](https://fazm.ai/blog/llm-news-april-2026)
-- [The Future of AGI: 5 Breakthroughs Defining April 2026 — Switas](https://www.switas.com/articles/the-future-of-agi-5-breakthroughs-defining-april-2026)
-- [LLM News Today — llm-stats.com](https://llm-stats.com/ai-news)
+- [ICLR 2026 outstanding papers — ICLR Blog](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)
+- [ICLR 2026 papers — Lambda summary](https://lambda.ai/blog/iclr-2026-12-papers)
+- [ICLR 2026 site](https://iclr.cc/)
+- [Apple at ICLR 2026](https://machinelearning.apple.com/research/iclr-2026)
+- [ParaRNN — Paper Digest highlights](https://www.paperdigest.org/2026/02/iclr-2026-papers-highlights/)
 
 ---
 
-## 4. Agents and Agentic Engineering
+## 4. AgentFlow: The Small-Model Agent Result That Reframes 2026
 
-- April 2026 commentary widely framed the year as the shift from "intelligence
-  as a model" to "intelligence as an engineered system" — agentic loops,
-  verifiers, memory, tools, and orchestration combined with mid-tier models
-  routinely matching frontier model results on real tasks.
-- Qwen 3.6-Plus and DeepSeek V4 explicitly target agentic terminal/GUI
-  workflows; Llama 4's 10M-token context and GLM-5V-Turbo's vision-to-code
-  flesh out the open-source agent stack.
-- Anthropic's Opus 4.7 emphasizes long-horizon, self-verifying execution —
-  the model checks its own outputs before reporting back.
+Stanford's **AgentFlow** (Lu et al., ICLR 2026 Oral, top 1.1%) is the result
+worth lingering on. It's the strongest data point yet that *agentic
+scaffolding can substitute for raw model scale*, and it shipped right as the
+April model wave was being absorbed.
+
+```mermaid
+flowchart LR
+    Q[User Query] --> P[Planner]
+    P -->|tool plan| E[Executor]
+    E -->|raw result| V[Verifier]
+    V -->|approve/retry| G[Generator]
+    G --> A[Answer]
+    P -.->|update| M[(Evolving Memory)]
+    E -.-> M
+    V -.-> M
+    M -.-> P
+
+    subgraph Training Loop
+      direction TB
+      RL[Flow-GRPO] -- "single-turn updates,<br/>multi-turn credit assignment" --> P
+    end
+```
+
+Headline numbers (7B backbone):
+
+- **+14.9%** on search reasoning vs top baselines
+- **+14.0%** on agentic tasks
+- **+14.5%** on math reasoning
+- **+4.1%** on scientific reasoning
+
+Across these, the 7B AgentFlow surpasses GPT-4o on search, agent, and math
+benchmarks — a model two generations and ~50× the parameters older.
+
+The technical argument worth absorbing:
+
+- Most tool-using agents train *one* policy on the full conversation context.
+  This collapses on long-horizon, sparse-reward problems because
+  credit-assignment fights everything else the policy has to do.
+- AgentFlow splits responsibility across **four cooperating modules** —
+  planner / executor / verifier / generator — coordinated by an evolving
+  memory. Only the planner is trained inside the loop.
+- **Flow-GRPO** turns multi-turn credit assignment into a sequence of
+  single-turn policy updates, side-stepping the long-horizon RL pathologies.
+- Online RL with Flow-GRPO yields +17.2%; replacing it with offline SFT
+  collapses to **−19.0%**. The gain is from *training-in-the-flow*, not
+  from supervision.
+
+For practitioners: 2026's agent stack is converging on this pattern —
+cooperating specialised modules with one trainable planner, not a single
+giant model self-orchestrating.
 
 Sources:
-- [LLM Reasoning Powers Agentic AI — Medium](https://medium.com/@anicomanesh/how-llm-reasoning-powers-the-agentic-ai-revolution-cbefd10ebf3f)
-- [LLM Bubble / Agentic Engineering reset — Medium](https://medium.com/generative-ai-revolution-ai-native-transformation/the-llm-bubble-is-bursting-the-2026-ai-reset-powering-agentic-engineering-085da564b6cd)
-- [LLMOrbit: From Scaling Walls to Agentic AI — arXiv 2601.14053](https://arxiv.org/pdf/2601.14053)
-- [Best Open-Source LLMs for Agentic Coding 2026 — MindStudio](https://www.mindstudio.ai/blog/best-open-source-llms-agentic-coding-2026)
+- [AgentFlow — Stanford project page](https://agentflow.stanford.edu/)
+- [In-the-Flow Agentic System Optimization — arXiv 2510.05592](https://arxiv.org/abs/2510.05592)
+- [AgentFlow — GitHub](https://github.com/lupantech/AgentFlow)
+- [Stanford AgentFlow coverage — MarkTechPost](https://www.marktechpost.com/2025/10/08/stanford-researchers-released-agentflow-in-the-flow-reinforcement-learning-rl-for-modular-tool-using-ai-agents/)
+- [Awesome AI Agent Papers 2026](https://github.com/VoltAgent/awesome-ai-agent-papers)
 
 ---
 
-## 5. Safety and Alignment Research
+## 5. Training-Side Win: MIT's Rollout Acceleration
 
-- **Superficial Safety Alignment Hypothesis** (ICLR 2026, Apr 23–27 in Rio):
-  argues safety alignment trains an implicit binary classifier — only a few
-  components establish the guardrails, which has implications for both
-  attackers and defenders.
-- **SAP — Safety-Aware Probing**: preserves safety under benign fine-tuning
-  with negligible task-quality cost, addressing a known regression where even
-  innocuous fine-tuning data degrades alignment.
-- **Rapid response to jailbreaks** (Peng, Apr 2026): an input classifier
-  fine-tuned on a small set of proliferated jailbreaks reduces in-distribution
-  attack success rate by >240× and out-of-distribution by >15×.
-- **Microsoft Security**: documented a one-prompt attack class that breaks
-  alignment in production models — pushing the field toward defense-in-depth.
-- **Position papers**: alignment should move beyond static
-  helpfulness/harmlessness toward dynamic, participatory frameworks that
-  preserve human agency and pluralism.
+Most April training-efficiency work targeted inference. MIT's late-April
+result targets **RL training itself** and is a meaningful one.
+
+The observation: in reasoning-LLM RL training, **the rollout phase
+(generating candidate answers) consumes up to 85% of total wall-clock**,
+while the actual policy update is cheap. Hu, Yang, and Han (Song Han's group)
+introduced a method that trains a **smaller predictor model** alongside the
+main reasoner to anticipate rollouts; the larger model only verifies.
+
+Reported acceleration: **70%–210% across multiple reasoning LLMs trained on
+real-world datasets**, with accuracy preserved.
+
+Implications:
+
+- The economics of reasoning-model training shift. RL post-training has been
+  the major cost driver of the 2025–2026 wave; cutting rollout 2–3× cuts the
+  largest line item.
+- Combined with TurboQuant (inference-side KV memory reduction) and the
+  small-model-agent results from AgentFlow, the field's compute curve is
+  bending in three places at once: training rollout, inference KV memory, and
+  *required parameter count for a given task*.
 
 Sources:
-- [Anthropic Alignment Science Blog](https://alignment.anthropic.com/)
-- [Rapid Response: Mitigating LLM Jailbreaks — MATS](https://www.matsprogram.org/research/rapid-response-mitigating-llm-jailbreaks-with-a-few-examples)
-- [Secure LLM Fine-Tuning via Safety-Aware Probing — arXiv](https://arxiv.org/html/2505.16737v2)
-- [Microsoft: one-prompt attack breaks safety alignment](https://www.microsoft.com/en-us/security/blog/2026/02/09/prompt-attack-breaks-llm-safety/)
-- [LLM Alignment beyond Harmlessness–Helpfulness — Springer](https://link.springer.com/article/10.1007/s12559-026-10568-9)
-- [NC State: technique to stop unsafe LLM responses](https://news.ncsu.edu/2026/03/new-technique-addresses-llm-safety/)
+- [New method increases LLM training efficiency — MIT News (Feb)](https://news.mit.edu/2026/new-method-could-increase-llm-training-efficiency-0226)
+- [MIT EECS coverage](https://www.eecs.mit.edu/new-method-could-increase-llm-training-efficiency/)
+- [Leaner-and-faster while still learning — MIT News (Apr 9)](https://news.mit.edu/2026/new-technique-makes-ai-models-leaner-faster-while-still-learning-0409)
 
 ---
 
-## 6. Takeaways
+## 6. Safety, Alignment, and Jailbreaks at Month-End
 
-1. The frontier vs open-source gap continues to compress. DeepSeek V4 and
-   Llama 4 ship credible alternatives to GPT-class models for many workloads;
-   Qwen 3 has become the practical open default at H100-friendly sizes.
-2. MoE has effectively won at scale — every major April 2026 release of more
-   than ~70B params is sparse, and memory-efficiency results are removing the
-   last objections.
-3. Capability gains are increasingly *post-training*: inference-time scaling,
-   verifiers, and agent scaffolding deliver more progress than another order
-   of magnitude of pretraining compute.
-4. Safety is bifurcating: gated previews (Mythos) for high-risk capability,
-   plus deployment-time classifiers (Opus 4.7) for the public surface.
-   Alignment research is shifting from static training-time fixes to dynamic,
-   defense-in-depth systems.
-5. Multimodality is no longer a feature — it's the baseline. Text-only models
-   are now the niche.
+April 1 saw a comprehensive jailbreak-survey paper drop, and the picture from
+recent empirical work is bleak in the short term, but the defensive toolkit
+has gotten more interesting.
+
+**The bad news.** Empirical jailbreak success rates against frontier models
+in 2024–2026 still range from ~65% (simple multi-turn) to ~99% (automated
+fuzzing). Prompt-input filters degrade benign performance enough to be
+unattractive in production. The April Microsoft Security disclosure of a
+one-prompt attack class that breaks alignment in production reinforced the
+"models can be jailbroken" baseline.
+
+**The newer defensive ideas.**
+
+- **In-decoding safety probing (SAP)** — preserves alignment under benign
+  fine-tuning, where prior approaches regressed.
+- **Rapid response** (MATS) — fine-tunes a small input classifier on a few
+  observed jailbreaks; reduces in-distribution success rate >240×, OOD >15×.
+- **ProAct** — proactive defence that returns *spurious responses* that look
+  successful to the attacker but contain no harmful content. Disrupts
+  automated-fuzzing pipelines whose feedback loop assumes plausible outputs
+  signal real success.
+- **SecurityLingua** — security-aware prompt compression as a jailbreak
+  defence layer.
+- **Safety-knowledge-neuron interpretability** — locates the small set of
+  components implementing the "is this query safe?" classification, building
+  on the Superficial Safety Alignment Hypothesis from earlier in April.
+
+The strategic shift: nobody at the frontier is shipping single-layer safety
+anymore. Anthropic ships Mythos *gated* and Opus 4.7 with cyber-misuse
+classifiers; OpenAI shipped GPT-5.5 with its strongest preparedness review to
+date; Microsoft ships MAI behind Foundry-side controls. **Defence in depth is
+no longer a slogan; it's the default deployment pattern.**
+
+Sources:
+- [Jailbreak Attacks and Defenses survey (Apr 2026)](https://www.preprints.org/frontend/manuscript/f6f71860ac6a9f5e0b7e64d013096864/download_pub)
+- [Jailbreaking LLMs & VLMs — arXiv 2601.03594](https://arxiv.org/html/2601.03594v1)
+- [In-decoding safety-awareness probing — arXiv 2601.10543](https://arxiv.org/html/2601.10543v1)
+- [Rapid Response — MATS](https://www.matsprogram.org/research/rapid-response-mitigating-llm-jailbreaks-with-a-few-examples)
+- [Jailbreaking Jailbreaks (ProAct) — OpenReview](https://openreview.net/forum?id=pq6rx9r6Aj)
+- [SecurityLingua — OpenReview](https://openreview.net/forum?id=tybbSo6wba)
+- [Unraveling LLM Jailbreaks via Safety Knowledge Neurons — EACL 2026](https://aclanthology.org/2026.eacl-long.83.pdf)
 
 ---
 
-*Generated 2026-04-30 (America/Los_Angeles). Information current as of the
-sources listed above; some claims rely on vendor announcements and public
-benchmarks rather than independent reproductions.*
+## 7. Capital, Adoption, and the Vendor Map
+
+April's market data points anchor a re-shaped landscape.
+
+- **OpenAI raised $122 billion** during April. Anthropic is reportedly
+  considering a public listing. Vendor consolidation pressure is now the
+  default base case.
+- **Enterprise LLM adoption** crossed 80% (from <5% in 2023), but only ~13%
+  of adopters report enterprise-wide impact. The "deployment value" gap is
+  the actual binding constraint, not model capability.
+- **Spend share has rotated.** Per Menlo Ventures (late 2025, persisting in
+  Q2 2026): Anthropic ~40% of enterprise LLM API spend, OpenAI ~27%, down
+  from OpenAI's ~50% in 2023.
+- **Agentic AI ≈ 17% of total AI value** today, projected to roughly double
+  by 2028. Gartner projects **40% of enterprise applications** will ship
+  task-specific AI agents by year-end 2026, up from <5% a year ago.
+
+```mermaid
+pie title Enterprise LLM API Spend (2026)
+    "Anthropic" : 40
+    "OpenAI" : 27
+    "Google (Gemini)" : 12
+    "Open-source self-host" : 10
+    "Others (Mistral, Cohere, etc.)" : 11
+```
+
+Sources:
+- [Enterprise Agentic AI Landscape 2026 — Kai Waehner](https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/)
+- [LLM Enterprise Adoption Statistics 2026 — index.dev](https://www.index.dev/blog/llm-enterprise-adoption-statistics)
+- [Agentic AI in 2026 — CIO](https://www.cio.com/article/4107315/agentic-ai-in-2026-more-mixed-than-mainstream.html)
+- [State of AI Agents 2026 — Arcade](https://blog.arcade.dev/5-takeaways-2026-state-of-ai-agents-claude)
+- [LLM news April 2026 — Fazm](https://fazm.ai/blog/llm-news-april-2026)
+
+---
+
+## 8. Cross-cutting Picture (Visual Summary)
+
+```mermaid
+flowchart TB
+    classDef model fill:#e8f0ff,stroke:#3a66ff,color:#0a1f80
+    classDef research fill:#eaf7ec,stroke:#2c8a3a,color:#13441b
+    classDef econ fill:#fdf2e0,stroke:#d68a1a,color:#5a3a05
+    classDef safety fill:#fce8e8,stroke:#b03030,color:#5a1010
+
+    subgraph Frontier["Frontier (proprietary)"]
+      Opus47[Claude Opus 4.7]:::model
+      Mythos[Claude Mythos<br/>gated]:::model
+      GPT55[GPT-5.5 / Pro]:::model
+      Gem31[Gemini 3.1 Pro]:::model
+    end
+
+    subgraph Open["Open-weight wave"]
+      DSV4[DeepSeek V4-Pro<br/>largest ever]:::model
+      GLM51[GLM-5.1<br/>MIT license]:::model
+      Kimi26[Kimi K2.6]:::model
+      Qwen36[Qwen3.6-35B-A3B]:::model
+      Llama4[Llama 4 Scout / Maverick]:::model
+      MAI[Microsoft MAI<br/>speech / voice / image]:::model
+    end
+
+    subgraph Research["Research advances (ICLR / arXiv)"]
+      AgF[AgentFlow<br/>7B beats GPT-4o]:::research
+      MIT[MIT rollout speedup<br/>70-210%]:::research
+      TurboQ[TurboQuant<br/>KV compression]:::research
+      ParaRNN[ParaRNN<br/>665× speedup]:::research
+      Multi[Multi-turn eval<br/>ICLR Outstanding]:::research
+    end
+
+    subgraph Safety["Safety / Alignment"]
+      Gated[Gated previews<br/>Mythos / Glasswing]:::safety
+      DefDepth[Defense-in-depth<br/>SAP / Rapid Response<br/>ProAct / SecurityLingua]:::safety
+    end
+
+    subgraph Market["Capital & Adoption"]
+      OAIfund[OpenAI +$122B]:::econ
+      Anth40[Anthropic 40% API spend]:::econ
+      Ent80[80% enterprise adoption<br/>13% wide impact]:::econ
+    end
+
+    Frontier -.specialise.-> Open
+    Research --> Frontier
+    Research --> Open
+    Safety --> Frontier
+    Open --> Market
+    Frontier --> Market
+```
+
+---
+
+## 9. Five Things That Are Actually New This Month
+
+If you only track five shifts from April 2026:
+
+1. **Specialisation, not dominance.** Opus 4.7, GPT-5.5, and Gemini 3.1 Pro
+   each win clearly distinct workloads. Single-model strategies underperform
+   multi-model routing for any non-trivial enterprise.
+2. **Open-weight saturation at the frontier.** DeepSeek V4-Pro is the largest
+   open-weight model ever, GLM-5.1 ships at 754B under MIT, and Arena Elo
+   among open models has converged inside a 6-point band. The relevant axis
+   is no longer "is open-weight competitive" but "self-host or API."
+3. **Small-model + scaffolding beats big-model on agentic tasks.**
+   AgentFlow's 7B-backbone result (ICLR Oral) is the strongest existence
+   proof of the year. Combined with MIT's rollout speedup, the cost curve
+   for capable agents bends sharply downward.
+4. **Multi-turn underspecified evaluation is the new credibility test.**
+   ICLR's outstanding-paper choice forces the field to publish on the
+   setting that mirrors real product use.
+5. **Safety has bifurcated permanently.** Gated previews for high-risk
+   capability (Mythos / Glasswing), defence-in-depth at the public surface
+   (Opus 4.7 cyber classifiers, SAP, ProAct, Rapid Response). Single-layer
+   alignment is no longer a credible posture.
+
+---
+
+*Generated 2026-04-30 (America/Los_Angeles, end-of-day). Information current
+as of the sources listed; benchmark numbers reflect provisional April 29
+SWE-bench Pro / LM Council snapshots. Vendor announcements have not all been
+independently reproduced.*
