@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">RL post-training time breakdown and where TLT (Taming the Long-Tail) bites</title>
+  <desc id="desc">Two stacked horizontal bars showing baseline RL training (rollout dominates 85% of execution) versus TLT-accelerated RL training (drafter model trained on idle compute, rollout shrinks). Mid-saturation fills, white text, neutral-gray axis treatment, theme-adaptive.</desc>
+
+  <!-- Title -->
+  <text x="40" y="36" fill="#6b7280" font-size="14">Where the time goes in reasoning RL post-training</text>
+
+  <!-- Axis -->
+  <line x1="180" y1="280" x2="820" y2="280" stroke="#6b7280" stroke-width="2"/>
+  <text x="180" y="304" fill="#6b7280" font-size="11" text-anchor="middle">0%</text>
+  <text x="340" y="304" fill="#6b7280" font-size="11" text-anchor="middle">25%</text>
+  <text x="500" y="304" fill="#6b7280" font-size="11" text-anchor="middle">50%</text>
+  <text x="660" y="304" fill="#6b7280" font-size="11" text-anchor="middle">75%</text>
+  <text x="820" y="304" fill="#6b7280" font-size="11" text-anchor="middle">100%</text>
+  <text x="500" y="328" fill="#6b7280" font-size="11" text-anchor="middle">share of wall-clock training time</text>
+
+  <!-- Baseline bar -->
+  <text x="170" y="100" text-anchor="end" fill="#6b7280" font-size="13" font-weight="600">Baseline RL</text>
+  <text x="170" y="118" text-anchor="end" fill="#6b7280" font-size="11">(synchronous rollout)</text>
+  <!-- 85% rollout -->
+  <rect x="180" y="78" width="544" height="50" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="452" y="108" fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">Rollout · 85%</text>
+  <!-- 15% gradient/update -->
+  <rect x="724" y="78" width="96" height="50" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+  <text x="772" y="108" fill="#ffffff" font-size="12" text-anchor="middle">update · 15%</text>
+
+  <!-- TLT bar -->
+  <text x="170" y="200" text-anchor="end" fill="#6b7280" font-size="13" font-weight="600">TLT (ASPLOS '26)</text>
+  <text x="170" y="218" text-anchor="end" fill="#6b7280" font-size="11">(adaptive drafter on idle GPUs)</text>
+  <!-- shortened rollout (~40%) -->
+  <rect x="180" y="178" width="256" height="50" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="308" y="208" fill="#ffffff" font-size="13" font-weight="600" text-anchor="middle">Rollout (sped-up) · 40%</text>
+  <!-- drafter training overlap (~20%) -->
+  <rect x="436" y="178" width="128" height="50" fill="#9333ea" stroke="#581c87" stroke-width="1.5"/>
+  <text x="500" y="208" fill="#ffffff" font-size="12" text-anchor="middle">drafter · 20%</text>
+  <!-- idle reclaimed (~25%) -->
+  <rect x="564" y="178" width="160" height="50" fill="#0ea5e9" stroke="#075985" stroke-width="1.5"/>
+  <text x="644" y="208" fill="#ffffff" font-size="12" text-anchor="middle">overlap reclaimed · 25%</text>
+  <!-- update -->
+  <rect x="724" y="178" width="96" height="50" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+  <text x="772" y="208" fill="#ffffff" font-size="12" text-anchor="middle">update · 15%</text>
+
+  <!-- Headline result -->
+  <text x="40" y="260" fill="#6b7280" font-size="13">End-to-end speedup: 1.7×–3.1× across reasoning RL workloads, with the drafter</text>
+  <text x="40" y="276" fill="#6b7280" font-size="13">model emerging as a deployable speculative-decoding artefact at no extra cost.</text>
+</svg>
