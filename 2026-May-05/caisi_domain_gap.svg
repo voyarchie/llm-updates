@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial">
+  <defs>
+    <style><![CDATA[
+      .title { font-size: 16px; font-weight: 600; fill: #888; }
+      .sub { font-size: 12px; fill: #888; }
+      .axis { stroke: #888; stroke-width: 1; }
+      .grid { stroke: #888; stroke-width: 0.5; stroke-dasharray: 3 4; opacity: 0.4; }
+      .label { font-size: 11px; fill: #888; }
+      .num { font-size: 11px; font-weight: 600; fill: #888; }
+      .ds { fill: #f08a5d; }
+      .gpt { fill: #6aa9ff; }
+      .gap { stroke: #888; stroke-width: 0.5; stroke-dasharray: 4 3; }
+      .annot { font-size: 11px; fill: #888; font-style: italic; }
+    ]]></style>
+  </defs>
+
+  <text x="20" y="28" class="title">NIST CAISI domain breakdown (May 5, 2026): DeepSeek V4-Pro vs GPT-5.5</text>
+  <text x="20" y="48" class="sub">CAISI's first IRT-style frontier eval — the gap is domain-specific, not uniform</text>
+
+  <!-- axes -->
+  <line x1="180" y1="80" x2="180" y2="340" class="axis"/>
+  <line x1="180" y1="340" x2="730" y2="340" class="axis"/>
+
+  <!-- x grid 0,20,...,100 -->
+  <g>
+    <line x1="180" y1="80"  x2="180" y2="340" class="grid"/>
+    <line x1="290" y1="80"  x2="290" y2="340" class="grid"/>
+    <line x1="400" y1="80"  x2="400" y2="340" class="grid"/>
+    <line x1="510" y1="80"  x2="510" y2="340" class="grid"/>
+    <line x1="620" y1="80"  x2="620" y2="340" class="grid"/>
+    <line x1="730" y1="80"  x2="730" y2="340" class="grid"/>
+    <text x="180" y="358" class="label" text-anchor="middle">0</text>
+    <text x="290" y="358" class="label" text-anchor="middle">20</text>
+    <text x="400" y="358" class="label" text-anchor="middle">40</text>
+    <text x="510" y="358" class="label" text-anchor="middle">60</text>
+    <text x="620" y="358" class="label" text-anchor="middle">80</text>
+    <text x="730" y="358" class="label" text-anchor="middle">100</text>
+    <text x="455" y="378" class="label" text-anchor="middle">Score (%)</text>
+  </g>
+
+  <!-- rows: cyber, abstract reasoning, agentic SWE, math (OTIS-AIME-2025) -->
+  <!-- bar height 18, rows centered around y -->
+
+  <!-- Cyber: V4 32, GPT 71 -->
+  <text x="172" y="107" class="label" text-anchor="end">Cyber tasks</text>
+  <rect x="180" y="92" width="176" height="14" class="ds"/>
+  <text x="362" y="103" class="num">32%</text>
+  <rect x="180" y="110" width="390.5" height="14" class="gpt"/>
+  <text x="577" y="121" class="num">71%</text>
+  <line x1="356" y1="92" x2="356" y2="124" class="gap"/>
+  <line x1="570.5" y1="92" x2="570.5" y2="124" class="gap"/>
+  <text x="463" y="138" class="annot" text-anchor="middle">Δ 39 pp — largest gap</text>
+
+  <!-- Abstract Reasoning (ARC-AGI-2): V4 46, GPT 79 -->
+  <text x="172" y="167" class="label" text-anchor="end">ARC-AGI-2</text>
+  <rect x="180" y="152" width="253" height="14" class="ds"/>
+  <text x="439" y="163" class="num">46%</text>
+  <rect x="180" y="170" width="434.5" height="14" class="gpt"/>
+  <text x="621" y="181" class="num">79%</text>
+  <text x="463" y="198" class="annot" text-anchor="middle">Δ 33 pp</text>
+
+  <!-- Agentic SWE (PortBench): V4 44, GPT 78 -->
+  <text x="172" y="227" class="label" text-anchor="end">Agentic SWE (PortBench)</text>
+  <rect x="180" y="212" width="242" height="14" class="ds"/>
+  <text x="428" y="223" class="num">44%</text>
+  <rect x="180" y="230" width="429" height="14" class="gpt"/>
+  <text x="615" y="241" class="num">78%</text>
+  <text x="463" y="258" class="annot" text-anchor="middle">Δ 34 pp</text>
+
+  <!-- Math (OTIS-AIME-2025): V4 97, GPT ~99 -->
+  <text x="172" y="287" class="label" text-anchor="end">OTIS-AIME-2025</text>
+  <rect x="180" y="272" width="533.5" height="14" class="ds"/>
+  <text x="720" y="283" class="num">97%</text>
+  <rect x="180" y="290" width="544.5" height="14" class="gpt"/>
+  <text x="731" y="301" class="num">~99%</text>
+  <text x="463" y="318" class="annot" text-anchor="middle">Δ ~2 pp — frontier-parity in math</text>
+
+  <!-- Legend -->
+  <rect x="200" y="398" width="14" height="10" class="ds"/>
+  <text x="220" y="408" class="label">DeepSeek V4-Pro (open-weight, ~$0.30/M)</text>
+  <rect x="450" y="398" width="14" height="10" class="gpt"/>
+  <text x="470" y="408" class="label">GPT-5.5 (US frontier reference)</text>
+
+  <text x="20" y="418" class="annot">Read: the 8-month "frontier gap" CAISI cites is real but unevenly distributed.</text>
+</svg>

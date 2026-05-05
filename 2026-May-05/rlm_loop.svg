@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial">
+  <defs>
+    <style><![CDATA[
+      .title { font-size: 16px; font-weight: 600; fill: #888; }
+      .sub { font-size: 12px; fill: #888; }
+      .label { font-size: 12px; fill: #888; }
+      .small { font-size: 10px; fill: #888; }
+      .annot { font-size: 11px; fill: #888; font-style: italic; }
+      .box { fill: none; stroke: #888; stroke-width: 1.2; }
+      .accent { stroke: #6aa9ff; }
+      .ctx { stroke: #f08a5d; }
+      .repl { stroke: #66c2a5; }
+      .arrow { stroke: #888; stroke-width: 1; fill: none; }
+    ]]></style>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="28" class="title">Recursive Language Models — long context as an external environment, not a prompt</text>
+  <text x="20" y="48" class="sub">Zhang, Kraska, Khattab (MIT CSAIL, arXiv:2512.24601). RLM-GPT-5 hits 91.3% on BrowseComp+ where vanilla GPT-5 fails to fit.</text>
+
+  <!-- User -->
+  <rect x="20" y="100" width="120" height="60" rx="6" class="box"/>
+  <text x="80" y="125" class="label" text-anchor="middle">User query</text>
+  <text x="80" y="143" class="small" text-anchor="middle">+ 10M-token context</text>
+
+  <!-- Root LLM -->
+  <rect x="190" y="100" width="160" height="60" rx="6" class="box accent"/>
+  <text x="270" y="125" class="label" text-anchor="middle" font-weight="600">Root LLM (small ctx)</text>
+  <text x="270" y="143" class="small" text-anchor="middle">writes Python; never sees full corpus</text>
+
+  <!-- REPL Sandbox -->
+  <rect x="400" y="80" width="400" height="140" rx="8" class="box repl"/>
+  <text x="600" y="100" class="label" text-anchor="middle" font-weight="600">Python REPL Notebook (sandbox)</text>
+
+  <!-- ctx variable -->
+  <rect x="420" y="115" width="170" height="40" rx="4" class="box ctx"/>
+  <text x="505" y="130" class="small" text-anchor="middle">ctx = load_corpus()</text>
+  <text x="505" y="145" class="small" text-anchor="middle">stored as variable, not tokens</text>
+
+  <!-- ops -->
+  <rect x="610" y="115" width="170" height="40" rx="4" class="box"/>
+  <text x="695" y="130" class="small" text-anchor="middle">ctx.grep("anomaly")</text>
+  <text x="695" y="145" class="small" text-anchor="middle">ctx.peek(start, n)</text>
+
+  <!-- recursive call -->
+  <rect x="510" y="170" width="190" height="40" rx="4" class="box accent"/>
+  <text x="605" y="185" class="small" text-anchor="middle">sub_lm(snippet, sub_question)</text>
+  <text x="605" y="198" class="small" text-anchor="middle">→ recursive RLM call</text>
+
+  <!-- arrows -->
+  <path d="M140 130 L188 130" class="arrow" marker-end="url(#ah)"/>
+  <path d="M350 120 L420 120" class="arrow" marker-end="url(#ah)"/>
+  <path d="M420 145 L350 145" class="arrow" marker-end="url(#ah)"/>
+  <text x="385" y="115" class="small" text-anchor="middle">code</text>
+  <text x="385" y="160" class="small" text-anchor="middle">snippet</text>
+
+  <!-- recursion arrow -->
+  <path d="M605 210 C 605 260, 700 260, 700 210" class="arrow" marker-end="url(#ah)"/>
+  <text x="700" y="270" class="small" text-anchor="middle">recurse</text>
+
+  <!-- Comparison panel -->
+  <rect x="20" y="270" width="780" height="120" rx="6" class="box"/>
+  <text x="40" y="294" class="label" font-weight="600">Why this matters</text>
+  <text x="40" y="316" class="small">• Conventional long-context LLMs feed all tokens through attention → quadratic cost, accuracy degrades past ~200K.</text>
+  <text x="40" y="334" class="small">• RLMs store the corpus as program state and only attend to whichever snippet the model itself decided to look at.</text>
+  <text x="40" y="352" class="small">• On BrowseComp+: RLM-GPT-5 = 91.3%; vanilla GPT-5 fails (context overflow); summary-agent baseline = 70.5%.</text>
+  <text x="40" y="370" class="small">• RLM-Qwen3-8B beats base Qwen3-8B by +28.3 pp avg, and approaches vanilla GPT-5 on three long-context tasks.</text>
+
+  <text x="20" y="412" class="annot">Architectural read: the "context window" is no longer the upper bound on what an LLM can reason over.</text>
+</svg>

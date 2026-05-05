@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial">
+  <defs>
+    <style><![CDATA[
+      .title { font-size: 16px; font-weight: 600; fill: #888; }
+      .sub { font-size: 12px; fill: #888; }
+      .axis { stroke: #888; stroke-width: 1; }
+      .grid { stroke: #888; stroke-width: 0.5; stroke-dasharray: 3 4; opacity: 0.4; }
+      .label { font-size: 11px; fill: #888; }
+      .num { font-size: 12px; font-weight: 600; fill: #888; }
+      .barA { fill: #6aa9ff; }
+      .barB { fill: #f08a5d; }
+      .barC { fill: #66c2a5; }
+      .barD { fill: #b48ead; }
+      .legbox { stroke: #888; stroke-width: 0.5; }
+      .annot { font-size: 11px; fill: #888; font-style: italic; }
+    ]]></style>
+  </defs>
+
+  <text x="20" y="28" class="title">Same model, different harness — Endor Labs SusVibes (May 1, 2026)</text>
+  <text x="20" y="48" class="sub">Functional-correctness score (%) for an identical underlying model run inside two coding harnesses</text>
+
+  <!-- y axis -->
+  <line x1="80" y1="80" x2="80" y2="340" class="axis"/>
+  <line x1="80" y1="340" x2="700" y2="340" class="axis"/>
+
+  <!-- gridlines / y labels -->
+  <g>
+    <line x1="80" y1="80"  x2="700" y2="80"  class="grid"/>
+    <line x1="80" y1="132" x2="700" y2="132" class="grid"/>
+    <line x1="80" y1="184" x2="700" y2="184" class="grid"/>
+    <line x1="80" y1="236" x2="700" y2="236" class="grid"/>
+    <line x1="80" y1="288" x2="700" y2="288" class="grid"/>
+    <text x="72" y="84"  class="label" text-anchor="end">100</text>
+    <text x="72" y="136" class="label" text-anchor="end">80</text>
+    <text x="72" y="188" class="label" text-anchor="end">60</text>
+    <text x="72" y="240" class="label" text-anchor="end">40</text>
+    <text x="72" y="292" class="label" text-anchor="end">20</text>
+    <text x="72" y="344" class="label" text-anchor="end">0</text>
+  </g>
+
+  <!-- Group 1: GPT-5.5 functional correctness -->
+  <!-- Codex 61.5 -> 340-(61.5/100)*260 = 340-159.9 = 180.1 -->
+  <rect x="120" y="180" width="60" height="160" class="barA"/>
+  <text x="150" y="174" class="num" text-anchor="middle">61.5%</text>
+  <text x="150" y="358" class="label" text-anchor="middle">Codex (native)</text>
+
+  <!-- Cursor 87.2 -> 340-(87.2/100)*260 = 340-226.7 = 113.3 -->
+  <rect x="195" y="114" width="60" height="226" class="barB"/>
+  <text x="225" y="108" class="num" text-anchor="middle">87.2%</text>
+  <text x="225" y="358" class="label" text-anchor="middle">Cursor SDK</text>
+
+  <!-- swing arrow -->
+  <line x1="155" y1="100" x2="225" y2="100" stroke="#888" stroke-width="1" marker-end="url(#arr)"/>
+  <text x="190" y="92" class="annot" text-anchor="middle">+25.7 pp from harness alone</text>
+
+  <text x="187" y="378" class="label" text-anchor="middle" font-weight="600">GPT-5.5 — same weights</text>
+
+  <!-- Group 2: Claude Opus 4.7 -->
+  <!-- Claude Code 87.2 -> 113.3 -->
+  <rect x="370" y="114" width="60" height="226" class="barC"/>
+  <text x="400" y="108" class="num" text-anchor="middle">87.2%</text>
+  <text x="400" y="358" class="label" text-anchor="middle">Claude Code</text>
+
+  <!-- Cursor 91.1 -> 340-(91.1/100)*260 = 340-236.86 = 103.14 -->
+  <rect x="445" y="103" width="60" height="237" class="barD"/>
+  <text x="475" y="97" class="num" text-anchor="middle">91.1%</text>
+  <text x="475" y="358" class="label" text-anchor="middle">Cursor SDK</text>
+
+  <text x="437" y="378" class="label" text-anchor="middle" font-weight="600">Claude Opus 4.7 — same weights</text>
+
+  <!-- Group 3: contextual: SWE-bench Verified for ref -->
+  <rect x="600" y="113" width="60" height="227" class="barA" opacity="0.7"/>
+  <text x="630" y="107" class="num" text-anchor="middle">87.6%</text>
+  <text x="630" y="358" class="label" text-anchor="middle">SWE-Verified</text>
+  <text x="630" y="378" class="label" text-anchor="middle" font-weight="600">Opus 4.7 best public</text>
+
+  <!-- y axis title -->
+  <text x="30" y="200" class="label" transform="rotate(-90 30 200)" text-anchor="middle">SusVibes functional correctness (%)</text>
+
+  <!-- footer -->
+  <text x="20" y="416" class="annot">The harness gap (≥4 pp on Opus 4.7, ≥25 pp on GPT-5.5) is now larger than most month-over-month model upgrades.</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+</svg>
