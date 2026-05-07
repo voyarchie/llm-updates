@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" role="img" aria-label="Three axes of test-time compute scaling in 2026 LLMs">
+  <style>
+    .ttl  { font: 700 16px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .sub  { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; opacity: 0.75; }
+    .lbl  { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .lblb { font: 600 12.5px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .axis-text { font: 600 13px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .col1 { fill: #5b8def22; stroke: #5b8def; stroke-width: 1.6; rx: 8; ry: 8; }
+    .col2 { fill: #0ea5a422; stroke: #0ea5a4; stroke-width: 1.6; rx: 8; ry: 8; }
+    .col3 { fill: #b388eb22; stroke: #b388eb; stroke-width: 1.6; rx: 8; ry: 8; }
+    .ex   { fill: none; stroke: currentColor; stroke-width: 1; rx: 5; ry: 5; opacity: 0.6; }
+    .badge1 { fill: #5b8def; }
+    .badge2 { fill: #0ea5a4; }
+    .badge3 { fill: #b388eb; }
+    .bw   { fill: #ffffff; }
+  </style>
+
+  <text x="410" y="26" class="ttl" text-anchor="middle">Three axes of test-time compute scaling — May 2026 snapshot</text>
+  <text x="410" y="44" class="sub" text-anchor="middle">Each axis trades a different resource. Frontier products combine all three under one router.</text>
+
+  <!-- Three columns -->
+  <!-- Column 1: Sequential CoT (more tokens) -->
+  <rect x="40" y="70" width="240" height="300" class="col1"/>
+  <circle cx="68" cy="98" r="14" class="badge1"/>
+  <text x="68" y="103" class="lblb" text-anchor="middle" fill="#fff">1</text>
+  <text x="92" y="103" class="lblb">Sequential CoT</text>
+  <text x="60" y="126" class="lbl">Spend = output tokens.</text>
+  <text x="60" y="144" class="lbl">Each step writes its</text>
+  <text x="60" y="162" class="lbl">reasoning to context.</text>
+
+  <rect x="60" y="180" width="200" height="40" class="ex"/>
+  <text x="160" y="198" class="lblb" text-anchor="middle">o-series, R1, V4 reasoning</text>
+  <text x="160" y="214" class="lbl"   text-anchor="middle">tokens visible to user</text>
+
+  <rect x="60" y="232" width="200" height="40" class="ex"/>
+  <text x="160" y="250" class="lblb" text-anchor="middle">Pros</text>
+  <text x="160" y="266" class="lbl"   text-anchor="middle">interpretable, auditable</text>
+
+  <rect x="60" y="284" width="200" height="40" class="ex"/>
+  <text x="160" y="302" class="lblb" text-anchor="middle">Cons</text>
+  <text x="160" y="318" class="lbl"   text-anchor="middle">latency × steps</text>
+
+  <rect x="60" y="336" width="200" height="22" class="ex"/>
+  <text x="160" y="352" class="lblb" text-anchor="middle">scales: token budget</text>
+
+  <!-- Column 2: Parallel sampling -->
+  <rect x="290" y="70" width="240" height="300" class="col2"/>
+  <circle cx="318" cy="98" r="14" class="badge2"/>
+  <text x="318" y="103" class="lblb" text-anchor="middle" fill="#fff">2</text>
+  <text x="342" y="103" class="lblb">Parallel sampling</text>
+  <text x="310" y="126" class="lbl">Run K samples at once,</text>
+  <text x="310" y="144" class="lbl">aggregate (vote / verify /</text>
+  <text x="310" y="162" class="lbl">best-of-K).</text>
+
+  <rect x="310" y="180" width="200" height="40" class="ex"/>
+  <text x="410" y="198" class="lblb" text-anchor="middle">GPT-5.5 Pro, Deep Think</text>
+  <text x="410" y="214" class="lbl"   text-anchor="middle">parallel reasoning paths</text>
+
+  <rect x="310" y="232" width="200" height="40" class="ex"/>
+  <text x="410" y="250" class="lblb" text-anchor="middle">Pros</text>
+  <text x="410" y="266" class="lbl"   text-anchor="middle">wall-clock ≈ single sample</text>
+
+  <rect x="310" y="284" width="200" height="40" class="ex"/>
+  <text x="410" y="302" class="lblb" text-anchor="middle">Cons</text>
+  <text x="410" y="318" class="lbl"   text-anchor="middle">K × cost; aggregation hard</text>
+
+  <rect x="310" y="336" width="200" height="22" class="ex"/>
+  <text x="410" y="352" class="lblb" text-anchor="middle">scales: parallel width K</text>
+
+  <!-- Column 3: Latent recurrent depth -->
+  <rect x="540" y="70" width="240" height="300" class="col3"/>
+  <circle cx="568" cy="98" r="14" class="badge3"/>
+  <text x="568" y="103" class="lblb" text-anchor="middle" fill="#fff">3</text>
+  <text x="592" y="103" class="lblb">Latent recurrent depth</text>
+  <text x="560" y="126" class="lbl">Iterate a recurrent block</text>
+  <text x="560" y="144" class="lbl">at inference; reasoning</text>
+  <text x="560" y="162" class="lbl">never leaves hidden state.</text>
+
+  <rect x="560" y="180" width="200" height="40" class="ex"/>
+  <text x="660" y="198" class="lblb" text-anchor="middle">NeurIPS '25 spotlight,</text>
+  <text x="660" y="214" class="lbl"   text-anchor="middle">3.5B proof-of-concept</text>
+
+  <rect x="560" y="232" width="200" height="40" class="ex"/>
+  <text x="660" y="250" class="lblb" text-anchor="middle">Pros</text>
+  <text x="660" y="266" class="lbl"   text-anchor="middle">no extra context, no CoT data</text>
+
+  <rect x="560" y="284" width="200" height="40" class="ex"/>
+  <text x="660" y="302" class="lblb" text-anchor="middle">Cons</text>
+  <text x="660" y="318" class="lbl"   text-anchor="middle">opaque, harder to align</text>
+
+  <rect x="560" y="336" width="200" height="22" class="ex"/>
+  <text x="660" y="352" class="lblb" text-anchor="middle">scales: recurrence depth</text>
+
+  <!-- Footer -->
+  <text x="410" y="396" class="sub" text-anchor="middle">A 2026 production "reasoning" SKU usually combines axis 1 (CoT tokens) with axis 2 (best-of-K) under a single header flag.</text>
+  <text x="410" y="412" class="sub" text-anchor="middle">Axis 3 is still research-stage but rapidly moving — the recurrent-depth approach is the cleanest non-token answer to inference-time scaling.</text>
+</svg>
