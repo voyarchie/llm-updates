@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title>ZAYA1-8B intelligence-density vs. peers</title>
+  <desc>Scatter of active-parameter count against reported reasoning competence for ZAYA1-8B vs. first-generation reasoning frontier. Light/dark mode aware.</desc>
+
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #0f172a; }
+    .sub   { font-size: 12px; fill: #475569; }
+    .axis  { stroke: #94a3b8; stroke-width: 1; }
+    .grid  { stroke: #94a3b8; stroke-width: 0.5; stroke-dasharray: 3 3; opacity: 0.5; }
+    .tick  { fill: #475569; font-size: 11px; }
+    .label { fill: #475569; font-size: 12px; }
+    .pt-zaya  { fill: #34d399; stroke: #047857; stroke-width: 2; }
+    .pt-peer  { fill: #38bdf8; stroke: #0369a1; stroke-width: 1.5; }
+    .pt-frontier { fill: #f472b6; stroke: #9d174d; stroke-width: 1.5; }
+    .ann   { fill: #0f172a; font-size: 12px; font-weight: 600; }
+    .frontier-zone { fill: #fde68a; opacity: 0.18; }
+    @media (prefers-color-scheme: dark) {
+      .title { fill: #f1f5f9; }
+      .sub, .tick, .label { fill: #cbd5e1; }
+      .axis, .grid { stroke: #475569; }
+      .ann { fill: #f1f5f9; }
+      .frontier-zone { fill: #fde68a; opacity: 0.10; }
+    }
+  </style>
+
+  <text class="title" x="40" y="36">ZAYA1-8B: matching first-gen frontier reasoning at &lt;1B active params</text>
+  <text class="sub"   x="40" y="56">Active parameters (log) vs. reported reasoning competence band. Sources: Zyphra, MarkTechPost, VentureBeat, AIwire (May 6 2026).</text>
+
+  <!-- frontier zone shading -->
+  <rect class="frontier-zone" x="80" y="80" width="720" height="100"/>
+
+  <g transform="translate(80, 80)">
+    <!-- axes -->
+    <line class="axis" x1="0" y1="0" x2="0" y2="280"/>
+    <line class="axis" x1="0" y1="280" x2="720" y2="280"/>
+
+    <!-- y axis (reasoning band) -->
+    <text class="label" x="-58" y="14" transform="rotate(-90 -58 14)">Reasoning competence band</text>
+    <text class="tick"  x="-8" y="14"  text-anchor="end">Frontier</text>
+    <text class="tick"  x="-8" y="100" text-anchor="end">First-gen</text>
+    <text class="tick"  x="-8" y="180" text-anchor="end">Strong-mid</text>
+    <text class="tick"  x="-8" y="260" text-anchor="end">Light</text>
+
+    <line class="grid" x1="0" y1="80"  x2="720" y2="80"/>
+    <line class="grid" x1="0" y1="160" x2="720" y2="160"/>
+    <line class="grid" x1="0" y1="240" x2="720" y2="240"/>
+
+    <!-- x axis (log active params) -->
+    <text class="label" x="360" y="320" text-anchor="middle">Active parameters (log)</text>
+    <text class="tick"  x="60"  y="296" text-anchor="middle">~1B</text>
+    <text class="tick"  x="240" y="296" text-anchor="middle">~10B</text>
+    <text class="tick"  x="420" y="296" text-anchor="middle">~50B</text>
+    <text class="tick"  x="600" y="296" text-anchor="middle">~200B</text>
+
+    <!-- frontier band annotation -->
+    <text class="ann" x="700" y="60" text-anchor="end">First-gen frontier band</text>
+
+    <!-- ZAYA1-8B: ~0.76B active, frontier-band reasoning -->
+    <circle class="pt-zaya" cx="60" cy="120" r="9"/>
+    <text class="ann" x="74" y="124">ZAYA1-8B (Zyphra, AMD MI300x)</text>
+    <text class="label" x="74" y="140">~0.76B active · MoE++ + CCA · Apache 2.0</text>
+
+    <!-- DeepSeek-R1-0528: ~37B active, mid-frontier band -->
+    <circle class="pt-frontier" cx="380" cy="100" r="9"/>
+    <text class="ann" x="394" y="96">DeepSeek-R1-0528</text>
+    <text class="label" x="394" y="112">~37B active</text>
+
+    <!-- Gemini-2.5-Pro: dense, ~70B equivalent -->
+    <circle class="pt-frontier" cx="450" cy="90" r="9"/>
+    <text class="ann" x="464" y="86">Gemini-2.5-Pro</text>
+
+    <!-- Claude 4.5 Sonnet: undisclosed, peer band -->
+    <circle class="pt-frontier" cx="520" cy="100" r="9"/>
+    <text class="ann" x="534" y="96">Claude 4.5 Sonnet</text>
+
+    <!-- Llama 4 Maverick: 17B active, strong-mid -->
+    <circle class="pt-peer" cx="280" cy="170" r="9"/>
+    <text class="ann" x="294" y="174">Llama 4 Maverick (17B active)</text>
+
+    <!-- Qwen 3.5: 17B active -->
+    <circle class="pt-peer" cx="280" cy="190" r="9"/>
+    <text class="ann" x="294" y="194">Qwen 3.5 (17B active)</text>
+
+    <!-- DeepSeek V4: 49B active frontier -->
+    <circle class="pt-frontier" cx="420" cy="80" r="9"/>
+    <text class="ann" x="434" y="76">DeepSeek V4-Pro (49B active)</text>
+
+    <!-- Mamba-2 7B: light -->
+    <circle class="pt-peer" cx="180" cy="240" r="9"/>
+    <text class="ann" x="194" y="244">Mamba-2 7B</text>
+
+    <!-- arrow showing density advantage -->
+    <line x1="60" y1="120" x2="380" y2="100" stroke="#047857" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+    <text class="ann" x="200" y="108" text-anchor="middle" fill="#047857">~50× fewer active params, similar tier</text>
+
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#047857"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(80, 420)">
+    <circle class="pt-zaya" cx="6" cy="0" r="6"/>
+    <text class="label" x="20" y="4">ZAYA1-8B (May 6 release)</text>
+    <circle class="pt-peer" cx="200" cy="0" r="6"/>
+    <text class="label" x="214" y="4">prior open-weight peers</text>
+    <circle class="pt-frontier" cx="400" cy="0" r="6"/>
+    <text class="label" x="414" y="4">first-gen reasoning frontier</text>
+  </g>
+</svg>
