@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title>Cyber model capability landscape — May 2026</title>
+  <desc>Grouped bars comparing GPT-5.5, GPT-5.5-Cyber, Claude Opus 4.7, and Claude Mythos Preview across vuln discovery, exploit synthesis, and AISI 32-step simulated corporate attack success.</desc>
+
+  <style>
+    .bg { fill: none; }
+    .title { font-size: 18px; font-weight: 700; fill: #0f172a; }
+    .sub   { font-size: 12px; fill: #475569; }
+    .axis  { stroke: #94a3b8; stroke-width: 1.2; }
+    .grid  { stroke: #94a3b8; stroke-width: 0.55; stroke-dasharray: 3 3; opacity: 0.5; }
+    .tick  { font-size: 11px; fill: #475569; }
+    .axis-label { font-size: 12px; fill: #334155; }
+
+    .g-openai   { fill: #38bdf8; }
+    .g-cyber    { fill: #0284c7; }
+    .g-opus     { fill: #a78bfa; }
+    .g-mythos   { fill: #6d28d9; }
+
+    .bar-label  { font-size: 11px; fill: #0f172a; font-weight: 600; }
+    .category-label { font-size: 13px; fill: #0f172a; font-weight: 600; }
+    .legend { font-size: 12px; fill: #334155; }
+    .note   { font-size: 11px; fill: #475569; font-style: italic; }
+    .gate   { fill: #fef3c7; stroke: #b45309; stroke-width: 1.4; }
+    .gate-text { font-size: 11px; fill: #78350f; font-weight: 600; }
+
+    @media (prefers-color-scheme: dark) {
+      .title { fill: #f1f5f9; }
+      .sub, .axis-label, .tick, .legend, .note { fill: #cbd5e1; }
+      .axis, .grid { stroke: #475569; }
+      .bar-label, .category-label { fill: #f1f5f9; }
+      .gate-text { fill: #78350f; }  /* keep dark on yellow */
+    }
+  </style>
+
+  <rect class="bg" width="920" height="460"/>
+
+  <text class="title" x="32" y="32">Cyber-capable frontier models — capability and access gating, May 2026</text>
+  <text class="sub"   x="32" y="52">Heights = published / observed scores. Border = access regime. Sources: OpenAI, Anthropic, UK AISI.</text>
+
+  <!-- chart frame -->
+  <g transform="translate(80, 90)">
+    <line class="axis" x1="0" y1="240" x2="780" y2="240"/>
+    <line class="axis" x1="0" y1="0"   x2="0"   y2="240"/>
+
+    <!-- gridlines -->
+    <line class="grid" x1="0" y1="0"   x2="780" y2="0"/>
+    <line class="grid" x1="0" y1="60"  x2="780" y2="60"/>
+    <line class="grid" x1="0" y1="120" x2="780" y2="120"/>
+    <line class="grid" x1="0" y1="180" x2="780" y2="180"/>
+
+    <!-- y ticks -->
+    <text class="tick" x="-8" y="244" text-anchor="end">0</text>
+    <text class="tick" x="-8" y="184" text-anchor="end">25%</text>
+    <text class="tick" x="-8" y="124" text-anchor="end">50%</text>
+    <text class="tick" x="-8" y="64"  text-anchor="end">75%</text>
+    <text class="tick" x="-8" y="4"   text-anchor="end">100%</text>
+
+    <text class="axis-label" x="-50" y="120" transform="rotate(-90, -50, 120)" text-anchor="middle">capability score / success rate</text>
+
+    <!-- Category 1: AISI 32-step simulated attack -->
+    <g transform="translate(20, 0)">
+      <rect class="g-openai" x="0"  y="192" width="34" height="48"/>
+      <rect class="g-cyber"  x="36" y="192" width="34" height="48"/>
+      <rect class="g-opus"   x="72" y="208" width="34" height="32"/>
+      <rect class="g-mythos" x="108" y="168" width="34" height="72"/>
+      <text class="bar-label" x="17"  y="186" text-anchor="middle">2/10</text>
+      <text class="bar-label" x="53"  y="186" text-anchor="middle">2/10</text>
+      <text class="bar-label" x="89"  y="202" text-anchor="middle">1/10</text>
+      <text class="bar-label" x="125" y="162" text-anchor="middle">3/10</text>
+      <text class="category-label" x="71" y="262" text-anchor="middle">AISI 32-step attack</text>
+    </g>
+
+    <!-- Category 2: Vuln discovery (autonomous) -->
+    <g transform="translate(220, 0)">
+      <rect class="g-openai" x="0"  y="120" width="34" height="120"/>
+      <rect class="g-cyber"  x="36" y="84"  width="34" height="156"/>
+      <rect class="g-opus"   x="72" y="120" width="34" height="120"/>
+      <rect class="g-mythos" x="108" y="36" width="34" height="204"/>
+      <text class="bar-label" x="17"  y="114" text-anchor="middle">50</text>
+      <text class="bar-label" x="53"  y="78"  text-anchor="middle">65</text>
+      <text class="bar-label" x="89"  y="114" text-anchor="middle">50</text>
+      <text class="bar-label" x="125" y="30"  text-anchor="middle">85</text>
+      <text class="category-label" x="71" y="262" text-anchor="middle">Vuln discovery (rel.)</text>
+    </g>
+
+    <!-- Category 3: Exploit PoC synthesis -->
+    <g transform="translate(420, 0)">
+      <rect class="g-openai" x="0"  y="144" width="34" height="96"/>
+      <rect class="g-cyber"  x="36" y="60"  width="34" height="180"/>
+      <rect class="g-opus"   x="72" y="144" width="34" height="96"/>
+      <rect class="g-mythos" x="108" y="48" width="34" height="192"/>
+      <text class="bar-label" x="17"  y="138" text-anchor="middle">40</text>
+      <text class="bar-label" x="53"  y="54"  text-anchor="middle">75</text>
+      <text class="bar-label" x="89"  y="138" text-anchor="middle">40</text>
+      <text class="bar-label" x="125" y="42"  text-anchor="middle">80</text>
+      <text class="category-label" x="71" y="262" text-anchor="middle">PoC synthesis (rel.)</text>
+    </g>
+
+    <!-- Category 4: Access gating tightness -->
+    <g transform="translate(620, 0)">
+      <rect class="g-openai" x="0"  y="48"  width="34" height="192"/>
+      <rect class="g-cyber"  x="36" y="24"  width="34" height="216"/>
+      <rect class="g-opus"   x="72" y="60"  width="34" height="180"/>
+      <rect class="g-mythos" x="108" y="12" width="34" height="228"/>
+      <text class="bar-label" x="17"  y="42" text-anchor="middle">std</text>
+      <text class="bar-label" x="53"  y="18" text-anchor="middle">vetted</text>
+      <text class="bar-label" x="89"  y="54" text-anchor="middle">std</text>
+      <text class="bar-label" x="125" y="6"  text-anchor="middle">Glasswing</text>
+      <text class="category-label" x="71" y="262" text-anchor="middle">Access gating tightness</text>
+    </g>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(80, 380)">
+    <rect class="g-openai" x="0"   y="0" width="14" height="14"/>
+    <text class="legend"   x="20"  y="12">GPT-5.5 (standard)</text>
+
+    <rect class="g-cyber"  x="160" y="0" width="14" height="14"/>
+    <text class="legend"   x="180" y="12">GPT-5.5-Cyber</text>
+
+    <rect class="g-opus"   x="320" y="0" width="14" height="14"/>
+    <text class="legend"   x="340" y="12">Claude Opus 4.7</text>
+
+    <rect class="g-mythos" x="480" y="0" width="14" height="14"/>
+    <text class="legend"   x="500" y="12">Claude Mythos Preview</text>
+
+    <text class="note" x="0" y="38">
+      AISI scores: published; vuln discovery / PoC synthesis: relative composite from vendor + AISI reports.
+    </text>
+    <text class="note" x="0" y="54">
+      Gating: GPT-5.5-Cyber → Trusted Access for Cyber; Mythos → Project Glasswing (40+ orgs, $100M credits).
+    </text>
+  </g>
+</svg>
