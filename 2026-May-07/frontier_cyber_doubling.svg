@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-label="Frontier cyber-offence capability doubling chart">
+  <style>
+    .axis  { stroke: #8a8a8a; stroke-width: 1.2; fill: none; }
+    .grid  { stroke: #8a8a8a; stroke-width: 0.5; stroke-dasharray: 3 4; opacity: 0.45; }
+    .lbl   { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .lblb  { font: 600 13px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .ttl   { font: 700 16px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .sub   { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; opacity: 0.75; }
+    .curve { stroke: #5b8def; stroke-width: 2.4; fill: none; }
+    .area  { fill: #5b8def; opacity: 0.13; }
+    .ref   { stroke: #f97a00; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+    .pt    { fill: #f97a00; stroke: #f97a00; stroke-width: 1.2; }
+    .pt2   { fill: #0ea5a4; stroke: #0ea5a4; stroke-width: 1.2; }
+    .ptcap { fill: #b388eb; stroke: #b388eb; stroke-width: 1.2; }
+  </style>
+
+  <text x="380" y="26" class="ttl" text-anchor="middle">Frontier cyber-offence capability — doubling every ~4 months</text>
+  <text x="380" y="44" class="sub" text-anchor="middle">UK AISI &amp; Air Street estimate; reference points are public capability disclosures (2024–2026)</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="320" x2="720" y2="320" class="axis"/>
+  <line x1="80" y1="60"  x2="80"  y2="320" class="axis"/>
+
+  <!-- Y axis labels (log capability index) -->
+  <g class="lbl" text-anchor="end">
+    <text x="74" y="324">0.5×</text>
+    <text x="74" y="260">  1×</text>
+    <text x="74" y="196">  2×</text>
+    <text x="74" y="132">  4×</text>
+    <text x="74" y="68">   8×</text>
+  </g>
+  <line x1="80" y1="260" x2="720" y2="260" class="grid"/>
+  <line x1="80" y1="196" x2="720" y2="196" class="grid"/>
+  <line x1="80" y1="132" x2="720" y2="132" class="grid"/>
+  <line x1="80" y1="68"  x2="720" y2="68"  class="grid"/>
+
+  <!-- X axis labels (months) -->
+  <g class="lbl" text-anchor="middle">
+    <text x="120" y="340">Jul '25</text>
+    <text x="220" y="340">Nov '25</text>
+    <text x="320" y="340">Jan '26</text>
+    <text x="420" y="340">Mar '26</text>
+    <text x="520" y="340">Apr '26</text>
+    <text x="620" y="340">May '26</text>
+    <text x="700" y="340">Jul '26</text>
+  </g>
+
+  <!-- Doubling curve as filled area + line -->
+  <path class="area" d="M 80 320 L 80 296 L 160 270 L 240 240 L 320 200 L 400 156 L 480 110 L 560 86 L 640 70 L 720 60 L 720 320 Z"/>
+  <path class="curve" d="M 80 296 L 160 270 L 240 240 L 320 200 L 400 156 L 480 110 L 560 86 L 640 70 L 720 60"/>
+
+  <!-- Anchor points (public disclosures) -->
+  <circle cx="160" cy="270" r="5" class="pt"/>
+  <text x="166" y="263" class="lbl">CTF coverage ~Jul '25 baseline</text>
+
+  <circle cx="320" cy="200" r="5" class="pt"/>
+  <text x="326" y="194" class="lbl">Multi-step exploit chains, late '25</text>
+
+  <circle cx="480" cy="110" r="6" class="ptcap"/>
+  <text x="486" y="104" class="lbl">Mythos Preview — 32-step end-to-end range, Apr '26</text>
+
+  <circle cx="560" cy="86" r="6" class="pt2"/>
+  <text x="346" y="80" class="lbl">GPT-5.5 clears the same range, late Apr '26 (~3 wk gap)</text>
+
+  <!-- 4-month doubling reference marker -->
+  <line x1="240" y1="240" x2="400" y2="156" class="ref"/>
+  <text x="318" y="218" class="lblb" text-anchor="middle" fill="#f97a00">+1 doubling / 4 months</text>
+
+  <!-- Y-axis title -->
+  <text x="36" y="190" class="lbl" text-anchor="middle" transform="rotate(-90 36 190)">Capability index (log scale)</text>
+
+  <!-- Source -->
+  <text x="80" y="364" class="sub">Source: Air Street, State of AI – May 2026 / red.anthropic.com (Mythos Preview) / OpenAI capability evals</text>
+</svg>
