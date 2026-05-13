@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="-apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="Android Show I/O Edition: Gemini Intelligence stack across surfaces">
+  <title>Android Show: I/O Edition (May 12, 2026) — Gemini Intelligence as the cross-surface fabric</title>
+  <defs>
+    <style>
+      .title { font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .sub   { font-size: 12px; fill: #475569; }
+      .h     { font-size: 13px; font-weight: 700; }
+      .b     { font-size: 11px; }
+      .muted { font-size: 11px; fill: #475569; }
+      @media (prefers-color-scheme: dark) {
+        .title { fill: #f1f5f9; }
+        .sub, .muted { fill: #cbd5e1; }
+      }
+    </style>
+  </defs>
+
+  <text x="410" y="28" text-anchor="middle" class="title">Android Show: I/O Edition — May 12, 2026</text>
+  <text x="410" y="48" text-anchor="middle" class="sub">"transitioning from an operating system to an intelligence system" — Gemini Intelligence as the cross-surface fabric</text>
+
+  <!-- Top: surfaces -->
+  <g>
+    <rect x="50"  y="80" width="140" height="70" rx="10" fill="#a78bfa" stroke="#4c1d95"/>
+    <text x="120" y="105" text-anchor="middle" class="h" fill="#1e1b4b">Android 17 phones</text>
+    <text x="120" y="123" text-anchor="middle" class="b" fill="#1e1b4b">Pixel · Galaxy</text>
+    <text x="120" y="139" text-anchor="middle" class="b" fill="#1e1b4b">Create-my-widget · Rambler</text>
+
+    <rect x="220" y="80" width="140" height="70" rx="10" fill="#a78bfa" stroke="#4c1d95"/>
+    <text x="290" y="105" text-anchor="middle" class="h" fill="#1e1b4b">Googlebook (fall '26)</text>
+    <text x="290" y="123" text-anchor="middle" class="b" fill="#1e1b4b">premium AI PC line</text>
+    <text x="290" y="139" text-anchor="middle" class="b" fill="#1e1b4b">Magic Pointer · phone-app bridge</text>
+
+    <rect x="390" y="80" width="140" height="70" rx="10" fill="#a78bfa" stroke="#4c1d95"/>
+    <text x="460" y="105" text-anchor="middle" class="h" fill="#1e1b4b">Android Auto</text>
+    <text x="460" y="123" text-anchor="middle" class="b" fill="#1e1b4b">widgets · video playback</text>
+    <text x="460" y="139" text-anchor="middle" class="b" fill="#1e1b4b">context from msg / mail / cal</text>
+
+    <rect x="560" y="80" width="140" height="70" rx="10" fill="#a78bfa" stroke="#4c1d95"/>
+    <text x="630" y="105" text-anchor="middle" class="h" fill="#1e1b4b">Chrome / Gboard</text>
+    <text x="630" y="123" text-anchor="middle" class="b" fill="#1e1b4b">auto-browse · form-fill</text>
+    <text x="630" y="139" text-anchor="middle" class="b" fill="#1e1b4b">dictation cleanup</text>
+  </g>
+
+  <!-- Connectors -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <path d="M120 150 L120 200"/>
+    <path d="M290 150 L290 200"/>
+    <path d="M460 150 L460 200"/>
+    <path d="M630 150 L630 200"/>
+  </g>
+
+  <!-- Middle: Gemini Intelligence band -->
+  <rect x="50" y="200" width="720" height="80" rx="14" fill="#60a5fa" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="410" y="226" text-anchor="middle" class="h" fill="#0c1a3a">Gemini Intelligence — the OS-level intelligence fabric</text>
+  <text x="410" y="246" text-anchor="middle" class="b" fill="#0c1a3a">proactive task execution · book a class · parse a syllabus · build a shopping cart from a list</text>
+  <text x="410" y="264" text-anchor="middle" class="b" fill="#0c1a3a">shared context across surfaces · personal + on-device + cloud · custom widget compilation</text>
+
+  <!-- Connector to bottom -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+    <path d="M250 280 L250 310"/>
+    <path d="M570 280 L570 310"/>
+  </g>
+
+  <!-- Bottom: model layer -->
+  <g>
+    <rect x="100" y="310" width="300" height="100" rx="10" fill="#34d399" stroke="#047857"/>
+    <text x="250" y="332" text-anchor="middle" class="h" fill="#022c22">On-device · Gemini Nano</text>
+    <text x="250" y="350" text-anchor="middle" class="b" fill="#022c22">low-latency widget logic</text>
+    <text x="250" y="366" text-anchor="middle" class="b" fill="#022c22">dictation / context summarization</text>
+    <text x="250" y="382" text-anchor="middle" class="b" fill="#022c22">privacy-preserving (no network)</text>
+    <text x="250" y="400" text-anchor="middle" class="muted">tier present on Pixel / Galaxy / Googlebook</text>
+
+    <rect x="420" y="310" width="300" height="100" rx="10" fill="#fb923c" stroke="#9a3412"/>
+    <text x="570" y="332" text-anchor="middle" class="h" fill="#1c1917">Cloud · Gemini 3.1 Pro / 3.2 Flash (leaked)</text>
+    <text x="570" y="350" text-anchor="middle" class="b" fill="#1c1917">heavy reasoning · agentic browse</text>
+    <text x="570" y="366" text-anchor="middle" class="b" fill="#1c1917">multimodal · long context</text>
+    <text x="570" y="382" text-anchor="middle" class="b" fill="#1c1917">3.2 Flash unveil expected at I/O May 19–20</text>
+    <text x="570" y="400" text-anchor="middle" class="muted">leaked pricing: $0.25 / $2.00 per 1M tok</text>
+  </g>
+
+  <text x="410" y="440" text-anchor="middle" class="muted">Android Show pre-empts WWDC (June 8–12): Google ships its OS-as-intelligence-system pitch before iOS 27 ships its multi-provider routing.</text>
+</svg>
