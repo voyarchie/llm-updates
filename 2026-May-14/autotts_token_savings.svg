@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" role="img" aria-label="AutoTTS / CMC token usage vs SC@64 at matched accuracy">
+  <title>AutoTTS (Confidence Momentum Controller) — tokens-per-question vs SC@64 at matched accuracy</title>
+  <defs>
+    <style>
+      .title    { fill: #0f172a; font-weight: 600; font-size: 15px; }
+      .sub      { fill: #475569; font-size: 12px; }
+      .axis     { stroke: #94a3b8; stroke-width: 1.25; }
+      .grid     { stroke: #94a3b8; stroke-opacity: 0.25; stroke-dasharray: 3 3; }
+      .tick     { fill: #64748b; font-size: 11px; }
+      .axlabel  { fill: #475569; font-size: 12px; }
+      .sc       { fill: #f87171; stroke: #b91c1c; stroke-width: 1.5; }
+      .cmc      { fill: #34d399; stroke: #047857; stroke-width: 1.5; }
+      .saving   { fill: #fde68a; stroke: #b45309; stroke-width: 1.2; }
+      .bar-t    { fill: #0f172a; font-size: 11px; font-weight: 600; }
+      .group-t  { fill: #0f172a; font-size: 12px; font-weight: 600; }
+      .legend-t { fill: #475569; font-size: 12px; }
+      @media (prefers-color-scheme: dark) {
+        .title, .bar-t, .group-t { fill: #f8fafc; }
+        .sub, .tick, .axlabel, .legend-t { fill: #cbd5e1; }
+        .axis { stroke: #64748b; }
+        .sc   { fill: #fca5a5; stroke: #fecaca; }
+        .cmc  { fill: #6ee7b7; stroke: #d1fae5; }
+        .saving { fill: #fde68a; stroke: #fcd34d; }
+      }
+    </style>
+  </defs>
+
+  <text x="20" y="28" class="title">AutoTTS / Confidence Momentum Controller — same accuracy, ~70% fewer tokens</text>
+  <text x="20" y="48" class="sub">Held-out math reasoning, Qwen3 family, β = 0.5 operating point. Source: arXiv 2605.08083 (May 12, 2026).</text>
+
+  <!-- y axis -->
+  <line x1="80" y1="80" x2="80" y2="340" class="axis"/>
+  <line x1="80" y1="340" x2="720" y2="340" class="axis"/>
+  <text x="80" y="372" class="axlabel" text-anchor="start">tokens / question (normalized; SC@64 = 1.00)</text>
+
+  <!-- gridlines -->
+  <g class="grid">
+    <line x1="80" y1="100" x2="720" y2="100"/>
+    <line x1="80" y1="160" x2="720" y2="160"/>
+    <line x1="80" y1="220" x2="720" y2="220"/>
+    <line x1="80" y1="280" x2="720" y2="280"/>
+  </g>
+  <g class="tick" text-anchor="end">
+    <text x="74" y="104">1.00</text>
+    <text x="74" y="164">0.75</text>
+    <text x="74" y="224">0.50</text>
+    <text x="74" y="284">0.25</text>
+    <text x="74" y="344">0.00</text>
+  </g>
+
+  <!-- Group: Qwen3-1.7B -->
+  <g>
+    <rect x="120" y="100"  width="40" height="240" class="sc"/>
+    <text x="140" y="92"   class="bar-t" text-anchor="middle">1.00</text>
+    <rect x="165" y="277"  width="40" height="63"  class="cmc"/>
+    <text x="185" y="269"  class="bar-t" text-anchor="middle">0.26</text>
+    <text x="162" y="360"  class="group-t" text-anchor="middle">Qwen3-1.7B</text>
+  </g>
+
+  <!-- Group: Qwen3-4B -->
+  <g>
+    <rect x="245" y="100"  width="40" height="240" class="sc"/>
+    <text x="265" y="92"   class="bar-t" text-anchor="middle">1.00</text>
+    <rect x="290" y="271"  width="40" height="69"  class="cmc"/>
+    <text x="310" y="263"  class="bar-t" text-anchor="middle">0.29</text>
+    <text x="287" y="360"  class="group-t" text-anchor="middle">Qwen3-4B</text>
+  </g>
+
+  <!-- Group: Qwen3-8B -->
+  <g>
+    <rect x="370" y="100"  width="40" height="240" class="sc"/>
+    <text x="390" y="92"   class="bar-t" text-anchor="middle">1.00</text>
+    <rect x="415" y="284"  width="40" height="56"  class="cmc"/>
+    <text x="435" y="276"  class="bar-t" text-anchor="middle">0.23</text>
+    <text x="412" y="360"  class="group-t" text-anchor="middle">Qwen3-8B</text>
+  </g>
+
+  <!-- Group: Qwen3-14B -->
+  <g>
+    <rect x="495" y="100"  width="40" height="240" class="sc"/>
+    <text x="515" y="92"   class="bar-t" text-anchor="middle">1.00</text>
+    <rect x="540" y="289"  width="40" height="51"  class="cmc"/>
+    <text x="560" y="281"  class="bar-t" text-anchor="middle">0.21</text>
+    <text x="537" y="360"  class="group-t" text-anchor="middle">Qwen3-14B</text>
+  </g>
+
+  <!-- Mean savings call-out -->
+  <g>
+    <rect x="610" y="120" width="100" height="80" class="saving"/>
+    <text x="660" y="146" class="bar-t" text-anchor="middle" font-size="13">Mean saving</text>
+    <text x="660" y="170" class="bar-t" text-anchor="middle" font-size="22">−69.5%</text>
+    <text x="660" y="190" class="legend-t" text-anchor="middle">vs SC@64 baseline</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(120,395)">
+    <rect x="0"   y="-10" width="16" height="14" class="sc"/>  <text x="22" y="2" class="legend-t">SC@64 (baseline)</text>
+    <rect x="160" y="-10" width="16" height="14" class="cmc"/> <text x="182" y="2" class="legend-t">AutoTTS / CMC (discovered controller)</text>
+    <rect x="430" y="-10" width="16" height="14" class="saving"/> <text x="452" y="2" class="legend-t">Aggregate token savings</text>
+  </g>
+</svg>
