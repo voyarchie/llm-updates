@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" role="img" aria-label="Timeline of enterprise-stack announcements, May 11–14 2026">
+  <title>Enterprise-stack timeline, May 11–14, 2026</title>
+  <desc>OpenAI Deployment Company launches with Tomoro acquisition on May 11; Google publishes first AI-built zero-day finding on May 11; Anthropic ships Claude Platform on AWS GA on May 12; Anthropic ships Claude for Small Business and raises Claude Code weekly limits 50% on May 13; Anthropic begins Small Business Roadshow on May 14.</desc>
+
+  <style>
+    .axis      { stroke: #94a3b8; stroke-width: 1.5; }
+    .tick      { stroke: #94a3b8; stroke-width: 1; }
+    .day-label { font: 600 13px ui-sans-serif, system-ui, sans-serif; fill: #475569; }
+    .title     { font: 700 17px ui-sans-serif, system-ui, sans-serif; fill: #334155; }
+    .subtitle  { font: 500 11px ui-sans-serif, system-ui, sans-serif; fill: #64748b; }
+    .card-text { font: 600 12px ui-sans-serif, system-ui, sans-serif; }
+    .card-sub  { font: 500 10.5px ui-sans-serif, system-ui, sans-serif; }
+    /* Color palette balanced for both light and dark backgrounds */
+    .openai    { fill: #38bdf8; }
+    .anthropic { fill: #fb923c; }
+    .google    { fill: #a78bfa; }
+    .ink       { fill: #0f172a; }
+    .ink-light { fill: #f8fafc; }
+  </style>
+
+  <text x="460" y="28" text-anchor="middle" class="title">Enterprise stack, May 11 – 14, 2026</text>
+  <text x="460" y="46" text-anchor="middle" class="subtitle">The week the services-layer race went concrete</text>
+
+  <!-- Axis -->
+  <line x1="80" y1="320" x2="860" y2="320" class="axis"/>
+  <line x1="80"  y1="315" x2="80"  y2="325" class="tick"/>
+  <line x1="290" y1="315" x2="290" y2="325" class="tick"/>
+  <line x1="500" y1="315" x2="500" y2="325" class="tick"/>
+  <line x1="710" y1="315" x2="710" y2="325" class="tick"/>
+  <text x="80"  y="345" text-anchor="middle" class="day-label">Mon May 11</text>
+  <text x="290" y="345" text-anchor="middle" class="day-label">Tue May 12</text>
+  <text x="500" y="345" text-anchor="middle" class="day-label">Wed May 13</text>
+  <text x="710" y="345" text-anchor="middle" class="day-label">Thu May 14</text>
+
+  <!-- Day 11: OpenAI DeployCo -->
+  <g>
+    <rect x="20" y="74" width="200" height="58" rx="8" class="openai" opacity="0.85"/>
+    <text x="120" y="93" text-anchor="middle" class="card-text ink">OpenAI Deployment Co.</text>
+    <text x="120" y="109" text-anchor="middle" class="card-sub ink">$4B raise · $14B valuation</text>
+    <text x="120" y="123" text-anchor="middle" class="card-sub ink">Tomoro acquired · 150 FDEs</text>
+    <line x1="80" y1="132" x2="80" y2="315" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Day 11: Google AI zero-day -->
+  <g>
+    <rect x="20" y="180" width="200" height="58" rx="8" class="google" opacity="0.85"/>
+    <text x="120" y="199" text-anchor="middle" class="card-text ink">Google: first AI-built</text>
+    <text x="120" y="215" text-anchor="middle" class="card-text ink">zero-day spotted</text>
+    <text x="120" y="229" text-anchor="middle" class="card-sub ink">2FA-bypass on open-source admin tool</text>
+  </g>
+
+  <!-- Day 12: Anthropic Claude Platform on AWS GA -->
+  <g>
+    <rect x="232" y="74" width="200" height="58" rx="8" class="anthropic" opacity="0.85"/>
+    <text x="332" y="93" text-anchor="middle" class="card-text ink">Claude Platform on AWS</text>
+    <text x="332" y="109" text-anchor="middle" class="card-sub ink">GA · full API feature set</text>
+    <text x="332" y="123" text-anchor="middle" class="card-sub ink">First cloud for native Claude</text>
+    <line x1="290" y1="132" x2="290" y2="315" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Day 13: Claude for Small Business -->
+  <g>
+    <rect x="442" y="74" width="200" height="58" rx="8" class="anthropic" opacity="0.85"/>
+    <text x="542" y="93" text-anchor="middle" class="card-text ink">Claude for Small Business</text>
+    <text x="542" y="109" text-anchor="middle" class="card-sub ink">QuickBooks · PayPal · HubSpot</text>
+    <text x="542" y="123" text-anchor="middle" class="card-sub ink">Canva · M365 · Workspace</text>
+    <line x1="500" y1="132" x2="500" y2="315" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Day 13: Claude Code weekly limits +50% -->
+  <g>
+    <rect x="442" y="180" width="200" height="58" rx="8" class="anthropic" opacity="0.7"/>
+    <text x="542" y="199" text-anchor="middle" class="card-text ink">Claude Code weekly limits</text>
+    <text x="542" y="215" text-anchor="middle" class="card-text ink">raised +50%</text>
+    <text x="542" y="229" text-anchor="middle" class="card-sub ink">on top of May 6 doubling</text>
+  </g>
+
+  <!-- Day 14: Small Business Roadshow -->
+  <g>
+    <rect x="652" y="74" width="200" height="58" rx="8" class="anthropic" opacity="0.85"/>
+    <text x="752" y="93" text-anchor="middle" class="card-text ink">Small Business Roadshow</text>
+    <text x="752" y="109" text-anchor="middle" class="card-sub ink">Starts Chicago, May 14</text>
+    <text x="752" y="123" text-anchor="middle" class="card-sub ink">Half-day, 100 leaders / stop</text>
+    <line x1="710" y1="132" x2="710" y2="315" stroke="#c2410c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Day 14: "Agents on a meter" framing (industry read) -->
+  <g>
+    <rect x="652" y="180" width="200" height="58" rx="8" class="anthropic" opacity="0.55"/>
+    <text x="752" y="199" text-anchor="middle" class="card-text ink">Managed Agents</text>
+    <text x="752" y="215" text-anchor="middle" class="card-text ink">$0.08 / session-hour</text>
+    <text x="752" y="229" text-anchor="middle" class="card-sub ink">usage-based across Pro/Max/Team</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(80,266)">
+    <rect width="14" height="14" rx="3" class="openai"/>
+    <text x="22" y="11" class="subtitle">OpenAI</text>
+    <rect x="92" width="14" height="14" rx="3" class="anthropic"/>
+    <text x="114" y="11" class="subtitle">Anthropic</text>
+    <rect x="200" width="14" height="14" rx="3" class="google"/>
+    <text x="222" y="11" class="subtitle">Google / DeepMind</text>
+  </g>
+</svg>
