@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" role="img" aria-label="Frontier-lab paper valuation timeline showing Anthropic crossing OpenAI in May 2026">
+  <title>Frontier-lab valuations, late 2024 to mid May 2026</title>
+  <desc>Stacked timeline of OpenAI and Anthropic paper valuations from Q4 2024 through May 12 2026, marking the May 12 raise at which Anthropic's $900B paper valuation crossed OpenAI's $852B for the first time.</desc>
+  <style>
+    .axis     { stroke: #94a3b8; stroke-width: 1.5; fill: none; }
+    .tick     { stroke: #94a3b8; stroke-width: 1; }
+    .grid     { stroke: #94a3b8; stroke-width: 0.5; stroke-dasharray: 2 4; opacity: 0.45; }
+    .gridlbl  { fill: #94a3b8; font: 11px ui-sans-serif, system-ui; }
+    .lbl      { fill: #475569; font: 12px ui-sans-serif, system-ui; }
+    .lblDark  { fill: #e2e8f0; font: 12px ui-sans-serif, system-ui; }
+    .title    { fill: #1e293b; font: 600 16px ui-sans-serif, system-ui; }
+    .titleD   { fill: #f1f5f9; font: 600 16px ui-sans-serif, system-ui; }
+    .anth     { stroke: #f97316; stroke-width: 3; fill: none; }
+    .anthD    { fill: #f97316; }
+    .openai   { stroke: #14b8a6; stroke-width: 3; fill: none; }
+    .openaiD  { fill: #14b8a6; }
+    .cross    { stroke: #ef4444; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    .crosslbl { fill: #ef4444; font: 600 12px ui-sans-serif, system-ui; }
+    .valLbl   { font: 600 12px ui-sans-serif, system-ui; }
+    @media (prefers-color-scheme: dark) {
+      .lbl   { fill: #cbd5e1; }
+      .title { fill: #f1f5f9; }
+    }
+  </style>
+
+  <!-- Background panel -->
+  <rect x="0" y="0" width="880" height="460" fill="none"/>
+
+  <!-- Title -->
+  <text x="40" y="34" class="title">Anthropic vs. OpenAI: paper valuation, Q4 2024 → May 12 2026</text>
+  <text x="40" y="54" class="lbl">Anthropic crosses for the first time on the in-progress $30B round.</text>
+
+  <!-- Axes -->
+  <line class="axis" x1="70"  y1="380" x2="820" y2="380"/>
+  <line class="axis" x1="70"  y1="80"  x2="70"  y2="380"/>
+
+  <!-- Y gridlines / labels: 0, 200, 400, 600, 800, 1000 ($B) -->
+  <g>
+    <line class="grid" x1="70" y1="380" x2="820" y2="380"/>
+    <text class="gridlbl" x="38" y="384">$0</text>
+
+    <line class="grid" x1="70" y1="320" x2="820" y2="320"/>
+    <text class="gridlbl" x="30" y="324">$200B</text>
+
+    <line class="grid" x1="70" y1="260" x2="820" y2="260"/>
+    <text class="gridlbl" x="30" y="264">$400B</text>
+
+    <line class="grid" x1="70" y1="200" x2="820" y2="200"/>
+    <text class="gridlbl" x="30" y="204">$600B</text>
+
+    <line class="grid" x1="70" y1="140" x2="820" y2="140"/>
+    <text class="gridlbl" x="30" y="144">$800B</text>
+
+    <line class="grid" x1="70" y1="80"  x2="820" y2="80"/>
+    <text class="gridlbl" x="30" y="84">$1000B</text>
+  </g>
+
+  <!-- X axis ticks: time points -->
+  <!-- 0 = Q4 2024, 6 anchor points across to May 2026 -->
+  <!-- x positions: 100, 230, 360, 490, 620, 750 -->
+  <g>
+    <line class="tick" x1="100" y1="380" x2="100" y2="386"/>
+    <text class="lbl" x="78" y="402">Q4'24</text>
+    <line class="tick" x1="230" y1="380" x2="230" y2="386"/>
+    <text class="lbl" x="210" y="402">Q2'25</text>
+    <line class="tick" x1="360" y1="380" x2="360" y2="386"/>
+    <text class="lbl" x="340" y="402">Q3'25</text>
+    <line class="tick" x1="490" y1="380" x2="490" y2="386"/>
+    <text class="lbl" x="470" y="402">Q4'25</text>
+    <line class="tick" x1="620" y1="380" x2="620" y2="386"/>
+    <text class="lbl" x="600" y="402">Q1'26</text>
+    <line class="tick" x1="750" y1="380" x2="750" y2="386"/>
+    <text class="lbl" x="724" y="402">May'26</text>
+  </g>
+
+  <!-- OpenAI valuation series (teal). Approx anchors:
+       Oct '24 $157B (y=380 - 157*0.3 = 332.9)
+       Mar '25 $300B  (y=380 - 90 = 290)
+       Q3 '25 $500B  (y=380-150 = 230)
+       Q4 '25 $600B  (y=380-180 = 200)
+       Mar '26 $852B (y=380 - 256 = 124)
+       May '26 $852B (still 124)
+       y = 380 - val*0.3 -->
+  <polyline class="openai" points="100,333 230,290 360,230 490,200 620,124 750,124"/>
+  <!-- OpenAI dots -->
+  <circle class="openaiD" cx="100" cy="333" r="5"/>
+  <circle class="openaiD" cx="230" cy="290" r="5"/>
+  <circle class="openaiD" cx="360" cy="230" r="5"/>
+  <circle class="openaiD" cx="490" cy="200" r="5"/>
+  <circle class="openaiD" cx="620" cy="124" r="6"/>
+  <circle class="openaiD" cx="750" cy="124" r="6"/>
+
+  <!-- Anthropic valuation series (orange). Anchors:
+       Oct '24 $40B  (y=380-12 = 368)
+       Mar '25 $61B  (y=380-18 = 362)
+       Aug '25 $183B (y=380-55 = 325)
+       Mar '26 $350B (y=380-105 = 275)  -- approx pre-G
+       Apr '26 $500B (y=380-150 = 230) -- series G ~$500B
+       May 12 '26 $900B (y=380-270 = 110) -->
+  <polyline class="anth" points="100,368 230,362 360,325 490,275 620,230 750,110"/>
+  <circle class="anthD" cx="100" cy="368" r="5"/>
+  <circle class="anthD" cx="230" cy="362" r="5"/>
+  <circle class="anthD" cx="360" cy="325" r="5"/>
+  <circle class="anthD" cx="490" cy="275" r="5"/>
+  <circle class="anthD" cx="620" cy="230" r="6"/>
+  <circle class="anthD" cx="750" cy="110" r="7"/>
+
+  <!-- Crossing annotation -->
+  <line class="cross" x1="750" y1="80" x2="750" y2="380"/>
+  <text class="crosslbl" x="612" y="74">May 12 raise: Anthropic crosses OpenAI</text>
+
+  <!-- Data labels with values -->
+  <text class="valLbl anthD" x="755" y="106">Anthropic ~$900B</text>
+  <text class="valLbl openaiD" x="755" y="142">OpenAI ~$852B</text>
+
+  <text class="valLbl anthD" x="565" y="224">Anthropic ~$500B (Apr)</text>
+  <text class="valLbl openaiD" x="565" y="184">OpenAI ~$600B (Q4'25)</text>
+
+  <text class="valLbl openaiD" x="120" y="324">OpenAI $157B</text>
+  <text class="valLbl anthD" x="120" y="362">Anthropic $40B</text>
+
+  <!-- Legend -->
+  <g transform="translate(540,420)">
+    <rect x="0" y="-12" width="14" height="6" fill="#f97316"/>
+    <text class="lbl" x="20" y="-6">Anthropic</text>
+    <rect x="100" y="-12" width="14" height="6" fill="#14b8a6"/>
+    <text class="lbl" x="120" y="-6">OpenAI</text>
+    <line class="cross" x1="190" y1="-9" x2="218" y2="-9"/>
+    <text class="crosslbl" x="224" y="-6">crossing point</text>
+  </g>
+</svg>
