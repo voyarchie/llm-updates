@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-label="Ramp AI Index — Anthropic crosses OpenAI in business payments, April 2026" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>Ramp AI Index — Anthropic crosses OpenAI in U.S. business payments, April 2026</title>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#9ca3af">Ramp AI Index — share of U.S. firms paying for a frontier-lab SKU</text>
+  <text x="360" y="48" text-anchor="middle" font-size="12" fill="#9ca3af">Monthly, % of ~50,000 Ramp-platform companies · Apr 2025 – Apr 2026</text>
+
+  <!-- Plot frame -->
+  <g stroke="#9ca3af" stroke-width="1" fill="none" opacity="0.6">
+    <line x1="80" y1="320" x2="680" y2="320"/>
+    <line x1="80" y1="70"  x2="80"  y2="320"/>
+  </g>
+
+  <!-- Y gridlines + labels -->
+  <g stroke="#9ca3af" stroke-width="0.5" opacity="0.25">
+    <line x1="80" y1="270" x2="680" y2="270"/>
+    <line x1="80" y1="220" x2="680" y2="220"/>
+    <line x1="80" y1="170" x2="680" y2="170"/>
+    <line x1="80" y1="120" x2="680" y2="120"/>
+  </g>
+  <g font-size="10" fill="#9ca3af" text-anchor="end">
+    <text x="74" y="324">10%</text>
+    <text x="74" y="274">20%</text>
+    <text x="74" y="224">30%</text>
+    <text x="74" y="174">40%</text>
+    <text x="74" y="124">50%</text>
+  </g>
+
+  <!-- X tick labels: 12 months -->
+  <g font-size="10" fill="#9ca3af" text-anchor="middle">
+    <text x="80"  y="338">Apr&apos;25</text>
+    <text x="130" y="338">Jun</text>
+    <text x="180" y="338">Aug</text>
+    <text x="230" y="338">Oct</text>
+    <text x="280" y="338">Dec</text>
+    <text x="330" y="338">Feb&apos;26</text>
+    <text x="380" y="338">Mar</text>
+    <text x="430" y="338">Apr</text>
+    <text x="480" y="338">May (proj.)</text>
+  </g>
+
+  <!-- OpenAI line: starts ~52%, declines to ~32.3% Apr 26 (drop of 2.9 pts in April) -->
+  <!-- points: x from 80 (Apr25) to 430 (Apr26), May proj at 480 -->
+  <polyline fill="none" stroke="#059669" stroke-width="2.5"
+    points="80,109 130,114 180,124 230,134 280,149 330,164 380,179 430,205 480,213"/>
+  <g fill="#059669">
+    <circle cx="80"  cy="109" r="3"/>
+    <circle cx="130" cy="114" r="3"/>
+    <circle cx="180" cy="124" r="3"/>
+    <circle cx="230" cy="134" r="3"/>
+    <circle cx="280" cy="149" r="3"/>
+    <circle cx="330" cy="164" r="3"/>
+    <circle cx="380" cy="179" r="3"/>
+    <circle cx="430" cy="205" r="4"/>
+    <circle cx="480" cy="213" r="3" opacity="0.6"/>
+  </g>
+
+  <!-- Anthropic line: starts ~9%, rises to 34.4% Apr 26 (up 3.8 pts in April) -->
+  <polyline fill="none" stroke="#d97706" stroke-width="2.5"
+    points="80,295 130,287 180,275 230,260 280,243 330,225 380,210 430,192 480,178"/>
+  <g fill="#d97706">
+    <circle cx="80"  cy="295" r="3"/>
+    <circle cx="130" cy="287" r="3"/>
+    <circle cx="180" cy="275" r="3"/>
+    <circle cx="230" cy="260" r="3"/>
+    <circle cx="280" cy="243" r="3"/>
+    <circle cx="330" cy="225" r="3"/>
+    <circle cx="380" cy="210" r="3"/>
+    <circle cx="430" cy="192" r="4"/>
+    <circle cx="480" cy="178" r="3" opacity="0.6"/>
+  </g>
+
+  <!-- Crossover marker -->
+  <line x1="408" y1="70" x2="408" y2="320" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+  <text x="408" y="64" text-anchor="middle" font-size="11" font-weight="600" fill="#9ca3af">crossover — April 2026</text>
+
+  <!-- April Anthropic call-out -->
+  <g>
+    <line x1="430" y1="192" x2="540" y2="140" stroke="#d97706" stroke-width="1" opacity="0.7"/>
+    <rect x="540" y="118" width="158" height="40" rx="6" fill="#d97706" opacity="0.12" stroke="#d97706" stroke-width="1"/>
+    <text x="619" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#d97706">Anthropic 34.4%</text>
+    <text x="619" y="151" text-anchor="middle" font-size="10" fill="#d97706">+3.8 pts in April alone</text>
+  </g>
+
+  <!-- April OpenAI call-out -->
+  <g>
+    <line x1="430" y1="205" x2="540" y2="252" stroke="#059669" stroke-width="1" opacity="0.7"/>
+    <rect x="540" y="234" width="158" height="40" rx="6" fill="#059669" opacity="0.12" stroke="#059669" stroke-width="1"/>
+    <text x="619" y="251" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">OpenAI 32.3%</text>
+    <text x="619" y="267" text-anchor="middle" font-size="10" fill="#059669">−2.9 pts in April</text>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="11" fill="#9ca3af">
+    <rect x="86"  y="78" width="14" height="3" fill="#d97706"/>
+    <text x="106" y="82">Anthropic</text>
+    <rect x="186" y="78" width="14" height="3" fill="#059669"/>
+    <text x="206" y="82">OpenAI</text>
+    <text x="280" y="82" font-style="italic" opacity="0.8">May figures projected from monthly trend</text>
+  </g>
+
+  <!-- Source -->
+  <text x="80" y="368" font-size="10" fill="#9ca3af" opacity="0.85">Source: Ramp AI Index, May 2026 release (data through April).</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Google I/O 2026 — leaked Gemini code-name lineup, two days before keynote" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>Google I/O 2026 — Gemini code-name lineup as of May 17</title>
+
+  <text x="380" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#9ca3af">Google I/O 2026 — leaked Gemini code-name lineup</text>
+  <text x="380" y="48" text-anchor="middle" font-size="12" fill="#9ca3af">As of Sun May 17 · keynote opens Tue May 19, 10am PT</text>
+
+  <!-- Quadrant axes -->
+  <g stroke="#9ca3af" stroke-width="1" opacity="0.4">
+    <line x1="60"  y1="220" x2="700" y2="220"/>
+    <line x1="380" y1="80"  x2="380" y2="380"/>
+  </g>
+  <g font-size="11" fill="#9ca3af" font-weight="600">
+    <text x="380" y="74" text-anchor="middle">consumer surface →</text>
+    <text x="380" y="396" text-anchor="middle">← developer / agent surface</text>
+    <text x="56"  y="220" text-anchor="end">single-modal</text>
+    <text x="704" y="220" text-anchor="start">unified / multimodal</text>
+  </g>
+
+  <!-- Top-left: Spark Robin (visual model, consumer) -->
+  <g>
+    <rect x="100" y="105" width="200" height="80" rx="10" fill="#2563eb" opacity="0.18" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="200" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">Spark Robin</text>
+    <text x="200" y="145" text-anchor="middle" font-size="10" fill="#9ca3af">visual model · consumer</text>
+    <text x="200" y="160" text-anchor="middle" font-size="10" fill="#9ca3af">image-first capability</text>
+    <text x="200" y="174" text-anchor="middle" font-size="10" fill="#9ca3af">code-name, low detail</text>
+  </g>
+
+  <!-- Top-right: Omni (unified video+image, consumer) -->
+  <g>
+    <rect x="460" y="105" width="200" height="80" rx="10" fill="#7c3aed" opacity="0.18" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="560" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">Omni</text>
+    <text x="560" y="145" text-anchor="middle" font-size="10" fill="#9ca3af">unified video + image + audio</text>
+    <text x="560" y="160" text-anchor="middle" font-size="10" fill="#9ca3af">replacement for Veo/Imagen/Lyria</text>
+    <text x="560" y="174" text-anchor="middle" font-size="10" fill="#9ca3af">already live in Pro app for some</text>
+  </g>
+
+  <!-- Bottom-left: Gemini 3.2 Flash (single, developer) -->
+  <g>
+    <rect x="100" y="255" width="200" height="80" rx="10" fill="#059669" opacity="0.18" stroke="#059669" stroke-width="1.5"/>
+    <text x="200" y="278" text-anchor="middle" font-size="13" font-weight="700" fill="#059669">Gemini 3.2 Flash</text>
+    <text x="200" y="295" text-anchor="middle" font-size="10" fill="#9ca3af">$0.25 / $2.00 per 1M tok</text>
+    <text x="200" y="310" text-anchor="middle" font-size="10" fill="#9ca3af">~92% of GPT-5.5 reasoning</text>
+    <text x="200" y="324" text-anchor="middle" font-size="10" fill="#9ca3af">&lt;200ms TTFT claim</text>
+  </g>
+
+  <!-- Bottom-right: Spark agent + Teamfood memory + 3.5 -->
+  <g>
+    <rect x="460" y="255" width="200" height="80" rx="10" fill="#d97706" opacity="0.18" stroke="#d97706" stroke-width="1.5"/>
+    <text x="560" y="278" text-anchor="middle" font-size="13" font-weight="700" fill="#d97706">Spark + Teamfood</text>
+    <text x="560" y="295" text-anchor="middle" font-size="10" fill="#9ca3af">always-on agent + persistent memory</text>
+    <text x="560" y="310" text-anchor="middle" font-size="10" fill="#9ca3af">aimed at Claude Cowork</text>
+    <text x="560" y="324" text-anchor="middle" font-size="10" fill="#9ca3af">"Gemini 3.5" string co-located</text>
+  </g>
+
+  <!-- Source -->
+  <text x="60" y="408" font-size="10" fill="#9ca3af" opacity="0.85">Codename evidence: Gemini app strings + Pro subscriber screenshots (9to5Google, Android Authority, Android Police, Phemex, WaveSpeed).</text>
+</svg>
