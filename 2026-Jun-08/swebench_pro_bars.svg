@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" role="img" aria-label="SWE-Bench Pro scores, frontier coding models June 2026" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>SWE-Bench Pro — frontier coding models, June 2026</title>
+
+  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#9ca3af">SWE-Bench Pro — agentic software-engineering accuracy</text>
+  <text x="360" y="46" text-anchor="middle" font-size="12" fill="#9ca3af">Higher is better · vendor + Artificial Analysis figures, June 2026</text>
+
+  <!-- gridlines at 50/60/70 -->
+  <g stroke="#9ca3af" stroke-width="0.5" opacity="0.25">
+    <line x1="200" y1="70" x2="200" y2="300"/>
+    <line x1="320" y1="70" x2="320" y2="300"/>
+    <line x1="440" y1="70" x2="440" y2="300"/>
+    <line x1="560" y1="70" x2="560" y2="300"/>
+  </g>
+  <g font-size="10" fill="#9ca3af" text-anchor="middle" opacity="0.8">
+    <text x="200" y="316">0%</text>
+    <text x="320" y="316">20%</text>
+    <text x="440" y="316">40%</text>
+    <text x="560" y="316">60%</text>
+  </g>
+
+  <!-- bars: scale 6px per point from x=200 -->
+  <!-- Opus 4.8 = 69.2 -->
+  <text x="190" y="98" text-anchor="end" font-size="11" font-weight="700" fill="#d97706">Claude Opus 4.8</text>
+  <rect x="200" y="82" width="415" height="24" rx="3" fill="#d97706"/>
+  <text x="623" y="98" font-size="11" font-weight="700" fill="#d97706">69.2%</text>
+
+  <!-- Opus 4.7 = 64.3 -->
+  <text x="190" y="143" text-anchor="end" font-size="11" fill="#9ca3af">Claude Opus 4.7</text>
+  <rect x="200" y="127" width="386" height="24" rx="3" fill="#d97706" opacity="0.5"/>
+  <text x="594" y="143" font-size="11" fill="#9ca3af">64.3%</text>
+
+  <!-- MiniMax M3 = 59.0 (open weight) -->
+  <text x="190" y="188" text-anchor="end" font-size="11" fill="#9ca3af">MiniMax M3 *</text>
+  <rect x="200" y="172" width="354" height="24" rx="3" fill="#0ea5e9"/>
+  <text x="562" y="188" font-size="11" fill="#9ca3af">59.0%</text>
+
+  <!-- GPT-5.5 = 58.6 -->
+  <text x="190" y="233" text-anchor="end" font-size="11" fill="#9ca3af">GPT-5.5</text>
+  <rect x="200" y="217" width="352" height="24" rx="3" fill="#059669"/>
+  <text x="560" y="233" font-size="11" fill="#9ca3af">58.6%</text>
+
+  <!-- Gemini 3.1 Pro = 54.2 -->
+  <text x="190" y="278" text-anchor="end" font-size="11" fill="#9ca3af">Gemini 3.1 Pro</text>
+  <rect x="200" y="262" width="325" height="24" rx="3" fill="#2563eb"/>
+  <text x="533" y="278" font-size="11" fill="#9ca3af">54.2%</text>
+
+  <text x="40" y="328" font-size="9.5" fill="#9ca3af" opacity="0.8">* MiniMax M3 is open-weight and company-reported (independent reruns pending). Sources: Artificial Analysis, Vellum, VentureBeat.</text>
+</svg>
