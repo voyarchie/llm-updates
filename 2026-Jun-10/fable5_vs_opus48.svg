@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" role="img" aria-label="Claude Fable 5 vs Opus 4.8 on SWE-bench Verified and SWE-bench Pro, June 2026" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>Claude Fable 5 vs Opus 4.8 — coding benchmarks, June 2026</title>
+
+  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#9ca3af">Fable 5 vs Opus 4.8 — agentic coding accuracy</text>
+  <text x="360" y="46" text-anchor="middle" font-size="12" fill="#9ca3af">Higher is better · vendor + Artificial Analysis figures, Jun 2026</text>
+
+  <!-- gridlines 0/20/40/60/80/100, x=220..660 (4.4px/point) -->
+  <g stroke="#9ca3af" stroke-width="0.5" opacity="0.25">
+    <line x1="220" y1="70" x2="220" y2="278"/>
+    <line x1="308" y1="70" x2="308" y2="278"/>
+    <line x1="396" y1="70" x2="396" y2="278"/>
+    <line x1="484" y1="70" x2="484" y2="278"/>
+    <line x1="572" y1="70" x2="572" y2="278"/>
+    <line x1="660" y1="70" x2="660" y2="278"/>
+  </g>
+  <g font-size="10" fill="#9ca3af" text-anchor="middle" opacity="0.8">
+    <text x="220" y="294">0%</text>
+    <text x="308" y="294">20%</text>
+    <text x="396" y="294">40%</text>
+    <text x="484" y="294">60%</text>
+    <text x="572" y="294">80%</text>
+    <text x="660" y="294">100%</text>
+  </g>
+
+  <!-- Group 1: SWE-bench Verified -->
+  <text x="210" y="100" text-anchor="end" font-size="12" font-weight="700" fill="#9ca3af">SWE-bench</text>
+  <text x="210" y="116" text-anchor="end" font-size="12" font-weight="700" fill="#9ca3af">Verified</text>
+  <!-- Fable 5 = 95.0 -> width 418 -->
+  <rect x="220" y="84" width="418" height="22" rx="3" fill="#d97706"/>
+  <text x="646" y="100" font-size="11" font-weight="700" fill="#d97706">95.0%</text>
+  <!-- Opus 4.8 = 88.6 -> width 390 -->
+  <rect x="220" y="110" width="390" height="22" rx="3" fill="#d97706" opacity="0.45"/>
+  <text x="618" y="126" font-size="11" fill="#9ca3af">88.6%</text>
+
+  <!-- Group 2: SWE-bench Pro -->
+  <text x="210" y="190" text-anchor="end" font-size="12" font-weight="700" fill="#9ca3af">SWE-bench</text>
+  <text x="210" y="206" text-anchor="end" font-size="12" font-weight="700" fill="#9ca3af">Pro</text>
+  <!-- Fable 5 = 80.0 -> width 352 -->
+  <rect x="220" y="174" width="352" height="22" rx="3" fill="#d97706"/>
+  <text x="580" y="190" font-size="11" font-weight="700" fill="#d97706">80.0%</text>
+  <!-- Opus 4.8 = 69.2 -> width 304 -->
+  <rect x="220" y="200" width="304" height="22" rx="3" fill="#d97706" opacity="0.45"/>
+  <text x="532" y="216" font-size="11" fill="#9ca3af">69.2%</text>
+
+  <!-- legend -->
+  <rect x="240" y="250" width="14" height="14" rx="2" fill="#d97706"/>
+  <text x="260" y="262" font-size="11" fill="#9ca3af">Claude Fable 5 (Jun 9)</text>
+  <rect x="430" y="250" width="14" height="14" rx="2" fill="#d97706" opacity="0.45"/>
+  <text x="450" y="262" font-size="11" fill="#9ca3af">Claude Opus 4.8 (May 28)</text>
+
+  <text x="40" y="312" font-size="9.5" fill="#9ca3af" opacity="0.8">Fable 5 also posts ~95% GPQA Diamond and a leading 1932 Elo on GDPval-AA (Opus 4.8: 1890). Vendor-reported; independent reruns pending.</text>
+</svg>
