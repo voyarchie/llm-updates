@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" role="img" aria-label="Claude Fable 5: from #1 launch to global shutdown in five days" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>Claude Fable 5 — from #1 launch to government-ordered global shutdown in five days (Jun 9–13, 2026)</title>
+
+  <text x="430" y="26" text-anchor="middle" font-size="16" font-weight="700" fill="#9ca3af">Claude Fable 5 — #1 launch to global shutdown in five days</text>
+  <text x="430" y="46" text-anchor="middle" font-size="12" fill="#9ca3af">Jun 9–13 2026 · the gate the Jun-11 brief said to watch did not just get bypassed — the model got pulled</text>
+
+  <!-- timeline spine -->
+  <line x1="70" y1="150" x2="790" y2="150" stroke="#9ca3af" stroke-width="2" opacity="0.5"/>
+
+  <!-- Node 1: Jun 9 launch (green) -->
+  <circle cx="110" cy="150" r="9" fill="#059669"/>
+  <text x="110" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#059669">Jun 9</text>
+  <rect x="40" y="166" width="140" height="74" rx="5" fill="#059669"/>
+  <text x="110" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#f8fafc">Fable 5 ships</text>
+  <text x="110" y="203" text-anchor="middle" font-size="10" fill="#f8fafc">#1 AA Index (64.9)</text>
+  <text x="110" y="218" text-anchor="middle" font-size="10" fill="#f8fafc">classifier gate +</text>
+  <text x="110" y="232" text-anchor="middle" font-size="10" fill="#f8fafc">30-day retention</text>
+
+  <!-- Node 2: Jun 10-11 jailbreak (amber) -->
+  <circle cx="280" cy="150" r="9" fill="#d97706"/>
+  <text x="280" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#d97706">Jun 10–11</text>
+  <rect x="210" y="166" width="140" height="74" rx="5" fill="#d97706"/>
+  <text x="280" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#f8fafc">Gate bypassed</text>
+  <text x="280" y="203" text-anchor="middle" font-size="10" fill="#f8fafc">multi-agent +</text>
+  <text x="280" y="218" text-anchor="middle" font-size="10" fill="#f8fafc">Unicode + framing</text>
+  <text x="280" y="232" text-anchor="middle" font-size="10" fill="#f8fafc">~120k prompt leaked</text>
+
+  <!-- Node 3: Jun 11-12 backlash (purple) -->
+  <circle cx="450" cy="150" r="9" fill="#7c3aed"/>
+  <text x="450" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#7c3aed">Jun 11–12</text>
+  <rect x="380" y="166" width="140" height="74" rx="5" fill="#7c3aed"/>
+  <text x="450" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#f8fafc">Apology</text>
+  <text x="450" y="203" text-anchor="middle" font-size="10" fill="#f8fafc">"secret sabotage"</text>
+  <text x="450" y="218" text-anchor="middle" font-size="10" fill="#f8fafc">backlash; silent</text>
+  <text x="450" y="232" text-anchor="middle" font-size="10" fill="#f8fafc">fallback made visible</text>
+
+  <!-- Node 4: Jun 12 order (red) -->
+  <circle cx="620" cy="150" r="9" fill="#dc2626"/>
+  <text x="620" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">Jun 12 · 5:21pm ET</text>
+  <rect x="550" y="166" width="140" height="74" rx="5" fill="#dc2626"/>
+  <text x="620" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#f8fafc">Export order</text>
+  <text x="620" y="203" text-anchor="middle" font-size="10" fill="#f8fafc">Commerce / BIS:</text>
+  <text x="620" y="218" text-anchor="middle" font-size="10" fill="#f8fafc">no foreign-national</text>
+  <text x="620" y="232" text-anchor="middle" font-size="10" fill="#f8fafc">access, any model</text>
+
+  <!-- Node 5: Jun 13 shutdown (dark red) -->
+  <circle cx="760" cy="150" r="9" fill="#991b1b"/>
+  <text x="760" y="120" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">Jun 12–13</text>
+  <rect x="690" y="166" width="140" height="74" rx="5" fill="#991b1b"/>
+  <text x="760" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#f8fafc">Pulled worldwide</text>
+  <text x="760" y="203" text-anchor="middle" font-size="10" fill="#f8fafc">Fable 5 + Mythos 5</text>
+  <text x="760" y="218" text-anchor="middle" font-size="10" fill="#f8fafc">off for ALL users;</text>
+  <text x="760" y="232" text-anchor="middle" font-size="10" fill="#f8fafc">other Claudes OK</text>
+
+  <text x="430" y="270" text-anchor="middle" font-size="9.5" fill="#9ca3af" opacity="0.85">Sources: Anthropic, Axios, Bloomberg, Al Jazeera, CNBC, Fortune, SecurityWeek, TechTimes. Times/dates as reported; directive received 5:21 p.m. ET Jun 12.</text>
+</svg>
