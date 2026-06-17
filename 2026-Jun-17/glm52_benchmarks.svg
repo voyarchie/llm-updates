@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="GLM-5.2 vs GPT-5.5 vs Claude Opus 4.8 on SWE-bench Pro and FrontierSWE">
+  <style>
+    .axis  { stroke:#64748b; stroke-width:1.5; }
+    .grid  { stroke:#94a3b8; stroke-width:1; stroke-dasharray:3 4; opacity:.55; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .val   { fill:#334155; font-size:13px; font-weight:700; }
+    .valw  { fill:#64748b; font-size:13px; font-weight:700; }
+    .lbl   { fill:#64748b; font-size:13px; font-weight:600; }
+    .ttl   { fill:#64748b; font-size:16px; font-weight:700; }
+    .glm   { fill:#16a34a; }
+    .gpt   { fill:#d97706; }
+    .opus  { fill:#2563eb; }
+    @media (prefers-color-scheme: dark) {
+      .val  { fill:#e2e8f0; }
+    }
+  </style>
+
+  <text x="360" y="26" text-anchor="middle" class="ttl">GLM-5.2 open weights land at the coding frontier (higher = better)</text>
+
+  <!-- y gridlines / ticks: axis truncated, baseline = 55 -->
+  <!-- mapping: y_px = 370 - (v-55)*11.111 ; v in [55,82] -->
+  <line class="grid" x1="80" y1="370" x2="690" y2="370"/>
+  <line class="grid" x1="80" y1="314" x2="690" y2="314"/>
+  <line class="grid" x1="80" y1="259" x2="690" y2="259"/>
+  <line class="grid" x1="80" y1="203" x2="690" y2="203"/>
+  <line class="grid" x1="80" y1="148" x2="690" y2="148"/>
+  <line class="grid" x1="80" y1="92"  x2="690" y2="92"/>
+  <text x="72" y="374" text-anchor="end" class="tick">55</text>
+  <text x="72" y="318" text-anchor="end" class="tick">60</text>
+  <text x="72" y="263" text-anchor="end" class="tick">65</text>
+  <text x="72" y="207" text-anchor="end" class="tick">70</text>
+  <text x="72" y="152" text-anchor="end" class="tick">75</text>
+  <text x="72" y="96"  text-anchor="end" class="tick">80</text>
+
+  <line class="axis" x1="80" y1="370" x2="690" y2="370"/>
+
+  <!-- ===== Group A: SWE-bench Pro (baseline 55) ===== -->
+  <!-- GLM 62.1 -> h=78.9, y=291 ; GPT 58.6 -> h=40, y=330 -->
+  <rect class="glm" x="160" y="291" width="58" height="79" rx="3"/>
+  <text x="189" y="284" text-anchor="middle" class="val">62.1</text>
+  <rect class="gpt" x="232" y="330" width="58" height="40" rx="3"/>
+  <text x="261" y="323" text-anchor="middle" class="val">58.6</text>
+  <text x="225" y="392" text-anchor="middle" class="lbl">SWE-bench Pro</text>
+
+  <!-- ===== Group B: FrontierSWE (baseline 55) ===== -->
+  <!-- GLM 74.4 -> h=215.5, y=154 ; GPT 72.6 -> h=195.5, y=174 ; Opus 75.1 -> h=223.3, y=146 -->
+  <rect class="glm"  x="430" y="154" width="58" height="216" rx="3"/>
+  <text x="459" y="147" text-anchor="middle" class="val">74.4</text>
+  <rect class="gpt"  x="502" y="174" width="58" height="196" rx="3"/>
+  <text x="531" y="167" text-anchor="middle" class="val">72.6</text>
+  <rect class="opus" x="574" y="146" width="58" height="224" rx="3"/>
+  <text x="603" y="139" text-anchor="middle" class="val">75.1</text>
+  <text x="531" y="392" text-anchor="middle" class="lbl">FrontierSWE</text>
+
+  <!-- legend -->
+  <rect class="glm"  x="180" y="408" width="14" height="14" rx="2"/>
+  <text x="200" y="420" class="lbl">GLM-5.2 (MIT, open weights)</text>
+  <rect class="gpt"  x="392" y="408" width="14" height="14" rx="2"/>
+  <text x="412" y="420" class="lbl">GPT-5.5</text>
+  <rect class="opus" x="492" y="408" width="14" height="14" rx="2"/>
+  <text x="512" y="420" class="lbl">Claude Opus 4.8</text>
+
+  <text x="690" y="412" text-anchor="end" class="tick">y-axis truncated at 55</text>
+</svg>
