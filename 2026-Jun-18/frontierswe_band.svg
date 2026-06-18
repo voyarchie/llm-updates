@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="FrontierSWE long-horizon coding scores: open-weights GLM-5.2 now sits inside the closed-frontier band, beating GPT-5.5 and trailing Claude Opus 4.8 by under one point">
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #888; }
+    .sub   { font-size: 12px; fill: #888; }
+    .axis  { font-size: 11px; fill: #888; }
+    .grid  { stroke: #888; stroke-width: 1; opacity: 0.28; }
+    .base  { stroke: #888; stroke-width: 1.5; }
+    .val   { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .name  { font-size: 13px; font-weight: 700; fill: #888; }
+    .tag   { font-size: 11px; fill: #888; }
+    .note  { font-size: 11px; fill: #888; }
+    .refln { stroke: #f59e0b; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .reftx { font-size: 11px; font-weight: 600; fill: #f59e0b; }
+  </style>
+
+  <text x="380" y="28" text-anchor="middle" class="title">FrontierSWE — long-horizon coding (June 2026)</text>
+  <text x="380" y="48" text-anchor="middle" class="sub">An open-weights model now sits inside the closed-frontier band: GLM-5.2 beats GPT-5.5 and trails Opus 4.8 by 0.7 pt</text>
+
+  <!-- gridlines + y labels (0..100) -->
+  <line x1="120" y1="320" x2="700" y2="320" class="grid"/>
+  <line x1="120" y1="262.5" x2="700" y2="262.5" class="grid"/>
+  <line x1="120" y1="205" x2="700" y2="205" class="grid"/>
+  <line x1="120" y1="147.5" x2="700" y2="147.5" class="grid"/>
+  <line x1="120" y1="90" x2="700" y2="90" class="grid"/>
+  <text x="112" y="324" text-anchor="end" class="axis">0</text>
+  <text x="112" y="266" text-anchor="end" class="axis">25</text>
+  <text x="112" y="209" text-anchor="end" class="axis">50</text>
+  <text x="112" y="151" text-anchor="end" class="axis">75</text>
+  <text x="112" y="94" text-anchor="end" class="axis">100</text>
+
+  <!-- baseline -->
+  <line x1="120" y1="320" x2="700" y2="320" class="base"/>
+
+  <!-- GPT-5.5 reference line at 72.6 -> y = 320 - 0.726*230 = 153.0 -->
+  <line x1="120" y1="153.0" x2="700" y2="153.0" class="refln"/>
+  <text x="696" y="148" text-anchor="end" class="reftx">GPT-5.5 line: 72.6</text>
+
+  <!-- GLM-5.2 74.4 (open, green) center 230 -->
+  <rect x="185" y="148.9" width="90" height="171.1" rx="6" fill="#16a34a"/>
+  <text x="230" y="172" text-anchor="middle" class="val">74.4</text>
+  <text x="230" y="342" text-anchor="middle" class="name">GLM-5.2</text>
+  <text x="230" y="360" text-anchor="middle" class="tag">open weights · MIT</text>
+
+  <!-- GPT-5.5 72.6 (closed, slate) center 410 -->
+  <rect x="365" y="153.0" width="90" height="167.0" rx="6" fill="#475569"/>
+  <text x="410" y="176" text-anchor="middle" class="val">72.6</text>
+  <text x="410" y="342" text-anchor="middle" class="name">GPT-5.5</text>
+  <text x="410" y="360" text-anchor="middle" class="tag">closed · API/app</text>
+
+  <!-- Opus 4.8 75.1 (closed, blue) center 590 -->
+  <rect x="545" y="147.3" width="90" height="172.7" rx="6" fill="#2563eb"/>
+  <text x="590" y="171" text-anchor="middle" class="val">75.1</text>
+  <text x="590" y="342" text-anchor="middle" class="name">Claude Opus 4.8</text>
+  <text x="590" y="360" text-anchor="middle" class="tag">closed · API/app</text>
+
+  <text x="380" y="394" text-anchor="middle" class="note">Vendor/early third-party numbers (Jun 16–17, 2026); FrontierSWE measures multi-step task completion.</text>
+  <text x="380" y="412" text-anchor="middle" class="note">The contested capability — long-horizon coding &amp; vuln-finding — is exactly what the US cited to switch Fable 5 off.</text>
+</svg>
