@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Artificial Analysis Intelligence Index v4.1: GLM-5.2 scores 51, the new leading open-weights model, ahead of MiniMax-M3 and DeepSeek V4 Pro at 44 and up 11 points from GLM-5.1's 40 — but it is among the least token-efficient open models">
+  <style>
+    .title { font-size: 20px; font-weight: 700; fill: #888; }
+    .sub   { font-size: 12px; fill: #888; }
+    .axis  { font-size: 11px; fill: #888; }
+    .grid  { stroke: #888; stroke-width: 1; opacity: 0.28; }
+    .base  { stroke: #888; stroke-width: 1.5; }
+    .val   { font-size: 16px; font-weight: 700; fill: #ffffff; }
+    .name  { font-size: 13px; font-weight: 700; fill: #888; }
+    .tag   { font-size: 11px; fill: #888; }
+    .note  { font-size: 11px; fill: #888; }
+  </style>
+
+  <text x="380" y="28" text-anchor="middle" class="title">Artificial Analysis Intelligence Index v4.1 — open weights (Jun 17, 2026)</text>
+  <text x="380" y="48" text-anchor="middle" class="sub">Independent verdict: GLM-5.2 is the new leading open-weights model, +11 pts over GLM-5.1</text>
+
+  <!-- gridlines + y labels (0..60), plot top y=90 bottom y=320, 230px over 60 pts -->
+  <line x1="120" y1="320" x2="700" y2="320" class="grid"/>
+  <line x1="120" y1="262.5" x2="700" y2="262.5" class="grid"/>
+  <line x1="120" y1="205" x2="700" y2="205" class="grid"/>
+  <line x1="120" y1="147.5" x2="700" y2="147.5" class="grid"/>
+  <line x1="120" y1="90" x2="700" y2="90" class="grid"/>
+  <text x="112" y="324" text-anchor="end" class="axis">0</text>
+  <text x="112" y="266" text-anchor="end" class="axis">15</text>
+  <text x="112" y="209" text-anchor="end" class="axis">30</text>
+  <text x="112" y="151" text-anchor="end" class="axis">45</text>
+  <text x="112" y="94" text-anchor="end" class="axis">60</text>
+
+  <!-- baseline -->
+  <line x1="120" y1="320" x2="700" y2="320" class="base"/>
+
+  <!-- GLM-5.2 = 51 -> h=195.5, y=124.5  center 190 (highlight green) -->
+  <rect x="145" y="124.5" width="90" height="195.5" rx="6" fill="#16a34a"/>
+  <text x="190" y="147" text-anchor="middle" class="val">51</text>
+  <text x="190" y="342" text-anchor="middle" class="name">GLM-5.2</text>
+  <text x="190" y="360" text-anchor="middle" class="tag">open · MIT · new leader</text>
+
+  <!-- MiniMax-M3 = 44 -> h=168.7, y=151.3 center 350 (slate) -->
+  <rect x="305" y="151.3" width="90" height="168.7" rx="6" fill="#475569"/>
+  <text x="350" y="174" text-anchor="middle" class="val">44</text>
+  <text x="350" y="342" text-anchor="middle" class="name">MiniMax-M3</text>
+  <text x="350" y="360" text-anchor="middle" class="tag">open weights</text>
+
+  <!-- DeepSeek V4 Pro = 44 -> h=168.7, y=151.3 center 510 (slate) -->
+  <rect x="465" y="151.3" width="90" height="168.7" rx="6" fill="#475569"/>
+  <text x="510" y="174" text-anchor="middle" class="val">44</text>
+  <text x="510" y="342" text-anchor="middle" class="name">DeepSeek V4 Pro</text>
+  <text x="510" y="360" text-anchor="middle" class="tag">open weights (max)</text>
+
+  <!-- GLM-5.1 = 40 -> h=153.3, y=166.7 center 650 (lineage dark green) -->
+  <rect x="605" y="166.7" width="90" height="153.3" rx="6" fill="#166534"/>
+  <text x="650" y="189" text-anchor="middle" class="val">40</text>
+  <text x="650" y="342" text-anchor="middle" class="name">GLM-5.1</text>
+  <text x="650" y="360" text-anchor="middle" class="tag">prior gen</text>
+
+  <text x="380" y="398" text-anchor="middle" class="note">Same size as GLM-5.1 (744B total / ~40B active); gains led by scientific reasoning (CritPt +16, HLE +12).</text>
+  <text x="380" y="416" text-anchor="middle" class="note">Caveat: among the least token-efficient open models — ~43k output tokens/task (37k reasoning) vs ~24k for MiniMax-M3.</text>
+  <text x="380" y="434" text-anchor="middle" class="note">Source: Artificial Analysis Intelligence Index v4.1, Jun 17 2026. Sits on the Intelligence-vs-Cost-per-Task Pareto frontier.</text>
+</svg>
