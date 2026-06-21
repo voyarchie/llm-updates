@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 330" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-label="Prediction-market odds that Fable 5 is restored for US customers, by date">
+  <title>Polymarket: probability Fable 5 is restored for US customers, by date (as of Jun 21, 2026)</title>
+
+  <!-- Title (slate tones read on light and dark) -->
+  <text x="20" y="34" font-size="20" font-weight="700" fill="#64748b">Market-implied odds Fable 5 is restored, by date</text>
+  <text x="20" y="58" font-size="13" fill="#94a3b8">Polymarket, as of Jun 21, 2026. Still no official restoration date from Anthropic or BIS.</text>
+
+  <!-- gridlines at 0/25/50/75/100% -->
+  <g stroke="#94a3b8" stroke-width="1" opacity="0.35">
+    <line x1="240" y1="84" x2="240" y2="250"/>
+    <line x1="345" y1="84" x2="345" y2="250"/>
+    <line x1="450" y1="84" x2="450" y2="250"/>
+    <line x1="555" y1="84" x2="555" y2="250"/>
+    <line x1="660" y1="84" x2="660" y2="250"/>
+  </g>
+  <g font-size="11" fill="#94a3b8" text-anchor="middle">
+    <text x="240" y="270">0%</text>
+    <text x="345" y="270">25%</text>
+    <text x="450" y="270">50%</text>
+    <text x="555" y="270">75%</text>
+    <text x="660" y="270">100%</text>
+  </g>
+
+  <!-- Bar 1: by Jul 1 = 57% -->
+  <text x="225" y="108" font-size="14" font-weight="600" fill="#64748b" text-anchor="end">by Jul 1</text>
+  <rect x="240" y="88" width="239.4" height="34" rx="4" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.5"/>
+  <text x="469" y="110" font-size="14" font-weight="700" fill="#ffffff" text-anchor="end">57%</text>
+
+  <!-- Bar 2: by Jul 10 = 67% -->
+  <text x="225" y="160" font-size="14" font-weight="600" fill="#64748b" text-anchor="end">by Jul 10</text>
+  <rect x="240" y="140" width="281.4" height="34" rx="4" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.5"/>
+  <text x="511" y="162" font-size="14" font-weight="700" fill="#ffffff" text-anchor="end">67%</text>
+
+  <!-- Bar 3: by Jul 17 = 75% -->
+  <text x="225" y="212" font-size="14" font-weight="600" fill="#64748b" text-anchor="end">by Jul 17</text>
+  <rect x="240" y="192" width="315" height="34" rx="4" fill="#16a34a" stroke="#14532d" stroke-width="1.5"/>
+  <text x="545" y="214" font-size="14" font-weight="700" fill="#ffffff" text-anchor="end">75%</text>
+
+  <!-- baseline axis -->
+  <line x1="240" y1="250" x2="660" y2="250" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- caption -->
+  <text x="20" y="306" font-size="12" fill="#94a3b8">The market still prices a 1-in-4 chance the models stay dark past mid-July &#8212; nine days after "back in days" was said.</text>
+</svg>
