@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 588" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="The chain of events from Amazon's jailbreak finding to the suspension of Fable 5 and Mythos 5">
+  <title>Amazon → White House → Anthropic: the 90-minute chain</title>
+
+  <text x="20" y="30" font-size="17" font-weight="700" fill="#888">From "fix this code" to a global suspension in ~24 hours</text>
+
+  <!-- arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- connectors -->
+  <g stroke="#888" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="360" y1="100" x2="360" y2="120"/>
+    <line x1="360" y1="178" x2="360" y2="198"/>
+    <line x1="360" y1="256" x2="360" y2="276"/>
+    <line x1="360" y1="334" x2="360" y2="354"/>
+    <line x1="360" y1="412" x2="360" y2="432"/>
+  </g>
+
+  <!-- Box 1 -->
+  <rect x="60" y="48" width="600" height="52" rx="8" fill="#2f7d8c"/>
+  <text x="360" y="72" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Amazon researchers find the "fix this code" bypass</text>
+  <text x="360" y="90" font-size="11.5" fill="#e8f3f4" text-anchor="middle">model returns restricted cyberattack info when asked to "fix" a codebase</text>
+
+  <!-- Box 2 -->
+  <rect x="60" y="126" width="600" height="52" rx="8" fill="#34708f"/>
+  <text x="360" y="150" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Andy Jassy (Amazon CEO) flags it to senior administration officials</text>
+  <text x="360" y="168" font-size="11.5" fill="#e6eef4" text-anchor="middle">Thursday, Jun 11 — Amazon is Anthropic's largest investor</text>
+
+  <!-- Box 3 -->
+  <rect x="60" y="204" width="600" height="52" rx="8" fill="#3a6390"/>
+  <text x="360" y="228" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">White House sends Anthropic an export-control letter</text>
+  <text x="360" y="246" font-size="11.5" fill="#e7ebf4" text-anchor="middle">Friday, Jun 12, ~5:30 p.m. ET — no prior national-security notice</text>
+
+  <!-- Box 4 -->
+  <rect x="60" y="282" width="600" height="52" rx="8" fill="#465c8e"/>
+  <text x="360" y="306" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">90-minute window to comply → Fable 5 + Mythos 5 pulled globally</text>
+  <text x="360" y="324" font-size="11.5" fill="#e9eaf4" text-anchor="middle">restriction scoped to all foreign nationals, incl. Anthropic's own staff</text>
+
+  <!-- Box 5 -->
+  <rect x="60" y="360" width="600" height="52" rx="8" fill="#54558b"/>
+  <text x="360" y="384" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Negotiation in D.C.: Tom Brown &amp; Sarah Heck ↔ Lutnick &amp; Cairncross</text>
+  <text x="360" y="402" font-size="11.5" fill="#ece9f4" text-anchor="middle">daily talks; Amodei calls the bypass narrow, not a universal jailbreak</text>
+
+  <!-- Box 6 -->
+  <rect x="60" y="438" width="600" height="52" rx="8" fill="#634f87"/>
+  <text x="360" y="462" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Status Jun 16: still dark — no restoration date</text>
+  <text x="360" y="480" font-size="11.5" fill="#efe9f4" text-anchor="middle">possible path back: joint technical review + Jul-8 identity verification</text>
+
+  <text x="20" y="520" font-size="11" fill="#888">Sources: Fortune, Axios, The Hill, Quartz, TechTimes (Jun 13–16, 2026). Timeline as reported.</text>
+</svg>
