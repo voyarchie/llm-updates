@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" font-family="Inter, system-ui, sans-serif" font-size="12">
+  <style>
+    .title { font-size: 16px; font-weight: 700; fill: currentColor; }
+    .axis { stroke: currentColor; stroke-width: 1.4; opacity: 0.5; }
+    .grid { stroke: currentColor; stroke-width: 1; opacity: 0.12; }
+    .tick { fill: currentColor; opacity: 0.7; font-size: 11px; }
+    .label { fill: currentColor; }
+    .muted { fill: currentColor; opacity: 0.65; }
+    .closed { fill: #5b8def; }
+    .open { fill: #4caf85; }
+    .leak { fill: #d97557; }
+    .dot { stroke: currentColor; stroke-width: 0; }
+    .ring { fill: none; stroke: currentColor; stroke-width: 1.2; opacity: 0.4; }
+  </style>
+  <text x="20" y="28" class="title">Frontier coding capability vs price — May 12 2026 snapshot</text>
+  <text x="20" y="48" class="muted">SWE-Bench Verified (y) vs blended $ / M tokens (x, log). Open-weight (green), closed (blue), preview / leaked (orange).</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="100" x2="80" y2="410" class="axis"/>
+  <line x1="80" y1="410" x2="880" y2="410" class="axis"/>
+  <text x="20" y="250" class="tick" transform="rotate(-90 30 250)">SWE-Bench Verified (%)</text>
+  <text x="460" y="455" class="tick">Blended price per million tokens (log scale)</text>
+
+  <!-- Y ticks 60..90 -->
+  <g class="muted">
+    <line x1="80" y1="380" x2="880" y2="380" class="grid"/>
+    <text x="56" y="384" class="tick">60</text>
+    <line x1="80" y1="320" x2="880" y2="320" class="grid"/>
+    <text x="56" y="324" class="tick">70</text>
+    <line x1="80" y1="260" x2="880" y2="260" class="grid"/>
+    <text x="56" y="264" class="tick">80</text>
+    <line x1="80" y1="200" x2="880" y2="200" class="grid"/>
+    <text x="56" y="204" class="tick">85</text>
+    <line x1="80" y1="140" x2="880" y2="140" class="grid"/>
+    <text x="56" y="144" class="tick">90</text>
+  </g>
+
+  <!-- X ticks: $0.5, $1, $2, $5, $10, $20 -->
+  <g class="muted">
+    <line x1="150" y1="100" x2="150" y2="410" class="grid"/>
+    <text x="142" y="425" class="tick">$0.5</text>
+    <line x1="280" y1="100" x2="280" y2="410" class="grid"/>
+    <text x="274" y="425" class="tick">$1</text>
+    <line x1="410" y1="100" x2="410" y2="410" class="grid"/>
+    <text x="404" y="425" class="tick">$2</text>
+    <line x1="585" y1="100" x2="585" y2="410" class="grid"/>
+    <text x="579" y="425" class="tick">$5</text>
+    <line x1="715" y1="100" x2="715" y2="410" class="grid"/>
+    <text x="705" y="425" class="tick">$10</text>
+    <line x1="845" y1="100" x2="845" y2="410" class="grid"/>
+    <text x="833" y="425" class="tick">$20</text>
+  </g>
+
+  <!-- Points -->
+  <!-- Claude Opus 4.7: SWE 87.6, blended ~$15  -->
+  <circle cx="795" cy="171" r="7" class="dot closed"/>
+  <text x="805" y="174" class="label">Claude Opus 4.7 · 87.6%</text>
+
+  <!-- GPT-5.5 (Codex): SWE-Pro 58.6 ≈ Verified ~84; blended ~$8 -->
+  <circle cx="680" cy="223" r="7" class="dot closed"/>
+  <text x="690" y="226" class="label">GPT-5.5 · ~84% (Codex)</text>
+
+  <!-- DeepSeek V4-Pro: 80.6, blended ~$2.6 -->
+  <circle cx="445" cy="257" r="7" class="dot open"/>
+  <text x="455" y="260" class="label">DeepSeek V4-Pro · 80.6%</text>
+
+  <!-- Kimi K2.6: 80.2, blended ~$2 -->
+  <circle cx="410" cy="259" r="7" class="dot open"/>
+  <text x="316" y="248" class="label">Kimi K2.6 · 80.2%</text>
+
+  <!-- Mistral Medium 3.5: 77.6, blended ~$4.5 -->
+  <circle cx="555" cy="277" r="7" class="dot open"/>
+  <text x="565" y="280" class="label">Mistral Medium 3.5 · 77.6%</text>
+
+  <!-- Qwen 3.6 Max-Preview: ~76, blended ~$3.6  -->
+  <circle cx="510" cy="285" r="7" class="dot leak"/>
+  <text x="520" y="288" class="label">Qwen 3.6 Max-Preview · ~76%</text>
+
+  <!-- GLM-5.1: 58.4 on Pro ≈ 78 Verified, blended ~$2 -->
+  <circle cx="408" cy="271" r="7" class="dot open"/>
+  <text x="240" y="264" class="label">GLM-5.1 · ~78%</text>
+
+  <!-- MiniMax M2.7: 56.22 Pro ≈ 75 Verified, blended ~$0.7 -->
+  <circle cx="195" cy="295" r="7" class="dot open"/>
+  <text x="205" y="298" class="label">MiniMax M2.7 · ~75%</text>
+
+  <!-- Ring 2.6 1T: ~73 Verified, free for now -->
+  <circle cx="120" cy="307" r="7" class="dot open"/>
+  <text x="130" y="310" class="label">Ring 2.6 1T (free) · ~73%</text>
+
+  <!-- ZAYA1 reasoning MoE: ~67, blended ~$0.6 -->
+  <circle cx="170" cy="343" r="7" class="dot open"/>
+  <text x="180" y="346" class="label">ZAYA1-8B · ~67% (math-strong)</text>
+
+  <!-- Gemini 3.1 Ultra: assume 84, blended ~$8 -->
+  <circle cx="680" cy="223" r="0" class="dot closed"/>
+
+  <!-- Mythos Preview (red.anthropic eval): hatched ring at ~93 / withheld -->
+  <circle cx="795" cy="125" r="9" class="ring"/>
+  <circle cx="795" cy="125" r="6" class="dot leak"/>
+  <text x="650" y="113" class="label">Claude Mythos Preview · withheld</text>
+  <text x="650" y="128" class="muted">(red.anthropic.com red-team eval)</text>
+
+  <!-- Legend -->
+  <g>
+    <circle cx="100" cy="455" r="6" class="dot closed"/>
+    <text x="112" y="459" class="label">Closed weight</text>
+    <circle cx="220" cy="455" r="6" class="dot open"/>
+    <text x="232" y="459" class="label">Open weight</text>
+    <circle cx="335" cy="455" r="6" class="dot leak"/>
+    <text x="347" y="459" class="label">Preview / withheld</text>
+  </g>
+</svg>
