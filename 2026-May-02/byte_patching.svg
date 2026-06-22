@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">
+  <title>Tokenizer-free byte-level architectures: BLT entropy patching vs. fixed-tokenizer pipeline</title>
+  <desc>Top: classic BPE pipeline. Bottom: BLT-style entropy-based byte patching with local + latent + local transformer trio. Mid-saturation fills with white text and neutral-gray strokes for light/dark mode legibility.</desc>
+
+  <!-- Top row: BPE pipeline -->
+  <g>
+    <text x="20" y="38" fill="#6b7280" font-weight="600" font-size="13">Classic: BPE tokenizer pipeline</text>
+    <!-- Raw bytes -->
+    <rect x="20" y="60" width="120" height="56" rx="6" fill="#6b7280" stroke="#374151" stroke-width="1.2"/>
+    <text x="80" y="84" text-anchor="middle" fill="#fff" font-weight="600">UTF-8 bytes</text>
+    <text x="80" y="102" text-anchor="middle" fill="#fff" font-size="11">"Hellö, 世界"</text>
+
+    <!-- arrow -->
+    <line x1="142" y1="88" x2="178" y2="88" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- BPE -->
+    <rect x="180" y="60" width="160" height="56" rx="6" fill="#dc2626" stroke="#7f1d1d" stroke-width="1.2"/>
+    <text x="260" y="84" text-anchor="middle" fill="#fff" font-weight="600">Frozen BPE merges</text>
+    <text x="260" y="102" text-anchor="middle" fill="#fff" font-size="11">vocab=128k, fixed</text>
+
+    <!-- arrow -->
+    <line x1="342" y1="88" x2="378" y2="88" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Tokens -->
+    <rect x="380" y="60" width="160" height="56" rx="6" fill="#6b7280" stroke="#374151" stroke-width="1.2"/>
+    <text x="460" y="84" text-anchor="middle" fill="#fff" font-weight="600">Token IDs</text>
+    <text x="460" y="102" text-anchor="middle" fill="#fff" font-size="11">5 tokens (uneven cost/byte)</text>
+
+    <!-- arrow -->
+    <line x1="542" y1="88" x2="578" y2="88" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Transformer -->
+    <rect x="580" y="60" width="160" height="56" rx="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.2"/>
+    <text x="660" y="84" text-anchor="middle" fill="#fff" font-weight="600">Dense transformer</text>
+    <text x="660" y="102" text-anchor="middle" fill="#fff" font-size="11">uniform compute / token</text>
+
+    <!-- arrow -->
+    <line x1="742" y1="88" x2="778" y2="88" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Output -->
+    <rect x="780" y="60" width="80" height="56" rx="6" fill="#16a34a" stroke="#14532d" stroke-width="1.2"/>
+    <text x="820" y="92" text-anchor="middle" fill="#fff" font-weight="600">logits</text>
+
+    <!-- problems -->
+    <text x="20" y="148" fill="#dc2626" font-size="11">spelling-blind &middot; multilingual-unfair &middot; cannot encode novel bytes</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="20" y1="170" x2="860" y2="170" stroke="#9ca3af" stroke-opacity="0.4" stroke-dasharray="3 4"/>
+
+  <!-- Bottom row: BLT pipeline -->
+  <g transform="translate(0,180)">
+    <text x="20" y="22" fill="#6b7280" font-weight="600" font-size="13">BLT (Byte Latent Transformer): entropy-based dynamic patching</text>
+
+    <!-- Raw bytes -->
+    <rect x="20" y="44" width="120" height="56" rx="6" fill="#6b7280" stroke="#374151" stroke-width="1.2"/>
+    <text x="80" y="68" text-anchor="middle" fill="#fff" font-weight="600">UTF-8 bytes</text>
+    <text x="80" y="86" text-anchor="middle" fill="#fff" font-size="11">no vocabulary</text>
+
+    <!-- arrow -->
+    <line x1="142" y1="72" x2="178" y2="72" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Local encoder -->
+    <rect x="180" y="44" width="140" height="56" rx="6" fill="#0ea5e9" stroke="#075985" stroke-width="1.2"/>
+    <text x="250" y="68" text-anchor="middle" fill="#fff" font-weight="600">Local byte encoder</text>
+    <text x="250" y="86" text-anchor="middle" fill="#fff" font-size="11">small, runs every byte</text>
+
+    <!-- arrow -->
+    <line x1="322" y1="72" x2="358" y2="72" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Entropy patcher -->
+    <rect x="360" y="44" width="160" height="56" rx="6" fill="#9333ea" stroke="#581c87" stroke-width="1.2"/>
+    <text x="440" y="68" text-anchor="middle" fill="#fff" font-weight="600">Entropy-based patching</text>
+    <text x="440" y="86" text-anchor="middle" fill="#fff" font-size="11">long patch on easy bytes</text>
+
+    <!-- arrow -->
+    <line x1="522" y1="72" x2="558" y2="72" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Latent transformer -->
+    <rect x="560" y="44" width="180" height="56" rx="6" fill="#2563eb" stroke="#1e3a8a" stroke-width="1.2"/>
+    <text x="650" y="68" text-anchor="middle" fill="#fff" font-weight="600">Latent transformer (big)</text>
+    <text x="650" y="86" text-anchor="middle" fill="#fff" font-size="11">runs once per patch</text>
+
+    <!-- arrow -->
+    <line x1="742" y1="72" x2="778" y2="72" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#a1)"/>
+
+    <!-- Local decoder -->
+    <rect x="780" y="44" width="80" height="56" rx="6" fill="#16a34a" stroke="#14532d" stroke-width="1.2"/>
+    <text x="820" y="68" text-anchor="middle" fill="#fff" font-weight="600">Local</text>
+    <text x="820" y="84" text-anchor="middle" fill="#fff" font-weight="600">decoder</text>
+
+    <!-- properties -->
+    <text x="20" y="132" fill="#16a34a" font-size="11">FLOPs allocated by predictability &middot; tokenizer-free &middot; stronger spelling, multilingual fairness</text>
+    <text x="20" y="150" fill="#6b7280" font-size="11">at fixed inference FLOPs, BLT matches Llama-3 8B and outperforms it on byte-level perturbations and low-resource languages</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+</svg>
