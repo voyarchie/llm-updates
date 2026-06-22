@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Capability versus deployability frontier, June 14 2026">
+  <title>Frontier models on capability vs. deployability — Jun 14, 2026</title>
+
+  <!-- frame -->
+  <rect x="0.5" y="0.5" width="759" height="499" fill="none" stroke="#94a3b8" stroke-opacity="0.35" rx="10"/>
+
+  <!-- heading -->
+  <text x="40" y="40" font-size="20" font-weight="700" fill="#6366f1">Capability is now deployment-fragile</text>
+  <text x="40" y="62" font-size="13" fill="#94a3b8">Frontier snapshot, Jun 14 2026 — raw capability (x) no longer guarantees you can actually use the model (y)</text>
+
+  <!-- axes -->
+  <line x1="120" y1="430" x2="710" y2="430" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="120" y1="430" x2="120" y2="100" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- axis labels -->
+  <text x="415" y="468" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle">Raw capability  →</text>
+  <text x="48" y="265" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 48 265)">Deployability today  →</text>
+
+  <!-- gridline ticks (subtle) -->
+  <g stroke="#94a3b8" stroke-opacity="0.18">
+    <line x1="120" y1="350" x2="710" y2="350"/>
+    <line x1="120" y1="270" x2="710" y2="270"/>
+    <line x1="120" y1="190" x2="710" y2="190"/>
+    <line x1="320" y1="100" x2="320" y2="430"/>
+    <line x1="520" y1="100" x2="520" y2="430"/>
+  </g>
+
+  <!-- points -->
+  <!-- Fable 5: top capability, zero deployability (suspended) -->
+  <circle cx="660" cy="408" r="11" fill="#dc2626"/>
+  <text x="660" cy="0" y="395" font-size="12" font-weight="700" fill="#dc2626" text-anchor="middle">Fable 5</text>
+  <text x="660" y="428" font-size="10.5" fill="#94a3b8" text-anchor="middle">suspended worldwide</text>
+
+  <!-- Mythos 5: highest capability, lowest deployability -->
+  <circle cx="700" cy="412" r="9" fill="#dc2626" fill-opacity="0.6"/>
+  <text x="700" y="370" font-size="11" fill="#dc2626" text-anchor="middle">Mythos 5</text>
+
+  <!-- Opus 4.8: high capability, high availability -->
+  <circle cx="560" cy="150" r="12" fill="#059669"/>
+  <text x="560" y="138" font-size="12" font-weight="700" fill="#059669" text-anchor="middle">Opus 4.8</text>
+  <text x="560" y="176" font-size="10.5" fill="#94a3b8" text-anchor="middle">GA, unaffected</text>
+
+  <!-- Gemini 3.5 Pro: high capability, limited (preview) -->
+  <circle cx="600" cy="300" r="12" fill="#d97706"/>
+  <text x="600" y="288" font-size="12" font-weight="700" fill="#d97706" text-anchor="middle">Gemini 3.5 Pro</text>
+  <text x="600" y="326" font-size="10.5" fill="#94a3b8" text-anchor="middle">Vertex preview, GA imminent</text>
+
+  <!-- DeepSeek V4: good capability, full availability (open weights) -->
+  <circle cx="430" cy="170" r="12" fill="#2563eb"/>
+  <text x="430" y="158" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle">DeepSeek V4</text>
+  <text x="430" y="196" font-size="10.5" fill="#94a3b8" text-anchor="middle">open weights, MIT</text>
+
+  <!-- Kimi K2.7-Code: coding-strong, open -->
+  <circle cx="360" cy="200" r="11" fill="#2563eb" fill-opacity="0.8"/>
+  <text x="360" y="225" font-size="11" fill="#2563eb" text-anchor="middle">Kimi K2.7-Code</text>
+
+  <!-- GPT-5.6: unknown capability, not shipped -->
+  <circle cx="610" cy="385" r="10" fill="#7c3aed" fill-opacity="0.55" stroke="#7c3aed" stroke-dasharray="4 3"/>
+  <text x="610" y="372" font-size="11" fill="#7c3aed" text-anchor="middle">GPT-5.6 (rumored)</text>
+
+  <!-- quadrant note -->
+  <text x="150" y="120" font-size="11" fill="#94a3b8" font-style="italic">High availability,</text>
+  <text x="150" y="135" font-size="11" fill="#94a3b8" font-style="italic">proven capability = where to build</text>
+
+  <text x="500" y="455" font-size="10" fill="#94a3b8" text-anchor="middle">Positions are illustrative, not benchmarked coordinates.</text>
+</svg>
