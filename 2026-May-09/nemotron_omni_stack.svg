@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="13">
+  <title>NVIDIA Nemotron 3 Nano Omni — unified perception + reasoning stack</title>
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="440" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#64748b">NVIDIA Nemotron 3 Nano Omni — 30B-A3B hybrid omni-modal stack</text>
+
+  <!-- Inputs row -->
+  <g>
+    <rect x="40"  y="60" width="130" height="60" rx="10" fill="#94a3b8" fill-opacity="0.25" stroke="#475569" stroke-width="1.5"/>
+    <text x="105" y="85" text-anchor="middle" font-weight="700" fill="#475569">Text</text>
+    <text x="105" y="105" text-anchor="middle" fill="#64748b" font-size="11">prompts · docs</text>
+
+    <rect x="190" y="60" width="130" height="60" rx="10" fill="#94a3b8" fill-opacity="0.25" stroke="#475569" stroke-width="1.5"/>
+    <text x="255" y="85" text-anchor="middle" font-weight="700" fill="#475569">Image / Video</text>
+    <text x="255" y="105" text-anchor="middle" fill="#64748b" font-size="11">frames · charts · GUIs</text>
+
+    <rect x="340" y="60" width="130" height="60" rx="10" fill="#94a3b8" fill-opacity="0.25" stroke="#475569" stroke-width="1.5"/>
+    <text x="405" y="85" text-anchor="middle" font-weight="700" fill="#475569">Audio</text>
+    <text x="405" y="105" text-anchor="middle" fill="#64748b" font-size="11">speech · paralinguistic</text>
+
+    <rect x="490" y="60" width="130" height="60" rx="10" fill="#94a3b8" fill-opacity="0.25" stroke="#475569" stroke-width="1.5"/>
+    <text x="555" y="85" text-anchor="middle" font-weight="700" fill="#475569">Documents</text>
+    <text x="555" y="105" text-anchor="middle" fill="#64748b" font-size="11">PDF · scans</text>
+
+    <rect x="640" y="60" width="200" height="60" rx="10" fill="#94a3b8" fill-opacity="0.25" stroke="#475569" stroke-width="1.5"/>
+    <text x="740" y="85" text-anchor="middle" font-weight="700" fill="#475569">Up to 1M-token context</text>
+    <text x="740" y="105" text-anchor="middle" fill="#64748b" font-size="11">long-horizon agent input</text>
+  </g>
+
+  <!-- Encoders row -->
+  <g>
+    <rect x="100" y="160" width="240" height="64" rx="10" fill="#fb923c" fill-opacity="0.25" stroke="#9a3412" stroke-width="1.5"/>
+    <text x="220" y="186" text-anchor="middle" font-weight="700" fill="#9a3412">C-RADIOv4-H vision encoder</text>
+    <text x="220" y="206" text-anchor="middle" fill="#64748b" font-size="11">unified image / video / GUI tokens</text>
+
+    <rect x="380" y="160" width="240" height="64" rx="10" fill="#fb923c" fill-opacity="0.25" stroke="#9a3412" stroke-width="1.5"/>
+    <text x="500" y="186" text-anchor="middle" font-weight="700" fill="#9a3412">Parakeet-TDT-0.6B-v2 audio</text>
+    <text x="500" y="206" text-anchor="middle" fill="#64748b" font-size="11">streaming · paralinguistic-aware</text>
+  </g>
+
+  <line x1="255" y1="120" x2="220" y2="160" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+  <line x1="405" y1="120" x2="500" y2="160" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+  <line x1="555" y1="120" x2="500" y2="160" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+
+  <!-- Backbone -->
+  <rect x="120" y="260" width="640" height="80" rx="12" fill="#a78bfa" fill-opacity="0.25" stroke="#5b21b6" stroke-width="1.8"/>
+  <text x="440" y="288" text-anchor="middle" font-weight="700" fill="#5b21b6">Hybrid Mamba-Transformer MoE backbone</text>
+  <text x="440" y="308" text-anchor="middle" fill="#64748b" font-size="12">30B params total · ~3B active per token · sub-quadratic across the long-context tail</text>
+  <text x="440" y="326" text-anchor="middle" fill="#64748b" font-size="12">eliminates separate perception models — one weight set serves all input modes</text>
+
+  <line x1="220" y1="224" x2="320" y2="260" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+  <line x1="500" y1="224" x2="560" y2="260" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+  <line x1="105" y1="120" x2="200" y2="260" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)" stroke-dasharray="4 3"/>
+  <line x1="740" y1="120" x2="700" y2="260" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)" stroke-dasharray="4 3"/>
+
+  <!-- Output -->
+  <rect x="320" y="370" width="240" height="56" rx="10" fill="#34d399" fill-opacity="0.30" stroke="#047857" stroke-width="1.6"/>
+  <text x="440" y="394" text-anchor="middle" font-weight="700" fill="#047857">Text output → agent loop</text>
+  <text x="440" y="412" text-anchor="middle" fill="#64748b" font-size="11">9× higher throughput vs other open omni models</text>
+
+  <line x1="440" y1="340" x2="440" y2="370" stroke="#64748b" stroke-width="1.4" marker-end="url(#m)"/>
+
+  <text x="440" y="448" text-anchor="middle" fill="#64748b" font-size="11">Open weights on Hugging Face / OpenRouter / build.nvidia.com NIM (April 29 release; expanding May)</text>
+</svg>
