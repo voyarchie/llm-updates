@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 392" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="How the Mythos NSA 'breach' claim narrowed from June 11 testimony to the June 24 Project Glasswing disclosure">
+  <title>The Mythos / NSA claim, narrowed: from "broke into classified systems" to "identified vulnerabilities under Glasswing"</title>
+
+  <text x="20" y="30" font-size="19" font-weight="700" fill="#64748b">The NSA &#8220;breach&#8221; claim, narrowed</text>
+  <text x="20" y="52" font-size="13" fill="#94a3b8">Each step down is a weaker, better-sourced version of the same event. Width &#8776; strength of the assertion.</text>
+
+  <!-- Step 1: strongest claim -->
+  <rect x="20" y="74" width="700" height="46" rx="4" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="34" y="95" font-size="13" font-weight="700" fill="#fee2e2">Jun 11 &#183; Sen. Warner, relaying Gen. Rudd (NSA/CyberCom)</text>
+  <text x="34" y="112" font-size="12" fill="#fee2e2">&#8220;Mythos broke into almost all of our classified systems &#8212; not in weeks, but in hours.&#8221;</text>
+
+  <!-- Step 2 -->
+  <rect x="20" y="130" width="560" height="46" rx="4" fill="#c2410c" stroke="#7c2d12" stroke-width="1"/>
+  <text x="34" y="151" font-size="13" font-weight="700" fill="#ffedd5">Jun 21 &#183; first reframe (covered Jun-21 brief)</text>
+  <text x="34" y="168" font-size="12" fill="#ffedd5">&#8220;found vulnerabilities,&#8221; against test environments &#8212; not a live production breach.</text>
+
+  <!-- Step 3 -->
+  <rect x="20" y="186" width="430" height="46" rx="4" fill="#a16207" stroke="#713f12" stroke-width="1"/>
+  <text x="34" y="207" font-size="13" font-weight="700" fill="#fef9c3">Jun 24 &#183; AP, citing a US official + Project Glasswing</text>
+  <text x="34" y="224" font-size="12" fill="#fef9c3">tested against replicas of classified environments under Glasswing red-teaming.</text>
+
+  <!-- Step 4: confirmed core -->
+  <rect x="20" y="242" width="300" height="46" rx="4" fill="#15803d" stroke="#14532d" stroke-width="1"/>
+  <text x="34" y="263" font-size="13" font-weight="700" fill="#dcfce7">Jun 24 &#183; the confirmed core</text>
+  <text x="34" y="280" font-size="12" fill="#dcfce7">identified &amp; chained flaws in hours &#8212; not necessarily exploited.</text>
+
+  <!-- arrow down the left edge -->
+  <line x1="10" y1="74" x2="10" y2="288" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="6,288 14,288 10,298" fill="#94a3b8"/>
+  <text x="36" y="316" font-size="11" fill="#94a3b8">"identify a vulnerability in hours" &#8800; "exploit it in hours" &#8800; "breach a live system" &#8212; the gap the headline elided.</text>
+
+  <text x="20" y="346" font-size="11" fill="#94a3b8">Glasswing is Anthropic's defensive offensive-security program (covered Jun-08 &#167;7, Jun-11 &#167;3). New on Jun-24: the NSA test ran *inside* it.</text>
+  <text x="20" y="364" font-size="11" fill="#94a3b8">Why it matters: the export-ban's stated basis (Jun-12 BIS order) rests on the strongest version of this claim, now materially softened.</text>
+  <text x="20" y="382" font-size="11" fill="#94a3b8">Sources: AP / News4Jax, Business Standard, Reuters (Jun 24, 2026). Earlier framing: Jun-21 brief &#167;1.</text>
+</svg>
