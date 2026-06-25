@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 404" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="The two possible legal theories behind the Fable 5 / Mythos 5 export order and the structural flaw in each">
+  <title>Whatever statute the Lutnick directive rests on, the same problem recurs: remote access to a hosted model is hard to fit the chosen authority.</title>
+
+  <text x="20" y="30" font-size="19" font-weight="700" fill="#64748b">The ban's legal footing &#8212; two theories, two flaws</text>
+  <text x="20" y="52" font-size="13" fill="#94a3b8">The order's text and stated authority are not public. Analysts map it to one of two paths; each has a structural problem.</text>
+
+  <!-- Left column: EAR / 744.22 -->
+  <rect x="20" y="76" width="350" height="58" rx="4" fill="#1e3a8a" stroke="#1e293b" stroke-width="1"/>
+  <text x="34" y="98" font-size="13" font-weight="700" fill="#dbeafe">Theory A &#183; Export Administration Regs (EAR)</text>
+  <text x="34" y="116" font-size="12" fill="#dbeafe">&#167;744.22 military-intelligence end-use controls &#8212;</text>
+  <text x="34" y="131" font-size="12" fill="#dbeafe">treat foreign access to the model as a controlled &#8220;export.&#8221;</text>
+
+  <!-- Right column: IEEPA -->
+  <rect x="400" y="76" width="350" height="58" rx="4" fill="#1e3a8a" stroke="#1e293b" stroke-width="1"/>
+  <text x="414" y="98" font-size="13" font-weight="700" fill="#dbeafe">Theory B &#183; IEEPA emergency authority</text>
+  <text x="414" y="116" font-size="12" fill="#dbeafe">declare a national-emergency basis to restrict a</text>
+  <text x="414" y="131" font-size="12" fill="#dbeafe">text-generating service reaching foreign persons.</text>
+
+  <!-- arrows -->
+  <line x1="195" y1="134" x2="195" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="191,162 199,162 195,172" fill="#94a3b8"/>
+  <line x1="575" y1="134" x2="575" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="571,162 579,162 575,172" fill="#94a3b8"/>
+
+  <!-- flaw A -->
+  <rect x="20" y="172" width="350" height="78" rx="4" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="34" y="193" font-size="13" font-weight="700" fill="#fee2e2">Flaw: must be &#8220;subject to the EAR&#8221; first</text>
+  <text x="34" y="211" font-size="12" fill="#fee2e2">Commerce's own three prior Advisory Opinions read</text>
+  <text x="34" y="226" font-size="12" fill="#fee2e2">&#167;734.13/.18 to say remote access to hosted software</text>
+  <text x="34" y="241" font-size="12" fill="#fee2e2">is not an export. The order would contradict them.</text>
+
+  <!-- flaw B -->
+  <rect x="400" y="172" width="350" height="78" rx="4" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="414" y="193" font-size="13" font-weight="700" fill="#fee2e2">Flaw: informational-materials carve-out</text>
+  <text x="414" y="211" font-size="12" fill="#fee2e2">IEEPA's Berman exemption shields informational</text>
+  <text x="414" y="226" font-size="12" fill="#fee2e2">output, and the route needs a declared emergency &#8212;</text>
+  <text x="414" y="241" font-size="12" fill="#fee2e2">which the administration did not invoke.</text>
+
+  <!-- converge -->
+  <line x1="195" y1="250" x2="195" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="575" y1="250" x2="575" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="195" y1="276" x2="575" y2="276" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="385" y1="276" x2="385" y2="290" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="381,290 389,290 385,300" fill="#94a3b8"/>
+
+  <rect x="150" y="300" width="470" height="46" rx="4" fill="#15803d" stroke="#14532d" stroke-width="1"/>
+  <text x="385" y="321" font-size="13" font-weight="700" fill="#dcfce7" text-anchor="middle">Same problem either way: a hosted model isn't a shipped &#8220;item.&#8221;</text>
+  <text x="385" y="338" font-size="12" fill="#dcfce7" text-anchor="middle">Contested footing strengthens the case for a scoped, verified-access fix over indefinite darkness.</text>
+
+  <text x="20" y="372" font-size="11" fill="#94a3b8">This is a different lever than the Jun-24 political reframing (NSA/Glasswing): that pushed on the ban's *premise*; this pushes on its *legal authority*.</text>
+  <text x="20" y="390" font-size="11" fill="#94a3b8">Sources: Just Security, CSIS, IAPP, Lawfare (Jun 2026). The order itself remains unpublished; mappings are analysts' best reading.</text>
+</svg>
