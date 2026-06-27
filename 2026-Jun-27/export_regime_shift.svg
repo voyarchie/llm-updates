@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-label="The export regime shifts from a blanket ban to selective trusted-partner access and pre-clearance">
+  <style>
+    .title { font-size: 21px; font-weight: 700; }
+    .sub   { font-size: 13px; }
+    .lab   { font-size: 14px; font-weight: 700; }
+    .small { font-size: 12px; }
+    .tag   { font-size: 11px; font-weight: 700; letter-spacing: .4px; }
+    .ttl-fill   { fill: #1e293b; }
+    .sub-fill   { fill: #64748b; }
+    /* prefers-color-scheme handled by stroke/white text on saturated fills */
+    @media (prefers-color-scheme: dark) {
+      .ttl-fill { fill: #e2e8f0; }
+      .sub-fill { fill: #94a3b8; }
+    }
+  </style>
+
+  <text x="32" y="40" class="title ttl-fill">The export regime moved: from blanket ban to gated access</text>
+  <text x="32" y="63" class="sub sub-fill">Jun 12 &#8594; Jun 26&#8211;27, 2026. The same "trusted-partner / pre-clearance" pattern now spans two labs.</text>
+
+  <!-- Stage 1: blanket ban -->
+  <rect x="32" y="100" width="250" height="150" rx="12" fill="#7f1d1d" stroke="#450a0a" stroke-width="2"/>
+  <text x="48" y="128" class="tag" fill="#fecaca">JUN 12 &#183; BLANKET</text>
+  <text x="48" y="154" class="lab" fill="#ffffff">Total suspension</text>
+  <text x="48" y="178" class="small" fill="#fee2e2">Fable 5 + Mythos 5 dark</text>
+  <text x="48" y="197" class="small" fill="#fee2e2">for every user worldwide;</text>
+  <text x="48" y="216" class="small" fill="#fee2e2">license required for any</text>
+  <text x="48" y="235" class="small" fill="#fee2e2">foreign-national access.</text>
+
+  <!-- arrow -->
+  <path d="M292 175 L330 175" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+
+  <!-- Stage 2a: Mythos carve-out -->
+  <rect x="338" y="92" width="262" height="118" rx="12" fill="#15803d" stroke="#14532d" stroke-width="2"/>
+  <text x="354" y="118" class="tag" fill="#bbf7d0">JUN 26 &#183; CARVE-OUT</text>
+  <text x="354" y="143" class="lab" fill="#ffffff">Mythos 5 &#8594; ~100 partners</text>
+  <text x="354" y="166" class="small" fill="#dcfce7">Annex A / Project Glasswing orgs;</text>
+  <text x="354" y="184" class="small" fill="#dcfce7">no license, incl. foreign-national</text>
+  <text x="354" y="202" class="small" fill="#dcfce7">employees. Critical-infra framing.</text>
+
+  <!-- Stage 2b: GPT-5.6 pre-clearance -->
+  <rect x="338" y="222" width="262" height="118" rx="12" fill="#1e3a8a" stroke="#1e293b" stroke-width="2"/>
+  <text x="354" y="248" class="tag" fill="#bfdbfe">JUN 26 &#183; PRE-CLEARANCE</text>
+  <text x="354" y="273" class="lab" fill="#ffffff">GPT-5.6 (Sol/Terra/Luna)</text>
+  <text x="354" y="296" class="small" fill="#dbeafe">limited preview only, "per US Gov";</text>
+  <text x="354" y="314" class="small" fill="#dbeafe">capabilities shown to government</text>
+  <text x="354" y="332" class="small" fill="#dbeafe">ahead of launch.</text>
+
+  <!-- arrow to pending -->
+  <path d="M610 175 L648 175" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#a)"/>
+
+  <!-- Stage 3: Fable still pending -->
+  <rect x="656" y="100" width="212" height="150" rx="12" fill="#a16207" stroke="#713f12" stroke-width="2"/>
+  <text x="672" y="128" class="tag" fill="#fef08a">STILL PENDING</text>
+  <text x="672" y="154" class="lab" fill="#ffffff">Fable 5: dark</text>
+  <text x="672" y="178" class="small" fill="#fef9c3">Letter silent on Fable;</text>
+  <text x="672" y="197" class="small" fill="#fef9c3">sources say talks are</text>
+  <text x="672" y="216" class="small" fill="#fef9c3">"moving toward" release,</text>
+  <text x="672" y="235" class="small" fill="#fef9c3">timeline unclear. Day 15.</text>
+
+  <!-- bottom takeaway -->
+  <rect x="32" y="372" width="836" height="62" rx="12" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="52" y="400" class="lab ttl-fill">The throughline:</text>
+  <text x="52" y="421" class="small sub-fill">access is no longer all-or-nothing &#8212; it is being rationed by a government allow-list. The same pattern now gates a second lab's flagship.</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>
