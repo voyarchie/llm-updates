@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 446" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="The three-tier access structure created by the June 26 Lutnick letter for Anthropic's Covered Models">
+  <title>After the June 26 Lutnick letter, the export order is no longer one blanket suspension but a three-tier, permissioned structure: Mythos 5 returns license-free to roughly 100 vetted entities, Mythos 5 stays license-gated for everyone else, and Fable 5 remains fully suspended.</title>
+
+  <text x="20" y="30" font-size="19" font-weight="700" fill="#64748b">From blanket ban to a three-tier carve-out &#8212; the &#8220;Covered Models&#8221;</text>
+  <text x="20" y="52" font-size="13" fill="#94a3b8">June 26 Lutnick letter. The Annex A entity list and the technical diversion-risk mitigations are not public.</text>
+
+  <!-- Tier 1: Mythos -> Annex A (restored) -->
+  <rect x="20" y="74" width="730" height="92" rx="6" fill="#15803d" stroke="#14532d" stroke-width="1.5"/>
+  <text x="34" y="98" font-size="14" font-weight="700" fill="#dcfce7">Tier 1 &#183; Mythos 5 &#8594; Annex A entities &#8212; RESTORED, no license required</text>
+  <text x="34" y="119" font-size="12.5" fill="#dcfce7">~100 vetted US critical-infrastructure orgs (gov agencies + private firms) and their foreign-national employees;</text>
+  <text x="34" y="136" font-size="12.5" fill="#dcfce7">US government civilian agencies and national labs; Anthropic's own foreign-national employees.</text>
+  <text x="34" y="156" font-size="12" font-style="italic" fill="#bbf7d0">Anthropic restoring access quickly. Commerce reserves the right to revoke or adjust the list.</text>
+
+  <!-- Tier 2: Mythos -> everyone else (license-gated) -->
+  <rect x="20" y="178" width="730" height="74" rx="6" fill="#b45309" stroke="#78350f" stroke-width="1.5"/>
+  <text x="34" y="202" font-size="14" font-weight="700" fill="#fef3c7">Tier 2 &#183; Mythos 5 &#8594; everyone else &#8212; LICENSE REQUIRED</text>
+  <text x="34" y="223" font-size="12.5" fill="#fef3c7">Export / reexport / in-country transfer outside Annex A still needs a license. All June 12 conditions remain,</text>
+  <text x="34" y="240" font-size="12.5" fill="#fef3c7">including the criminal and civil penalties of the original order.</text>
+
+  <!-- Tier 3: Fable -> all (suspended) -->
+  <rect x="20" y="264" width="730" height="74" rx="6" fill="#b91c1c" stroke="#7f1d1d" stroke-width="1.5"/>
+  <text x="34" y="288" font-size="14" font-weight="700" fill="#fee2e2">Tier 3 &#183; Fable 5 &#8594; all users &#8212; STILL FULLY SUSPENDED</text>
+  <text x="34" y="309" font-size="12.5" fill="#fee2e2">The general-purpose flagship most subscribers and developers are waiting for is untouched by the carve-out.</text>
+  <text x="34" y="326" font-size="12.5" fill="#fee2e2">No announced restoration date. The letter covers Mythos only.</text>
+
+  <!-- footer reasoning -->
+  <rect x="20" y="354" width="730" height="74" rx="6" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="34" y="378" font-size="13" font-weight="700" fill="#64748b">Why it matters</text>
+  <text x="34" y="398" font-size="12.5" fill="#94a3b8">Adjusting a license *requirement* on named entities is an Export Administration Regulations lever &#8212; a data point</text>
+  <text x="34" y="415" font-size="12.5" fill="#94a3b8">favoring the EAR theory of the ban's basis (vs. IEEPA), and the first concrete restoration mechanism in the saga.</text>
+</svg>
