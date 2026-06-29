@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="How the Jun-12 worldwide ban on Fable 5 and Mythos 5 became a tiered Annex A allowlist on Jun-26">
+  <title>The export action stopped being a binary worldwide ban and became a tiered access regime: Mythos 5 to an Annex A allowlist, Fable 5 still dark.</title>
+
+  <text x="20" y="30" font-size="19" font-weight="700" fill="#64748b">From a binary ban to a tiered allowlist</text>
+  <text x="20" y="52" font-size="13" fill="#94a3b8">Jun 12 pulled both models for everyone. The Jun 26 Lutnick letter kept the worldwide license rule but carved out a named list.</text>
+
+  <!-- Stage 1: binary ban -->
+  <rect x="20" y="78" width="240" height="92" rx="6" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+  <text x="32" y="102" font-size="13" font-weight="700" fill="#fee2e2">Jun 12 &#183; worldwide ban</text>
+  <text x="32" y="123" font-size="12" fill="#fee2e2">Fable 5 + Mythos 5 dark for</text>
+  <text x="32" y="139" font-size="12" fill="#fee2e2">every user on earth &#8212; incl.</text>
+  <text x="32" y="155" font-size="12" fill="#fee2e2">Anthropic's own foreign staff.</text>
+
+  <!-- arrow -->
+  <line x1="262" y1="124" x2="312" y2="124" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="312,120 312,128 322,124" fill="#94a3b8"/>
+  <text x="266" y="114" font-size="10.5" fill="#94a3b8">14 days of</text>
+  <text x="266" y="148" font-size="10.5" fill="#94a3b8">daily talks</text>
+
+  <!-- Stage 2: mechanism -->
+  <rect x="326" y="78" width="240" height="92" rx="6" fill="#1e3a8a" stroke="#1e293b" stroke-width="1"/>
+  <text x="338" y="102" font-size="13" font-weight="700" fill="#dbeafe">Jun 26 &#183; license carve-out</text>
+  <text x="338" y="123" font-size="12" fill="#dbeafe">&#8220;a license will no longer be</text>
+  <text x="338" y="139" font-size="12" fill="#dbeafe">required&#8221; to export Mythos 5 to</text>
+  <text x="338" y="155" font-size="12" fill="#dbeafe">entities in <tspan font-weight="700">Annex A</tspan>.</text>
+
+  <!-- arrows to two outcomes -->
+  <line x1="446" y1="170" x2="446" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="196" x2="712" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="180" y1="196" x2="180" y2="222" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="176,222 184,222 180,232" fill="#94a3b8"/>
+  <line x1="712" y1="196" x2="712" y2="222" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="708,222 716,222 712,232" fill="#94a3b8"/>
+
+  <!-- Outcome A: Mythos restored to Annex A -->
+  <rect x="20" y="236" width="360" height="120" rx="6" fill="#15803d" stroke="#14532d" stroke-width="1"/>
+  <text x="34" y="260" font-size="14" font-weight="700" fill="#dcfce7">Mythos 5 &#8212; partially restored</text>
+  <text x="34" y="282" font-size="12" fill="#dcfce7">&#8226; ~100+ US orgs on a non-public Annex A list</text>
+  <text x="34" y="300" font-size="12" fill="#dcfce7">&#160;&#160;(Fortune 500 + critical-infrastructure defenders)</text>
+  <text x="34" y="318" font-size="12" fill="#dcfce7">&#8226; their foreign-national employees included</text>
+  <text x="34" y="336" font-size="12" fill="#dcfce7">&#8226; Anthropic's foreign-national employees too</text>
+
+  <!-- Outcome B: Fable still dark -->
+  <rect x="420" y="236" width="340" height="120" rx="6" fill="#a16207" stroke="#713f12" stroke-width="1"/>
+  <text x="434" y="260" font-size="14" font-weight="700" fill="#fef9c3">Fable 5 &#8212; still dark</text>
+  <text x="434" y="282" font-size="12" fill="#fef9c3">&#8226; still under the worldwide license rule</text>
+  <text x="434" y="300" font-size="12" fill="#fef9c3">&#8226; no published criteria or timeline</text>
+  <text x="434" y="318" font-size="12" fill="#fef9c3">&#8226; Pentagon + NSA sign-off still pending</text>
+  <text x="434" y="336" font-size="12" fill="#fef9c3">&#8226; Axios (Jun 27): &#8220;within days&#8221;</text>
+
+  <!-- bottom note -->
+  <rect x="20" y="378" width="740" height="74" rx="6" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="34" y="402" font-size="12.5" font-weight="700" fill="#64748b">What the mechanism implies</text>
+  <text x="34" y="422" font-size="12" fill="#94a3b8">Treating access as something needing a license &#8212; then waiving it &#8212; lands on the EAR &#8220;export&#8221; theory (Jun-25 &#167;2, Theory A),</text>
+  <text x="34" y="440" font-size="12" fill="#94a3b8">the very path analysts said contradicts Commerce's own prior advisory opinions on remote access. The ban is now an allowlist.</text>
+</svg>
