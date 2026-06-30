@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="What the June 26 Lutnick license exception resolves: the EAR-vs-IEEPA legal-basis question, and the shape of the resolution.">
+  <title>The Jun-26 partial lift is a BIS license exception (Annex A) — which both answers the Jun-25 EAR-vs-IEEPA question and shows the resolution arriving by a scoped-roster door, not the predicted Jul-8 Persona ID path.</title>
+
+  <text x="20" y="30" font-size="19" font-weight="700" fill="#64748b">What the Jun-26 license exception tells us</text>
+  <text x="20" y="52" font-size="13" fill="#94a3b8">The mechanism of the partial lift &#8212; a no-license exception keyed to Annex A &#8212; is itself evidence.</text>
+
+  <!-- Top: the mechanism -->
+  <rect x="20" y="74" width="740" height="58" rx="4" fill="#475569" stroke="#1e293b" stroke-width="1"/>
+  <text x="34" y="98" font-size="14" font-weight="700" fill="#ffffff">Jun-26 Lutnick letter: Mythos 5 may be exported WITHOUT a license to entities on Annex A</text>
+  <text x="34" y="118" font-size="12" fill="#e2e8f0">(&#8220;Anthropic US Entities &#8212; Approved,&#8221; ~100 orgs) + their foreign-national staff + US civilian agencies &amp; national labs.</text>
+
+  <!-- two arrows down -->
+  <line x1="220" y1="132" x2="220" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="216,162 224,162 220,172" fill="#94a3b8"/>
+  <line x1="560" y1="132" x2="560" y2="162" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="556,162 564,162 560,172" fill="#94a3b8"/>
+
+  <!-- Left payoff: answers EAR vs IEEPA -->
+  <rect x="20" y="172" width="360" height="92" rx="4" fill="#1e3a8a" stroke="#1e293b" stroke-width="1"/>
+  <text x="34" y="194" font-size="13" font-weight="700" fill="#dbeafe">Payoff 1 &#183; the legal basis (was Jun-25 §2)</text>
+  <text x="34" y="214" font-size="12" fill="#dbeafe">A &#8220;license exception&#8221; is pure EAR machinery. You only</text>
+  <text x="34" y="229" font-size="12" fill="#dbeafe">grant a license exception to something that is an</text>
+  <text x="34" y="244" font-size="12" fill="#dbeafe">&#8220;export subject to the EAR.&#8221; So the order is being run</text>
+  <text x="34" y="259" font-size="12" fill="#dbeafe">on the EAR path &#8212; not IEEPA emergency authority.</text>
+
+  <!-- Right payoff: shape of resolution -->
+  <rect x="400" y="172" width="360" height="92" rx="4" fill="#15803d" stroke="#14532d" stroke-width="1"/>
+  <text x="414" y="194" font-size="13" font-weight="700" fill="#dcfce7">Payoff 2 &#183; the shape (was Jun-24 §2 / Jun-25 §3)</text>
+  <text x="414" y="214" font-size="12" fill="#dcfce7">A scoped, verified-access resolution &#8212; as predicted.</text>
+  <text x="414" y="229" font-size="12" fill="#dcfce7">But it arrived via an Annex A ROSTER (who you are),</text>
+  <text x="414" y="244" font-size="12" fill="#dcfce7">not the Jul-8 Persona ID path (prove where you are).</text>
+  <text x="414" y="259" font-size="12" fill="#dcfce7">Right destination, different door.</text>
+
+  <!-- arrow to caveat -->
+  <line x1="390" y1="264" x2="390" y2="296" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="386,296 394,296 390,306" fill="#94a3b8"/>
+
+  <!-- caveat / inversion -->
+  <rect x="20" y="306" width="740" height="66" rx="4" fill="#a16207" stroke="#713f12" stroke-width="1"/>
+  <text x="34" y="328" font-size="13" font-weight="700" fill="#fef9c3">The inversion worth noting</text>
+  <text x="34" y="348" font-size="12" fill="#fef9c3">The model cleared FIRST is Mythos 5 &#8212; the classifier-stripped, safeguard-free build &#8212; routed to ~100 vetted</text>
+  <text x="34" y="363" font-size="12" fill="#fef9c3">cyber defenders. The guarded, mass-market Fable 5 (classifiers route risky queries to Opus 4.8) stays dark worldwide.</text>
+
+  <!-- footer -->
+  <text x="20" y="398" font-size="11" fill="#94a3b8">Not a court ruling. The order's full text remains unpublished; the EAR read is inferred from the exception's form, corroborated</text>
+  <text x="20" y="413" font-size="11" fill="#94a3b8">by CNN / CNBC / Semafor / NBC / Fortune reporting on the Jun-26 letter. Architecture (shared weights, classifier gate): Jun-11 §2, Jun-13.</text>
+</svg>
