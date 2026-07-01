@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Timeline of the 19-day Fable 5 / Mythos 5 export-suspension arc, from the Jun-12 BIS order to the Jul-1 full restoration">
+  <title>The 19-day suspension arc closes</title>
+
+  <!-- theme-neutral palette: saturated fills + white text render on both light and dark -->
+  <text x="20" y="34" font-size="19" font-weight="700" fill="#64748b">The 19-day suspension arc closes</text>
+  <text x="20" y="56" font-size="13" fill="#94a3b8">Jun 12 BIS export order &#8594; Jul 1 both models restored (Fable global, Mythos scoped)</text>
+
+  <!-- spine -->
+  <line x1="60" y1="150" x2="800" y2="150" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Milestone 1: Jun 12 -->
+  <circle cx="110" cy="150" r="7" fill="#dc2626"/>
+  <rect x="42" y="176" width="150" height="92" rx="8" fill="#dc2626"/>
+  <text x="117" y="198" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Jun 12 &#183; Day 0</text>
+  <text x="117" y="217" font-size="11" fill="#ffffff" text-anchor="middle">BIS export order;</text>
+  <text x="117" y="232" font-size="11" fill="#ffffff" text-anchor="middle">both models dark</text>
+  <text x="117" y="247" font-size="11" fill="#ffffff" text-anchor="middle">worldwide</text>
+  <text x="117" y="262" font-size="10" fill="#fecaca" text-anchor="middle">(Amazon jailbreak)</text>
+
+  <!-- Milestone 2: Jun 26 -->
+  <circle cx="340" cy="150" r="7" fill="#d97706"/>
+  <rect x="270" y="60" width="150" height="80" rx="8" fill="#d97706"/>
+  <text x="345" y="82" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Jun 26 &#183; Day 14</text>
+  <text x="345" y="101" font-size="11" fill="#ffffff" text-anchor="middle">First partial lift:</text>
+  <text x="345" y="116" font-size="11" fill="#ffffff" text-anchor="middle">Mythos 5 &#8594; ~100</text>
+  <text x="345" y="131" font-size="11" fill="#ffffff" text-anchor="middle">defenders, license-free</text>
+
+  <!-- Milestone 3: Jun 30 -->
+  <circle cx="565" cy="150" r="7" fill="#2563eb"/>
+  <rect x="492" y="176" width="150" height="76" rx="8" fill="#2563eb"/>
+  <text x="567" y="198" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Jun 30 &#183; Day 18</text>
+  <text x="567" y="217" font-size="11" fill="#ffffff" text-anchor="middle">Controls removed;</text>
+  <text x="567" y="232" font-size="11" fill="#ffffff" text-anchor="middle">Sonnet 5 ships the</text>
+  <text x="567" y="247" font-size="11" fill="#ffffff" text-anchor="middle">same day</text>
+
+  <!-- Milestone 4: Jul 1 -->
+  <circle cx="770" cy="150" r="7" fill="#16a34a"/>
+  <rect x="690" y="60" width="158" height="80" rx="8" fill="#16a34a"/>
+  <text x="769" y="82" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Jul 1 &#183; Day 19</text>
+  <text x="769" y="101" font-size="11" fill="#ffffff" text-anchor="middle">Fable 5 back GLOBAL;</text>
+  <text x="769" y="116" font-size="11" fill="#ffffff" text-anchor="middle">Mythos 5 stays scoped</text>
+  <text x="769" y="131" font-size="11" fill="#ffffff" text-anchor="middle">to approved US orgs</text>
+
+  <!-- connectors from spine to raised boxes -->
+  <line x1="340" y1="150" x2="340" y2="140" stroke="#d97706" stroke-width="2"/>
+  <line x1="770" y1="150" x2="770" y2="140" stroke="#16a34a" stroke-width="2"/>
+
+  <text x="20" y="322" font-size="11" fill="#94a3b8">Price of return: a more conservative classifier now blocks the flagged technique in &gt;99% of cases &#8212; at the cost of more false positives on routine coding/debugging.</text>
+</svg>
