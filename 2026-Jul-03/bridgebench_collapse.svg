@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="BridgeBench scores for Claude Fable 5 before and after the July 1 2026 relaunch: debugging fell from 86.2 to 25.9 and refactoring from 73.6 to 38.4, dropping the model from 9th to 41st of 42 ranked models">
+  <title>Fable 5's BridgeBench collapse after the Jul-1 relaunch</title>
+
+  <!-- theme-neutral palette: saturated fills + white text render on both light and dark; labels in mid-slate read on both -->
+  <text x="24" y="34" font-size="19" font-weight="700" fill="#64748b">Fable 5 same model, guard rerouted the work</text>
+  <text x="24" y="56" font-size="13" fill="#94a3b8">BridgeBench (BridgeMind), measured Jul 1&#8211;2. Only 3 of 12 tasks ran on Fable 5; 9 fell back to Opus 4.8.</text>
+
+  <!-- plot baseline and gridlines (0/25/50/75/100) -->
+  <line x1="90" y1="300" x2="720" y2="300" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="90" y1="250" x2="720" y2="250" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="90" y1="200" x2="720" y2="200" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="90" y1="150" x2="720" y2="150" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="90" y1="100" x2="720" y2="100" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <text x="80" y="304" font-size="11" fill="#94a3b8" text-anchor="end">0</text>
+  <text x="80" y="254" font-size="11" fill="#94a3b8" text-anchor="end">25</text>
+  <text x="80" y="204" font-size="11" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="80" y="154" font-size="11" fill="#94a3b8" text-anchor="end">75</text>
+  <text x="80" y="104" font-size="11" fill="#94a3b8" text-anchor="end">100</text>
+
+  <!-- Group 1: Debugging (before 86.2 -> after 25.9) -->
+  <rect x="150" y="127.6" width="90" height="172.4" rx="4" fill="#16a34a"/>
+  <text x="195" y="120" font-size="13" font-weight="700" fill="#64748b" text-anchor="middle">86.2</text>
+  <rect x="260" y="248.2" width="90" height="51.8" rx="4" fill="#dc2626"/>
+  <text x="305" y="240" font-size="13" font-weight="700" fill="#64748b" text-anchor="middle">25.9</text>
+  <text x="250" y="326" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">Debugging</text>
+  <text x="250" y="344" font-size="11" fill="#dc2626" text-anchor="middle">&#8595; 70%</text>
+
+  <!-- Group 2: Refactoring (before 73.6 -> after 38.4) -->
+  <rect x="460" y="152.8" width="90" height="147.2" rx="4" fill="#16a34a"/>
+  <text x="505" y="145" font-size="13" font-weight="700" fill="#64748b" text-anchor="middle">73.6</text>
+  <rect x="570" y="223.2" width="90" height="76.8" rx="4" fill="#dc2626"/>
+  <text x="615" y="215" font-size="13" font-weight="700" fill="#64748b" text-anchor="middle">38.4</text>
+  <text x="560" y="326" font-size="13" font-weight="700" fill="#94a3b8" text-anchor="middle">Refactoring</text>
+  <text x="560" y="344" font-size="11" fill="#dc2626" text-anchor="middle">&#8595; 48%</text>
+
+  <!-- legend -->
+  <rect x="150" y="366" width="14" height="14" rx="3" fill="#16a34a"/>
+  <text x="170" y="378" font-size="12" fill="#94a3b8">Before (pre-suspension build)</text>
+  <rect x="400" y="366" width="14" height="14" rx="3" fill="#dc2626"/>
+  <text x="420" y="378" font-size="12" fill="#94a3b8">After Jul-1 relaunch (guard on)</text>
+
+  <!-- ranking callout -->
+  <text x="748" y="150" font-size="13" font-weight="700" fill="#64748b" text-anchor="end">Overall rank</text>
+  <text x="748" y="172" font-size="12" fill="#94a3b8" text-anchor="end">9th &#8594; 41st</text>
+  <text x="748" y="190" font-size="12" fill="#94a3b8" text-anchor="end">of 42 models</text>
+</svg>
