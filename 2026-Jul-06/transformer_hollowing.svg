@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Comparison of a classic dense transformer block against the 2026 efficient hybrid stack. The classic block has dense self-attention with quadratic O(L squared) compute and a full KV cache, plus a dense feed-forward layer active for every token and parameter. The 2026 stack replaces most depth with Mamba-2 state-space layers that run in linear time with no KV growth, interleaves sparse attention with O of L times K cost using a Lightning Indexer, uses a Latent Mixture-of-Experts that calls four times as many experts for the same FLOPs, and adds multi-token prediction for built-in speculative decoding. At one million tokens DeepSeek V4-Pro uses about 27 percent of the FLOPs per token and 10 percent of the KV cache memory of the prior generation.">
+  <title>How 2026 hollows out the dense transformer block</title>
+
+  <text x="24" y="34" font-size="19" font-weight="700" fill="#64748b">The transformer is being hollowed out, layer by layer</text>
+  <text x="24" y="56" font-size="13" fill="#94a3b8">Same task, far less compute: dense attention gives way to state-space + sparse layers.</text>
+
+  <!-- LEFT: classic dense -->
+  <text x="220" y="92" font-size="14" font-weight="700" fill="#64748b" text-anchor="middle">Classic transformer block</text>
+  <text x="220" y="110" font-size="11" fill="#94a3b8" text-anchor="middle">dense &#183; scales badly with context</text>
+
+  <rect x="70" y="130" width="300" height="64" rx="6" fill="#64748b"/>
+  <text x="220" y="158" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Dense self-attention</text>
+  <text x="220" y="178" font-size="11" fill="#e2e8f0" text-anchor="middle">O(L&#178;) compute &#183; full KV cache grows with L</text>
+
+  <rect x="70" y="210" width="300" height="64" rx="6" fill="#64748b"/>
+  <text x="220" y="238" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Dense feed-forward</text>
+  <text x="220" y="258" font-size="11" fill="#e2e8f0" text-anchor="middle">every token routes through every parameter</text>
+
+  <rect x="70" y="290" width="300" height="50" rx="6" fill="#64748b" opacity="0.55"/>
+  <text x="220" y="320" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">&#215; repeated for every layer</text>
+
+  <!-- arrow -->
+  <line x1="392" y1="235" x2="486" y2="235" stroke="#94a3b8" stroke-width="2"/>
+  <polygon points="486,229 500,235 486,241" fill="#94a3b8"/>
+
+  <!-- RIGHT: 2026 hybrid -->
+  <text x="660" y="92" font-size="14" font-weight="700" fill="#64748b" text-anchor="middle">2026 efficient hybrid stack</text>
+  <text x="660" y="110" font-size="11" fill="#94a3b8" text-anchor="middle">Nemotron 3 / Mamba-3 &#183; DeepSeek V4</text>
+
+  <rect x="510" y="130" width="300" height="54" rx="6" fill="#2563eb"/>
+  <text x="660" y="152" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Mamba-2 SSM layers (most depth)</text>
+  <text x="660" y="171" font-size="11" fill="#dbeafe" text-anchor="middle">linear O(L) &#183; no KV cache growth</text>
+
+  <rect x="510" y="196" width="300" height="54" rx="6" fill="#2563eb"/>
+  <text x="660" y="218" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Sparse attention (interleaved)</text>
+  <text x="660" y="237" font-size="11" fill="#dbeafe" text-anchor="middle">O(L&#183;K) &#183; Lightning Indexer picks blocks</text>
+
+  <rect x="510" y="262" width="300" height="54" rx="6" fill="#16a34a"/>
+  <text x="660" y="284" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Latent Mixture-of-Experts</text>
+  <text x="660" y="303" font-size="11" fill="#dcfce7" text-anchor="middle">4&#215; more experts for the same FLOPs</text>
+
+  <rect x="510" y="328" width="300" height="54" rx="6" fill="#16a34a"/>
+  <text x="660" y="350" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Multi-token prediction</text>
+  <text x="660" y="369" font-size="11" fill="#dcfce7" text-anchor="middle">built-in speculative decoding</text>
+
+  <!-- footer stat -->
+  <text x="440" y="420" font-size="13" font-weight="700" fill="#64748b" text-anchor="middle">Net effect &#8212; DeepSeek V4-Pro at 1M-token context:</text>
+  <text x="440" y="440" font-size="12" fill="#94a3b8" text-anchor="middle">~27% of the FLOPs per token and ~10% of the KV-cache memory of the prior generation.</text>
+</svg>
