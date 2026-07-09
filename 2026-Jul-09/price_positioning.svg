@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Horizontal bar chart of output price per million tokens for the models in play on July 9 2026. Claude Fable 5 (credit pricing) 50 dollars, input 10. GPT-5.6 Sol 30 dollars, input 5. GPT-5.6 Terra 15 dollars, input 2.50. GPT-5.6 Luna 6 dollars, input 1. Grok 4.5 6 dollars, input 2. The two same-day public launches, GPT-5.6 Luna and Grok 4.5, sit at the bottom of the output-price range while Anthropic's Fable 5 sits far above it.">
+  <title>Output price per million tokens — the July 9 field</title>
+
+  <!-- theme-neutral palette: saturated fills carry white text on both light and dark; slate labels/axis read on both -->
+  <text x="24" y="32" font-size="19" font-weight="700" fill="#64748b">Output price per million tokens — the July 9 field</text>
+  <text x="24" y="53" font-size="12.5" fill="#94a3b8">Output $/Mtok (bar). Input $/Mtok noted under each label. Both models launched publicly today sit at the floor.</text>
+
+  <!-- x-axis gridlines at $0,10,20,30,40,50 : x = 175 + 12.8*$ -->
+  <line x1="175" y1="92" x2="175" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="303" y1="92" x2="303" y2="300" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="431" y1="92" x2="431" y2="300" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="559" y1="92" x2="559" y2="300" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="687" y1="92" x2="687" y2="300" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="815" y1="92" x2="815" y2="300" stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="175" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0</text>
+  <text x="303" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="431" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$20</text>
+  <text x="559" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$30</text>
+  <text x="687" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$40</text>
+  <text x="815" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="495" y="340" font-size="11" fill="#94a3b8" text-anchor="middle">output price ($ per million tokens)</text>
+
+  <!-- Row 1: Fable 5 (credits) $50 -> width 640 -->
+  <text x="24" y="112" font-size="13" font-weight="700" fill="#64748b">Claude Fable 5</text>
+  <text x="24" y="127" font-size="10.5" fill="#94a3b8">credits · in $10</text>
+  <rect x="175" y="98" width="640" height="26" rx="4" fill="#7c3aed"/>
+  <text x="805" y="116" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="end">$50</text>
+
+  <!-- Row 2: GPT-5.6 Sol $30 -> width 384 -->
+  <text x="24" y="156" font-size="13" font-weight="700" fill="#64748b">GPT-5.6 Sol</text>
+  <text x="24" y="171" font-size="10.5" fill="#94a3b8">in $5</text>
+  <rect x="175" y="142" width="384" height="26" rx="4" fill="#1e40af"/>
+  <text x="549" y="160" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="end">$30</text>
+
+  <!-- Row 3: GPT-5.6 Terra $15 -> width 192 -->
+  <text x="24" y="200" font-size="13" font-weight="700" fill="#64748b">GPT-5.6 Terra</text>
+  <text x="24" y="215" font-size="10.5" fill="#94a3b8">in $2.50</text>
+  <rect x="175" y="186" width="192" height="26" rx="4" fill="#2563eb"/>
+  <text x="357" y="204" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="end">$15</text>
+
+  <!-- Row 4: GPT-5.6 Luna $6 -> width 76.8 -->
+  <text x="24" y="244" font-size="13" font-weight="700" fill="#64748b">GPT-5.6 Luna</text>
+  <text x="24" y="259" font-size="10.5" fill="#94a3b8">in $1 · public today</text>
+  <rect x="175" y="230" width="77" height="26" rx="4" fill="#3b82f6"/>
+  <text x="260" y="248" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="start">$6</text>
+
+  <!-- Row 5: Grok 4.5 $6 -> width 76.8 -->
+  <text x="24" y="288" font-size="13" font-weight="700" fill="#64748b">Grok 4.5</text>
+  <text x="24" y="303" font-size="10.5" fill="#94a3b8">in $2 · public today</text>
+  <rect x="175" y="274" width="77" height="26" rx="4" fill="#0d9488"/>
+  <text x="260" y="292" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="start">$6</text>
+</svg>
