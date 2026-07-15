@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of Artificial Analysis Intelligence Index (vertical, 48 to 62) against output price in dollars per million tokens (horizontal, 0 to 55) for the mid-July 2026 frontier. Claude Fable 5 max scores 60 at $50 output; GPT-5.6 Sol max scores 59 at $30; GPT-5.6 Terra max scores 55 at $15; Grok 4.5 scores 54 at $6; GPT-5.6 Luna max scores 51 at $6; Meta Muse Spark 1.1 scores 51 at $4.25. A dashed reference line marks Opus 4.8 at 60 — the most intelligent generally available model. The points cluster in a narrow 9-point capability band while output price spans roughly twelve-fold.">
+  <title>Intelligence Index vs. output price — the mid-July 2026 field</title>
+
+  <!-- theme-neutral palette: saturated fills carry white text on light and dark; slate labels/axis read on both -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Capability barely moves; price spans ~12&#215;</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index (vertical) vs. output price $/Mtok (horizontal). Mid-July 2026 frontier.</text>
+
+  <!-- plot frame: x = 90 + (price/55)*740 ; y = 340 - (index-48)*19.29 -->
+  <!-- y gridlines / ticks at index 50,52,54,56,58,60,62 -->
+  <line x1="90" y1="70" x2="90" y2="340" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="90" y1="340" x2="830" y2="340" stroke="#94a3b8" stroke-width="1"/>
+
+  <line x1="90" y1="301" x2="830" y2="301" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="263" x2="830" y2="263" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="224" x2="830" y2="224" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="186" x2="830" y2="186" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="147" x2="830" y2="147" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="109" x2="830" y2="109" stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="82" y="305" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="82" y="267" font-size="10.5" fill="#94a3b8" text-anchor="end">52</text>
+  <text x="82" y="228" font-size="10.5" fill="#94a3b8" text-anchor="end">54</text>
+  <text x="82" y="190" font-size="10.5" fill="#94a3b8" text-anchor="end">56</text>
+  <text x="82" y="151" font-size="10.5" fill="#94a3b8" text-anchor="end">58</text>
+  <text x="82" y="113" font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="30" y="205" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 30 205)">Intelligence Index</text>
+
+  <!-- x ticks at $0,10,20,30,40,50 -->
+  <line x1="90"  y1="340" x2="90"  y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="225" y1="340" x2="225" y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="359" y1="340" x2="359" y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="494" y1="340" x2="494" y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="628" y1="340" x2="628" y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="763" y1="340" x2="763" y2="345" stroke="#94a3b8" stroke-width="1"/>
+  <text x="90"  y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0</text>
+  <text x="225" y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="359" y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$20</text>
+  <text x="494" y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$30</text>
+  <text x="628" y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$40</text>
+  <text x="763" y="360" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="460" y="382" font-size="11" fill="#94a3b8" text-anchor="middle">output price ($ per million tokens)</text>
+
+  <!-- Opus 4.8 reference: most intelligent generally-available model, Index 56 (y=186) -->
+  <line x1="90" y1="186" x2="830" y2="186" stroke="#0ea5e9" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="826" y="180" font-size="10.5" font-weight="600" fill="#0ea5e9" text-anchor="end">Opus 4.8 (56) — top generally-available</text>
+
+  <!-- points -->
+  <!-- Fable 5 (max): 60 @ $50 -> (763,109) purple -->
+  <circle cx="763" cy="109" r="8" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="751" y="104" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="end">Claude Fable 5</text>
+  <text x="751" y="119" font-size="10" fill="#94a3b8" text-anchor="end">60 &#183; $50 out (credits)</text>
+
+  <!-- GPT-5.6 Sol (max): 59 @ $30 -> (494,128) deep blue -->
+  <circle cx="494" cy="128" r="8" fill="#1e40af" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="506" y="123" font-size="12" font-weight="700" fill="#1e40af" text-anchor="start">GPT-5.6 Sol</text>
+  <text x="506" y="138" font-size="10" fill="#94a3b8" text-anchor="start">59 &#183; $30 out</text>
+
+  <!-- GPT-5.6 Terra (max): 55 @ $15 -> (292,205) mid blue -->
+  <circle cx="292" cy="205" r="8" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="304" y="200" font-size="12" font-weight="700" fill="#2563eb" text-anchor="start">GPT-5.6 Terra</text>
+  <text x="304" y="215" font-size="10" fill="#94a3b8" text-anchor="start">55 &#183; $15 out</text>
+
+  <!-- Grok 4.5 (high): 54 @ $6 -> (171,224) teal -->
+  <circle cx="171" cy="224" r="8" fill="#0d9488" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="183" y="219" font-size="12" font-weight="700" fill="#0d9488" text-anchor="start">Grok 4.5</text>
+  <text x="183" y="234" font-size="10" fill="#94a3b8" text-anchor="start">54 &#183; $6 out</text>
+
+  <!-- GPT-5.6 Luna (max): 51 @ $6 -> (171,282) light blue -->
+  <circle cx="171" cy="282" r="8" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="183" y="279" font-size="12" font-weight="700" fill="#3b82f6" text-anchor="start">GPT-5.6 Luna</text>
+  <text x="183" y="294" font-size="10" fill="#94a3b8" text-anchor="start">51 &#183; $6 out</text>
+
+  <!-- Muse Spark 1.1 (xhigh): 51 @ $4.25 -> (147,282) amber, Meta closed -->
+  <circle cx="147" cy="282" r="8" fill="#d97706" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="135" y="279" font-size="12" font-weight="700" fill="#d97706" text-anchor="end">Muse Spark 1.1</text>
+  <text x="135" y="294" font-size="10" fill="#94a3b8" text-anchor="end">51 &#183; $4.25 out</text>
+
+  <!-- annotation band note -->
+  <text x="628" y="300" font-size="11" font-style="italic" fill="#94a3b8" text-anchor="middle">9-point capability band, ~12&#215; price range</text>
+</svg>
