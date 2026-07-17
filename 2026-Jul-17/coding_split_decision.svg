@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Grouped bar chart of coding-agent benchmark scores for three models across four benchmarks. DeepSWE: GPT-5.6 Sol 73.0, Claude Fable 5 70.0, Kimi K3 67.5. Program Bench: Kimi K3 77.8, GPT-5.6 Sol 77.6, Claude Fable 5 76.8. Terminal Bench 2.1: GPT-5.6 Sol 88.8, Kimi K3 88.3, Claude Fable 5 84.6. FrontierSWE: Claude Fable 5 86.6, Kimi K3 81.2, GPT-5.6 Sol 71.3. Kimi K3, an open-weights-class model, wins Program Bench, essentially ties on Terminal Bench, and stays within a few points elsewhere, so no single model sweeps the set.">
+  <title>Coding benchmarks — the open Kimi K3 trades wins with the two closed frontier models</title>
+
+  <!-- theme-neutral palette: saturated fills carry white text on light and dark; slate labels/axis read on both -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">A split decision: open Kimi K3 trades wins with two closed frontier models</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Coding-agent benchmark scores (higher is better). Independent figures as relayed by benchmark trackers, July 2026. Note the truncated 50&#8211;90 axis.</text>
+
+  <!-- plot frame: x 100..830 ; y axis 50..90 -> y(v)=380-(v-50)*6.889 ; baseline y=380 top y=70 -->
+  <line x1="100" y1="70" x2="100" y2="380" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="100" y1="380" x2="830" y2="380" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- gridlines + y ticks at 50,60,70,80,90 -->
+  <line x1="100" y1="311.1" x2="830" y2="311.1" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="100" y1="242.2" x2="830" y2="242.2" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="100" y1="173.3" x2="830" y2="173.3" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="100" y1="104.4" x2="830" y2="104.4" stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="92" y="384" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="92" y="315" font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="92" y="246" font-size="10.5" fill="#94a3b8" text-anchor="end">70</text>
+  <text x="92" y="177" font-size="10.5" fill="#94a3b8" text-anchor="end">80</text>
+  <text x="92" y="108" font-size="10.5" fill="#94a3b8" text-anchor="end">90</text>
+  <text x="34" y="225" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 34 225)">benchmark score</text>
+
+  <!-- ===== DeepSWE (center 191) ===== -->
+  <!-- K3 67.5 (259.4) -->
+  <rect x="125" y="259.4" width="40" height="120.6" fill="#0d9488"/>
+  <text x="145" y="253" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">67.5</text>
+  <!-- Fable 70.0 (242.2) -->
+  <rect x="171" y="242.2" width="40" height="137.8" fill="#7c3aed"/>
+  <text x="191" y="236" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">70.0</text>
+  <!-- Sol 73.0 (221.6) -->
+  <rect x="217" y="221.6" width="40" height="158.4" fill="#1e40af"/>
+  <text x="237" y="215" font-size="10.5" font-weight="700" fill="#1e40af" text-anchor="middle">73.0</text>
+  <text x="191" y="398" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">DeepSWE</text>
+
+  <!-- ===== Program Bench (center 373) ===== -->
+  <!-- K3 77.8 (188.5) -->
+  <rect x="307" y="188.5" width="40" height="191.5" fill="#0d9488"/>
+  <text x="327" y="182" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">77.8</text>
+  <!-- Fable 76.8 (195.4) -->
+  <rect x="353" y="195.4" width="40" height="184.6" fill="#7c3aed"/>
+  <text x="373" y="211" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">76.8</text>
+  <!-- Sol 77.6 (189.9) -->
+  <rect x="399" y="189.9" width="40" height="190.1" fill="#1e40af"/>
+  <text x="419" y="205" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">77.6</text>
+  <text x="373" y="398" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Program Bench</text>
+
+  <!-- ===== Terminal Bench 2.1 (center 555) ===== -->
+  <!-- K3 88.3 (116.2) -->
+  <rect x="489" y="116.2" width="40" height="263.8" fill="#0d9488"/>
+  <text x="509" y="110" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">88.3</text>
+  <!-- Fable 84.6 (141.6) -->
+  <rect x="535" y="141.6" width="40" height="238.4" fill="#7c3aed"/>
+  <text x="555" y="135" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">84.6</text>
+  <!-- Sol 88.8 (112.7) -->
+  <rect x="581" y="112.7" width="40" height="267.3" fill="#1e40af"/>
+  <text x="601" y="106" font-size="10.5" font-weight="700" fill="#1e40af" text-anchor="middle">88.8</text>
+  <text x="555" y="398" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Terminal Bench 2.1</text>
+
+  <!-- ===== FrontierSWE (center 737) ===== -->
+  <!-- K3 81.2 (165.1) -->
+  <rect x="671" y="165.1" width="40" height="214.9" fill="#0d9488"/>
+  <text x="691" y="159" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">81.2</text>
+  <!-- Fable 86.6 (127.9) -->
+  <rect x="717" y="127.9" width="40" height="252.1" fill="#7c3aed"/>
+  <text x="737" y="121" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">86.6</text>
+  <!-- Sol 71.3 (233.3) -->
+  <rect x="763" y="233.3" width="40" height="146.7" fill="#1e40af"/>
+  <text x="783" y="227" font-size="10.5" font-weight="700" fill="#1e40af" text-anchor="middle">71.3</text>
+  <text x="737" y="398" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">FrontierSWE</text>
+
+  <!-- ===== legend ===== -->
+  <rect x="270" y="428" width="14" height="14" fill="#0d9488"/>
+  <text x="290" y="440" font-size="12" fill="#64748b" text-anchor="start">Kimi K3 (open weights &#8804; Jul 27)</text>
+  <rect x="470" y="428" width="14" height="14" fill="#7c3aed"/>
+  <text x="490" y="440" font-size="12" fill="#64748b" text-anchor="start">Claude Fable 5</text>
+  <rect x="610" y="428" width="14" height="14" fill="#1e40af"/>
+  <text x="630" y="440" font-size="12" fill="#64748b" text-anchor="start">GPT-5.6 Sol (max)</text>
+</svg>
