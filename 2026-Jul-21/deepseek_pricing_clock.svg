@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="A 24-hour timeline of DeepSeek V4 API output pricing in Beijing time. Most of the day is off-peak at the base rate: V4-Pro output 0.87 dollars and V4-Flash 0.28 dollars per million tokens. Two peak windows, 9 to 12 in the morning and 14 to 18 in the afternoon, are billed at double: V4-Pro 1.74 dollars and V4-Flash 0.56 dollars. Peak windows total six hours per day; the other eighteen hours are off-peak. This is the first time-of-day surge pricing on a major AI API.">
+  <title>A day on the DeepSeek V4 meter — the first time-of-day AI pricing</title>
+
+  <!-- theme-neutral palette: teal = off-peak (cheap), amber = peak (2x); slate text/axis reads on light and dark -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">A day on the DeepSeek V4 meter (Beijing time)</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Same model, same tokens — the price now depends on the clock. Peak windows bill at 2x off-peak. Effective at V4 GA.</text>
+
+  <!-- axis: x=80 -> 00:00, x=800 -> 24:00  (30 px per hour) -->
+  <!-- off-peak base bar across the whole day -->
+  <rect x="80" y="110" width="720" height="46" rx="4" fill="#0d9488"/>
+
+  <!-- peak window 1: 09:00-12:00 -> x 350..440 -->
+  <rect x="350" y="102" width="90" height="62" rx="4" fill="#b45309" stroke="#7c2d12" stroke-width="1"/>
+  <!-- peak window 2: 14:00-18:00 -> x 500..620 -->
+  <rect x="500" y="102" width="120" height="62" rx="4" fill="#b45309" stroke="#7c2d12" stroke-width="1"/>
+
+  <!-- peak labels -->
+  <text x="395" y="96" font-size="11" font-weight="700" fill="#b45309" text-anchor="middle">PEAK 2x</text>
+  <text x="560" y="96" font-size="11" font-weight="700" fill="#b45309" text-anchor="middle">PEAK 2x</text>
+  <text x="395" y="139" font-size="10.5" fill="#ffffff" text-anchor="middle">09:00</text>
+  <text x="395" y="152" font-size="10.5" fill="#ffffff" text-anchor="middle">12:00</text>
+  <text x="560" y="139" font-size="10.5" fill="#ffffff" text-anchor="middle">14:00</text>
+  <text x="560" y="152" font-size="10.5" fill="#ffffff" text-anchor="middle">18:00</text>
+
+  <!-- off-peak label -->
+  <text x="200" y="139" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">off-peak (base rate)</text>
+  <text x="710" y="139" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">off-peak</text>
+
+  <!-- hour ticks -->
+  <g font-size="10" fill="#94a3b8" text-anchor="middle">
+    <text x="80" y="180">00</text>
+    <text x="260" y="180">06</text>
+    <text x="350" y="180">09</text>
+    <text x="440" y="180">12</text>
+    <text x="500" y="180">14</text>
+    <text x="620" y="180">18</text>
+    <text x="800" y="180">24</text>
+  </g>
+  <line x1="80" y1="164" x2="800" y2="164" stroke="#cbd5e1" stroke-width="0.75"/>
+
+  <!-- rate callouts -->
+  <text x="80" y="222" font-size="13" font-weight="700" fill="#64748b">What it costs per million output tokens</text>
+
+  <!-- Pro row -->
+  <circle cx="90" cy="246" r="6" fill="#0d9488"/>
+  <text x="106" y="250" font-size="12" fill="#64748b">V4-Pro output &#8212; off-peak <tspan font-weight="700">$0.87</tspan></text>
+  <circle cx="430" cy="246" r="6" fill="#b45309"/>
+  <text x="446" y="250" font-size="12" fill="#64748b">peak <tspan font-weight="700">$1.74</tspan>  (about 1/29 of Fable 5's $50 even at peak)</text>
+
+  <!-- Flash row -->
+  <circle cx="90" cy="272" r="6" fill="#0d9488"/>
+  <text x="106" y="276" font-size="12" fill="#64748b">V4-Flash output &#8212; off-peak <tspan font-weight="700">$0.28</tspan></text>
+  <circle cx="430" cy="272" r="6" fill="#b45309"/>
+  <text x="446" y="276" font-size="12" fill="#64748b">peak <tspan font-weight="700">$0.56</tspan></text>
+
+  <text x="80" y="306" font-size="10.5" fill="#94a3b8">Peak = 9:00&#8211;12:00 &amp; 14:00&#8211;18:00 Beijing daily (6 h). USD from published RMB rates; input tokens follow the same 2x rule. 24 h advance notice on changes.</text>
+
+  <!-- legend -->
+  <rect x="620" y="222" width="14" height="14" rx="2" fill="#0d9488"/>
+  <text x="640" y="234" font-size="11" fill="#64748b">off-peak</text>
+  <rect x="710" y="222" width="14" height="14" rx="2" fill="#b45309"/>
+  <text x="730" y="234" font-size="11" fill="#64748b">peak (2x)</text>
+</svg>
