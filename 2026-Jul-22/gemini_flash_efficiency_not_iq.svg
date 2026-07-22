@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Grouped bar chart comparing Gemini 3.5 Flash (slate) with Gemini 3.6 Flash (teal) across five 0-to-100 benchmarks, July 2026. Artificial Analysis Intelligence Index is flat: 50 for both models. Every task benchmark rises: SWE-Bench Pro 55.1 to 58.7, DeepSWE 37 to 49, MLE Bench 49.7 to 63.9, and OSWorld-Verified 78.4 to 83.0. A callout notes the output price falls from 9.00 to 7.50 dollars per million tokens, output tokens drop 17 percent, and long-horizon token use falls up to 65 percent on DeepSWE. The message: Gemini 3.6 Flash is cheaper and more token-efficient but not more intelligent on the composite index.">
+  <title>Gemini 3.6 Flash: cheaper and more efficient, but the composite Index is flat</title>
+
+  <!-- theme-neutral palette: saturated bar fills carry white value labels; slate/gray axis text reads on light and dark -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Gemini 3.6 Flash upgraded the tasks, not the IQ</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Gemini 3.5 Flash vs. 3.6 Flash. Every task score rises; the composite Intelligence Index is unchanged (50 -&gt; 50). July 2026.</text>
+
+  <!-- plot frame: y 70..400 maps score 100..0 -> y(v)=400-v*3.3 -->
+  <line x1="90" y1="70" x2="90" y2="400" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="90" y1="400" x2="830" y2="400" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- y gridlines + ticks 0,25,50,75,100 -->
+  <line x1="90" y1="317.5" x2="830" y2="317.5" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="235"   x2="830" y2="235"   stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="152.5" x2="830" y2="152.5" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="70"    x2="830" y2="70"    stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="82" y="404" font-size="10.5" fill="#94a3b8" text-anchor="end">0</text>
+  <text x="82" y="321" font-size="10.5" fill="#94a3b8" text-anchor="end">25</text>
+  <text x="82" y="239" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="82" y="156" font-size="10.5" fill="#94a3b8" text-anchor="end">75</text>
+  <text x="82" y="74"  font-size="10.5" fill="#94a3b8" text-anchor="end">100</text>
+  <text x="34" y="235" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 34 235)">score (0&#8211;100)</text>
+
+  <!-- ===== Group 1: Intelligence Index (FLAT) — center 164 ===== -->
+  <rect x="127" y="235" width="34" height="165" fill="#64748b"/>
+  <text x="144" y="228" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="middle">50</text>
+  <rect x="167" y="235" width="34" height="165" fill="#0d9488"/>
+  <text x="184" y="228" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">50</text>
+  <text x="164" y="416" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">Intelligence Index</text>
+  <text x="164" y="431" font-size="9.5" fill="#b45309" text-anchor="middle">flat &#8212; no IQ gain</text>
+
+  <!-- ===== Group 2: SWE-Bench Pro — center 312 ===== -->
+  <rect x="275" y="218.2" width="34" height="181.8" fill="#64748b"/>
+  <text x="292" y="211.2" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="middle">55.1</text>
+  <rect x="315" y="206.3" width="34" height="193.7" fill="#0d9488"/>
+  <text x="332" y="199.3" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">58.7</text>
+  <text x="312" y="416" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">SWE-Bench Pro</text>
+
+  <!-- ===== Group 3: DeepSWE — center 460 ===== -->
+  <rect x="423" y="277.9" width="34" height="122.1" fill="#64748b"/>
+  <text x="440" y="270.9" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="middle">37</text>
+  <rect x="463" y="238.3" width="34" height="161.7" fill="#0d9488"/>
+  <text x="480" y="231.3" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">49</text>
+  <text x="460" y="416" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">DeepSWE</text>
+
+  <!-- ===== Group 4: MLE Bench — center 608 ===== -->
+  <rect x="571" y="236" width="34" height="164" fill="#64748b"/>
+  <text x="588" y="229" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="middle">49.7</text>
+  <rect x="611" y="189.1" width="34" height="210.9" fill="#0d9488"/>
+  <text x="628" y="182.1" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">63.9</text>
+  <text x="608" y="416" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">MLE Bench</text>
+
+  <!-- ===== Group 5: OSWorld-Verified — center 756 ===== -->
+  <rect x="719" y="141.3" width="34" height="258.7" fill="#64748b"/>
+  <text x="736" y="134.3" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="middle">78.4</text>
+  <rect x="759" y="126.1" width="34" height="273.9" fill="#0d9488"/>
+  <text x="776" y="119.1" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">83.0</text>
+  <text x="756" y="416" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">OSWorld-Verified</text>
+
+  <!-- ===== efficiency callout ===== -->
+  <rect x="516" y="60" width="308" height="60" rx="8" fill="none" stroke="#b45309" stroke-width="1.2"/>
+  <text x="530" y="80" font-size="11.5" font-weight="700" fill="#b45309" text-anchor="start">Where the real gain is:</text>
+  <text x="530" y="97" font-size="11" fill="#94a3b8" text-anchor="start">output $9.00 &#8594; $7.50/Mtok &#183; &#8722;17% output tokens</text>
+  <text x="530" y="112" font-size="11" fill="#94a3b8" text-anchor="start">up to &#8722;65% tokens on long-horizon (DeepSWE)</text>
+
+  <!-- ===== legend ===== -->
+  <rect x="300" y="454" width="14" height="14" fill="#64748b"/>
+  <text x="320" y="465" font-size="12" fill="#64748b" text-anchor="start">Gemini 3.5 Flash</text>
+  <rect x="470" y="454" width="14" height="14" fill="#0d9488"/>
+  <text x="490" y="465" font-size="12" fill="#64748b" text-anchor="start">Gemini 3.6 Flash</text>
+</svg>
