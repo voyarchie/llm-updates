@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of Artificial Analysis Intelligence Index (vertical, higher is smarter) against output price in dollars per million tokens (horizontal, further left is cheaper) for frontier models as of July 25 2026. Claude Opus 5 sits at Index 61 and 25 dollars output, the highest point on the chart and up and to the left of Claude Fable 5 at Index 60 and 50 dollars output — Opus 5 is both smarter and half the price. GPT-5.6 Sol is at Index 59 and 30 dollars. Kimi K3, an open-weights model, is at Index 57 and 15 dollars. Opus 4.8, Opus 5's same-priced predecessor, is at Index 56 and 25 dollars, directly below Opus 5, showing a five-point generational jump at unchanged price. Gemini 3.6 Flash is at Index 50 and 7.5 dollars. A dashed arrow connects Fable 5 to Opus 5 labelled comparable intelligence at 26 percent lower cost per task.">
+  <title>The top of the Intelligence Index moved down the price curve — Opus 5 beats Fable 5 at half the output price</title>
+
+  <!-- theme-neutral palette: slate axis/labels read on light and dark; saturated dots carry white text -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Opus 5 tops the Intelligence Index — and does it at half Fable 5's output price</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index v4.1 (vertical) vs output price $/Mtok (horizontal). Up-and-left is better.</text>
+
+  <!-- Y gridlines: Index 35,40,45,50,55,60 -> y 349.6,297.9,246.1,194.3,142.5,90.7 -->
+  <line x1="90" y1="349.6" x2="830" y2="349.6" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="297.9" x2="830" y2="297.9" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="246.1" x2="830" y2="246.1" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="194.3" x2="830" y2="194.3" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="142.5" x2="830" y2="142.5" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="90" y1="90.7"  x2="830" y2="90.7"  stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="82" y="353" font-size="10.5" fill="#94a3b8" text-anchor="end">35</text>
+  <text x="82" y="301" font-size="10.5" fill="#94a3b8" text-anchor="end">40</text>
+  <text x="82" y="250" font-size="10.5" fill="#94a3b8" text-anchor="end">45</text>
+  <text x="82" y="198" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="82" y="146" font-size="10.5" fill="#94a3b8" text-anchor="end">55</text>
+  <text x="82" y="94"  font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="30" y="215" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 30 215)">Intelligence Index (higher = smarter)</text>
+
+  <!-- axes -->
+  <line x1="90" y1="70" x2="90" y2="360" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="90" y1="360" x2="830" y2="360" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- X ticks: $0,10,20,30,40,50 -> x 90,224.5,359.1,493.6,628.2,762.7 -->
+  <text x="90"    y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0</text>
+  <text x="224.5" y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="359.1" y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$20</text>
+  <text x="493.6" y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$30</text>
+  <text x="628.2" y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$40</text>
+  <text x="762.7" y="378" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="460" y="398" font-size="11" fill="#94a3b8" text-anchor="middle">Output price ($ / million tokens) — further left = cheaper</text>
+
+  <!-- dominance connector: Fable 5 -> Opus 5 -->
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <line x1="762.7" y1="90.7" x2="440" y2="80.4" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+  <text x="600" y="63" font-size="11" font-weight="600" fill="#2563eb" text-anchor="middle">same intelligence, 26% lower cost/task</text>
+
+  <!-- generational jump connector: Opus 4.8 -> Opus 5 (same price column) -->
+  <line x1="426.4" y1="132.1" x2="426.4" y2="90.4" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="416" y="112" font-size="9.5" fill="#94a3b8" text-anchor="end">+5 Index, same $</text>
+
+  <!-- Gemini 3.6 Flash (50, $7.5) -->
+  <circle cx="190.9" cy="194.3" r="7" fill="#64748b"/>
+  <text x="190.9" y="216" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle">Gemini 3.6 Flash</text>
+  <text x="190.9" y="230" font-size="9.5" fill="#94a3b8" text-anchor="middle">50 · $7.50</text>
+
+  <!-- Kimi K3 (57, $15) open weights -->
+  <circle cx="291.8" cy="121.8" r="7" fill="#0d9488"/>
+  <text x="291.8" y="112" font-size="11" font-weight="600" fill="#0d9488" text-anchor="middle">Kimi K3</text>
+  <text x="291.8" y="143" font-size="9.5" fill="#94a3b8" text-anchor="middle">57 · $15 · open</text>
+
+  <!-- Opus 4.8 (56, $25) predecessor, faded -->
+  <circle cx="426.4" cy="132.1" r="7" fill="#94a3b8"/>
+  <text x="437" y="136" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">Opus 4.8</text>
+  <text x="437" y="150" font-size="9.5" fill="#94a3b8" text-anchor="start">56 · $25</text>
+
+  <!-- GPT-5.6 Sol (59, $30) -->
+  <circle cx="493.6" cy="101.1" r="7" fill="#7c3aed"/>
+  <text x="504" y="97" font-size="11" font-weight="600" fill="#7c3aed" text-anchor="start">GPT-5.6 Sol</text>
+  <text x="504" y="111" font-size="9.5" fill="#94a3b8" text-anchor="start">59 · $30</text>
+
+  <!-- Fable 5 (60, $50) premium, now beaten -->
+  <circle cx="762.7" cy="90.7" r="7" fill="#b45309"/>
+  <text x="752" y="86" font-size="11" font-weight="600" fill="#b45309" text-anchor="end">Fable 5</text>
+  <text x="752" y="100" font-size="9.5" fill="#94a3b8" text-anchor="end">60 · $50</text>
+
+  <!-- Opus 5 (61, $25) HIGHLIGHT -->
+  <circle cx="426.4" cy="80.4" r="12" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="426.4" cy="80.4" r="8" fill="#2563eb"/>
+  <text x="426.4" y="58" font-size="13" font-weight="700" fill="#2563eb" text-anchor="middle">Claude Opus 5 — 61 · $25</text>
+
+  <!-- legend -->
+  <circle cx="100" cy="432" r="6" fill="#2563eb"/>
+  <text x="112" y="436" font-size="11" fill="#64748b" text-anchor="start">New (Jul 24)</text>
+  <circle cx="222" cy="432" r="6" fill="#0d9488"/>
+  <text x="234" y="436" font-size="11" fill="#64748b" text-anchor="start">Open weights</text>
+  <circle cx="350" cy="432" r="6" fill="#94a3b8"/>
+  <text x="362" y="436" font-size="11" fill="#64748b" text-anchor="start">Predecessor</text>
+  <text x="470" y="436" font-size="10" fill="#94a3b8" text-anchor="start">Index = Artificial Analysis Intelligence Index v4.1 (max effort). Prices are list output $/Mtok.</text>
+</svg>
