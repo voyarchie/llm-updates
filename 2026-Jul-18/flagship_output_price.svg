@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Horizontal bar chart of API list output price per million tokens for four frontier flagships. Gemini 3.5 Pro, launched July 18, is the most expensive at 60 dollars per million output tokens. Claude Fable 5 is 50 dollars (metered credits from July 20). GPT-5.6 Sol is 30 dollars. The open-weights Kimi K3 is 15 dollars. Google's newest flagship arrives as the priciest, not the cheapest.">
+  <title>The newest flagship is the priciest — Gemini 3.5 Pro launches at $60/Mtok output</title>
+
+  <!-- theme-neutral palette: saturated fills carry white value text on light and dark; slate labels/axis read on both -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The newest flagship is the priciest, not the cheapest</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">API list output price, $ per million tokens. Gemini 3.5 Pro (launched Jul 18) tops the field; the open models undercut from below.</text>
+
+  <!-- plot frame: bars start x=210 ; scale = value * 10.167 (0..60 -> 0..610) ; baseline y=290 -->
+  <!-- gridlines + x ticks at 0,15,30,45,60 -->
+  <line x1="210" y1="80" x2="210" y2="290" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="362.5" y1="80" x2="362.5" y2="290" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="515" y1="80" x2="515" y2="290" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="667.5" y1="80" x2="667.5" y2="290" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="820" y1="80" x2="820" y2="290" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="210" y1="290" x2="820" y2="290" stroke="#94a3b8" stroke-width="1"/>
+  <text x="210" y="308" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0</text>
+  <text x="362.5" y="308" font-size="10.5" fill="#94a3b8" text-anchor="middle">$15</text>
+  <text x="515" y="308" font-size="10.5" fill="#94a3b8" text-anchor="middle">$30</text>
+  <text x="667.5" y="308" font-size="10.5" fill="#94a3b8" text-anchor="middle">$45</text>
+  <text x="820" y="308" font-size="10.5" fill="#94a3b8" text-anchor="middle">$60</text>
+  <text x="515" y="330" font-size="11" fill="#94a3b8" text-anchor="middle">output price ($ / million tokens)</text>
+
+  <!-- Row 1: Gemini 3.5 Pro 60 -> width 610 -->
+  <rect x="210" y="92" width="610" height="34" fill="#b45309"/>
+  <text x="200" y="114" font-size="12.5" font-weight="600" fill="#64748b" text-anchor="end">Gemini 3.5 Pro</text>
+  <text x="808" y="114" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">$60</text>
+
+  <!-- Row 2: Claude Fable 5 50 -> width 508.3 -->
+  <rect x="210" y="142" width="508.3" height="34" fill="#7c3aed"/>
+  <text x="200" y="164" font-size="12.5" font-weight="600" fill="#64748b" text-anchor="end">Claude Fable 5</text>
+  <text x="706" y="164" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">$50</text>
+
+  <!-- Row 3: GPT-5.6 Sol 30 -> width 305 -->
+  <rect x="210" y="192" width="305" height="34" fill="#1e40af"/>
+  <text x="200" y="214" font-size="12.5" font-weight="600" fill="#64748b" text-anchor="end">GPT-5.6 Sol (max)</text>
+  <text x="503" y="214" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">$30</text>
+
+  <!-- Row 4: Kimi K3 15 -> width 152.5 -->
+  <rect x="210" y="242" width="152.5" height="34" fill="#0d9488"/>
+  <text x="200" y="264" font-size="12.5" font-weight="600" fill="#64748b" text-anchor="end">Kimi K3</text>
+  <text x="350" y="264" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">$15</text>
+
+  <!-- annotation: open weights -->
+  <text x="210" y="346" font-size="11.5" fill="#94a3b8">Open-weights note: Kimi K3 weights go open by Jul 27; Inkling (Thinking Machines, Jul 15) ships weights now &#8212; self-hosting bypasses per-token API pricing entirely.</text>
+</svg>
