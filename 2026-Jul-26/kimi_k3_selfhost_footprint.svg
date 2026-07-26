@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" role="img" aria-label="Kimi K3 self-host download footprint in gigabytes by precision format">
+  <title>Kimi K3 self-host footprint: MXFP4 native ~594 GB, Q4 GGUF ~300-400 GB</title>
+
+  <!-- Title -->
+  <text x="30" y="34" font-size="18" font-weight="700" fill="#64748b">Kimi K3 self-host footprint &#8212; the open-weights &#8220;escape hatch&#8221; is a 300&#8211;600&#160;GB one</text>
+  <text x="30" y="56" font-size="13" fill="#94a3b8">2.8T total params &#183; 16 of 896 experts active &#183; 1M-token context &#183; native vision &#183; download size to run it inside your own perimeter</text>
+
+  <!-- Plot geometry: x=210..710 maps 0..700 GB (0.7143 px/GB) -->
+  <!-- Gridlines every 100 GB -->
+  <g stroke="#cbd5e1" stroke-width="1" opacity="0.5">
+    <line x1="210" y1="90" x2="210" y2="270"/>
+    <line x1="281" y1="90" x2="281" y2="270"/>
+    <line x1="353" y1="90" x2="353" y2="270"/>
+    <line x1="424" y1="90" x2="424" y2="270"/>
+    <line x1="496" y1="90" x2="496" y2="270"/>
+    <line x1="567" y1="90" x2="567" y2="270"/>
+    <line x1="638" y1="90" x2="638" y2="270"/>
+    <line x1="710" y1="90" x2="710" y2="270"/>
+  </g>
+  <!-- X axis labels -->
+  <g font-size="11" fill="#94a3b8" text-anchor="middle">
+    <text x="210" y="288">0</text>
+    <text x="281" y="288">100</text>
+    <text x="353" y="288">200</text>
+    <text x="424" y="288">300</text>
+    <text x="496" y="288">400</text>
+    <text x="567" y="288">500</text>
+    <text x="638" y="288">600</text>
+    <text x="710" y="288">700</text>
+  </g>
+  <text x="460" y="312" font-size="12" fill="#64748b" text-anchor="middle" font-weight="600">Download size (GB)</text>
+
+  <!-- Reference lines: single 80 GB GPU and an 8x80 GB (~640 GB) node -->
+  <g stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3">
+    <line x1="267" y1="80" x2="267" y2="270"/>
+    <line x1="667" y1="80" x2="667" y2="270"/>
+  </g>
+  <text x="267" y="76" font-size="10.5" fill="#64748b" text-anchor="middle">1&#215; 80&#160;GB GPU</text>
+  <text x="667" y="76" font-size="10.5" fill="#64748b" text-anchor="middle">8&#215; 80&#160;GB node (~640)</text>
+
+  <!-- Row 1: MXFP4 native ~594 GB -->
+  <text x="200" y="120" font-size="13" fill="#64748b" text-anchor="end" font-weight="600">MXFP4 safetensors</text>
+  <text x="200" y="137" font-size="11" fill="#94a3b8" text-anchor="end">native release</text>
+  <rect x="210" y="102" width="424" height="42" rx="4" fill="#d97706"/>
+  <text x="624" y="128" font-size="13" fill="#ffffff" text-anchor="end" font-weight="700">~594 GB</text>
+
+  <!-- Row 2: Q4 GGUF ~300-400 GB (solid to 300, lighter range 300-400) -->
+  <text x="200" y="196" font-size="13" fill="#64748b" text-anchor="end" font-weight="600">Q4 GGUF</text>
+  <text x="200" y="213" font-size="11" fill="#94a3b8" text-anchor="end">community quant</text>
+  <rect x="210" y="178" width="214" height="42" rx="4" fill="#0d9488"/>
+  <rect x="424" y="178" width="72" height="42" rx="4" fill="#5eead4"/>
+  <text x="506" y="204" font-size="13" fill="#64748b" text-anchor="start" font-weight="700">~300&#8211;400 GB</text>
+
+  <!-- Takeaway strip -->
+  <text x="30" y="352" font-size="12.5" fill="#64748b"><tspan font-weight="700">Takeaway:</tspan> the native release fits (just) in an 8&#215;80&#160;GB accelerator node; a Q4 quant roughly halves that &#8212; but neither runs on one GPU. Open weights remove the data-residency problem, not the hardware bill.</text>
+</svg>
