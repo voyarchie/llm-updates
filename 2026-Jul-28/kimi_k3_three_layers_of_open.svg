@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram titled 'Open weights' resolved in three layers when Kimi K3 shipped on July 26 2026, only the first layer is unqualified. Layer 1, the weights: OPEN — 2.8 trillion parameters, about 50 billion active per token, published on Hugging Face as roughly 594 gigabytes in MXFP4, the largest open-weight release in history. Layer 2, the license: RESTRICTED — a bespoke Kimi K3 License, not the Modified MIT claimed earlier; a revenue-triggered separate agreement is required for Model-as-a-Service resale, and any product over 100 million monthly users or 20 million dollars monthly revenue must display 'Kimi K3' in its interface. Layer 3, running it yourself: GATED BY HARDWARE — about a 1.4 terabyte VRAM planning floor to serve, roughly 18 H100 80GB GPUs at 4-bit, with production-stable local inference not expected before Q4 2026. A footer notes that day-zero practical access is still to rent it: 3 dollars and 15 dollars per million tokens on Moonshot's API, hosted same-window by Together AI and Modal.">
+  <title>"Open weights" landed in three layers — only the first is unqualified (Kimi K3, Jul 26 2026)</title>
+
+  <!-- theme-neutral palette: slate text (#64748b / #94a3b8) reads on light and dark; status pills carry white text -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The largest open-weight release ever landed — but "open" resolved in three layers</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Kimi K3 (Moonshot AI), weights published Jul 26 2026. Only the first layer is unqualified.</text>
+
+  <!-- Layer 1: weights -->
+  <rect x="24" y="72" width="852" height="96" rx="10" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="44" y="104" font-size="30" font-weight="800" fill="#94a3b8">1</text>
+  <text x="88" y="98" font-size="15" font-weight="700" fill="#64748b">The weights</text>
+  <rect x="88" y="108" width="70" height="21" rx="10.5" fill="#16a34a"/>
+  <text x="123" y="123" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">OPEN</text>
+  <text x="180" y="98"  font-size="12.5" fill="#94a3b8">2.8T params (~50B active/token) · ~594 GB MXFP4 (QAT from SFT) · on Hugging Face</text>
+  <text x="180" y="118" font-size="12.5" fill="#94a3b8">Largest open-weight release in history · Index #4 at ~57 · #1 Frontend Code Arena</text>
+  <text x="180" y="138" font-size="12.5" fill="#94a3b8">Resolves the Jul-17 → Jul-25 promise: the "open frontier" is genuinely downloadable</text>
+
+  <!-- Layer 2: license -->
+  <rect x="24" y="180" width="852" height="80" rx="10" fill="none" stroke="#d97706" stroke-width="1.5"/>
+  <text x="44" y="212" font-size="30" font-weight="800" fill="#94a3b8">2</text>
+  <text x="88" y="206" font-size="15" font-weight="700" fill="#64748b">The license</text>
+  <rect x="88" y="216" width="108" height="21" rx="10.5" fill="#d97706"/>
+  <text x="142" y="231" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">RESTRICTED</text>
+  <text x="218" y="206" font-size="12.5" fill="#94a3b8">Bespoke "Kimi K3 License" (HF license:other) — NOT the "Modified MIT" claimed Jul-17</text>
+  <text x="218" y="226" font-size="12.5" fill="#94a3b8">Revenue-triggered separate agreement to resell as a service; must show "Kimi K3" in</text>
+  <text x="218" y="246" font-size="12.5" fill="#94a3b8">the UI above 100M monthly users or $20M/month revenue</text>
+
+  <!-- Layer 3: run it yourself -->
+  <rect x="24" y="272" width="852" height="80" rx="10" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="44" y="304" font-size="30" font-weight="800" fill="#94a3b8">3</text>
+  <text x="88" y="298" font-size="15" font-weight="700" fill="#64748b">Run it yourself</text>
+  <rect x="88" y="308" width="150" height="21" rx="10.5" fill="#dc2626"/>
+  <text x="163" y="323" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">GATED BY HARDWARE</text>
+  <text x="260" y="298" font-size="12.5" fill="#94a3b8">~1.4 TB VRAM planning floor to serve · ~18× H100-80GB at 4-bit · 64+ accelerators</text>
+  <text x="260" y="318" font-size="12.5" fill="#94a3b8">recommended · production-stable local inference is a ~Q4 2026 story for most teams</text>
+  <text x="260" y="338" font-size="12.5" fill="#94a3b8">(vLLM KDA support still landing)</text>
+
+  <!-- footer: rent it today -->
+  <rect x="24" y="366" width="852" height="52" rx="10" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="44" y="390" font-size="13" font-weight="700" fill="#64748b">Day-0 practical access = rent it, not host it:</text>
+  <text x="44" y="409" font-size="12.5" fill="#94a3b8">Moonshot API $3 / $15 per Mtok (~$0.30 cache-hit input) · hosted same-window by Together AI &amp; Modal</text>
+</svg>
