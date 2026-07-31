@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 384" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Horizontal bar chart of large language model API output prices in US dollars per million tokens after OpenAI's July 30 2026 price cut. GPT-5.6 Luna is now 1.20 dollars, down 80 percent from 6 dollars. GPT-5.6 Terra is 12 dollars, down 20 percent from 15. Claude Opus 5 is 25 dollars at Intelligence Index 61. GPT-5.6 Sol, the OpenAI flagship, is unchanged at 30 dollars at Index 59. Claude Fable 5 is 50 dollars at Index 60. The chart shows OpenAI cut the cheap floor tiers hard while leaving its flagship untouched, and that Claude Opus 5's top-quality-at-mid-price point is still unmatched.">
+  <title>OpenAI's cut hit the floor, not the ceiling — Luna −80% to $1.20, but Sol stays $30 and Opus 5's $25-at-Index-61 is still unanswered</title>
+
+  <!-- theme-neutral palette: slate text/axes read on light and dark; teal = the cut tiers, amber = flagship left untouched, blue = Claude quality reference -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The price war moved to the floor, not the ceiling</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">API output price ($/Mtok) after OpenAI's Jul 30 cut. Teal = tiers OpenAI cut; amber = flagship left unchanged; blue = Claude reference.</text>
+
+  <!-- X gridlines / ticks: $0..$50, x = 210 + v*12.6 -->
+  <line x1="210" y1="78" x2="210" y2="330" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="336" y1="78" x2="336" y2="330" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="462" y1="78" x2="462" y2="330" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="588" y1="78" x2="588" y2="330" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="714" y1="78" x2="714" y2="330" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="840" y1="78" x2="840" y2="330" stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="210" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0</text>
+  <text x="336" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="462" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$20</text>
+  <text x="588" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$30</text>
+  <text x="714" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$40</text>
+  <text x="840" y="348" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="525" y="370" font-size="11" fill="#94a3b8" text-anchor="middle">API output price per million tokens (lower = cheaper)</text>
+
+  <!-- GPT-5.6 Luna = $1.20 (was $6, -80%) -->
+  <rect x="210" y="95" width="15.1" height="26" fill="#0d9488"/>
+  <text x="202" y="112" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="end">GPT-5.6 Luna</text>
+  <text x="233" y="113" font-size="11.5" font-weight="700" fill="#0d9488" text-anchor="start">$1.20  ↓80% from $6</text>
+
+  <!-- GPT-5.6 Terra = $12 (was $15, -20%) -->
+  <rect x="210" y="139" width="151.2" height="26" fill="#0d9488"/>
+  <text x="202" y="156" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="end">GPT-5.6 Terra</text>
+  <text x="369" y="157" font-size="11.5" font-weight="700" fill="#0d9488" text-anchor="start">$12  ↓20% from $15</text>
+
+  <!-- Claude Opus 5 = $25, Index 61 -->
+  <rect x="210" y="183" width="315" height="26" fill="#2563eb"/>
+  <text x="202" y="200" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="end">Claude Opus 5</text>
+  <text x="533" y="201" font-size="11.5" font-weight="700" fill="#2563eb" text-anchor="start">$25 · Index 61 (top quality)</text>
+
+  <!-- GPT-5.6 Sol = $30, Index 59, unchanged -->
+  <rect x="210" y="227" width="378" height="26" fill="#b45309"/>
+  <text x="202" y="244" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="end">GPT-5.6 Sol</text>
+  <text x="596" y="245" font-size="11.5" font-weight="700" fill="#b45309" text-anchor="start">$30 · Index 59 — unchanged</text>
+
+  <!-- Claude Fable 5 = $50, Index 60 -->
+  <rect x="210" y="271" width="630" height="26" fill="#64748b"/>
+  <text x="202" y="288" font-size="12.5" font-weight="700" fill="#64748b" text-anchor="end">Claude Fable 5</text>
+  <text x="828" y="288" font-size="11.5" font-weight="700" fill="#f8fafc" text-anchor="end">$50 · Index 60</text>
+
+  <!-- annotation: Opus 5 undercuts Sol on price AND leads on quality -->
+  <line x1="525" y1="183" x2="588" y2="227" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <text x="600" y="180" font-size="10.5" fill="#94a3b8" text-anchor="start">Opus 5: cheaper than Sol, higher Index — still unanswered</text>
+</svg>
