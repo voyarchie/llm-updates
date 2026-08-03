@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of large language model intelligence versus API output price on a logarithmic price axis, as of August 3 2026. The cheap floor tier is converging on frontier quality: DeepSeek V4-Flash-0731 scores 50 on the Artificial Analysis Intelligence Index at just 0.28 dollars per million output tokens, and GPT-5.6 Luna scores 51 at 1.20 dollars after an 80 percent cut, both far cheaper than the top. Kimi K3 (open weights) scores 57 at 15 dollars. The static, expensive top is Claude Opus 5 at index 61 for 25 dollars, GPT-5.6 Sol at index 59 for 30 dollars, and Claude Fable 5 at index 60 for 50 dollars. The competitive action is all at the low-price floor while the top of the leaderboard is unchanged and unanswered.">
+  <title>The price war is climbing the quality axis at the floor — DeepSeek V4-Flash (Index 50, $0.28) and Luna (51, $1.20) close on the frontier for pennies, while the $25–$50 top stays static</title>
+
+  <!-- theme-neutral palette: slate text/axes read on light and dark. teal = the contested cheap floor; green = open-weight near-frontier; amber/blue/slate = the static, expensive top. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The fight is at the floor — and it stopped being only about price</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index (v4.1, higher = smarter) vs. API output price, log scale. Teal = the cheap tier both labs are contesting; green = open weights; amber/blue/slate = the static top.</text>
+
+  <!-- plot frame -->
+  <line x1="120" y1="80" x2="120" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="120" y1="300" x2="840" y2="300" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- floor zone highlight -->
+  <rect x="120" y="80" width="245" height="220" fill="#0d9488" opacity="0.07"/>
+  <text x="128" y="97" font-size="10.5" font-weight="700" fill="#0d9488">THE CONTESTED FLOOR (&lt; $1.50/Mtok)</text>
+
+  <!-- Y gridlines / ticks: Index 45,50,55,60,65  y = 300 - (i-40)/25*220 -->
+  <line x1="120" y1="256" x2="840" y2="256" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="212" x2="840" y2="212" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="168" x2="840" y2="168" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="124" x2="840" y2="124" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="80"  x2="840" y2="80"  stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="112" y="260" font-size="10.5" fill="#94a3b8" text-anchor="end">45</text>
+  <text x="112" y="216" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="112" y="172" font-size="10.5" fill="#94a3b8" text-anchor="end">55</text>
+  <text x="112" y="128" font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="112" y="84"  font-size="10.5" fill="#94a3b8" text-anchor="end">65</text>
+  <text x="34" y="192" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 34 192)">Intelligence Index (higher = smarter)</text>
+
+  <!-- X ticks (log10): x = 120 + (log10(v)+0.7)/2.4*720 -->
+  <text x="120" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.20</text>
+  <text x="240" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.50</text>
+  <text x="330" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$1</text>
+  <text x="540" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$5</text>
+  <text x="630" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="840" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="480" y="340" font-size="11" fill="#94a3b8" text-anchor="middle">API output price per million tokens — log scale (left = cheaper)</text>
+
+  <!-- DeepSeek V4 Pro (reference, faded): Index 44, $0.87 -> x=312 y=264.8 -->
+  <circle cx="312" cy="265" r="5" fill="#5eead4"/>
+  <text x="312" y="282" font-size="10" fill="#94a3b8" text-anchor="middle">DeepSeek V4 Pro · 44</text>
+
+  <!-- DeepSeek V4-Flash-0731: Index 50, $0.28 -> x=164 y=212 (NEW Jul 31) -->
+  <circle cx="164" cy="212" r="7" fill="#0d9488"/>
+  <text x="174" y="205" font-size="11.5" font-weight="700" fill="#0d9488" text-anchor="start">DeepSeek V4-Flash-0731</text>
+  <text x="174" y="219" font-size="10.5" fill="#0d9488" text-anchor="start">Index 50 · $0.28 · MIT weights (Jul 31)</text>
+
+  <!-- GPT-5.6 Luna: Index 51, $1.20 -> x=354 y=203 (cut Jul 30) -->
+  <circle cx="354" cy="203" r="7" fill="#0d9488"/>
+  <text x="364" y="199" font-size="11.5" font-weight="700" fill="#0d9488" text-anchor="start">GPT-5.6 Luna</text>
+  <text x="364" y="213" font-size="10.5" fill="#0d9488" text-anchor="start">Index 51 · $1.20 (−80%, Jul 30)</text>
+
+  <!-- Kimi K3 (open): Index 57, $15 -> x=683 y=150 -->
+  <circle cx="683" cy="150" r="6" fill="#16a34a"/>
+  <text x="683" y="140" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">Kimi K3 · 57 · $15 (open)</text>
+
+  <!-- GPT-5.6 Sol: Index 59, $30 -> x=773 y=133 -->
+  <circle cx="773" cy="133" r="6" fill="#b45309"/>
+  <text x="773" y="123" font-size="11" font-weight="700" fill="#b45309" text-anchor="middle">GPT-5.6 Sol · 59 · $30</text>
+
+  <!-- Claude Fable 5: Index 60, $50 -> x=840 y=124 -->
+  <circle cx="838" cy="124" r="6" fill="#64748b"/>
+  <text x="838" y="114" font-size="11" font-weight="700" fill="#64748b" text-anchor="end">Fable 5 · 60 · $50</text>
+
+  <!-- Claude Opus 5: Index 61, $25 -> x=749 y=115 (top, unanswered) -->
+  <circle cx="749" cy="115" r="7" fill="#2563eb"/>
+  <text x="749" y="105" font-size="11.5" font-weight="700" fill="#2563eb" text-anchor="middle">Claude Opus 5 · 61 · $25 — still #1, unanswered</text>
+
+  <!-- annotation arrow: the floor is climbing -->
+  <line x1="200" y1="235" x2="330" y2="212" stroke="#0d9488" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#ah)"/>
+  <defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0d9488"/></marker></defs>
+  <text x="205" y="252" font-size="10.5" fill="#0d9488" text-anchor="start">Index climbing toward the frontier at ~1/100th the price</text>
+</svg>
