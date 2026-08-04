@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of large language model intelligence versus API output price on a logarithmic price axis, as of August 4 2026. Alibaba's new Qwen3.8-Max lands in the previously-empty middle of the map, at an independent Artificial Analysis Intelligence Index of 53 for 6 dollars per million output tokens — between the ultra-cheap floor and the expensive top. The cheap floor holds DeepSeek V4-Flash-0731 at index 50 for 0.28 dollars and GPT-5.6 Luna at index 51 for 1.20 dollars. The near-frontier open model Kimi K3 sits at index 57 for 15 dollars. The static, expensive top is Claude Opus 5 at index 61 for 25 dollars, GPT-5.6 Sol at index 59 for 30 dollars, and Claude Fable 5 at index 60 for 50 dollars. Alibaba's own unverified claim places Qwen3.8-Max far higher, near index 59 to 60, second only to Fable 5 — shown as a hollow marker well above the independently measured point.">
+  <title>The empty middle fills in — Qwen3.8-Max lands at Index 53 for $6, between the ultra-cheap floor and the $25–$50 top; Alibaba's own "second only to Fable 5" claim (hollow) sits far above the independently measured point</title>
+
+  <!-- theme-neutral palette: slate text/axes read on light and dark. teal = cheap floor; violet = the new mid-tier entrant; green = open-weight near-frontier; amber/blue/slate = the static top. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The empty middle fills in — and the filler is another Chinese open-weights model</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index (v4.1, higher = smarter) vs. API output price, log scale. Violet = Qwen3.8-Max, the new mid-tier entrant; teal = cheap floor; green = open weights; amber/blue/slate = the static top.</text>
+
+  <!-- plot frame -->
+  <line x1="120" y1="80" x2="120" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="120" y1="300" x2="840" y2="300" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- floor zone highlight -->
+  <rect x="120" y="80" width="263" height="220" fill="#0d9488" opacity="0.07"/>
+  <text x="128" y="97" font-size="10" font-weight="700" fill="#0d9488">CHEAP FLOOR (&lt; $1.50)</text>
+
+  <!-- middle zone highlight (now filled) -->
+  <rect x="383" y="80" width="337" height="220" fill="#7c3aed" opacity="0.07"/>
+  <text x="391" y="97" font-size="10" font-weight="700" fill="#7c3aed">THE EMPTY MIDDLE — now has a contestant ($1.50–$20)</text>
+
+  <!-- Y gridlines / ticks: Index 45,50,55,60,65  y = 300 - (i-40)/25*220 -->
+  <line x1="120" y1="256" x2="840" y2="256" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="212" x2="840" y2="212" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="168" x2="840" y2="168" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="124" x2="840" y2="124" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="80"  x2="840" y2="80"  stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="112" y="260" font-size="10.5" fill="#94a3b8" text-anchor="end">45</text>
+  <text x="112" y="216" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="112" y="172" font-size="10.5" fill="#94a3b8" text-anchor="end">55</text>
+  <text x="112" y="128" font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="112" y="84"  font-size="10.5" fill="#94a3b8" text-anchor="end">65</text>
+  <text x="34" y="192" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 34 192)">Intelligence Index (higher = smarter)</text>
+
+  <!-- X ticks (log10): x = 120 + (log10(v)+0.7)/2.4*720 -->
+  <text x="120" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.20</text>
+  <text x="240" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.50</text>
+  <text x="330" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$1</text>
+  <text x="540" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$5</text>
+  <text x="630" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="840" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="480" y="340" font-size="11" fill="#94a3b8" text-anchor="middle">API output price per million tokens — log scale (left = cheaper)</text>
+
+  <!-- DeepSeek V4-Flash-0731: Index 50, $0.28 -> x=164 y=212 -->
+  <circle cx="164" cy="212" r="6" fill="#0d9488"/>
+  <text x="172" y="228" font-size="10" fill="#0d9488" text-anchor="start">DeepSeek V4-Flash · 50 · $0.28</text>
+
+  <!-- GPT-5.6 Luna: Index 51, $1.20 -> x=354 y=203 -->
+  <circle cx="354" cy="203" r="6" fill="#0d9488"/>
+  <text x="346" y="193" font-size="10" fill="#0d9488" text-anchor="middle">Luna · 51 · $1.20</text>
+
+  <!-- Qwen3.8-Max MEASURED: Index 53, $6 -> x=563 y=186 (NEW) -->
+  <circle cx="563" cy="186" r="8" fill="#7c3aed"/>
+  <text x="573" y="182" font-size="11.5" font-weight="700" fill="#7c3aed" text-anchor="start">Qwen3.8-Max</text>
+  <text x="573" y="196" font-size="10.5" fill="#7c3aed" text-anchor="start">AA preliminary: Index 53 · $6 (Aug 3)</text>
+
+  <!-- Qwen3.8-Max CLAIM (hollow ghost): ~59-60, $6 -> x=563 y=130 -->
+  <circle cx="563" cy="130" r="8" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="3 2"/>
+  <text x="573" y="127" font-size="10" fill="#a78bfa" text-anchor="start">Alibaba's claim: "2nd only to Fable 5"</text>
+  <text x="573" y="140" font-size="10" fill="#a78bfa" text-anchor="start">(~59–60, unverified)</text>
+
+  <!-- gap line between claim and measured -->
+  <line x1="563" y1="140" x2="563" y2="176" stroke="#7c3aed" stroke-width="1.1" stroke-dasharray="3 3"/>
+  <text x="551" y="164" font-size="9.5" fill="#a78bfa" text-anchor="end">the gap</text>
+
+  <!-- Kimi K3 (open): Index 57, $15 -> x=683 y=150 -->
+  <circle cx="683" cy="150" r="6" fill="#16a34a"/>
+  <text x="683" y="140" font-size="10.5" font-weight="700" fill="#16a34a" text-anchor="middle">Kimi K3 · 57 · $15 (open)</text>
+
+  <!-- GPT-5.6 Sol: Index 59, $30 -> x=773 y=133 -->
+  <circle cx="773" cy="133" r="6" fill="#b45309"/>
+  <text x="773" y="123" font-size="10.5" font-weight="700" fill="#b45309" text-anchor="middle">Sol · 59 · $30</text>
+
+  <!-- Claude Fable 5: Index 60, $50 -> x=840 y=124 -->
+  <circle cx="838" cy="124" r="6" fill="#64748b"/>
+  <text x="838" y="114" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="end">Fable 5 · 60 · $50</text>
+
+  <!-- Claude Opus 5: Index 61, $25 -> x=749 y=115 (top, unanswered) -->
+  <circle cx="749" cy="115" r="7" fill="#2563eb"/>
+  <text x="749" y="105" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Opus 5 · 61 · $25 — still #1, unanswered</text>
+
+  <!-- footnote -->
+  <text x="120" y="372" font-size="9.5" fill="#94a3b8">Independent Index 53 places Qwen3.8-Max mid-pack (below Kimi K3's 57), not #2 — the vendor's "second only to Fable 5" claim is unverified as of Aug 4.</text>
+  <text x="120" y="388" font-size="9.5" fill="#94a3b8">Open weights (Qwen3.8-Max + a runnable 27B) are promised "next week" — no Hugging Face repo, license, or model card had shipped by Aug 4.</text>
+</svg>
