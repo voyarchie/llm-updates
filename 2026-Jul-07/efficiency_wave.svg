@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="The 2026 efficiency wave in LLM architectures: ZAYA1-8B's Compressed Convolutional Attention delivers 8x KV-cache compression; NVIDIA Nemotron 3 hybrid Mamba-2 plus MoE models deliver 3.3x (Nano vs Qwen3-30B), 5x (Ultra vs SOTA open), and up to 7.5x (Super vs Qwen3.5-122B) higher inference throughput. Each bar is labeled with its own metric and baseline.">
+  <title>The efficiency wave: how much cheaper attention got in 2026</title>
+
+  <!-- theme-neutral palette: saturated fills + white text read on both light and dark; labels in mid-slate read on both -->
+  <text x="24" y="34" font-size="19" font-weight="700" fill="#64748b">Making attention cheaper, not just bigger</text>
+  <text x="24" y="56" font-size="13" fill="#94a3b8">2026's efficiency techniques, by the multiplier each vendor reports. Bars use different metrics &#8212; read each label.</text>
+
+  <!-- baseline axis -->
+  <line x1="300" y1="90" x2="300" y2="360" stroke="#94a3b8" stroke-width="2"/>
+  <text x="300" y="382" font-size="11" fill="#94a3b8" text-anchor="middle">1&#215; (standard multi-head-attention transformer baseline)</text>
+
+  <!-- scale: 300px = 1x, 60px per 1x, up to ~8x at x=780 -->
+  <!-- gridlines at 3x, 5x, 7x -->
+  <line x1="420" y1="90" x2="420" y2="360" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="540" y1="90" x2="540" y2="360" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="660" y1="90" x2="660" y2="360" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <text x="420" y="84" font-size="10" fill="#94a3b8" text-anchor="middle">3&#215;</text>
+  <text x="540" y="84" font-size="10" fill="#94a3b8" text-anchor="middle">5&#215;</text>
+  <text x="660" y="84" font-size="10" fill="#94a3b8" text-anchor="middle">7&#215;</text>
+
+  <!-- Bar 1: ZAYA1 CCA - 8x KV-cache compression (x = 300 + 8*60 = 780) -->
+  <rect x="300" y="104" width="480" height="34" rx="4" fill="#2563eb"/>
+  <text x="292" y="126" font-size="12" font-weight="700" fill="#64748b" text-anchor="end">ZAYA1-8B &#183; CCA/CCGQA</text>
+  <text x="770" y="126" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">8&#215; KV-cache compression</text>
+
+  <!-- Bar 2: Nemotron 3 Super - up to 7.5x throughput (x = 300 + 7.5*60 = 750) -->
+  <rect x="300" y="164" width="450" height="34" rx="4" fill="#16a34a"/>
+  <text x="292" y="186" font-size="12" font-weight="700" fill="#64748b" text-anchor="end">Nemotron 3 Super</text>
+  <text x="740" y="186" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">up to 7.5&#215; throughput vs Qwen3.5-122B</text>
+
+  <!-- Bar 3: Nemotron 3 Ultra - 5x throughput (x = 300 + 5*60 = 600) -->
+  <rect x="300" y="224" width="300" height="34" rx="4" fill="#16a34a"/>
+  <text x="292" y="246" font-size="12" font-weight="700" fill="#64748b" text-anchor="end">Nemotron 3 Ultra</text>
+  <text x="590" y="246" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">5&#215; throughput vs SOTA open</text>
+
+  <!-- Bar 4: Nemotron 3 Nano - 3.3x throughput (x = 300 + 3.3*60 = 498) -->
+  <rect x="300" y="284" width="198" height="34" rx="4" fill="#16a34a"/>
+  <text x="292" y="306" font-size="12" font-weight="700" fill="#64748b" text-anchor="end">Nemotron 3 Nano</text>
+  <text x="488" y="306" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">3.3&#215; vs Qwen3-30B</text>
+
+  <!-- legend -->
+  <rect x="300" y="398" width="14" height="14" rx="3" fill="#2563eb"/>
+  <text x="320" y="410" font-size="12" fill="#94a3b8">Memory: KV-cache compression (Zyphra)</text>
+  <rect x="560" y="398" width="14" height="14" rx="3" fill="#16a34a"/>
+  <text x="580" y="410" font-size="12" fill="#94a3b8">Speed: inference throughput (NVIDIA)</text>
+</svg>
