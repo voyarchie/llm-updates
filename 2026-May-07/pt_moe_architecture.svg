@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" role="img" aria-label="Apple Parallel-Track Mixture-of-Experts (PT-MoE) architecture">
+  <style>
+    .ttl  { font: 700 16px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .sub  { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; opacity: 0.75; }
+    .lbl  { font: 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .lblb { font: 600 12px ui-sans-serif, system-ui, sans-serif; fill: currentColor; }
+    .box  { fill: none; stroke: currentColor; stroke-width: 1.2; rx: 6; ry: 6; opacity: 0.7; }
+    .track1 { fill: #5b8def22; stroke: #5b8def; stroke-width: 1.6; rx: 8; ry: 8; }
+    .track2 { fill: #0ea5a422; stroke: #0ea5a4; stroke-width: 1.6; rx: 8; ry: 8; }
+    .track3 { fill: #b388eb22; stroke: #b388eb; stroke-width: 1.6; rx: 8; ry: 8; }
+    .track4 { fill: #f97a0022; stroke: #f97a00; stroke-width: 1.6; rx: 8; ry: 8; }
+    .moe  { fill: #f4d35e22; stroke: #c9a227; stroke-width: 1.4; rx: 6; ry: 6; }
+    .sync { stroke: #999; stroke-width: 1.2; fill: none; stroke-dasharray: 4 3; }
+    .arrow { stroke: currentColor; stroke-width: 1.2; fill: none; }
+    .head { fill: currentColor; }
+  </style>
+
+  <text x="410" y="26" class="ttl" text-anchor="middle">Apple PT-MoE: parallel tracks with sparse experts, sync only at block boundaries</text>
+  <text x="410" y="44" class="sub" text-anchor="middle">Server-side foundation model · 4 tracks shown · KV-cache-share variant ships on-device</text>
+
+  <!-- Input -->
+  <rect x="350" y="62" width="120" height="32" class="box"/>
+  <text x="410" y="83" class="lblb" text-anchor="middle">Token embeddings</text>
+
+  <!-- Sync line down to splitter -->
+  <line x1="410" y1="94" x2="410" y2="116" class="arrow"/>
+
+  <!-- Splitter sync bar -->
+  <rect x="100" y="116" width="620" height="14" class="moe"/>
+  <text x="410" y="127" class="lbl" text-anchor="middle">SYNC barrier (block input)</text>
+
+  <!-- Four parallel tracks -->
+  <!-- Track 1 -->
+  <g>
+    <rect x="100" y="146" width="140" height="48" class="track1"/>
+    <text x="170" y="166" class="lblb" text-anchor="middle">Track 1</text>
+    <text x="170" y="184" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+
+    <rect x="100" y="208" width="140" height="40" class="moe"/>
+    <text x="170" y="232" class="lbl" text-anchor="middle">MoE (top-k experts)</text>
+
+    <rect x="100" y="262" width="140" height="48" class="track1"/>
+    <text x="170" y="282" class="lblb" text-anchor="middle">Track 1</text>
+    <text x="170" y="300" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+  </g>
+
+  <!-- Track 2 -->
+  <g>
+    <rect x="260" y="146" width="140" height="48" class="track2"/>
+    <text x="330" y="166" class="lblb" text-anchor="middle">Track 2</text>
+    <text x="330" y="184" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+
+    <rect x="260" y="208" width="140" height="40" class="moe"/>
+    <text x="330" y="232" class="lbl" text-anchor="middle">MoE (top-k experts)</text>
+
+    <rect x="260" y="262" width="140" height="48" class="track2"/>
+    <text x="330" y="282" class="lblb" text-anchor="middle">Track 2</text>
+    <text x="330" y="300" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+  </g>
+
+  <!-- Track 3 -->
+  <g>
+    <rect x="420" y="146" width="140" height="48" class="track3"/>
+    <text x="490" y="166" class="lblb" text-anchor="middle">Track 3</text>
+    <text x="490" y="184" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+
+    <rect x="420" y="208" width="140" height="40" class="moe"/>
+    <text x="490" y="232" class="lbl" text-anchor="middle">MoE (top-k experts)</text>
+
+    <rect x="420" y="262" width="140" height="48" class="track3"/>
+    <text x="490" y="282" class="lblb" text-anchor="middle">Track 3</text>
+    <text x="490" y="300" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+  </g>
+
+  <!-- Track 4 -->
+  <g>
+    <rect x="580" y="146" width="140" height="48" class="track4"/>
+    <text x="650" y="166" class="lblb" text-anchor="middle">Track 4</text>
+    <text x="650" y="184" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+
+    <rect x="580" y="208" width="140" height="40" class="moe"/>
+    <text x="650" y="232" class="lbl" text-anchor="middle">MoE (top-k experts)</text>
+
+    <rect x="580" y="262" width="140" height="48" class="track4"/>
+    <text x="650" y="282" class="lblb" text-anchor="middle">Track 4</text>
+    <text x="650" y="300" class="lbl" text-anchor="middle">Self-attn + FFN</text>
+  </g>
+
+  <!-- Within-track flows (no cross-track lines) -->
+  <g class="arrow">
+    <line x1="170" y1="194" x2="170" y2="208"/>
+    <line x1="170" y1="248" x2="170" y2="262"/>
+    <line x1="330" y1="194" x2="330" y2="208"/>
+    <line x1="330" y1="248" x2="330" y2="262"/>
+    <line x1="490" y1="194" x2="490" y2="208"/>
+    <line x1="490" y1="248" x2="490" y2="262"/>
+    <line x1="650" y1="194" x2="650" y2="208"/>
+    <line x1="650" y1="248" x2="650" y2="262"/>
+  </g>
+
+  <!-- Output sync bar -->
+  <rect x="100" y="324" width="620" height="14" class="moe"/>
+  <text x="410" y="335" class="lbl" text-anchor="middle">SYNC barrier (block output) — interleaved global / local attention applied here</text>
+
+  <!-- Down to next block -->
+  <line x1="410" y1="338" x2="410" y2="362" class="arrow"/>
+  <rect x="320" y="362" width="180" height="32" class="box"/>
+  <text x="410" y="383" class="lblb" text-anchor="middle">Next PT-MoE block (×N)</text>
+
+  <!-- Side annotation -->
+  <text x="410" y="424" class="sub" text-anchor="middle">Tracks operate independently inside a block → low sync overhead, high parallel efficiency</text>
+  <text x="410" y="442" class="sub" text-anchor="middle">On-device variant adds KV-cache sharing across blocks (−37.5% KV memory) and 2-bit QAT</text>
+</svg>
