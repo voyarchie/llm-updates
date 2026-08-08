@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of large language model intelligence versus API output price on a logarithmic price axis, as of August 8 2026. The near-frontier band between Intelligence Index 54 and 57 has filled with contestants sitting just below a closed ceiling that has not moved in about two weeks. Alibaba's Qwen3.8-Max was re-scored upward from 53 to 56 after Artificial Analysis blamed intermittent endpoint issues for the original run, shown by an arrow rising from index 53 to 56 at 6 dollars. Meta's new Muse Spark 1.2 enters at index 54 for 4.25 dollars output, bundled with a terminal coding agent called Muse Code, and is a US model with no open weights. The open-weight near-frontier model Kimi K3 sits at index 57 for 15 dollars. The cheap floor holds DeepSeek V4-Flash-0731 at index 50 for 0.28 dollars and GPT-5.6 Luna at index 51 for 1.20 dollars. The static, expensive closed ceiling is GPT-5.6 Sol at index 59 for 30 dollars, Claude Fable 5 at index 60 for 50 dollars, and Claude Opus 5 at index 61 for 25 dollars, still number one and still uncut.">
+  <title>The near-frontier band fills in and compresses toward the ceiling — Qwen3.8-Max re-scored 53→56, Meta's Muse Spark 1.2 enters at 54, both crowding just under a closed top (59–61) that has not moved in ~2 weeks</title>
+
+  <!-- theme-neutral palette: slate text/axes read on light and dark. teal = cheap floor; violet = Qwen (re-scored up); indigo-pink = Meta's new API-only entrant; green = open weights near-frontier; amber/blue/slate = the static closed ceiling. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The near-frontier band gets crowded — and compresses toward an unmoving ceiling</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index (v4.1, higher = smarter) vs. API output price, log scale. Violet = Qwen3.8-Max (re-scored 53→56); pink = Meta Muse Spark 1.2 (new, API-only); green = open weights; amber/blue/slate = the static closed top.</text>
+
+  <!-- plot frame -->
+  <line x1="120" y1="80" x2="120" y2="300" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="120" y1="300" x2="840" y2="300" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- near-frontier band highlight (Index ~53.5–57.5) -->
+  <rect x="120" y="146" width="720" height="35" fill="#16a34a" opacity="0.08"/>
+  <text x="128" y="159" font-size="10" font-weight="700" fill="#16a34a">NEAR-FRONTIER BAND (Index 54–57) — now crowded: Qwen · Kimi · Muse Spark · (GPT-5.5 55, Grok 4.5 54)</text>
+
+  <!-- closed ceiling band highlight (Index ~58.5–61.5) -->
+  <rect x="120" y="106" width="720" height="35" fill="#2563eb" opacity="0.08"/>
+  <text x="128" y="119" font-size="10" font-weight="700" fill="#2563eb">CLOSED CEILING (Index 59–61) — static &amp; uncut for ~2 weeks</text>
+
+  <!-- Y gridlines / ticks: Index 45,50,55,60,65  y = 300 - (i-40)/25*220 -->
+  <line x1="120" y1="256" x2="840" y2="256" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="212" x2="840" y2="212" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="168" x2="840" y2="168" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="124" x2="840" y2="124" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="120" y1="80"  x2="840" y2="80"  stroke="#cbd5e1" stroke-width="0.5"/>
+  <text x="112" y="260" font-size="10.5" fill="#94a3b8" text-anchor="end">45</text>
+  <text x="112" y="216" font-size="10.5" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="112" y="172" font-size="10.5" fill="#94a3b8" text-anchor="end">55</text>
+  <text x="112" y="128" font-size="10.5" fill="#94a3b8" text-anchor="end">60</text>
+  <text x="112" y="84"  font-size="10.5" fill="#94a3b8" text-anchor="end">65</text>
+  <text x="34" y="192" font-size="11" fill="#94a3b8" text-anchor="middle" transform="rotate(-90 34 192)">Intelligence Index (higher = smarter)</text>
+
+  <!-- X ticks (log10): x = 120 + (log10(v)+0.7)/2.4*720 -->
+  <text x="120" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.20</text>
+  <text x="240" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$0.50</text>
+  <text x="330" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$1</text>
+  <text x="540" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$5</text>
+  <text x="630" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$10</text>
+  <text x="840" y="318" font-size="10.5" fill="#94a3b8" text-anchor="middle">$50</text>
+  <text x="480" y="340" font-size="11" fill="#94a3b8" text-anchor="middle">API output price per million tokens — log scale (left = cheaper)</text>
+
+  <!-- DeepSeek V4-Flash-0731: Index 50, $0.28 -> x=164 y=212 -->
+  <circle cx="164" cy="212" r="6" fill="#0d9488"/>
+  <text x="172" y="228" font-size="10" fill="#0d9488" text-anchor="start">DeepSeek V4-Flash · 50 · $0.28</text>
+
+  <!-- GPT-5.6 Luna: Index 51, $1.20 -> x=354 y=203 -->
+  <circle cx="354" cy="203" r="6" fill="#0d9488"/>
+  <text x="346" y="193" font-size="10" fill="#0d9488" text-anchor="middle">Luna · 51 · $1.20</text>
+
+  <!-- Meta Muse Spark 1.2 MEASURED: Index 54, $4.25 -> x=518 y=177 (NEW) -->
+  <circle cx="518" cy="177" r="8" fill="#db2777"/>
+  <text x="512" y="235" font-size="11.5" font-weight="700" fill="#db2777" text-anchor="middle">Muse Spark 1.2</text>
+  <text x="512" y="249" font-size="10.5" fill="#db2777" text-anchor="middle">54 · $4.25 · API-only (Aug 5)</text>
+  <line x1="518" y1="185" x2="514" y2="225" stroke="#db2777" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+  <!-- Qwen3.8-Max: re-scored 53 -> 56 at $6 -> x=563; y(53)=186, y(56)=159 -->
+  <circle cx="563" cy="186" r="5" fill="none" stroke="#a78bfa" stroke-width="1.4" stroke-dasharray="3 2"/>
+  <line x1="563" y1="181" x2="563" y2="166" stroke="#7c3aed" stroke-width="1.4" marker-end="url(#arrow)"/>
+  <circle cx="563" cy="159" r="8" fill="#7c3aed"/>
+  <text x="573" y="150" font-size="11.5" font-weight="700" fill="#7c3aed" text-anchor="start">Qwen3.8-Max · 56 · $6</text>
+  <text x="573" y="163" font-size="9.5" fill="#a78bfa" text-anchor="start">re-scored up from 53 (endpoint issue)</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Kimi K3 (open): Index 57, $15 -> x=683 y=150 -->
+  <circle cx="683" cy="150" r="6" fill="#16a34a"/>
+  <text x="683" y="140" font-size="10.5" font-weight="700" fill="#16a34a" text-anchor="middle">Kimi K3 · 57 · $15 (open)</text>
+
+  <!-- GPT-5.6 Sol: Index 59, $30 -> x=773 y=133 -->
+  <circle cx="773" cy="133" r="6" fill="#b45309"/>
+  <text x="773" y="146" font-size="10.5" font-weight="700" fill="#b45309" text-anchor="middle">Sol · 59 · $30</text>
+
+  <!-- Claude Fable 5: Index 60, $50 -> x=838 y=124 -->
+  <circle cx="838" cy="124" r="6" fill="#64748b"/>
+  <text x="838" y="114" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="end">Fable 5 · 60 · $50</text>
+
+  <!-- Claude Opus 5: Index 61, $25 -> x=749 y=115 (top, unanswered) -->
+  <circle cx="749" cy="115" r="7" fill="#2563eb"/>
+  <text x="749" y="105" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Opus 5 · 61 · $25 — still #1, uncut</text>
+
+  <!-- footnote -->
+  <text x="120" y="372" font-size="9.5" fill="#94a3b8">Qwen3.8-Max's re-run (56) narrows the gap to Alibaba's "second only to Fable 5" claim (~59–60) to ~3–4 pts and leaves it ~1 pt behind open-weight leader Kimi K3 (57).</text>
+  <text x="120" y="388" font-size="9.5" fill="#94a3b8">Muse Spark 1.2 is a US, API-only entrant (no open weights) — it crowds the same near-frontier band as the Chinese open models. AA's launch figure is 54; one AA model page shows 57.</text>
+  <text x="120" y="404" font-size="9.5" fill="#94a3b8">The ceiling (Sol 59 · Fable 60 · Opus 61) has had no price cut and no Index-61+ challenger for ~2 weeks; every new release lands below it.</text>
+</svg>
