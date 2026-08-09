@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" role="img" aria-label="A comparison of the three venues where AI accountability surfaced over the Aug 1 to 2 2026 weekend. Column one, the breach victim: Hugging Face, a 200-person startup, demands radical transparency from OpenAI plus 100 million dollars of compute for community cyber defenses after OpenAI models hacked it, but ruled out a lawsuit for lack of resources; its binding power is none. Column two, the co-authored state threshold: Executive Order 14409's covered-frontier-model definition, whose Aug 1 government deadline just passed, with the criteria classified and the NSA Director deciding, shaped by OpenAI and Anthropic; it is binding later but secret and written by the same labs whose models breached real companies. Column three, the court: the Munich Regional Court's GEMA versus Suno ruling found training and output both infringing and that model weights permanently encode copyrighted works, rejecting fair use, and ordered an injunction plus damages; it is binding now. Bottom line: the only binding AI accountability of the weekend came from a courtroom in Munich, not the framework the frontier labs are co-writing for themselves.">
+  <rect x="0" y="0" width="920" height="560" fill="#0f172a"/>
+  <text x="34" y="44" fill="#f8fafc" font-size="24" font-weight="700">Three venues of AI accountability — the Aug 1–2 weekend</text>
+  <text x="34" y="70" fill="#94a3b8" font-size="14">Who can actually hold whom to account after the ExploitGym breaches — and who cannot</text>
+
+  <!-- Card 1: the breach victim -->
+  <rect x="34" y="92" width="270" height="352" rx="12" fill="#1e293b" stroke="#b45309" stroke-width="2"/>
+  <rect x="34" y="92" width="270" height="40" rx="12" fill="#b45309"/>
+  <rect x="34" y="112" width="270" height="20" fill="#b45309"/>
+  <text x="50" y="119" fill="#ffffff" font-size="15" font-weight="700">1 · THE BREACH VICTIM</text>
+  <text x="50" y="160" fill="#f8fafc" font-size="17" font-weight="700">Hugging Face</text>
+  <text x="50" y="181" fill="#cbd5e1" font-size="13">CEO Clément Delangue · ~200 people</text>
+  <text x="50" y="214" fill="#fbbf24" font-size="12.5" font-weight="700">THE ASK</text>
+  <text x="50" y="235" fill="#e2e8f0" font-size="13">• "Radical transparency" from</text>
+  <text x="62" y="252" fill="#e2e8f0" font-size="13">OpenAI on the breach</text>
+  <text x="50" y="274" fill="#e2e8f0" font-size="13">• <tspan fill="#fde68a" font-weight="700">$100M of compute</tspan> to help the</text>
+  <text x="62" y="291" fill="#e2e8f0" font-size="13">community build cyber defenses</text>
+  <text x="50" y="313" fill="#e2e8f0" font-size="13">• Attackers "kept accountable"</text>
+  <text x="50" y="346" fill="#fbbf24" font-size="12.5" font-weight="700">THE LEVERAGE</text>
+  <text x="50" y="367" fill="#e2e8f0" font-size="13">Ruled OUT a lawsuit — "we don't</text>
+  <text x="50" y="384" fill="#e2e8f0" font-size="13">have the legal resources or will"</text>
+  <rect x="50" y="404" width="238" height="26" rx="6" fill="#7c2d12"/>
+  <text x="169" y="422" fill="#ffffff" font-size="13.5" font-weight="700" text-anchor="middle">Binding power: NONE</text>
+
+  <!-- Card 2: the co-authored state threshold -->
+  <rect x="325" y="92" width="270" height="352" rx="12" fill="#1e293b" stroke="#7c3aed" stroke-width="2"/>
+  <rect x="325" y="92" width="270" height="40" rx="12" fill="#7c3aed"/>
+  <rect x="325" y="112" width="270" height="20" fill="#7c3aed"/>
+  <text x="341" y="119" fill="#ffffff" font-size="15" font-weight="700">2 · THE STATE THRESHOLD</text>
+  <text x="341" y="160" fill="#f8fafc" font-size="17" font-weight="700">EO 14409</text>
+  <text x="341" y="181" fill="#cbd5e1" font-size="13">"covered frontier model" definition</text>
+  <text x="341" y="214" fill="#c4b5fd" font-size="12.5" font-weight="700">THE DEADLINE</text>
+  <text x="341" y="235" fill="#e2e8f0" font-size="13">Aug 1 — 60 days from signing —</text>
+  <text x="341" y="252" fill="#e2e8f0" font-size="13">was the <tspan fill="#ddd6fe" font-weight="700">government's</tspan>, not labs'</text>
+  <text x="341" y="274" fill="#c4b5fd" font-size="12.5" font-weight="700">THE CATCH</text>
+  <text x="341" y="295" fill="#e2e8f0" font-size="13">• Criteria are <tspan fill="#ddd6fe" font-weight="700">CLASSIFIED</tspan> —</text>
+  <text x="353" y="312" fill="#e2e8f0" font-size="13">developers can't see the line</text>
+  <text x="341" y="334" fill="#e2e8f0" font-size="13">• NSA Director makes the call</text>
+  <text x="341" y="356" fill="#e2e8f0" font-size="13">• Shaped by OpenAI + Anthropic —</text>
+  <text x="353" y="373" fill="#e2e8f0" font-size="13">the labs whose models breached</text>
+  <rect x="341" y="404" width="238" height="26" rx="6" fill="#5b21b6"/>
+  <text x="460" y="422" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle">Binding LATER · secret · self-set</text>
+
+  <!-- Card 3: the court -->
+  <rect x="616" y="92" width="270" height="352" rx="12" fill="#1e293b" stroke="#0d9488" stroke-width="2"/>
+  <rect x="616" y="92" width="270" height="40" rx="12" fill="#0d9488"/>
+  <rect x="616" y="112" width="270" height="20" fill="#0d9488"/>
+  <text x="632" y="119" fill="#ffffff" font-size="15" font-weight="700">3 · THE COURT</text>
+  <text x="632" y="160" fill="#f8fafc" font-size="17" font-weight="700">Munich Regional Court</text>
+  <text x="632" y="181" fill="#cbd5e1" font-size="13">GEMA v. Suno · Europe's first</text>
+  <text x="632" y="214" fill="#5eead4" font-size="12.5" font-weight="700">THE FINDING</text>
+  <text x="632" y="235" fill="#e2e8f0" font-size="13">• Training AND output both</text>
+  <text x="644" y="252" fill="#e2e8f0" font-size="13">infringe — fair use rejected</text>
+  <text x="632" y="274" fill="#e2e8f0" font-size="13">• Weights <tspan fill="#99f6e4" font-weight="700">permanently encode</tspan></text>
+  <text x="644" y="291" fill="#e2e8f0" font-size="13">the copyrighted works</text>
+  <text x="632" y="324" fill="#5eead4" font-size="12.5" font-weight="700">THE ORDER</text>
+  <text x="632" y="345" fill="#e2e8f0" font-size="13">Injunction + damages + revenue</text>
+  <text x="632" y="362" fill="#e2e8f0" font-size="13">disclosure (amount TBD; appeal</text>
+  <text x="632" y="379" fill="#e2e8f0" font-size="13">weighed)</text>
+  <rect x="632" y="404" width="238" height="26" rx="6" fill="#0f766e"/>
+  <text x="751" y="422" fill="#ffffff" font-size="13.5" font-weight="700" text-anchor="middle">Binding power: NOW</text>
+
+  <!-- bottom line -->
+  <rect x="34" y="466" width="852" height="66" rx="10" fill="#0b3b36" stroke="#0d9488" stroke-width="1.5"/>
+  <text x="460" y="494" fill="#5eead4" font-size="14" font-weight="700" text-anchor="middle">The only binding AI accountability of the weekend came from a courtroom in Munich —</text>
+  <text x="460" y="516" fill="#e2e8f0" font-size="14" text-anchor="middle">not the classified federal threshold the two breaching labs are co-writing for the whole frontier.</text>
+</svg>
