@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram of Meta's two-track model strategy as of August 11 2026. From a single root, Meta Superintelligence Labs, two branches fork. The left branch is the closed, hosted track: Muse Spark 1.2, released August 5, scores 54 on the Artificial Analysis Intelligence Index, priced at 1.25 dollars in and 4.25 dollars out per million tokens, API only with no open weights, bundled with the Muse Code terminal agent, and aimed at the frontier-adjacent band. The right branch is the open, on-device track and is new this window: Muse Glimmer 30B, released August 10 under an Apache 2.0 license, a dense 30 billion parameter multimodal model distilled from Muse Spark, scoring 35 on the Intelligence Index which is well above the median of 9 for open models its size, and purpose-built for agentic tool use. An arrow from Spark to Glimmer is labelled logit distillation into a 30 billion parameter student. Below Glimmer sits its on-device inference stack: 4-bit quantization shrinking the model to under 20 gigabytes to fit a single 24 gigabyte consumer GPU, plus DFlash 16-token block speculative decoding giving a 3.1 times decode speedup on an RTX 5090. A separate boxed contrast at lower left notes that Alibaba's Qwen promised to open the weights of Qwen3.8-Max and a 27B during the week of August 10 but the deadline passed with no repository, no license, and no new date, so the open-weights momentum this window came from Meta, the lab widely written off as having abandoned open source, rather than from Qwen, which had promised it.">
+  <title>Meta's two-track fork — a closed, hosted, frontier-adjacent Muse Spark 1.2 and, new on Aug 10, an open Apache-2.0 on-device Muse Glimmer 30B distilled from it — while Qwen's promised open-weights drop missed its Aug-10 window</title>
+
+  <!-- theme-neutral palette: slate text (#64748b / #94a3b8) reads on light and dark; all descriptive text sits on saturated filled boxes with white text. blue = closed hosted track; green = open on-device track; teal = on-device inference stack; violet (dashed) = Qwen's un-shipped promise. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Meta forks in two: a closed hosted flagship and a new OPEN on-device child</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Three days after Aug-08 called Meta "US, API-only, no-open-weights," Meta shipped Apache-2.0 weights. Blue = closed/hosted · green = open/on-device · teal = the on-device stack · violet dashed = Qwen's still-unshipped promise.</text>
+
+  <!-- root -->
+  <rect x="345" y="72" width="210" height="40" rx="8" fill="#334155"/>
+  <text x="450" y="97" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Meta Superintelligence Labs</text>
+
+  <!-- fork lines -->
+  <path d="M 450 112 L 450 128 L 225 128 L 225 150" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <path d="M 450 112 L 450 128 L 675 128 L 675 150" fill="none" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="300" y="143" font-size="10" font-weight="700" fill="#2563eb" text-anchor="middle">CLOSED · HOSTED</text>
+  <text x="600" y="143" font-size="10" font-weight="700" fill="#16a34a" text-anchor="middle">OPEN · ON-DEVICE</text>
+
+  <!-- LEFT: Muse Spark 1.2 (closed) -->
+  <rect x="70" y="150" width="310" height="118" rx="10" fill="#2563eb"/>
+  <text x="86" y="174" font-size="14" font-weight="700" fill="#ffffff">Muse Spark 1.2  ·  Aug 5</text>
+  <text x="86" y="194" font-size="11.5" fill="#dbeafe">Index 54  ·  $1.25 in / $4.25 out per Mtok</text>
+  <text x="86" y="212" font-size="11.5" fill="#dbeafe">API-only — no open weights</text>
+  <text x="86" y="230" font-size="11.5" fill="#dbeafe">Frontier-adjacent band (54–57)</text>
+  <rect x="86" y="240" width="278" height="20" rx="5" fill="#1e40af"/>
+  <text x="96" y="254" font-size="10.5" fill="#ffffff">+ Muse Code — terminal coding agent (beta)</text>
+
+  <!-- RIGHT: Muse Glimmer (open) -->
+  <rect x="520" y="150" width="310" height="118" rx="10" fill="#16a34a"/>
+  <text x="536" y="174" font-size="14" font-weight="700" fill="#ffffff">Muse Glimmer 30B  ·  Aug 10  ·  NEW</text>
+  <text x="536" y="194" font-size="11.5" fill="#dcfce7">Apache-2.0  ·  dense 30B  ·  text + vision</text>
+  <text x="536" y="212" font-size="11.5" fill="#dcfce7">Index 35 (high) — median for size ≈ 9</text>
+  <text x="536" y="230" font-size="11.5" fill="#dcfce7">256k context  ·  purpose-built agentic</text>
+  <rect x="536" y="240" width="278" height="20" rx="5" fill="#15803d"/>
+  <text x="546" y="254" font-size="10.5" fill="#ffffff">Leads MCP-Atlas 75.5 · AIME-2026 94.7 · SWE-Bench Pro 51.2</text>
+
+  <!-- distillation arrow Spark -> Glimmer -->
+  <line x1="380" y1="209" x2="520" y2="209" stroke="#7c3aed" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="450" y="200" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">logit distillation</text>
+  <text x="450" y="224" font-size="9.5" fill="#94a3b8" text-anchor="middle">closed teacher → 30B student</text>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- on-device stack under Glimmer -->
+  <line x1="675" y1="268" x2="675" y2="292" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="675" y="308" font-size="11" font-weight="700" fill="#0d9488" text-anchor="middle">runs on ONE 24 GB consumer GPU / a Mac — no network call</text>
+  <rect x="520" y="318" width="150" height="58" rx="8" fill="#0d9488"/>
+  <text x="595" y="340" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">4-bit quant</text>
+  <text x="595" y="358" font-size="10" fill="#ccfbf1" text-anchor="middle">55 GB → &lt; 20 GB</text>
+  <text x="595" y="370" font-size="10" fill="#ccfbf1" text-anchor="middle">(fits 24 GB VRAM)</text>
+  <rect x="680" y="318" width="150" height="58" rx="8" fill="#0f766e"/>
+  <text x="755" y="340" font-size="11.5" font-weight="700" fill="#ffffff" text-anchor="middle">DFlash drafter</text>
+  <text x="755" y="358" font-size="10" fill="#ccfbf1" text-anchor="middle">16-token block spec.</text>
+  <text x="755" y="370" font-size="10" fill="#ccfbf1" text-anchor="middle">3.1× decode / RTX 5090</text>
+
+  <!-- Qwen contrast box (lower left) -->
+  <rect x="70" y="318" width="360" height="120" rx="10" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="86" y="342" font-size="12.5" font-weight="700" fill="#7c3aed">The irony this window</text>
+  <text x="86" y="363" font-size="11" fill="#94a3b8">Qwen <tspan font-weight="700">promised</tspan> to open Qwen3.8-Max + a 27B</text>
+  <text x="86" y="381" font-size="11" fill="#94a3b8">during the week of Aug 10 …</text>
+  <text x="86" y="403" font-size="11" font-weight="700" fill="#7c3aed">→ window passed: no repo, no license, no new date.</text>
+  <text x="86" y="425" font-size="10.5" fill="#94a3b8">Open-weights momentum came from the lab written off as</text>
+  <text x="86" y="439" font-size="10.5" fill="#94a3b8">having quit open source — not the one that promised it.</text>
+
+  <!-- footnote -->
+  <text x="70" y="470" font-size="9.5" fill="#94a3b8">Two-track read: Meta keeps a closed, hosted model aimed at the frontier-adjacent band (Spark 1.2) AND ships its distilled child as free Apache-2.0 weights (Glimmer),</text>
+  <text x="70" y="484" font-size="9.5" fill="#94a3b8">tuned to run inside a real agent loop on a single consumer GPU. Glimmer trails Qwen3.6-27B on computer-use/terminal (OSWorld-Verified 65.9 vs 75.6) but leads on tool orchestration.</text>
+  <text x="70" y="498" font-size="9.5" fill="#94a3b8">Index/agentic figures from Artificial Analysis; benchmark and hardware figures vendor-/press-reported. Distinct from Spark's own Aug-05 launch (Aug-08 §2).</text>
+</svg>
