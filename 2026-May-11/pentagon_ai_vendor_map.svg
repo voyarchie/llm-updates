@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title>Pentagon AI vendor map — May 1, 2026</title>
+  <desc>Eight cleared IL6/IL7 AI vendors after the May 1, 2026 DoD award, with Anthropic shown as supply-chain-risk designated despite ongoing Mythos usage.</desc>
+
+  <style>
+    .bg { fill: none; }
+    .title  { font-size: 18px; font-weight: 700; fill: #0f172a; }
+    .sub    { font-size: 12px; fill: #475569; }
+    .label  { font-size: 12px; fill: #334155; }
+    .small  { font-size: 11px; fill: #475569; }
+    .center-text { font-size: 14px; fill: #0f172a; font-weight: 700; }
+    .vendor-text { font-size: 13px; fill: #0f172a; font-weight: 600; }
+    .vendor-sub  { font-size: 11px; fill: #1e293b; }
+    .center { fill: #fde68a; stroke: #b45309; stroke-width: 2; }
+    .vendor { fill: #bae6fd; stroke: #0284c7; stroke-width: 1.5; }
+    .reflection { fill: #ddd6fe; stroke: #6d28d9; stroke-width: 1.5; }
+    .excluded { fill: #fecaca; stroke: #b91c1c; stroke-width: 2; stroke-dasharray: 6 4; }
+    .edge    { stroke: #0284c7; stroke-width: 1.4; fill: none; }
+    .edge-r  { stroke: #6d28d9; stroke-width: 1.4; fill: none; }
+    .edge-x  { stroke: #b91c1c; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+    .edge-mythos { stroke: #047857; stroke-width: 1.6; fill: none; stroke-dasharray: 2 3; }
+    .note    { font-size: 11px; fill: #475569; }
+    .badge-r { font-size: 11px; fill: #b91c1c; font-weight: 700; }
+    .badge-g { font-size: 11px; fill: #047857; font-weight: 700; }
+    @media (prefers-color-scheme: dark) {
+      .title { fill: #f1f5f9; }
+      .sub, .label, .small, .note { fill: #cbd5e1; }
+      .center-text { fill: #0f172a; }  /* keep on yellow */
+      .vendor-text { fill: #0f172a; }  /* keep on light blue */
+      .vendor-sub  { fill: #1e293b; }
+    }
+  </style>
+
+  <rect class="bg" width="920" height="540"/>
+
+  <text class="title" x="32" y="32">Pentagon AI vendor map — IL6 / IL7 classified networks</text>
+  <text class="sub"   x="32" y="52">May 1, 2026 award. Anthropic remains designated a supply-chain risk; Mythos still used for cyber work.</text>
+
+  <!-- center -->
+  <ellipse class="center" cx="460" cy="290" rx="92" ry="58"/>
+  <text class="center-text" x="460" y="284" text-anchor="middle">U.S. DoD</text>
+  <text class="center-text" x="460" y="302" text-anchor="middle">IL6 / IL7</text>
+  <text class="small"       x="460" y="320" text-anchor="middle">"never again rely</text>
+  <text class="small"       x="460" y="334" text-anchor="middle">on one provider"</text>
+
+  <!-- 8 cleared vendors in a ring -->
+  <!-- Top row -->
+  <rect class="vendor" x="100" y="100" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="175" y="124" text-anchor="middle">OpenAI</text>
+  <text class="vendor-sub"  x="175" y="142" text-anchor="middle">GPT-5.5 family (+Cyber)</text>
+
+  <rect class="vendor" x="300" y="80" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="375" y="104" text-anchor="middle">Google</text>
+  <text class="vendor-sub"  x="375" y="122" text-anchor="middle">Gemini 3.1 Ultra</text>
+
+  <rect class="vendor" x="470" y="80" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="545" y="104" text-anchor="middle">Microsoft</text>
+  <text class="vendor-sub"  x="545" y="122" text-anchor="middle">Azure OpenAI + Foundry</text>
+
+  <rect class="vendor" x="670" y="100" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="745" y="124" text-anchor="middle">AWS</text>
+  <text class="vendor-sub"  x="745" y="142" text-anchor="middle">Bedrock multi-model</text>
+
+  <!-- Bottom row -->
+  <rect class="vendor" x="100" y="420" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="175" y="444" text-anchor="middle">NVIDIA</text>
+  <text class="vendor-sub"  x="175" y="462" text-anchor="middle">NIMs + Nemotron</text>
+
+  <rect class="vendor" x="300" y="440" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="375" y="464" text-anchor="middle">Oracle</text>
+  <text class="vendor-sub"  x="375" y="482" text-anchor="middle">OCI sovereign cloud</text>
+
+  <rect class="vendor" x="470" y="440" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="545" y="464" text-anchor="middle">SpaceX</text>
+  <text class="vendor-sub"  x="545" y="482" text-anchor="middle">Starshield + Colossus 1</text>
+
+  <rect class="reflection" x="670" y="420" width="150" height="60" rx="10"/>
+  <text class="vendor-text" x="745" y="442" text-anchor="middle">Reflection AI</text>
+  <text class="vendor-sub"  x="745" y="460" text-anchor="middle">ex-DeepMind founders</text>
+  <text class="badge-r"     x="745" y="474" text-anchor="middle">no public model</text>
+
+  <!-- edges to center -->
+  <line class="edge" x1="250" y1="130" x2="380" y2="270"/>
+  <line class="edge" x1="375" y1="140" x2="430" y2="232"/>
+  <line class="edge" x1="545" y1="140" x2="490" y2="232"/>
+  <line class="edge" x1="670" y1="130" x2="540" y2="270"/>
+  <line class="edge" x1="250" y1="450" x2="380" y2="320"/>
+  <line class="edge" x1="375" y1="440" x2="430" y2="348"/>
+  <line class="edge" x1="545" y1="440" x2="490" y2="348"/>
+  <line class="edge-r" x1="670" y1="450" x2="540" y2="320"/>
+
+  <!-- excluded vendor -->
+  <rect class="excluded" x="50" y="250" width="170" height="80" rx="10"/>
+  <text class="vendor-text" x="135" y="276" text-anchor="middle">Anthropic</text>
+  <text class="vendor-sub"  x="135" y="296" text-anchor="middle">Claude Opus 4.7 / Mythos</text>
+  <text class="badge-r"     x="135" y="316" text-anchor="middle">supply-chain risk (1st US)</text>
+
+  <line class="edge-x" x1="220" y1="290" x2="368" y2="290"/>
+  <text class="badge-r" x="294" y="282" text-anchor="middle">cancelled $200M</text>
+  <text class="badge-r" x="294" y="304" text-anchor="middle">contract; suing</text>
+
+  <!-- Mythos still used edge -->
+  <path class="edge-mythos" d="M 135 250 C 135 200, 300 180, 460 230"/>
+  <text class="badge-g" x="290" y="200" text-anchor="middle">Mythos still in use for cyber</text>
+
+  <!-- legend -->
+  <g transform="translate(700, 250)">
+    <rect class="vendor" x="0" y="0" width="14" height="14"/>
+    <text class="label" x="20" y="12">Cleared (May 1)</text>
+
+    <rect class="reflection" x="0" y="22" width="14" height="14"/>
+    <text class="label" x="20" y="34">Cleared, no model</text>
+
+    <rect class="excluded" x="0" y="44" width="14" height="14"/>
+    <text class="label" x="20" y="56">Designated risk</text>
+
+    <line class="edge-mythos" x1="0" y1="74" x2="14" y2="74"/>
+    <text class="label" x="20" y="78">Operational backdoor</text>
+  </g>
+</svg>

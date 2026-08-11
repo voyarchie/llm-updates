@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" font-family="ui-sans-serif, system-ui, sans-serif">
+  <title>Cloudflare serving stack — Infire + Unweight + Kimi K2.5</title>
+  <desc>Block diagram showing prefill/decode disaggregation, lossless BF16 compression and tensor-core-direct decompression as deployed on Cloudflare Workers AI.</desc>
+
+  <style>
+    .bg { fill: none; }
+    .title { font-size: 18px; font-weight: 700; fill: #0f172a; }
+    .sub { font-size: 12px; fill: #475569; }
+    .label { font-size: 12px; fill: #475569; }
+    .small { font-size: 11px; fill: #475569; }
+    .node-text { font-size: 13px; fill: #0f172a; font-weight: 600; }
+    .node-sub  { font-size: 11px; fill: #1e293b; }
+    .badge { font-size: 11px; fill: #047857; font-weight: 600; }
+    .layer { fill: none; stroke: #94a3b8; stroke-width: 1; stroke-dasharray: 4 4; }
+    .layer-label { font-size: 11px; fill: #64748b; }
+    .req     { fill: #fde68a; stroke: #d97706; stroke-width: 1.5; }
+    .prefill { fill: #bae6fd; stroke: #0284c7; stroke-width: 1.5; }
+    .decode  { fill: #c4b5fd; stroke: #6d28d9; stroke-width: 1.5; }
+    .weights { fill: #fbcfe8; stroke: #be185d; stroke-width: 1.5; }
+    .tensor  { fill: #bbf7d0; stroke: #047857; stroke-width: 1.5; }
+    .kim     { fill: #fed7aa; stroke: #c2410c; stroke-width: 1.5; }
+    .arrow   { stroke: #475569; stroke-width: 1.6; fill: none; marker-end: url(#arrowhead); }
+    .arrow-fast { stroke: #047857; stroke-width: 2.2; fill: none; marker-end: url(#arrowhead-green); }
+    @media (prefers-color-scheme: dark) {
+      .title { fill: #f1f5f9; }
+      .sub, .label, .small, .layer-label { fill: #cbd5e1; }
+      .node-text { fill: #f1f5f9; }
+      .node-sub  { fill: #e2e8f0; }
+      .layer { stroke: #475569; }
+      .arrow { stroke: #cbd5e1; }
+    }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowhead-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#047857"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="920" height="520"/>
+
+  <text class="title" x="32" y="34">Cloudflare Workers AI serving stack</text>
+  <text class="sub"   x="32" y="54">Infire (Rust) + Unweight (lossless BF16) + Kimi K2.5 hosting — May 2026</text>
+
+  <!-- Layer frames -->
+  <rect class="layer" x="24"  y="78"  width="872" height="84"/>
+  <text class="layer-label" x="32" y="96">Request edge</text>
+
+  <rect class="layer" x="24"  y="174" width="872" height="124"/>
+  <text class="layer-label" x="32" y="192">Inference workers (Infire)</text>
+
+  <rect class="layer" x="24"  y="310" width="872" height="120"/>
+  <text class="layer-label" x="32" y="328">GPU memory hierarchy (per worker)</text>
+
+  <rect class="layer" x="24"  y="442" width="872" height="62"/>
+  <text class="layer-label" x="32" y="460">Hosted model surface</text>
+
+  <!-- Request edge -->
+  <rect class="req" x="60"  y="106" width="220" height="44" rx="8"/>
+  <text class="node-text" x="170" y="128" text-anchor="middle">Client request</text>
+  <text class="node-sub"  x="170" y="144" text-anchor="middle">prompt + tools + image/audio</text>
+
+  <rect class="req" x="320" y="106" width="220" height="44" rx="8"/>
+  <text class="node-text" x="430" y="128" text-anchor="middle">Edge router</text>
+  <text class="node-sub"  x="430" y="144" text-anchor="middle">picks model + nearest region</text>
+
+  <rect class="req" x="580" y="106" width="280" height="44" rx="8"/>
+  <text class="node-text" x="720" y="128" text-anchor="middle">Radix prefix cache (global)</text>
+  <text class="node-sub"  x="720" y="144" text-anchor="middle">cross-node prefix re-use</text>
+
+  <line class="arrow" x1="280" y1="128" x2="320" y2="128"/>
+  <line class="arrow" x1="540" y1="128" x2="580" y2="128"/>
+
+  <!-- Inference workers -->
+  <rect class="prefill" x="60" y="206" width="380" height="76" rx="10"/>
+  <text class="node-text" x="250" y="230" text-anchor="middle">Prefill worker pool</text>
+  <text class="node-sub"  x="250" y="250" text-anchor="middle">compute-heavy, parallelizable</text>
+  <text class="node-sub"  x="250" y="266" text-anchor="middle">FlashAttention kernels, big batch</text>
+
+  <rect class="decode" x="480" y="206" width="380" height="76" rx="10"/>
+  <text class="node-text" x="670" y="230" text-anchor="middle">Decode worker pool</text>
+  <text class="node-sub"  x="670" y="250" text-anchor="middle">memory-BW bound, low latency</text>
+  <text class="node-sub"  x="670" y="266" text-anchor="middle">CUDA-graph autoreg loop</text>
+
+  <line class="arrow" x1="430" y1="150" x2="250" y2="206"/>
+  <line class="arrow" x1="720" y1="150" x2="670" y2="206"/>
+  <line class="arrow" x1="440" y1="244" x2="480" y2="244"/>
+  <text class="badge" x="460" y="234" text-anchor="middle">KV handoff</text>
+
+  <!-- GPU memory hierarchy -->
+  <rect class="weights" x="60" y="340" width="220" height="76" rx="10"/>
+  <text class="node-text" x="170" y="362" text-anchor="middle">HBM (compressed)</text>
+  <text class="node-sub"  x="170" y="380" text-anchor="middle">BF16 weights, Huffman-coded</text>
+  <text class="badge"     x="170" y="402" text-anchor="middle">~22% footprint reduction</text>
+
+  <rect class="weights" x="320" y="340" width="220" height="76" rx="10"/>
+  <text class="node-text" x="430" y="362" text-anchor="middle">On-chip shared memory</text>
+  <text class="node-sub"  x="430" y="380" text-anchor="middle">decompress sign/exp/mantissa</text>
+  <text class="badge"     x="430" y="402" text-anchor="middle">bit-exact reconstruction</text>
+
+  <rect class="tensor" x="580" y="340" width="280" height="76" rx="10"/>
+  <text class="node-text" x="720" y="362" text-anchor="middle">Tensor cores (H100 / H200)</text>
+  <text class="node-sub"  x="720" y="380" text-anchor="middle">matmul on reconstructed BF16</text>
+  <text class="badge"     x="720" y="402" text-anchor="middle">≈600× faster than HBM→SM</text>
+
+  <line class="arrow-fast" x1="280" y1="378" x2="320" y2="378"/>
+  <line class="arrow-fast" x1="540" y1="378" x2="580" y2="378"/>
+
+  <!-- Hosted model -->
+  <rect class="kim" x="60" y="464" width="800" height="28" rx="8"/>
+  <text class="node-text" x="460" y="483" text-anchor="middle">
+    Kimi K2.5 — 1T total / 32B active MoE — 256K context — vision, tools, structured output — $0.05–$5 / M tokens
+  </text>
+</svg>
