@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 470" role="img" aria-label="Bar chart of GPT-5.6 Sol Artificial Analysis Intelligence Index across reasoning-effort settings. Non-reasoning scores 41, high 56, xhigh 58, and max 59. A dashed reference line marks Claude Fable 5 at 60, the capability ceiling. The bars show that most of Sol's intelligence is available below max effort, and that climbing from high to max adds only three points.">
+  <style>
+    .title { font: 700 20px system-ui, sans-serif; fill: #1e293b; }
+    .subtitle { font: 400 13px system-ui, sans-serif; fill: #475569; }
+    .lbl { font: 600 14px system-ui, sans-serif; fill: #334155; }
+    .tick { font: 400 12px system-ui, sans-serif; fill: #64748b; }
+    .note { font: 400 12px system-ui, sans-serif; fill: #64748b; }
+    .val { font: 700 16px system-ui, sans-serif; fill: #ffffff; }
+    .refl { font: 600 12px system-ui, sans-serif; fill: #b45309; }
+    .grid { stroke: #e2e8f0; stroke-width: 1; }
+    .axis { stroke: #94a3b8; stroke-width: 1.5; }
+    @media (prefers-color-scheme: dark) {
+      .title { fill: #f1f5f9; }
+      .subtitle { fill: #cbd5e1; }
+      .lbl { fill: #e2e8f0; }
+      .tick { fill: #94a3b8; }
+      .note { fill: #94a3b8; }
+      .refl { fill: #fbbf24; }
+      .grid { stroke: #334155; }
+      .axis { stroke: #475569; }
+    }
+  </style>
+
+  <text x="40" y="34" class="title">Buying intelligence by the effort tick</text>
+  <text x="40" y="54" class="subtitle">GPT-5.6 Sol - Artificial Analysis Intelligence Index at each reasoning-effort setting</text>
+
+  <!-- y gridlines and ticks at 0,20,40,60 -->
+  <line x1="70" y1="370" x2="720" y2="370" class="grid"/>
+  <line x1="70" y1="277" x2="720" y2="277" class="grid"/>
+  <line x1="70" y1="185" x2="720" y2="185" class="grid"/>
+  <line x1="70" y1="93"  x2="720" y2="93"  class="grid"/>
+  <text x="60" y="374" text-anchor="end" class="tick">0</text>
+  <text x="60" y="281" text-anchor="end" class="tick">20</text>
+  <text x="60" y="189" text-anchor="end" class="tick">40</text>
+  <text x="60" y="97"  text-anchor="end" class="tick">60</text>
+
+  <!-- baseline axis -->
+  <line x1="70" y1="370" x2="720" y2="370" class="axis"/>
+
+  <!-- bars: scale 4.615 px/unit, baseline y=370 -->
+  <!-- Non-reasoning 41 -->
+  <rect x="106" y="181" width="90" height="189" rx="4" fill="#64748b"/>
+  <text x="151" y="203" text-anchor="middle" class="val">41</text>
+  <text x="151" y="392" text-anchor="middle" class="lbl">Non-reasoning</text>
+
+  <!-- High 56 -->
+  <rect x="269" y="112" width="90" height="258" rx="4" fill="#3b82f6"/>
+  <text x="314" y="134" text-anchor="middle" class="val">56</text>
+  <text x="314" y="392" text-anchor="middle" class="lbl">High</text>
+
+  <!-- xhigh 58 -->
+  <rect x="431" y="102" width="90" height="268" rx="4" fill="#2563eb"/>
+  <text x="476" y="124" text-anchor="middle" class="val">58</text>
+  <text x="476" y="392" text-anchor="middle" class="lbl">xhigh</text>
+
+  <!-- Max 59 -->
+  <rect x="594" y="98" width="90" height="272" rx="4" fill="#1d4ed8"/>
+  <text x="639" y="120" text-anchor="middle" class="val">59</text>
+  <text x="639" y="392" text-anchor="middle" class="lbl">Max</text>
+
+  <!-- Fable 5 reference line at 60 -->
+  <line x1="70" y1="93" x2="720" y2="93" stroke="#d97706" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="716" y="87" text-anchor="end" class="refl">Claude Fable 5 = 60 (capability ceiling)</text>
+
+  <!-- footnotes -->
+  <text x="40" y="424" class="note">Most of Sol's intelligence is available below the top setting: high (56) already ties Opus 4.8; the climb from high to max buys 3 points.</text>
+  <text x="40" y="444" class="note">Max effort costs ~$1.04 per Index task (Artificial Analysis) and, per the system card, is also where over-agency rises fastest.</text>
+</svg>
