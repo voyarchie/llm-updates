@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram showing that the top of the Artificial Analysis Intelligence Index leaderboard moved up between two index versions without any new model shipping. Two vertical score scales are drawn side by side. The left scale is labelled version 4.1, the scale the previous three briefs used; the right scale is labelled version 4.1.1, read on August 10 2026. Three closed frontier models are plotted on both scales and joined by arrows that slope gently upward from left to right. Claude Opus 5 moves from 61 to 63, Claude Fable 5 from 60 to 62, and GPT-5.6 Sol from 59 to 61. A separate point marks Meta's Muse Spark 1.2, which rose the most, about plus 2.7 points, from the grader change alone. A large caption states that no new model shipped: the ceiling number rose because the ruler changed, not the territory. The change came from two measurement causes, an upgraded grader pipeline in version 4.1.1 and the leaderboard surfacing Opus 5's higher max-effort tier of 63 rather than its high-effort tier of 61. A dashed grey marker floats near the top labelled Gemini 3.5 Pro, still absent, marking the only unshipped model that could raise the ceiling on the capability axis rather than the measurement axis.">
+  <title>The ceiling number moved 61 → 63 — but the ruler changed (Index v4.1.1 grader upgrade + effort-tier relabel), not the territory. No new frontier model shipped.</title>
+
+  <!-- theme-neutral palette: slate text (#64748b headings / #94a3b8 body) reads on light and dark; colored points carry white or dark-on-light labels beside them, not inside tiny boxes. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The ceiling read 63 this window — but the ruler changed, not the territory</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis shipped Intelligence Index v4.1.1 (Aug 10): upgraded graders + a higher effort tier on the headline. No new frontier model shipped.</text>
+
+  <!-- axis frame -->
+  <line x1="250" y1="90" x2="250" y2="450" stroke="#cbd5e1" stroke-width="1.2"/>
+  <line x1="650" y1="90" x2="650" y2="450" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="250" y="478" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">Index v4.1</text>
+  <text x="250" y="494" font-size="10" fill="#94a3b8" text-anchor="middle">(what the last 3 briefs cited)</text>
+  <text x="650" y="478" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">Index v4.1.1  ·  Aug 10</text>
+  <text x="650" y="494" font-size="10" fill="#94a3b8" text-anchor="middle">(upgraded grader pipeline)</text>
+
+  <!-- gridline ticks: score scale 54..64, y = 440 - (score-52)*29.17 -->
+  <text x="150" y="123" font-size="10" fill="#94a3b8" text-anchor="end">63</text>
+  <text x="150" y="181" font-size="10" fill="#94a3b8" text-anchor="end">61</text>
+  <text x="150" y="239" font-size="10" fill="#94a3b8" text-anchor="end">59</text>
+  <text x="150" y="327" font-size="10" fill="#94a3b8" text-anchor="end">56</text>
+  <text x="150" y="385" font-size="10" fill="#94a3b8" text-anchor="end">54</text>
+  <line x1="160" y1="119" x2="740" y2="119" stroke="#e2e8f0" stroke-width="0.8" stroke-dasharray="2 4"/>
+  <line x1="160" y1="177" x2="740" y2="177" stroke="#e2e8f0" stroke-width="0.8" stroke-dasharray="2 4"/>
+  <line x1="160" y1="236" x2="740" y2="236" stroke="#e2e8f0" stroke-width="0.8" stroke-dasharray="2 4"/>
+  <line x1="160" y1="323" x2="740" y2="323" stroke="#e2e8f0" stroke-width="0.8" stroke-dasharray="2 4"/>
+
+  <defs>
+    <marker id="up" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Opus 5: 61 (y177.5) -> 63 (y119.2) -->
+  <line x1="250" y1="177" x2="650" y2="119" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#up)"/>
+  <circle cx="250" cy="177" r="6" fill="#2563eb"/>
+  <circle cx="650" cy="119" r="7" fill="#2563eb"/>
+  <text x="238" y="172" font-size="11" font-weight="700" fill="#2563eb" text-anchor="end">Opus 5 · 61</text>
+  <text x="662" y="116" font-size="11.5" font-weight="700" fill="#2563eb">Opus 5 · 63  (#1)</text>
+
+  <!-- Fable 5: 60 (y206.7) -> 62 (y148.3) -->
+  <line x1="250" y1="207" x2="650" y2="148" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#up)"/>
+  <circle cx="250" cy="207" r="6" fill="#0d9488"/>
+  <circle cx="650" cy="148" r="7" fill="#0d9488"/>
+  <text x="238" y="211" font-size="11" font-weight="700" fill="#0d9488" text-anchor="end">Fable 5 · 60</text>
+  <text x="662" y="152" font-size="11.5" font-weight="700" fill="#0d9488">Fable 5 · 62</text>
+
+  <!-- Sol: 59 (y235.8) -> 61 (y177.5) -->
+  <line x1="250" y1="236" x2="650" y2="177" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#up)"/>
+  <circle cx="250" cy="236" r="6" fill="#e11d48"/>
+  <circle cx="650" cy="177" r="7" fill="#e11d48"/>
+  <text x="238" y="240" font-size="11" font-weight="700" fill="#e11d48" text-anchor="end">GPT-5.6 Sol · 59</text>
+  <text x="662" y="181" font-size="11.5" font-weight="700" fill="#e11d48">GPT-5.6 Sol · 61</text>
+
+  <!-- Muse Spark 1.2: largest single mover +2.7 -> ~54 to ~56.7 (y381.7 -> y304) -->
+  <line x1="250" y1="382" x2="650" y2="304" stroke="#7c3aed" stroke-width="1.6" marker-end="url(#up)"/>
+  <circle cx="250" cy="382" r="6" fill="#d97706"/>
+  <circle cx="650" cy="304" r="7" fill="#d97706"/>
+  <text x="238" y="386" font-size="11" font-weight="700" fill="#d97706" text-anchor="end">Muse Spark 1.2 · 54</text>
+  <text x="662" y="308" font-size="11.5" font-weight="700" fill="#d97706">Muse Spark 1.2 · ≈56.7</text>
+  <text x="662" y="323" font-size="9.5" fill="#94a3b8">largest single mover: +2.7 (grader change alone)</text>
+
+  <!-- Gemini ghost: the only capability-axis mover that isn't here -->
+  <circle cx="650" cy="105" r="7" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3"/>
+  <text x="662" y="101" font-size="10.5" font-weight="700" fill="#94a3b8">Gemini 3.5 Pro — still absent</text>
+  <text x="662" y="115" font-size="9" fill="#94a3b8">(the only unshipped model that could raise the ceiling for real)</text>
+
+  <!-- big caption -->
+  <rect x="70" y="360" width="360" height="86" rx="10" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="86" y="384" font-size="13" font-weight="700" fill="#7c3aed">No new model shipped this window.</text>
+  <text x="86" y="405" font-size="11" fill="#94a3b8">The ceiling number rose for two <tspan font-weight="700">measurement</tspan> reasons:</text>
+  <text x="86" y="422" font-size="11" fill="#94a3b8">(1) v4.1.1 upgraded graders (τ³-Banking v1.0.1; GPT-5.6</text>
+  <text x="86" y="437" font-size="11" fill="#94a3b8">Luna grades HLE/AA-LCR/AA-Omniscience); (2) the board now</text>
+
+  <!-- footnote -->
+  <text x="70" y="518" font-size="9.5" fill="#94a3b8">surfaces Opus 5's max-effort tier (63) over its high-effort tier (61). Scores from Artificial Analysis Intelligence Index v4.1.1 (read Aug 10 2026); v4.1 figures are the ones the Aug-03/04/08/11 briefs carried.</text>
+  <text x="70" y="532" font-size="9.5" fill="#94a3b8">Most models moved &lt; 1 pt on the patch itself; the top three shown also reflect the effort-tier relabel. AA and BenchLM domains were egress-blocked to direct fetch; figures cited via the search index.</text>
+</svg>
