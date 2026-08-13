@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of Artificial Analysis Intelligence Index (vertical, 48 to 63) against output price in dollars per million tokens on a logarithmic horizontal axis, as of August 13 2026. A shaded band across the top marks the frontier tier, Index 59 to 61. Before this window that tier held only three expensive models: Claude Opus 5 at Index 61 and 25 dollars, GPT-5.6 Sol at Index 59 and 30 dollars, and Claude Fable 5 at Index 60 and 50 dollars. On August 12 xAI's Grok 4.6 entered the same frontier band at Index 61 but at just 6 dollars output, far to the cheap left of the incumbents. A bold vertical arrow rises from Grok 4.5's old position, Index 54 at 6 dollars in the near-frontier band, straight up to Grok 4.6 at Index 61 at the same 6 dollars, showing xAI vaulting five to seven Index points into the frontier tier without raising price. Also plotted: the near-frontier band around Index 54 to 57, holding Kimi K3 at 57 and 15 dollars, Qwen3.8-Max at 56 and 6 dollars, GPT-5.5 at 55, and Muse Spark 1.2 at 54 and 4.25 dollars; and the cheap floor, DeepSeek V4-Flash-0731 at Index 50 and 28 cents. The takeaway is that frontier-tier intelligence, previously priced at 25 to 50 dollars, is now available at 6 dollars.">
+  <title>The price war reaches the frontier — Grok 4.6 (Aug 12) enters the Index-59-to-61 frontier tier at $6 output, a price previously seen only in the near-frontier band, while Opus 5 / Sol / Fable 5 stay at $25–$50</title>
+
+  <!-- theme-neutral palette: slate axis/text (#64748b / #94a3b8) reads on light and dark; every data label sits in a saturated filled pill with white text so it stays legible on any background. amber = Grok 4.6 (the new entrant) · blue = frozen frontier incumbents · slate = near-frontier band · green = cheap floor. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The price war finally reaches the frontier</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Intelligence Index vs. output price ($/Mtok, log). Amber = Grok 4.6 (new, Aug 12) · blue = frozen frontier incumbents · slate = near-frontier band · green = floor.</text>
+
+  <!-- frontier-tier shaded band (Index 59-61) -->
+  <rect x="90" y="135" width="760" height="66" fill="#f59e0b" fill-opacity="0.10"/>
+  <text x="842" y="150" font-size="10.5" font-weight="700" fill="#b45309" text-anchor="end">FRONTIER TIER · Index 59–61</text>
+
+  <!-- near-frontier band (Index 54-57) -->
+  <rect x="90" y="242" width="760" height="76" fill="#64748b" fill-opacity="0.08"/>
+  <text x="842" y="257" font-size="10.5" font-weight="700" fill="#64748b" text-anchor="end">near-frontier band · 54–57</text>
+
+  <!-- axes -->
+  <line x1="90" y1="90" x2="90" y2="470" stroke="#94a3b8" stroke-width="1.4"/>
+  <line x1="90" y1="470" x2="850" y2="470" stroke="#94a3b8" stroke-width="1.4"/>
+  <text x="30" y="285" font-size="12" font-weight="700" fill="#64748b" transform="rotate(-90 30 285)" text-anchor="middle">Intelligence Index →</text>
+  <text x="470" y="512" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">Output price, $/Mtok (log scale) →</text>
+
+  <!-- y gridlines/ticks: 50,54,57,59,61 -->
+  <line x1="90" y1="419" x2="850" y2="419" stroke="#94a3b8" stroke-width="0.6" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+  <text x="84" y="423" font-size="10" fill="#94a3b8" text-anchor="end">50</text>
+  <line x1="90" y1="318" x2="850" y2="318" stroke="#94a3b8" stroke-width="0.6" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+  <text x="84" y="322" font-size="10" fill="#94a3b8" text-anchor="end">54</text>
+  <line x1="90" y1="242" x2="850" y2="242" stroke="#94a3b8" stroke-width="0.6" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+  <text x="84" y="246" font-size="10" fill="#94a3b8" text-anchor="end">57</text>
+  <line x1="90" y1="141" x2="850" y2="141" stroke="#94a3b8" stroke-width="0.6" stroke-dasharray="3 4" stroke-opacity="0.5"/>
+  <text x="84" y="145" font-size="10" fill="#94a3b8" text-anchor="end">61</text>
+
+  <!-- x ticks: 0.28, 4.25, 6, 15, 25, 50 -->
+  <text x="135" y="486" font-size="10" fill="#94a3b8" text-anchor="middle">$0.28</text>
+  <text x="543" y="486" font-size="10" fill="#94a3b8" text-anchor="middle">$6</text>
+  <text x="665" y="486" font-size="10" fill="#94a3b8" text-anchor="middle">$15</text>
+  <text x="733" y="486" font-size="10" fill="#94a3b8" text-anchor="middle">$25</text>
+  <text x="825" y="486" font-size="10" fill="#94a3b8" text-anchor="middle">$50</text>
+
+  <defs>
+    <marker id="up" markerWidth="10" markerHeight="10" refX="5" refY="2" orient="auto">
+      <path d="M0,8 L5,0 L10,8 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- the vault arrow: Grok 4.5 (54/$6) -> Grok 4.6 (61/$6) -->
+  <line x1="543" y1="308" x2="543" y2="152" stroke="#f59e0b" stroke-width="3" marker-end="url(#up)"/>
+  <text x="556" y="235" font-size="10.5" font-weight="700" fill="#b45309">+~5–7 Index</text>
+  <text x="556" y="250" font-size="9.5" fill="#94a3b8">same $6 price</text>
+
+  <!-- price-collapse bracket: frontier quality was $25-$50, now $6 -->
+  <line x1="543" y1="120" x2="733" y2="120" stroke="#b45309" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="638" y="114" font-size="9.5" fill="#b45309" text-anchor="middle">frontier quality: was $25–$50 → now $6</text>
+
+  <!-- Grok 4.5 (faded old position) -->
+  <circle cx="543" cy="318" r="6" fill="#94a3b8" fill-opacity="0.55"/>
+  <rect x="470" y="326" width="94" height="17" rx="5" fill="#94a3b8"/>
+  <text x="517" y="338" font-size="10" fill="#ffffff" text-anchor="middle">Grok 4.5 (was)</text>
+
+  <!-- Muse Spark 1.2 -->
+  <circle cx="497" cy="318" r="6" fill="#64748b"/>
+  <rect x="360" y="308" width="112" height="17" rx="5" fill="#64748b"/>
+  <text x="416" y="320" font-size="10" fill="#ffffff" text-anchor="middle">Muse Spark 1.2 · 54</text>
+
+  <!-- Qwen3.8-Max -->
+  <circle cx="543" cy="267" r="6" fill="#64748b"/>
+  <rect x="405" y="259" width="128" height="17" rx="5" fill="#64748b"/>
+  <text x="469" y="271" font-size="10" fill="#ffffff" text-anchor="middle">Qwen3.8-Max · 56 · $6</text>
+
+  <!-- Kimi K3 -->
+  <circle cx="665" cy="242" r="6" fill="#64748b"/>
+  <rect x="678" y="234" width="126" height="17" rx="5" fill="#64748b"/>
+  <text x="741" y="246" font-size="10" fill="#ffffff" text-anchor="middle">Kimi K3 · 57 · $15 (open)</text>
+
+  <!-- DeepSeek floor -->
+  <circle cx="135" cy="419" r="6" fill="#16a34a"/>
+  <rect x="150" y="411" width="150" height="17" rx="5" fill="#16a34a"/>
+  <text x="225" y="423" font-size="10" fill="#ffffff" text-anchor="middle">DeepSeek V4-Flash · 50 · $0.28</text>
+
+  <!-- Sol -->
+  <circle cx="757" cy="191" r="6" fill="#2563eb"/>
+  <rect x="678" y="176" width="150" height="17" rx="5" fill="#2563eb"/>
+  <text x="753" y="188" font-size="10" fill="#ffffff" text-anchor="middle">GPT-5.6 Sol · 59 · $30</text>
+
+  <!-- Fable 5 -->
+  <circle cx="825" cy="166" r="6" fill="#2563eb"/>
+  <rect x="700" y="150" width="128" height="17" rx="5" fill="#2563eb"/>
+  <text x="764" y="162" font-size="10" fill="#ffffff" text-anchor="middle">Fable 5 · 60 · $50</text>
+
+  <!-- Opus 5 (still #1) -->
+  <circle cx="733" cy="141" r="7" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+  <rect x="612" y="125" width="118" height="17" rx="5" fill="#1e40af"/>
+  <text x="671" y="137" font-size="10" fill="#ffffff" text-anchor="middle">Opus 5 · 61 · $25 · #1</text>
+
+  <!-- Grok 4.6 (the new entrant, highlighted) -->
+  <circle cx="543" cy="141" r="9" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <rect x="360" y="125" width="176" height="17" rx="5" fill="#f59e0b"/>
+  <text x="448" y="137" font-size="10" font-weight="700" fill="#3f2d00" text-anchor="middle">Grok 4.6 · 61 · $6 · NEW (Aug 12)</text>
+
+  <!-- caption -->
+  <text x="24" y="544" font-size="10.5" fill="#94a3b8">Opus 5 stays #1 (finer agentic Elos keep it ahead of Grok 4.6 at the same rounded Index 61). No incumbent cut its price this window — the frontier got cheaper by a new entrant, not by a discount.</text>
+</svg>
