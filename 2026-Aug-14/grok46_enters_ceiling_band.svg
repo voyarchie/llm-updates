@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Scatter plot of the Artificial Analysis Intelligence Index (vertical axis, version 4.1.1) against output price in dollars per million tokens on a logarithmic horizontal axis, as of August 14 2026. A shaded horizontal band across the top marks the closed ceiling tier from Index 61 to 63. Claude Opus 5 sits at Index 63 and about 25 dollars, still ranked number one and uncut. Claude Fable 5 sits at Index 62 and 50 dollars, the most expensive point. GPT-5.6 Sol sits at Index 61 and 30 dollars. The new model this window, Grok 4.6 from SpaceXAI, sits at Index 61 but only 6 dollars output, tying Sol for third place at a fraction of the price, far to the cheap left side of the ceiling band. A green arrow rises vertically from a faded ghost marker at Grok 4.5's old position of Index 56 at 6 dollars straight up five points to Grok 4.6 at Index 61 at the same 6 dollars, showing the gain came at constant price. Kimi K3, open weights, sits at Index 59 and 15 dollars. Qwen3.8-Max, whose open weights shipped this window, sits at Index 58 and 6 dollars. GPT-5.5 sits near Index 57 and 12 dollars, and Muse Spark 1.2 near Index 56 and about 4 dollars. A note explains that the whole top rose about two points versus the August 11 figures purely because the Index recalibrated to version 4.1.1 on August 6, upgrading its graders, so the ceiling's higher numbers reflect a changed ruler, not new model gains, and Opus 5 remains number one and uncut.">
+  <title>Grok 4.6 enters the closed ceiling band at the cheap end — tying GPT-5.6 Sol for #3 (Index 61) at $6 output vs Sol's $30 and Fable's $50 — while the top's headline rise to 63/62/61 is the v4.1.1 grader recalibration, not the ceiling moving</title>
+
+  <!-- theme-neutral palette: slate text (#64748b heading / #94a3b8 body) reads on light and dark; data points are saturated fills with strokes. green = the new entrant (Grok 4.6); blue = Opus 5 #1; violet = Fable/Sol closed tier; teal = open-weights models; grey ghost = Grok 4.5's old position. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">The frontier stalemate cracks — at #3, and at a fraction of the price</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Index (v4.1.1) vs output $/Mtok (log). Grok 4.6 ties Sol for #3 at $6 out — but Opus 5 (#1) is still unbeaten &amp; uncut, and the top's +2 rise is a grader recalibration.</text>
+
+  <!-- ceiling band shading (Index 61-63) -->
+  <rect x="110" y="133" width="720" height="66" fill="#8b5cf6" opacity="0.12"/>
+  <text x="822" y="128" font-size="10" font-weight="700" fill="#8b5cf6" text-anchor="end">CLOSED CEILING BAND (61–63)</text>
+
+  <!-- axes -->
+  <line x1="110" y1="100" x2="110" y2="430" stroke="#94a3b8" stroke-width="1.2"/>
+  <line x1="110" y1="430" x2="830" y2="430" stroke="#94a3b8" stroke-width="1.2"/>
+
+  <!-- y gridlines + labels (Index) -->
+  <g font-size="10" fill="#94a3b8" text-anchor="end">
+    <line x1="110" y1="133" x2="830" y2="133" stroke="#94a3b8" stroke-width="0.5" opacity="0.35"/>
+    <text x="104" y="137">63</text>
+    <line x1="110" y1="199" x2="830" y2="199" stroke="#94a3b8" stroke-width="0.5" opacity="0.35"/>
+    <text x="104" y="203">61</text>
+    <line x1="110" y1="265" x2="830" y2="265" stroke="#94a3b8" stroke-width="0.5" opacity="0.35"/>
+    <text x="104" y="269">59</text>
+    <line x1="110" y1="331" x2="830" y2="331" stroke="#94a3b8" stroke-width="0.5" opacity="0.35"/>
+    <text x="104" y="335">57</text>
+    <line x1="110" y1="397" x2="830" y2="397" stroke="#94a3b8" stroke-width="0.5" opacity="0.35"/>
+    <text x="104" y="401">55</text>
+  </g>
+  <text x="34" y="250" font-size="12" font-weight="700" fill="#64748b" transform="rotate(-90 34 250)" text-anchor="middle">Intelligence Index (v4.1.1) →</text>
+
+  <!-- x ticks (price, log) -->
+  <g font-size="10" fill="#94a3b8" text-anchor="middle">
+    <text x="248" y="447">$5</text>
+    <text x="407" y="447">$10</text>
+    <text x="567" y="447">$20</text>
+    <text x="660" y="447">$30</text>
+    <text x="778" y="447">$50</text>
+  </g>
+  <text x="470" y="466" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">← cheaper · output price $/Mtok (log scale) · pricier →</text>
+
+  <!-- Grok 4.5 -> 4.6 vertical jump at constant $6 -->
+  <circle cx="290" cy="364" r="7" fill="#94a3b8" opacity="0.4"/>
+  <text x="290" y="382" font-size="9" fill="#94a3b8" text-anchor="middle" opacity="0.8">Grok 4.5 (56)</text>
+  <line x1="290" y1="356" x2="290" y2="212" stroke="#16a34a" stroke-width="2.2" marker-end="url(#gj)"/>
+  <text x="298" y="290" font-size="10" font-weight="700" fill="#16a34a">+5 Index</text>
+  <text x="298" y="304" font-size="9" fill="#94a3b8">post-training only,</text>
+  <text x="298" y="316" font-size="9" fill="#94a3b8">same base &amp; price</text>
+  <defs>
+    <marker id="gj" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- DATA POINTS -->
+  <!-- Grok 4.6 (NEW) 61 / $6 -->
+  <circle cx="290" cy="199" r="10" fill="#16a34a" stroke="#15803d" stroke-width="1.5"/>
+  <text x="290" y="188" font-size="12" font-weight="700" fill="#16a34a" text-anchor="middle">Grok 4.6 · NEW</text>
+  <text x="290" y="176" font-size="9.5" fill="#94a3b8" text-anchor="middle">61 · $2/$6 · 500k · SpaceXAI</text>
+
+  <!-- GPT-5.6 Sol 61 / $30 -->
+  <circle cx="660" cy="199" r="8" fill="#8b5cf6" stroke="#6d28d9" stroke-width="1.3"/>
+  <text x="660" y="190" font-size="11" font-weight="700" fill="#8b5cf6" text-anchor="middle">GPT-5.6 Sol</text>
+  <text x="660" y="216" font-size="9.5" fill="#94a3b8" text-anchor="middle">61 · $30 (T-#3)</text>
+
+  <!-- tie connector Grok 4.6 <-> Sol -->
+  <line x1="300" y1="199" x2="650" y2="199" stroke="#16a34a" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  <text x="475" y="194" font-size="9.5" font-weight="700" fill="#16a34a" text-anchor="middle">same Index, ~5× cheaper output</text>
+
+  <!-- Fable 5 62 / $50 -->
+  <circle cx="778" cy="166" r="8" fill="#8b5cf6" stroke="#6d28d9" stroke-width="1.3"/>
+  <text x="778" y="157" font-size="11" font-weight="700" fill="#8b5cf6" text-anchor="middle">Fable 5</text>
+  <text x="778" y="183" font-size="9.5" fill="#94a3b8" text-anchor="end">62 · $50 (#2)</text>
+
+  <!-- Opus 5 63 / $25 #1 -->
+  <circle cx="619" cy="133" r="9" fill="#2563eb" stroke="#1e40af" stroke-width="1.5"/>
+  <text x="619" y="124" font-size="11.5" font-weight="700" fill="#2563eb" text-anchor="middle">Opus 5 · #1 (uncut)</text>
+  <text x="619" y="150" font-size="9.5" fill="#94a3b8" text-anchor="middle">63 · $5/$25</text>
+
+  <!-- Kimi K3 59 / $15 open -->
+  <circle cx="501" cy="265" r="7" fill="#0d9488" stroke="#0f766e" stroke-width="1.3"/>
+  <text x="501" y="256" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">Kimi K3 (open)</text>
+  <text x="501" y="282" font-size="9.5" fill="#94a3b8" text-anchor="middle">~59 · $15</text>
+
+  <!-- Qwen3.8-Max 58 / $6 (open weights now) -->
+  <circle cx="290" cy="298" r="7" fill="#0d9488" stroke="#0f766e" stroke-width="1.3"/>
+  <text x="290" y="336" font-size="10.5" font-weight="700" fill="#0d9488" text-anchor="middle">Qwen3.8-Max</text>
+  <text x="290" y="349" font-size="9" fill="#94a3b8" text-anchor="middle">~58 · $6 · weights shipped</text>
+
+  <!-- GPT-5.5 57 / $12 -->
+  <circle cx="449" cy="331" r="6" fill="#64748b" stroke="#475569" stroke-width="1.2"/>
+  <text x="449" y="322" font-size="10" fill="#94a3b8" text-anchor="middle">GPT-5.5 · ~57</text>
+
+  <!-- Muse Spark 1.2 56 / $4.25 -->
+  <circle cx="210" cy="364" r="6" fill="#64748b" stroke="#475569" stroke-width="1.2"/>
+  <text x="210" y="355" font-size="10" fill="#94a3b8" text-anchor="middle">Muse Spark 1.2 · ~56</text>
+
+  <!-- recalibration note -->
+  <rect x="470" y="322" width="358" height="86" rx="8" fill="none" stroke="#8b5cf6" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="486" y="343" font-size="11.5" font-weight="700" fill="#8b5cf6">Why the ceiling reads higher than Aug-11</text>
+  <text x="486" y="362" font-size="10" fill="#94a3b8">AA recalibrated to Index v4.1.1 on Aug 6 (upgraded graders).</text>
+  <text x="486" y="377" font-size="10" fill="#94a3b8">The whole top rose ~+2 (Opus 61→63, Fable 60→62, Sol 59→61).</text>
+  <text x="486" y="394" font-size="10" font-weight="700" fill="#8b5cf6">The ruler moved — not the models. Opus 5 is still #1 &amp; uncut.</text>
+
+  <!-- footnote -->
+  <text x="110" y="492" font-size="9.5" fill="#94a3b8">The genuine move this window is Grok 4.6: +5 Index over Grok 4.5 from post-training alone (frozen base), tying Sol for #3 at $6 output — SpaceXAI's cost-efficiency play. It answers</text>
+  <text x="110" y="506" font-size="9.5" fill="#94a3b8">the 3-week "does anyone reach the ceiling band?" question — but at #3, not #1: no model has beaten Opus 5, and no flagship price cut. Qwen3.8-Max weights shipped this window (text-only,</text>
+  <text x="110" y="520" font-size="9.5" fill="#94a3b8">no 1M context, revenue-share license). Index figures from Artificial Analysis (v4.1.1); prices vendor-listed; post-recal near-band numbers (~58/57/56) are approximate. Positions illustrative.</text>
+</svg>
