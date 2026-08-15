@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Post-training's two faces, August 14–15 2026</title>
+  <desc id="desc">Two Chinese-lab releases in one window both derive their gains from post-training on a frozen base, but land opposite. Left column, the payoff: Alibaba distills its closed Qwen3.8-Max flagship into an open Qwen3.8-27B, a 27.78-billion-parameter dense model under a permissive Apache-2.0 license, multimodal with text, image and video input, a native 262K context extendable to 1M with YaRN, and running locally in about 17 gigabytes at 4-bit; it beats Meta's Muse Glimmer 30B on many benchmarks and retakes the open-plus-runnable on-device crown. Right column, the bill: Z.ai's GLM-5.3 keeps the exact GLM-5.2 base frozen and gets a roughly 50 percent coding-agent gain from scaled post-training alone, but that same post-training produced an emergent cyber capability the lab did not plan, scoring 84.5 percent on CyberGym and finding 2,436 vulnerabilities across 269 open-source projects with 1,097 critical or high, so Z.ai is holding the open weights back about two weeks, targeted around August 28, for extra safety evaluation and hardening. A bottom banner notes the frozen ceiling frames both: Claude Opus 5 is still number one at Index 63, five and twenty-five dollars per million tokens, and uncut, so all the motion is below it and increasingly it is post-training deciding what open weights can do, for better and worse.</desc>
+
+  <!-- header -->
+  <text x="470" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#6366f1">Post-training's two faces — Aug 14–15, 2026</text>
+  <text x="470" y="57" text-anchor="middle" font-size="13" fill="#94a3b8">Two releases, same lever (a frozen base + scaled post-training), opposite outcomes</text>
+
+  <!-- divider -->
+  <line x1="470" y1="78" x2="470" y2="452" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 5" opacity="0.6"/>
+
+  <!-- ================= LEFT: PAYOFF (Qwen) ================= -->
+  <text x="235" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#0d9488">THE PAYOFF — open + runnable finally lands clean</text>
+
+  <!-- teacher -->
+  <rect x="95" y="112" width="280" height="52" rx="8" fill="#475569" stroke="#334155"/>
+  <text x="235" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Qwen3.8-Max (closed flagship)</text>
+  <text x="235" y="152" text-anchor="middle" font-size="11" fill="#e2e8f0">2.4T-A95B teacher · shipped gated (Aug 12–13)</text>
+
+  <!-- arrow -->
+  <line x1="235" y1="164" x2="235" y2="196" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="248" y="184" font-size="11" font-style="italic" fill="#6366f1">distill →</text>
+
+  <!-- 27B box -->
+  <rect x="80" y="198" width="310" height="94" rx="8" fill="#0d9488" stroke="#0f766e"/>
+  <text x="235" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Qwen3.8-27B (open)</text>
+  <text x="235" y="240" text-anchor="middle" font-size="11" fill="#ecfeff">27.78B dense · Apache-2.0 · text+image+video</text>
+  <text x="235" y="257" text-anchor="middle" font-size="11" fill="#ecfeff">262K ctx → 1M (YaRN) · ~17GB @ 4-bit (one GPU)</text>
+  <text x="235" y="279" text-anchor="middle" font-size="11" fill="#ecfeff">SWE-Bench Pro 61.7 · Terminal-Bench 2.1 73.0 · OSWorld 84.3</text>
+
+  <!-- arrow down -->
+  <line x1="235" y1="292" x2="235" y2="322" stroke="#0d9488" stroke-width="2.5" marker-end="url(#at)"/>
+
+  <!-- payoff result -->
+  <rect x="80" y="324" width="310" height="86" rx="8" fill="#16a34a" stroke="#15803d"/>
+  <text x="235" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Retakes the open + runnable crown</text>
+  <text x="235" y="367" text-anchor="middle" font-size="11" fill="#f0fdf4">Beats Meta's Muse Glimmer 30B on many benches</text>
+  <text x="235" y="384" text-anchor="middle" font-size="11" fill="#f0fdf4">Reverses Aug-14 "the small one is gated": the small</text>
+  <text x="235" y="400" text-anchor="middle" font-size="11" fill="#f0fdf4">one is the clean one — permissive, multimodal, local</text>
+
+  <!-- ================= RIGHT: THE BILL (GLM) ================= -->
+  <text x="705" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#d97706">THE BILL — post-training trips a safety gate</text>
+
+  <!-- base -->
+  <rect x="565" y="112" width="280" height="52" rx="8" fill="#475569" stroke="#334155"/>
+  <text x="705" y="134" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">GLM-5.2 base (frozen — no new model)</text>
+  <text x="705" y="152" text-anchor="middle" font-size="11" fill="#e2e8f0">every gain from scaled post-training</text>
+
+  <!-- arrow -->
+  <line x1="705" y1="164" x2="705" y2="196" stroke="#6366f1" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="718" y="184" font-size="11" font-style="italic" fill="#6366f1">post-train →</text>
+
+  <!-- GLM 5.3 box -->
+  <rect x="550" y="198" width="310" height="94" rx="8" fill="#6366f1" stroke="#4338ca"/>
+  <text x="705" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">GLM-5.3 (Z.ai, Aug 14)</text>
+  <text x="705" y="240" text-anchor="middle" font-size="11" fill="#eef2ff">+~50% coding-agent vs 5.2 · post-training only</text>
+  <text x="705" y="257" text-anchor="middle" font-size="11" fill="#eef2ff">tops open coding (Terminal-Bench 3.0 ~28.3, #1 open)</text>
+  <text x="705" y="279" text-anchor="middle" font-size="11" fill="#eef2ff">2nd post-training-only climb in 2 days (after Grok 4.6)</text>
+
+  <!-- arrow down -->
+  <line x1="705" y1="292" x2="705" y2="322" stroke="#d97706" stroke-width="2.5" marker-end="url(#aa)"/>
+  <text x="718" y="311" font-size="11" font-style="italic" fill="#d97706">emergent →</text>
+
+  <!-- bill result -->
+  <rect x="550" y="324" width="310" height="86" rx="8" fill="#dc2626" stroke="#b91c1c"/>
+  <text x="705" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">Cyber capability Z.ai didn't plan for</text>
+  <text x="705" y="367" text-anchor="middle" font-size="11" fill="#fef2f2">CyberGym 84.5 · 2,436 vulns / 269 OSS projects</text>
+  <text x="705" y="384" text-anchor="middle" font-size="11" fill="#fef2f2">(1,097 critical/high) → open weights HELD ~2 wks</text>
+  <text x="705" y="400" text-anchor="middle" font-size="11" fill="#fef2f2">for safety hardening (targeted ~Aug 28)</text>
+
+  <!-- ================= bottom banner: frozen ceiling ================= -->
+  <rect x="80" y="470" width="780" height="66" rx="8" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="470" y="494" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8">The frozen ceiling frames both — Claude Opus 5 still #1 (Index 63, $5/$25), uncut</text>
+  <text x="470" y="515" text-anchor="middle" font-size="12" fill="#94a3b8">No flagship price cut in response to Grok 4.6. All the motion is below the top —</text>
+  <text x="470" y="531" text-anchor="middle" font-size="12" fill="#94a3b8">and it is increasingly post-training deciding what open weights can do, for better and worse.</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#6366f1"/></marker>
+    <marker id="at" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#0d9488"/></marker>
+    <marker id="aa" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#d97706"/></marker>
+  </defs>
+</svg>
