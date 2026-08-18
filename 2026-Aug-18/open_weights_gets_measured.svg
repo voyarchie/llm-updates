@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3.8-27B independently measured at Intelligence Index 52, under a frozen closed ceiling</title>
+  <desc id="desc">A scatter of Artificial Analysis Intelligence Index (vertical) against model parameter count on a log scale (horizontal). A dashed band across the top marks the closed ceiling, frozen for a fifth straight brief: Claude Opus 5 at 63 still number one and uncut, Fable 5 at 62.1, Grok 4.6 at 60.9, with no Index-64 model and no flagship price cut since July 24. Four measured models sit below it: Qwen3.8-Max at Index 56 (2.4 trillion parameters), DeepSeek V4 Pro 0813 at 53 (1.7 trillion), GLM-5.2 at 53 (753 billion), and GPT-5.6 Luna at 52. The highlighted point is Qwen3.8-27B, a dense 27-billion-parameter open-weights model, landing at Index 52 on August 17 — tying GPT-5.6 Luna, one point behind models 28 to 63 times larger, and only 4 points below its own 2.4-trillion-parameter Max sibling. A dashed floor line marks the open-weights 27B size-class median of 9. A callout notes the model's Agentic Index of 51, which beats GPT-5.6 Terra and Claude Opus 4.8 at max effort, and a caution that it is verbose, emitting 160 million tokens on the index versus a 43-million class median.</desc>
+
+  <style>
+    .axis  { stroke:#94a3b8; stroke-width:1; }
+    .grid  { stroke:#94a3b8; stroke-width:1; stroke-dasharray:2 4; opacity:.45; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .lab   { fill:#475569; font-size:13px; }
+    .labm  { fill:#64748b; font-size:12px; }
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .dot       { fill:#64748b; }
+    .dotstroke { fill:none; stroke:#64748b; stroke-width:2; }
+    .ceil  { stroke:#f59e0b; stroke-width:1.4; stroke-dasharray:6 5; opacity:.9; }
+    .ceilfill { fill:#f59e0b; opacity:.07; }
+    .floor { stroke:#94a3b8; stroke-width:1.2; stroke-dasharray:5 5; opacity:.7; }
+    .hi        { fill:#0ea5e9; }
+    .histroke  { stroke:#0ea5e9; stroke-width:2; fill:none; }
+    .hilab     { fill:#0284c7; font-size:13px; font-weight:700; }
+    .box   { fill:#0ea5e9; opacity:.08; stroke:#0ea5e9; stroke-width:1; }
+    .boxt  { fill:#0369a1; font-size:12px; }
+    .boxh  { fill:#0369a1; font-size:12.5px; font-weight:700; }
+    .amb   { fill:#b45309; font-size:12px; font-weight:700; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The open-weights promise gets measured — 52, and no help from above</text>
+  <text x="40" y="55" class="sub">Artificial Analysis Intelligence Index (v4.1.1) vs parameter count · measured points as of Aug 17–18, 2026</text>
+
+  <!-- plot frame -->
+  <!-- y axis 0..70 mapped 470..70 ; x log(params B) -->
+  <line x1="90" y1="72" x2="90" y2="472" class="axis"/>
+  <line x1="90" y1="472" x2="880" y2="472" class="axis"/>
+
+  <!-- y ticks -->
+  <g text-anchor="end">
+    <line x1="86" y1="110" x2="90" y2="110" class="axis"/><text x="82" y="114" class="tick">63</text>
+    <line x1="86" y1="167" x2="90" y2="167" class="axis"/><text x="82" y="171" class="tick">53</text>
+    <line x1="86" y1="270" x2="90" y2="270" class="axis"/><text x="82" y="274" class="tick">35</text>
+    <line x1="86" y1="419" x2="90" y2="419" class="axis"/><text x="82" y="423" class="tick">9</text>
+  </g>
+  <text x="30" y="272" class="labm" transform="rotate(-90 30 272)" text-anchor="middle">Intelligence Index</text>
+
+  <!-- x ticks: 27B, 753B, 1.7T, 2.4T -->
+  <g text-anchor="middle">
+    <text x="140" y="492" class="tick">27B</text>
+    <text x="600" y="492" class="tick">753B</text>
+    <text x="712" y="492" class="tick">1.7T</text>
+    <text x="790" y="492" class="tick">2.4T</text>
+  </g>
+  <text x="470" y="512" class="labm" text-anchor="middle">parameter count (log scale)  →  bigger</text>
+
+  <!-- closed ceiling band -->
+  <rect x="90" y="110" width="790" height="16" class="ceilfill"/>
+  <line x1="90" y1="110" x2="880" y2="110" class="ceil"/>
+  <line x1="90" y1="121" x2="880" y2="121" class="ceil"/>
+  <text x="875" y="102" class="amb" text-anchor="end">CLOSED CEILING — frozen 5th brief · Opus 5 63 (#1, uncut) · Fable 62.1 · Grok 4.6 60.9 · no Index-64, no cut since Jul 24</text>
+
+  <!-- class median floor -->
+  <line x1="90" y1="419" x2="880" y2="419" class="floor"/>
+  <text x="875" y="435" class="labm" text-anchor="end">open-weights 27B-class median = 9</text>
+
+  <!-- measured points (larger models) -->
+  <!-- Qwen3.8-Max 56 @ 2.4T -->
+  <circle cx="790" cy="150" r="7" class="dotstroke"/>
+  <text x="790" y="140" class="lab" text-anchor="middle">Qwen3.8-Max 56</text>
+  <!-- DeepSeek V4 Pro 0813 53 @ 1.7T -->
+  <circle cx="712" cy="167" r="7" class="dotstroke"/>
+  <text x="712" y="186" class="labm" text-anchor="middle">DeepSeek V4 Pro 53</text>
+  <!-- GLM-5.2 53 @ 753B -->
+  <circle cx="600" cy="167" r="7" class="dotstroke"/>
+  <text x="600" y="157" class="lab" text-anchor="middle">GLM-5.2 53</text>
+  <!-- GPT-5.6 Luna 52 (closed, small; placed mid) -->
+  <circle cx="430" cy="173" r="7" class="dotstroke"/>
+  <text x="430" y="163" class="lab" text-anchor="middle">GPT-5.6 Luna 52</text>
+
+  <!-- tie connector -->
+  <line x1="150" y1="173" x2="420" y2="173" class="grid"/>
+
+  <!-- highlighted point: Qwen3.8-27B 52 @ 27B -->
+  <circle cx="140" cy="173" r="10" class="hi"/>
+  <circle cx="140" cy="173" r="16" class="histroke"/>
+  <text x="140" y="207" class="hilab" text-anchor="middle">Qwen3.8-27B</text>
+  <text x="140" y="223" class="hilab" text-anchor="middle">Index 52 · Aug 17</text>
+  <text x="140" y="240" class="labm" text-anchor="middle">dense · Apache-2.0</text>
+  <text x="140" y="256" class="labm" text-anchor="middle">$0/self-host · 256k</text>
+
+  <!-- prior-gen reference -->
+  <circle cx="140" cy="253" r="5" class="dot" opacity=".5"/>
+  <text x="163" y="257" class="labm" text-anchor="start">3.6-27B was 38</text>
+
+  <!-- agentic callout box -->
+  <rect x="250" y="270" width="300" height="86" rx="8" class="box"/>
+  <text x="266" y="292" class="boxh">Agentic Index 51 — punches up a weight class</text>
+  <text x="266" y="312" class="boxt">Beats GPT-5.6 Terra and Claude Opus 4.8 (max effort)</text>
+  <text x="266" y="330" class="boxt">on the agentic sub-index — models many× its size.</text>
+  <text x="266" y="348" class="boxt">"Frontier-class coding agents, run locally" (VentureBeat).</text>
+
+  <!-- verbosity caution -->
+  <rect x="580" y="300" width="300" height="56" rx="8" fill="#f59e0b" opacity=".07"/>
+  <rect x="580" y="300" width="300" height="56" rx="8" fill="none" stroke="#f59e0b" stroke-width="1" opacity=".6"/>
+  <text x="596" y="322" class="amb">Caveat: verbose</text>
+  <text x="596" y="340" class="boxt" fill="#92400e">160M tokens on the Index vs a 43M class median —</text>
+  <text x="596" y="357" class="boxt" fill="#92400e">the cheap per-token price is eaten at the task level.</text>
+
+</svg>
