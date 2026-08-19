@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram of the Claude Fable 5 access change effective July 20, 2026. The four-times-slipped included window resolves into a fork by subscription tier rather than a flat cutover to credits. On the left, Claude Max and Team Premium keep Fable 5 included permanently, capped at 50 percent of plan limits, bundled with no separate metering. On the right, Claude Pro and Team Standard move to usage credits only at 10 dollars per million input and 50 dollars per million output tokens, which is double the Opus 4.8 rate, with a one-time 100 dollar credit softening the switch. A footnote records the deadline history sliding July 7 to 12 to 19 to 20 with no fifth extension, sourced to Claude's July 18 announcement.">
+  <title>Fable 5's July 20 landing splits by tier: Max/Team Premium keep it bundled, Pro/Team Standard move to credits</title>
+
+  <!-- theme-neutral palette: saturated fills carry white text on light and dark; slate labels read on both -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Fable 5's Jul 20 landing: a fork, not a flat cutover</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">After four slipped deadlines the meter resolves by subscription tier &#8212; premium plans keep it bundled, entry plans move to credits.</text>
+
+  <!-- date pill -->
+  <rect x="398" y="72" width="84" height="26" rx="13" fill="#334155"/>
+  <text x="440" y="89" font-size="12.5" font-weight="700" fill="#ffffff" text-anchor="middle">Jul 20</text>
+
+  <!-- connectors from pill to the two boxes -->
+  <line x1="430" y1="98" x2="230" y2="128" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="450" y1="98" x2="650" y2="128" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- LEFT box: kept / included -->
+  <rect x="40" y="128" width="380" height="212" rx="10" fill="#0d9488"/>
+  <text x="60" y="158" font-size="15" font-weight="700" fill="#ffffff">INCLUDED &#8212; permanently</text>
+  <text x="60" y="188" font-size="13.5" fill="#ffffff">&#8226;&#160;&#160;Claude Max</text>
+  <text x="60" y="212" font-size="13.5" fill="#ffffff">&#8226;&#160;&#160;Team Premium</text>
+  <line x1="60" y1="230" x2="400" y2="230" stroke="#ffffff" stroke-width="0.75" opacity="0.5"/>
+  <text x="60" y="258" font-size="12.5" font-weight="600" fill="#ffffff">Capped at 50% of plan limits</text>
+  <text x="60" y="282" font-size="11.5" fill="#e2f5f2">Bundled in the subscription; no separate metering.</text>
+  <text x="60" y="312" font-size="11.5" fill="#e2f5f2">The permanent 50% cap is tighter than the</text>
+  <text x="60" y="328" font-size="11.5" fill="#e2f5f2">promo window Max users had &#8212; a trim, not a gift.</text>
+
+  <!-- RIGHT box: metered / credits -->
+  <rect x="460" y="128" width="380" height="212" rx="10" fill="#b45309"/>
+  <text x="480" y="158" font-size="15" font-weight="700" fill="#ffffff">USAGE CREDITS only</text>
+  <text x="480" y="188" font-size="13.5" fill="#ffffff">&#8226;&#160;&#160;Claude Pro</text>
+  <text x="480" y="212" font-size="13.5" fill="#ffffff">&#8226;&#160;&#160;Team Standard</text>
+  <line x1="480" y1="230" x2="820" y2="230" stroke="#ffffff" stroke-width="0.75" opacity="0.5"/>
+  <text x="480" y="258" font-size="12.5" font-weight="600" fill="#ffffff">$10 in / $50 out per Mtok</text>
+  <text x="480" y="282" font-size="11.5" fill="#fde8d5">= 2&#215; Opus 4.8; Anthropic's priciest GA rate.</text>
+  <text x="480" y="312" font-size="11.5" fill="#fde8d5">One-time $100 credit softens the switch;</text>
+  <text x="480" y="328" font-size="11.5" fill="#fde8d5">after that, pay-per-token at API rates.</text>
+
+  <!-- footnote -->
+  <text x="24" y="374" font-size="11.5" fill="#94a3b8">Deadline history: included window slipped Jul 7 &#8594; 12 &#8594; 19 &#8594; 20 (four times). No fifth extension &#8212; instead a permanent tier split.</text>
+  <text x="24" y="392" font-size="11.5" fill="#94a3b8">The Jul-18 brief read Jul 20 as a flat cutover to credits for all subscribers; the actual structure keeps Fable bundled for premium tiers.</text>
+  <text x="24" y="414" font-size="11" fill="#cbd5e1">Source: @claudeai (Jul 18 2026) &#183; corroborated by The Decoder, TechTimes, Simon Willison, DAWN. Cache/Batch rates per Jul-18 pricing.</text>
+</svg>
