@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The benchmark decentralizes — from one public Index number to a per-workload custom benchmark with cost-per-task and time-per-task</title>
+  <desc id="desc">A left-to-right comparison. On the left, "The public Intelligence Index" reports a single quality number — Qwen3.8-27B at 52 — the same fixed workload for everyone; a caution below notes the number hides cost, because producing that score took 160 million output tokens, about 3.7 times the class median, costing 666 dollars and 92 cents to run. A central arrow points to Optima, Artificial Analysis's new custom-benchmark platform launched August 13, fed by four inputs: your own files, agent traces imported from Arize, Braintrust or Langfuse, a coding environment, or a plain-text description of your use case. On the right, Optima reports three numbers on your own workload rather than one: Quality, Cost per Task, and Time per Task — and surfaces an equally good model at up to ten times lower cost or time per task. Along the bottom, an amber dashed band marks the closed ceiling, frozen for a seventh straight brief: Claude Opus 5 at 63 and still number one and uncut, Fable 5 at 62, GPT-5.6 Sol at 61, Grok 4.6 at 60.9, with no Index-64 model, no flagship price cut since July 24, and no new model shipped in the August 19 to 20 window.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:20px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .panh  { fill:#334155; font-size:15px; font-weight:700; }
+    .lab   { fill:#475569; font-size:13px; }
+    .labm  { fill:#64748b; font-size:12px; }
+    .big   { fill:#0f766e; font-size:52px; font-weight:800; }
+    .bigl  { fill:#0369a1; font-size:26px; font-weight:800; }
+    .chiph { fill:#0369a1; font-size:13px; font-weight:700; }
+    .chipv { fill:#334155; font-size:12px; }
+    .amb   { fill:#b45309; font-size:12px; font-weight:700; }
+    .ambs  { fill:#b45309; font-size:12.5px; font-weight:700; }
+    .in    { fill:#475569; font-size:12px; }
+    .note  { fill:#64748b; font-size:12px; }
+    .boxg  { fill:#64748b; opacity:.06; stroke:#94a3b8; stroke-width:1; }
+    .boxs  { fill:#0ea5e9; opacity:.07; stroke:#0ea5e9; stroke-width:1.2; }
+    .boxe  { fill:#10b981; opacity:.08; stroke:#10b981; stroke-width:1.2; }
+    .boxin { fill:none; stroke:#94a3b8; stroke-width:1; }
+    .ceil  { stroke:#f59e0b; stroke-width:1.4; stroke-dasharray:6 5; opacity:.9; }
+    .ceilfill { fill:#f59e0b; opacity:.07; }
+    .arrow { stroke:#0284c7; stroke-width:2.2; fill:none; }
+    .arrowh{ fill:#0284c7; }
+    .warn  { fill:#b45309; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">When the models stop moving, the benchmark does — the Index decentralizes</text>
+  <text x="40" y="55" class="sub">Aug 19–20 window · no new model, 7th frozen-ceiling brief · the move is a measurement TOOL: Artificial Analysis Optima (launched Aug 13)</text>
+
+  <!-- LEFT: the public index -->
+  <rect x="40" y="80" width="300" height="300" rx="10" class="boxg"/>
+  <text x="60" y="108" class="panh">The public Intelligence Index</text>
+  <text x="60" y="128" class="labm">one number · one fixed workload · everyone's</text>
+
+  <text x="60" y="196" class="big">52</text>
+  <text x="175" y="176" class="lab">Qwen3.8-27B</text>
+  <text x="175" y="194" class="labm">Artificial Analysis</text>
+  <text x="175" y="211" class="labm">Intelligence Index (v4.1.1)</text>
+
+  <line x1="60" y1="224" x2="320" y2="224" class="boxin"/>
+
+  <!-- hidden-cost caution -->
+  <text x="60" y="250" class="ambs">⚠ the single number hides cost</text>
+  <text x="60" y="272" class="note">to PRODUCE that 52, the model emitted</text>
+  <text x="60" y="291" class="note"><tspan class="warn" font-weight="700">160M output tokens</tspan> — ~3.7× the 43M class median</text>
+  <text x="60" y="315" class="note">→ it cost <tspan class="warn" font-weight="700">$666.92</tspan> to run it on the Index</text>
+  <text x="60" y="343" class="note">cheap per-<tspan font-style="italic">token</tspan> ($0.40/$3) ≠ cheap per-<tspan font-style="italic">task</tspan>.</text>
+  <text x="60" y="362" class="note">a quality-only score can't show that.</text>
+
+  <!-- center arrow to Optima -->
+  <path d="M348 230 L392 230" class="arrow"/>
+  <polygon points="392,224 404,230 392,236" class="arrowh"/>
+
+  <!-- OPTIMA hub -->
+  <rect x="405" y="150" width="150" height="160" rx="10" class="boxs"/>
+  <text x="480" y="178" class="bigl" text-anchor="middle">Optima</text>
+  <text x="480" y="198" class="labm" text-anchor="middle">Artificial Analysis</text>
+  <text x="480" y="215" class="labm" text-anchor="middle">launched Aug 13</text>
+  <text x="480" y="243" class="chipv" text-anchor="middle">build a custom benchmark</text>
+  <text x="480" y="261" class="chipv" text-anchor="middle">for YOUR use case,</text>
+  <text x="480" y="279" class="chipv" text-anchor="middle">run every model in 1 click</text>
+  <text x="480" y="299" class="labm" text-anchor="middle">usage-based · no subscription</text>
+
+  <!-- inputs feeding optima -->
+  <text x="405" y="112" class="lab">Fed by your own inputs:</text>
+  <g class="in">
+    <rect x="405" y="120" width="150" height="20" rx="5" class="boxin"/>
+    <text x="480" y="134" text-anchor="middle">files / dataset</text>
+  </g>
+  <text x="405" y="335" class="in">• agent traces (Arize · Braintrust · Langfuse)</text>
+  <text x="405" y="353" class="in">• a coding environment</text>
+  <text x="405" y="371" class="in">• or plain-text: describe the task</text>
+
+  <!-- arrow to right -->
+  <path d="M558 230 L598 230" class="arrow"/>
+  <polygon points="598,224 610,230 598,236" class="arrowh"/>
+
+  <!-- RIGHT: three numbers -->
+  <rect x="612" y="80" width="288" height="300" rx="10" class="boxe"/>
+  <text x="632" y="108" class="panh">Optima report — YOUR workload</text>
+  <text x="632" y="128" class="labm">three numbers, not one</text>
+
+  <g>
+    <rect x="632" y="142" width="248" height="46" rx="7" class="boxin"/>
+    <text x="646" y="163" class="chiph">Quality</text>
+    <text x="646" y="180" class="chipv">research-grade grading (AA-Briefcase / GDPval-AA method)</text>
+  </g>
+  <g>
+    <rect x="632" y="196" width="248" height="46" rx="7" class="boxin"/>
+    <text x="646" y="217" class="chiph">Cost per Task</text>
+    <text x="646" y="234" class="chipv">prices in verbosity — what per-token can't show</text>
+  </g>
+  <g>
+    <rect x="632" y="250" width="248" height="46" rx="7" class="boxin"/>
+    <text x="646" y="271" class="chiph">Time per Task</text>
+    <text x="646" y="288" class="chipv">latency on the real job, not a synthetic prompt</text>
+  </g>
+
+  <text x="632" y="322" class="lab" font-weight="700" fill="#047857">→ find an equally-good model at up to</text>
+  <text x="632" y="341" class="lab" font-weight="700" fill="#047857">   10× lower cost — or time — per task.</text>
+  <text x="632" y="365" class="note">custom agent stacks compete vs frontier models, same run.</text>
+
+  <!-- frozen ceiling band footer -->
+  <rect x="40" y="404" width="860" height="34" class="ceilfill"/>
+  <line x1="40" y1="404" x2="900" y2="404" class="ceil"/>
+  <line x1="40" y1="437" x2="900" y2="437" class="ceil"/>
+  <text x="52" y="425" class="amb">CLOSED CEILING — frozen 7th brief · Opus 5 63 (#1, uncut $5/$25) · Fable 5 62 · GPT-5.6 Sol 61 · Grok 4.6 60.9</text>
+  <text x="888" y="425" class="amb" text-anchor="end">no Index-64 · no flagship cut since Jul 24 · no new model Aug 19–20</text>
+
+  <!-- caption -->
+  <text x="40" y="470" class="labm">The through-line, 3rd window running: the top of the map is frozen, so the motion moves DOWNSTREAM of the models —</text>
+  <text x="40" y="489" class="labm">first an outside number for one open model (Aug 17), then for another + the meter changing hands (Aug 19), now the</text>
+  <text x="40" y="508" class="labm">measurement itself decentralizes: one public Index → a benchmark anyone builds on their own data, with cost &amp; time per task.</text>
+  <text x="40" y="536" class="note" font-style="italic">Optima launched Aug 13; the Aug-18 and Aug-19 briefs missed it — picked up now as it surfaced via coverage/adoption and resolves Aug-18's "price the verbosity" watch-item.</text>
+</svg>
