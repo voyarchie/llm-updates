@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3's open weights held on emergent cyber capability — leads vulnerability discovery, trails exploitation</title>
+  <desc id="desc">A diagram of Z.ai's GLM-5.3 cyber-safety finding, the reason its open weights are held to about August 28, 2026. On the left, a funnel: during evaluation the model surfaced 2,436 real vulnerabilities across 269 open-source projects, of which 1,097 were rated critical or high, in Linux, WebKit and FreeBSD, the oldest dating to 1981, and it reportedly found a serious vulnerability in the Cursor editor. On the right, two bar clusters on a shared zero-to-eighty-six scale. The first, CyberGym vulnerability discovery: GLM-5.2 baseline about 77, GLM-5.3 at 84.5 edging just ahead of Anthropic Mythos 5 at 83.8 and GPT-5.6 Sol at 83.6 — GLM-5.3 narrowly tops the discovery axis. The second, ExploitBench full exploitation: GLM-5.2 at 24.4, GLM-5.3 jumping to 54.4 (2.2 times), but still well behind GPT-5.6 Sol at 76.5 and Mythos 5 at 78 — so GLM-5.3 leads discovery yet trails the US frontier on exploitation. A full-width footer explains that the reason the weights are held is emergent exploit-chaining: post-training on the GLM-5 base produced coherent multi-stage exploitation plans the lab never trained for, with ExploitGym throughput up 3.5 times over GLM-5.2, so Z.ai is holding the weights about two weeks for safety hardening, target around August 28, four days out. Every cyber figure is Z.ai's own, with no independent replication at compile time.</desc>
+
+  <style>
+    .axis  { stroke:#94a3b8; stroke-width:1; }
+    .grid  { stroke:#94a3b8; stroke-width:1; stroke-dasharray:2 4; opacity:.4; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .lab   { fill:#475569; font-size:12.5px; }
+    .labm  { fill:#64748b; font-size:11.5px; }
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .sect  { fill:#334155; font-size:13.5px; font-weight:700; }
+    .hi        { fill:#0ea5e9; }
+    .histroke  { stroke:#0284c7; stroke-width:1.5; fill:none; }
+    .hilab     { fill:#0284c7; font-size:12px; font-weight:700; }
+    .neu   { fill:#64748b; opacity:.85; }
+    .base  { fill:#94a3b8; opacity:.45; }
+    .amb   { fill:#b45309; font-size:12px; font-weight:700; }
+    .ambt  { fill:#92400e; font-size:12px; }
+    .fun   { fill:#0ea5e9; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The open-weights gate turns to danger — GLM-5.3's weights held on emergent cyber</text>
+  <text x="40" y="55" class="sub">Z.ai's own cyber evaluation, Aug 14 · weights held ~2 weeks for safety hardening (target ≈ Aug 28) · all figures vendor-claimed</text>
+
+  <!-- ============ LEFT: vulnerability funnel ============ -->
+  <text x="40" y="92" class="sect">What the model found in evaluation</text>
+
+  <!-- wide band: 2,436 across 269 -->
+  <rect x="40" y="104" width="250" height="46" rx="6" class="fun" opacity=".14"/>
+  <rect x="40" y="104" width="250" height="46" rx="6" fill="none" stroke="#0ea5e9" stroke-width="1.2" opacity=".7"/>
+  <text x="165" y="126" class="hilab" text-anchor="middle" font-size="15">2,436 real vulnerabilities</text>
+  <text x="165" y="143" class="labm" text-anchor="middle">across 269 open-source projects</text>
+
+  <!-- arrow -->
+  <line x1="165" y1="150" x2="165" y2="168" class="axis"/>
+  <path d="M161 164 L165 170 L169 164 Z" fill="#94a3b8"/>
+
+  <!-- narrower band: 1,097 critical -->
+  <rect x="80" y="170" width="170" height="44" rx="6" fill="#b45309" opacity=".12"/>
+  <rect x="80" y="170" width="170" height="44" rx="6" fill="none" stroke="#b45309" stroke-width="1.2" opacity=".7"/>
+  <text x="165" y="191" class="amb" text-anchor="middle" font-size="15">1,097 critical / high</text>
+  <text x="165" y="207" class="ambt" text-anchor="middle">Linux · WebKit · FreeBSD</text>
+
+  <text x="40" y="238" class="labm">Oldest bug dates to 1981 · reportedly found a</text>
+  <text x="40" y="254" class="labm">"serious vulnerability" in the Cursor editor.</text>
+
+  <!-- ============ RIGHT: two bar clusters ============ -->
+  <!-- shared scale: value v -> y = 380 - v*2.667 ; plot from x=330 -->
+  <line x1="360" y1="150" x2="360" y2="380" class="axis"/>
+  <line x1="360" y1="380" x2="890" y2="380" class="axis"/>
+  <g text-anchor="end">
+    <line x1="356" y1="167" x2="360" y2="167" class="axis"/><text x="352" y="171" class="tick">80</text>
+    <line x1="356" y1="220" x2="360" y2="220" class="axis"/><text x="352" y="224" class="tick">60</text>
+    <line x1="356" y1="273" x2="360" y2="273" class="axis"/><text x="352" y="277" class="tick">40</text>
+    <line x1="356" y1="327" x2="360" y2="327" class="axis"/><text x="352" y="331" class="tick">20</text>
+    <line x1="356" y1="380" x2="360" y2="380" class="axis"/><text x="352" y="384" class="tick">0</text>
+  </g>
+  <line x1="360" y1="167" x2="890" y2="167" class="grid"/>
+  <line x1="360" y1="220" x2="890" y2="220" class="grid"/>
+  <line x1="360" y1="273" x2="890" y2="273" class="grid"/>
+  <line x1="360" y1="327" x2="890" y2="327" class="grid"/>
+
+  <!-- Cluster A: CyberGym (discovery) -->
+  <text x="480" y="106" class="sect" text-anchor="middle">CyberGym — discovery</text>
+  <text x="480" y="123" class="labm" text-anchor="middle">GLM-5.3 narrowly TOPS the axis</text>
+  <!-- GLM-5.2 baseline 77.2 -> y=174 -->
+  <rect x="392" y="174" width="30" height="206" class="base"/>
+  <text x="407" y="396" class="labm" text-anchor="middle">5.2</text>
+  <text x="407" y="166" class="labm" text-anchor="middle">77</text>
+  <!-- GLM-5.3 84.5 -> y=155 (highlight) -->
+  <rect x="429" y="155" width="30" height="225" class="hi"/>
+  <rect x="429" y="155" width="30" height="225" class="histroke"/>
+  <text x="444" y="396" class="hilab" text-anchor="middle">5.3</text>
+  <text x="444" y="148" class="hilab" text-anchor="middle">84.5</text>
+  <!-- Mythos 5 83.8 -> y=157 -->
+  <rect x="466" y="157" width="30" height="223" class="neu"/>
+  <text x="481" y="396" class="labm" text-anchor="middle">Myth5</text>
+  <text x="481" y="150" class="labm" text-anchor="middle">83.8</text>
+  <!-- Sol 83.6 -> y=157 -->
+  <rect x="503" y="157" width="30" height="223" class="neu"/>
+  <text x="518" y="396" class="labm" text-anchor="middle">Sol</text>
+  <text x="518" y="150" class="labm" text-anchor="middle">83.6</text>
+
+  <!-- Cluster B: ExploitBench (exploitation) -->
+  <text x="700" y="106" class="sect" text-anchor="middle">ExploitBench — exploitation</text>
+  <text x="700" y="123" class="labm" text-anchor="middle">jumps 2.2× but still TRAILS frontier</text>
+  <!-- GLM-5.2 24.4 -> y=315 -->
+  <rect x="612" y="315" width="30" height="65" class="base"/>
+  <text x="627" y="396" class="labm" text-anchor="middle">5.2</text>
+  <text x="627" y="307" class="labm" text-anchor="middle">24.4</text>
+  <!-- GLM-5.3 54.4 -> y=235 (highlight) -->
+  <rect x="649" y="235" width="30" height="145" class="hi"/>
+  <rect x="649" y="235" width="30" height="145" class="histroke"/>
+  <text x="664" y="396" class="hilab" text-anchor="middle">5.3</text>
+  <text x="664" y="228" class="hilab" text-anchor="middle">54.4</text>
+  <!-- Sol 76.5 -> y=176 -->
+  <rect x="686" y="176" width="30" height="204" class="neu"/>
+  <text x="701" y="396" class="labm" text-anchor="middle">Sol</text>
+  <text x="701" y="169" class="labm" text-anchor="middle">76.5</text>
+  <!-- Mythos 5 78 -> y=172 -->
+  <rect x="723" y="172" width="30" height="208" class="neu"/>
+  <text x="738" y="396" class="labm" text-anchor="middle">Myth5</text>
+  <text x="738" y="165" class="labm" text-anchor="middle">78</text>
+
+  <text x="798" y="240" class="labm">■ GLM-5.3</text>
+  <rect x="798" y="232" width="10" height="10" class="hi"/>
+  <text x="798" y="262" class="labm">■ US frontier</text>
+  <rect x="798" y="254" width="10" height="10" class="neu"/>
+  <text x="798" y="284" class="labm">■ GLM-5.2 base</text>
+  <rect x="798" y="276" width="10" height="10" class="base"/>
+
+  <!-- ============ FOOTER: the reason weights are held ============ -->
+  <rect x="40" y="418" width="850" height="118" rx="10" fill="#b45309" opacity=".08"/>
+  <rect x="40" y="418" width="850" height="118" rx="10" fill="none" stroke="#b45309" stroke-width="1.2" opacity=".65"/>
+  <text x="60" y="444" class="amb" font-size="14">Why the weights are held — not the scores, the EMERGENCE</text>
+  <text x="60" y="466" class="ambt">Post-training on the GLM-5 base produced coherent, multi-stage exploit-<tspan font-weight="700">chaining</tspan> the lab says it never trained for —</text>
+  <text x="60" y="484" class="ambt">ExploitGym throughput up <tspan font-weight="700">3.5×</tspan> over GLM-5.2 (105 tasks / 2h, 130 / 6h vs 29 / 39). A coding upgrade that quietly</text>
+  <text x="60" y="502" class="ambt">learned offense. Z.ai is holding open weights ~2 weeks for safety hardening → target <tspan font-weight="700">≈ Aug 28</tspan> (4 days out).</text>
+  <text x="60" y="524" class="labm">Caveat: every cyber figure here is Z.ai's own — no independent replication at compile time. The Index ceiling above stays frozen a 6th brief.</text>
+
+</svg>
