@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The holding pattern — GLM-5.3's weights gate is 3 days out, and the safety hold is also a verification hold</title>
+  <desc id="desc">A diagram of the quiet window of August 25, 2026. Across the top, a frozen closed-model ceiling band: Claude Opus 5 at Index 63, Claude Fable 5 at 62.1, and Grok 4.6 at 60.9, unchanged for a seventh straight brief, with no Index-64 model and no flagship price cut since July 24, about five weeks. Below it, a horizontal countdown timeline with three marks: August 14, GLM-5.3 launched API-only; August 25, today, the marker labelled T minus 3 days; and August 28, the target date for the open weights to be published to Hugging Face, still not shipped and with no slip signal yet. Beneath the timeline, a two-node catch-22 loop drawn as a cycle: node one, the weights are held for safety because of an emergent exploit-chaining capability; node two, the vendor's own cyber claims cannot be independently verified until the weights are public. An arrow runs from node one to node two labelled the hold blocks the check, and an arrow runs back from node two to node one labelled the check needs the release, so the two open watch-items — does it ship, and is it verified — collapse into the same single dated event. A footer notes that nothing shipped in the window, the Intelligence Index is unchanged, and the whole board is waiting on one date three days out.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .sect  { fill:#334155; font-size:13.5px; font-weight:700; }
+    .lab   { fill:#475569; font-size:12.5px; }
+    .labm  { fill:#64748b; font-size:11.5px; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .axis  { stroke:#94a3b8; stroke-width:1.5; }
+    .amb   { fill:#b45309; font-size:12.5px; font-weight:700; }
+    .ambt  { fill:#92400e; font-size:11.5px; }
+    .sky   { fill:#0284c7; font-size:12.5px; font-weight:700; }
+    .skyt  { fill:#0369a1; font-size:11.5px; }
+    .rose  { fill:#be123c; font-size:12.5px; font-weight:700; }
+    .roset { fill:#9f1239; font-size:11.5px; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The holding pattern — one dated event, three days out</text>
+  <text x="40" y="55" class="sub">Quietest window of the series: nothing shipped, the Index is unchanged, and the whole board waits on GLM-5.3's weights gate</text>
+
+  <!-- ============ TOP: frozen ceiling band ============ -->
+  <rect x="40" y="76" width="840" height="66" rx="8" fill="#f59e0b" opacity=".10"/>
+  <rect x="40" y="76" width="840" height="66" rx="8" fill="none" stroke="#d97706" stroke-width="1.3" stroke-dasharray="6 4" opacity=".8"/>
+  <text x="56" y="98" class="amb">❄ CLOSED CEILING — frozen a 7th straight brief</text>
+  <text x="56" y="118" class="ambt">Opus 5  Index 63  (#1, uncut $5/$25)   ·   Fable 5  62.1   ·   Grok 4.6  60.9</text>
+  <text x="56" y="134" class="ambt">No Index-64 model · no flagship price cut since Jul 24 (~5 weeks) · Gemini 3.5 Pro still absent</text>
+
+  <!-- ============ MIDDLE: countdown timeline ============ -->
+  <text x="40" y="182" class="sect">The one live thread — GLM-5.3 open-weights gate</text>
+
+  <!-- baseline -->
+  <line x1="90" y1="238" x2="830" y2="238" class="axis"/>
+  <path d="M826 234 L834 238 L826 242 Z" fill="#94a3b8"/>
+
+  <!-- Aug 14 launch -->
+  <circle cx="130" cy="238" r="6" fill="#64748b"/>
+  <text x="130" y="220" class="tick" text-anchor="middle">Aug 14</text>
+  <text x="130" y="262" class="labm" text-anchor="middle">launched</text>
+  <text x="130" y="277" class="labm" text-anchor="middle">API-only</text>
+
+  <!-- Aug 25 today -->
+  <circle cx="470" cy="238" r="7" fill="#0ea5e9"/>
+  <circle cx="470" cy="238" r="12" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="470" y="220" class="sky" text-anchor="middle">Aug 25 — TODAY</text>
+  <text x="470" y="262" class="skyt" text-anchor="middle" font-weight="700">T − 3 days</text>
+  <text x="470" y="277" class="skyt" text-anchor="middle">no slip signal yet</text>
+
+  <!-- Aug 28 gate -->
+  <line x1="790" y1="214" x2="790" y2="262" stroke="#be123c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <circle cx="790" cy="238" r="7" fill="none" stroke="#be123c" stroke-width="2"/>
+  <text x="790" y="206" class="rose" text-anchor="middle">Aug 28</text>
+  <text x="790" y="277" class="roset" text-anchor="middle">weights gate</text>
+
+  <!-- ============ BOTTOM: catch-22 loop ============ -->
+  <text x="40" y="330" class="sect">Why "does it ship?" and "is it verified?" are now the same question</text>
+
+  <!-- node 1 -->
+  <rect x="70" y="352" width="330" height="96" rx="10" fill="#0ea5e9" opacity=".10"/>
+  <rect x="70" y="352" width="330" height="96" rx="10" fill="none" stroke="#0284c7" stroke-width="1.3"/>
+  <text x="235" y="382" class="sky" text-anchor="middle">① Weights HELD for safety</text>
+  <text x="235" y="404" class="skyt" text-anchor="middle">emergent exploit-chaining found in</text>
+  <text x="235" y="420" class="skyt" text-anchor="middle">Z.ai's own eval — held ~2 wks to harden</text>
+  <text x="235" y="438" class="skyt" text-anchor="middle" font-weight="700">target ≈ Aug 28</text>
+
+  <!-- node 2 -->
+  <rect x="520" y="352" width="330" height="96" rx="10" fill="#be123c" opacity=".08"/>
+  <rect x="520" y="352" width="330" height="96" rx="10" fill="none" stroke="#be123c" stroke-width="1.3"/>
+  <text x="685" y="382" class="rose" text-anchor="middle">② Claims UNVERIFIABLE</text>
+  <text x="685" y="404" class="roset" text-anchor="middle">CyberGym 84.5 / exploit-chaining are all</text>
+  <text x="685" y="420" class="roset" text-anchor="middle">vendor-claimed — no outside run possible</text>
+  <text x="685" y="438" class="roset" text-anchor="middle" font-weight="700">until the weights are public</text>
+
+  <!-- arrows forming the loop -->
+  <path d="M400 384 L516 384" fill="none" stroke="#64748b" stroke-width="1.6"/>
+  <path d="M512 380 L520 384 L512 388 Z" fill="#64748b"/>
+  <text x="458" y="374" class="labm" text-anchor="middle">hold blocks the check</text>
+
+  <path d="M520 416 L404 416" fill="none" stroke="#64748b" stroke-width="1.6"/>
+  <path d="M408 412 L400 416 L408 420 Z" fill="#64748b"/>
+  <text x="462" y="434" class="labm" text-anchor="middle">check needs the release</text>
+
+  <!-- footer -->
+  <line x1="40" y1="480" x2="880" y2="480" stroke="#94a3b8" stroke-width="1" opacity=".5"/>
+  <text x="40" y="502" class="labm">The same drop is both the resolution and the first chance to check it — three outcomes for Aug 28: full weights · a hardened/capability-restricted</text>
+  <text x="40" y="519" class="labm">checkpoint · or a slip (the way Qwen3.8-Max's open drop slipped twice). No new model shipped since GLM-5.2 Turbo (Aug 17).</text>
+</svg>
