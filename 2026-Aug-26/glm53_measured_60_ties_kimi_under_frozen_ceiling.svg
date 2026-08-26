@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3 independently measured at Index 60, tying Kimi K3 as top open-weights model, three points under a frozen closed ceiling</title>
+  <desc id="desc">A horizontal bar chart of the Artificial Analysis Intelligence Index in a zoomed 42-to-63 range. A shaded amber band across the top three bars marks the closed ceiling, frozen for a seventh straight brief: Claude Opus 5 at 63 (number one, uncut), Claude Fable 5 at 62.1, and Grok 4.6 at 60.9. Just below the band, highlighted in sky blue, is GLM-5.3 newly measured at 60 by Artificial Analysis, up seven points from GLM-5.2, and tagged "weights still held, not on Hugging Face, target about August 28." Tied with it at 60 is Kimi K3, the previous top open model; a bracket labels the pair the joint top open-weights models at 60, now only three points behind Opus 5. Below them, faded, are Qwen3.8-Max at 56, GLM-5.2 at 53, and DeepSeek V4 Pro at 44, showing the ground GLM-5.3 covered on post-training alone. A footer notes the standout is agentic: GLM-5.3's GDPval-AA v2 Elo rose from 1524 to 1770, a 246-point jump placing it among frontier models, at the cost of more verbosity, about 18,700 output tokens per task. The general Index is now third-party measured; the model's cyber-security figures remain vendor-claimed with no independent replication.</desc>
+
+  <style>
+    .axis  { stroke:#94a3b8; stroke-width:1; }
+    .grid  { stroke:#94a3b8; stroke-width:1; stroke-dasharray:2 4; opacity:.4; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .name  { fill:#475569; font-size:13.5px; font-weight:600; }
+    .val   { fill:#475569; font-size:12.5px; font-weight:700; }
+    .labm  { fill:#64748b; font-size:11.5px; }
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .hi        { fill:#0ea5e9; }
+    .histroke  { stroke:#0284c7; stroke-width:1.5; fill:none; }
+    .hilab     { fill:#0284c7; font-size:12px; font-weight:700; }
+    .open  { fill:#0d9488; opacity:.85; }
+    .openlab { fill:#0f766e; font-size:12px; font-weight:700; }
+    .base  { fill:#94a3b8; opacity:.5; }
+    .amb   { fill:#b45309; font-size:12px; font-weight:700; }
+    .ambt  { fill:#92400e; font-size:11.5px; }
+    .brk   { stroke:#0284c7; stroke-width:1.4; fill:none; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The open frontier gets measured to within 3 points — GLM-5.3 lands at Index 60</text>
+  <text x="40" y="55" class="sub">Artificial Analysis Intelligence Index · GLM-5.3 third-party measured (≈Aug 23–24), ties Kimi K3 for top open model · closed ceiling frozen a 7th brief</text>
+
+  <!-- x scale: v -> x = 200 + (v-42)*27.6 ; baseline x=200 (=42), 63 -> 780 -->
+  <!-- gridlines at 45,50,55,60 -->
+  <g>
+    <line x1="282.8" y1="80" x2="282.8" y2="470" class="grid"/><text x="282.8" y="490" class="tick" text-anchor="middle">45</text>
+    <line x1="420.8" y1="80" x2="420.8" y2="470" class="grid"/><text x="420.8" y="490" class="tick" text-anchor="middle">50</text>
+    <line x1="558.8" y1="80" x2="558.8" y2="470" class="grid"/><text x="558.8" y="490" class="tick" text-anchor="middle">55</text>
+    <line x1="696.8" y1="80" x2="696.8" y2="470" class="grid"/><text x="696.8" y="490" class="tick" text-anchor="middle">60</text>
+  </g>
+  <text x="420" y="512" class="labm" text-anchor="middle">Artificial Analysis Intelligence Index (zoomed 42–63)</text>
+
+  <!-- ceiling band behind top 3 rows (y 96..214) -->
+  <rect x="196" y="92" width="620" height="120" rx="8" fill="#b45309" opacity=".08"/>
+  <rect x="196" y="92" width="620" height="120" rx="8" fill="none" stroke="#b45309" stroke-width="1.1" opacity=".55"/>
+  <text x="806" y="110" class="amb" text-anchor="end">❄️ frozen ceiling — 7th brief</text>
+  <text x="806" y="126" class="ambt" text-anchor="end">no Index-64, no flagship cut since Jul 24</text>
+
+  <!-- baseline axis -->
+  <line x1="200" y1="80" x2="200" y2="470" class="axis"/>
+
+  <!-- Rows: top y for each bar, height 22 -->
+  <!-- Row 1: Opus 5 63 -> x=780 -->
+  <text x="188" y="150" class="name" text-anchor="end">Claude Opus 5</text>
+  <rect x="200" y="138" width="580" height="22" rx="3" fill="#b45309" opacity=".55"/>
+  <text x="788" y="155" class="val">63 · #1, uncut</text>
+
+  <!-- Row 2: Fable 5 62.1 -> x=755.0 -->
+  <text x="188" y="190" class="name" text-anchor="end">Claude Fable 5</text>
+  <rect x="200" y="178" width="555" height="22" rx="3" fill="#b45309" opacity=".42"/>
+  <text x="763" y="195" class="val">62.1</text>
+
+  <!-- Row 3: Grok 4.6 60.9 -> x=724.6 -->
+  <text x="188" y="230" class="name" text-anchor="end">Grok 4.6</text>
+  <rect x="200" y="218" width="524.6" height="22" rx="3" fill="#b45309" opacity=".42"/>
+  <text x="733" y="235" class="val">60.9</text>
+
+  <!-- Row 4: GLM-5.3 60 -> x=696.8 (HIGHLIGHT) -->
+  <text x="188" y="270" class="hilab" text-anchor="end" font-size="13.5">GLM-5.3</text>
+  <rect x="200" y="258" width="496.8" height="22" rx="3" class="hi"/>
+  <rect x="200" y="258" width="496.8" height="22" rx="3" class="histroke"/>
+  <text x="705" y="275" class="hilab">60 ▲+7 vs 5.2</text>
+
+  <!-- Row 5: Kimi K3 60 -> x=696.8 (open) -->
+  <text x="188" y="310" class="openlab" text-anchor="end" font-size="13.5">Kimi K3</text>
+  <rect x="200" y="298" width="496.8" height="22" rx="3" class="open"/>
+  <text x="705" y="315" class="openlab">60</text>
+
+  <!-- bracket grouping GLM-5.3 + Kimi K3 -->
+  <path d="M726 258 h14 v62 h-14" class="brk"/>
+  <text x="748" y="285" class="hilab">joint top</text>
+  <text x="748" y="300" class="hilab">open weights</text>
+  <text x="748" y="315" class="labm">3 pts under #1</text>
+
+  <!-- Row 6: Qwen3.8-Max 56 -> x=586.4 -->
+  <text x="188" y="350" class="name" text-anchor="end">Qwen3.8-Max</text>
+  <rect x="200" y="338" width="386.4" height="22" rx="3" class="base"/>
+  <text x="594" y="355" class="val">56</text>
+
+  <!-- Row 7: GLM-5.2 53 -> x=503.6 -->
+  <text x="188" y="390" class="name" text-anchor="end">GLM-5.2 (prev.)</text>
+  <rect x="200" y="378" width="303.6" height="22" rx="3" class="base"/>
+  <text x="511" y="395" class="val">53</text>
+
+  <!-- Row 8: DeepSeek V4 Pro 44 -> x=255.2 -->
+  <text x="188" y="430" class="name" text-anchor="end">DeepSeek V4 Pro</text>
+  <rect x="200" y="418" width="55.2" height="22" rx="3" class="base"/>
+  <text x="263" y="435" class="val">44</text>
+
+  <!-- arrow: GLM-5.2 -> GLM-5.3 gain on post-training alone -->
+  <line x1="503.6" y1="389" x2="503.6" y2="300" stroke="#0284c7" stroke-width="1.2" stroke-dasharray="3 3" opacity=".7"/>
+  <path d="M499.6 304 L503.6 296 L507.6 304 Z" fill="#0284c7" opacity=".8"/>
+  <text x="470" y="345" class="hilab" text-anchor="end" font-size="11">+7 on post-</text>
+  <text x="470" y="358" class="hilab" text-anchor="end" font-size="11">training alone</text>
+
+  <!-- ============ FOOTER ============ -->
+  <rect x="40" y="522" width="840" height="0" fill="none"/>
+  <line x1="40" y1="470" x2="880" y2="470" class="axis" opacity=".5"/>
+  <text x="40" y="512" class="sect">The standout is agentic — and the general Index is now third-party, but the cyber numbers still aren't</text>
+  <text x="40" y="533" class="ambt" font-size="12">GDPval-AA v2 Elo <tspan class="hilab">1524 → 1770 (+246)</tspan> — among frontier models · cost: ~18.7k output tokens/task (verbose) · weights still held (≈Aug 28), so "leading open model" is pending the drop · CyberGym/ExploitBench figures remain vendor-claimed, no independent run.</text>
+</svg>
