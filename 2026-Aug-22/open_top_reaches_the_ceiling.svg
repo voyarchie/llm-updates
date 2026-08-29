@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" role="img" aria-label="Intelligence Index chart showing the top open-weights score reaching within three points of the frozen closed ceiling.">
+  <title>The open-weights top reaches within 3 points of the frozen ceiling</title>
+
+  <!-- palette: slate #8a94a6 (text), amber #e0a02a (closed ceiling), sky #35a3e0 (open), gray dashed guides -->
+
+  <text x="380" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#8a94a6">The best open score reaches the ceiling's doorstep — 2026-Aug-22</text>
+  <text x="380" y="56" text-anchor="middle" font-size="13" fill="#8a94a6">Artificial Analysis Intelligence Index v4.1.1 (max effort). Closed ceiling frozen for a 6th straight brief.</text>
+
+  <!-- Y axis -->
+  <line x1="150" y1="80" x2="150" y2="440" stroke="#8a94a6" stroke-width="1.5"/>
+  <text x="70" y="264" text-anchor="middle" font-size="12" fill="#8a94a6" transform="rotate(-90 70 264)">Intelligence Index (max effort)</text>
+
+  <!-- gridlines / ticks: index 50..64 -->
+  <!-- y = 440 - (index-50)*25.714 -->
+  <g font-size="11" fill="#8a94a6">
+    <line x1="146" y1="440" x2="150" y2="440" stroke="#8a94a6" stroke-width="1"/><text x="140" y="444" text-anchor="end">50</text>
+    <line x1="146" y1="311.4" x2="150" y2="311.4" stroke="#8a94a6" stroke-width="1"/><text x="140" y="315" text-anchor="end">55</text>
+    <line x1="146" y1="182.9" x2="150" y2="182.9" stroke="#8a94a6" stroke-width="1"/><text x="140" y="187" text-anchor="end">60</text>
+    <line x1="146" y1="80" x2="150" y2="80" stroke="#8a94a6" stroke-width="1"/><text x="140" y="84" text-anchor="end">64</text>
+  </g>
+
+  <!-- Frozen closed ceiling band: index 60.9 (Grok) to 63 (Opus5) -->
+  <!-- 63 -> y=85.7 ; 60.9 -> y=139.7 -->
+  <rect x="150" y="85.7" width="560" height="54" fill="#e0a02a" fill-opacity="0.13" stroke="#e0a02a" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="700" y="103" text-anchor="end" font-size="12" font-weight="700" fill="#e0a02a">CLOSED CEILING — frozen 6th brief</text>
+  <text x="700" y="120" text-anchor="end" font-size="11" fill="#e0a02a">no Index-64 · no flagship cut since Jul 24</text>
+
+  <!-- Closed ceiling points (amber) -->
+  <!-- Opus 5 = 63 -->
+  <circle cx="250" cy="85.7" r="6" fill="#e0a02a"/>
+  <text x="264" y="82" font-size="12" font-weight="700" fill="#8a94a6">Claude Opus 5 — 63  (#1, uncut $5/$25)</text>
+  <!-- Fable 5 = 62.1 -->
+  <circle cx="250" cy="108.9" r="5" fill="#e0a02a"/>
+  <text x="264" y="112" font-size="11.5" fill="#8a94a6">Claude Fable 5 — 62.1</text>
+  <!-- Grok 4.6 = 60.9 -->
+  <circle cx="250" cy="139.7" r="5" fill="#e0a02a"/>
+  <text x="264" y="143" font-size="11.5" fill="#8a94a6">Grok 4.6 — 60.9</text>
+
+  <!-- The 3-point gap bracket between 63 and 60 -->
+  <line x1="205" y1="85.7" x2="205" y2="182.9" stroke="#8a94a6" stroke-width="1.2"/>
+  <line x1="200" y1="85.7" x2="205" y2="85.7" stroke="#8a94a6" stroke-width="1.2"/>
+  <line x1="200" y1="182.9" x2="205" y2="182.9" stroke="#8a94a6" stroke-width="1.2"/>
+  <text x="196" y="138" text-anchor="end" font-size="11.5" font-weight="700" fill="#8a94a6">gap = 3</text>
+
+  <!-- Open top line at 60 (GLM-5.3 = Kimi K3) -->
+  <!-- 60 -> y=182.9 -->
+  <line x1="150" y1="182.9" x2="710" y2="182.9" stroke="#35a3e0" stroke-width="1.4" stroke-dasharray="2 3"/>
+  <!-- GLM-5.3 highlighted (hollow = measured but weights held) -->
+  <circle cx="430" cy="182.9" r="8" fill="#35a3e0" fill-opacity="0.20" stroke="#35a3e0" stroke-width="2.5"/>
+  <text x="446" y="179" font-size="12.5" font-weight="700" fill="#35a3e0">GLM-5.3 — 60  (weights held to ~Aug 28)</text>
+  <text x="446" y="195" font-size="10.5" fill="#8a94a6">hollow = independently measured, not yet downloadable</text>
+  <!-- Kimi K3 (open, runnable) solid -->
+  <circle cx="300" cy="182.9" r="6" fill="#35a3e0"/>
+  <text x="240" y="172" text-anchor="middle" font-size="11.5" fill="#8a94a6">Kimi K3 — 60</text>
+
+  <!-- GLM-5.2 at 53, arrow +7 up to 60 -->
+  <!-- 53 -> y=311.4 -->
+  <circle cx="430" cy="311.4" r="5" fill="#35a3e0" fill-opacity="0.55"/>
+  <text x="446" y="315" font-size="11.5" fill="#8a94a6">GLM-5.2 — 53  (same 743B base)</text>
+  <line x1="430" y1="305" x2="430" y2="193" stroke="#35a3e0" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="405" y="255" text-anchor="end" font-size="11.5" font-weight="700" fill="#35a3e0">+7</text>
+  <text x="405" y="270" text-anchor="end" font-size="10" fill="#8a94a6">post-training</text>
+  <text x="405" y="282" text-anchor="end" font-size="10" fill="#8a94a6">only</text>
+
+  <!-- Qwen3.8-27B at 52 (reference, prior brief) -->
+  <!-- 52 -> y=337.1 -->
+  <circle cx="300" cy="337.1" r="5" fill="#35a3e0" fill-opacity="0.55"/>
+  <text x="286" y="341" text-anchor="end" font-size="11" fill="#8a94a6">Qwen3.8-27B — 52 (Aug-17)</text>
+
+  <!-- open-class median 35 reference note (below axis window) -->
+  <text x="160" y="415" font-size="11" fill="#8a94a6">open-model class median ≈ 35 — both open leaders sit ~25 pts above it</text>
+
+  <!-- arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#35a3e0"/>
+    </marker>
+  </defs>
+
+  <!-- footnote -->
+  <text x="380" y="470" text-anchor="middle" font-size="11.5" fill="#8a94a6">The open top jumped +7 to tie Kimi K3 at 60 — within 3 of the frozen closed ceiling — but GLM-5.3's weights stay locked until ~Aug 28.</text>
+  <text x="380" y="492" text-anchor="middle" font-size="10.5" fill="#8a94a6">Sources: Artificial Analysis (v4.1.1) · Unite.AI · officechai · BenchLM (180 models). Amber = closed. Sky = open. Hollow = measured but not yet downloadable.</text>
+</svg>
