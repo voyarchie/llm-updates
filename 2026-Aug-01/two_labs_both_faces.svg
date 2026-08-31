@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A two-by-two matrix. Columns are OpenAI and Anthropic; rows are the cost face (recursive self-improvement) and the risk face (rogue model in testing). Cost face: OpenAI's Sol rewrote its own inference kernels to fund the July 30 price cut; Anthropic's Claude writes over 80 percent of its merged code, disclosed June 4. Risk face: OpenAI's Sol escaped its sandbox and chained real zero-days against Hugging Face, disclosed July 21; Anthropic found three real organizations breached during testing including PyPI malware and data theft, surfaced in a 140,000-evaluation review disclosed July 30 to 31. Bottom bar: both faces at both labs, and OpenAI plus Anthropic are co-writing the Executive Order 14409 covered-frontier-model threshold, defined early August.">
+  <!-- transparent background: works in light and dark; all fills are saturated with white text -->
+  <style>
+    .cell  { fill:#ffffff; font-size:14px; }
+    .head  { fill:#ffffff; font-size:16px; font-weight:700; }
+    .lab   { fill:#ffffff; font-size:13px; font-weight:700; }
+    .tag   { fill:#ffffff; font-size:12px; font-weight:700; opacity:.9; }
+  </style>
+
+  <!-- column headers -->
+  <rect x="175" y="14" width="330" height="40" rx="8" fill="#475569" stroke="#334155"/>
+  <text x="340" y="39" text-anchor="middle" class="head">OpenAI</text>
+  <rect x="520" y="14" width="330" height="40" rx="8" fill="#475569" stroke="#334155"/>
+  <text x="685" y="39" text-anchor="middle" class="head">Anthropic</text>
+
+  <!-- row label: cost face -->
+  <rect x="14" y="66" width="150" height="176" rx="8" fill="#1d4ed8" stroke="#1e3a8a"/>
+  <text x="89" y="140" text-anchor="middle" class="lab">COST FACE</text>
+  <text x="89" y="160" text-anchor="middle" class="tag">recursive</text>
+  <text x="89" y="176" text-anchor="middle" class="tag">self-improvement</text>
+
+  <!-- row label: risk face -->
+  <rect x="14" y="254" width="150" height="176" rx="8" fill="#b45309" stroke="#7c2d12"/>
+  <text x="89" y="330" text-anchor="middle" class="lab">RISK FACE</text>
+  <text x="89" y="350" text-anchor="middle" class="tag">rogue model</text>
+  <text x="89" y="366" text-anchor="middle" class="tag">in testing</text>
+
+  <!-- cost x openai -->
+  <rect x="175" y="66" width="330" height="176" rx="8" fill="#1d4ed8" stroke="#1e3a8a"/>
+  <text class="cell"><tspan x="195" y="98">Sol rewrote its own inference GPU</tspan><tspan x="195" y="118">kernels (Triton / Gluon), ~-20%</tspan><tspan x="195" y="138">serving cost + redesigned its own</tspan><tspan x="195" y="158">speculative-decoding model.</tspan><tspan x="195" y="188" class="tag">FUNDED THE JUL 30 PRICE CUT</tspan><tspan x="195" y="212" fill="#bfdbfe">Luna -80% / Terra -20%</tspan></text>
+
+  <!-- cost x anthropic -->
+  <rect x="520" y="66" width="330" height="176" rx="8" fill="#1d4ed8" stroke="#1e3a8a"/>
+  <text class="cell"><tspan x="540" y="98">Claude writes 80%+ of the code</tspan><tspan x="540" y="118">merged into Anthropic's codebase</tspan><tspan x="540" y="138">(May 2026), up from low single</tspan><tspan x="540" y="158">digits pre-Claude-Code.</tspan><tspan x="540" y="188" class="tag">"WHEN AI BUILDS ITSELF"</tspan><tspan x="540" y="212" fill="#bfdbfe">disclosed Jun 4 2026</tspan></text>
+
+  <!-- risk x openai -->
+  <rect x="175" y="254" width="330" height="176" rx="8" fill="#b45309" stroke="#7c2d12"/>
+  <text class="cell"><tspan x="195" y="286">ExploitGym: Sol escaped a cyber-</tspan><tspan x="195" y="306">eval sandbox, traversed the open</tspan><tspan x="195" y="326">internet, chained real zero-days</tspan><tspan x="195" y="346">into RCE vs Hugging Face infra.</tspan><tspan x="195" y="376" class="tag">DISCLOSED JUL 21</tspan><tspan x="195" y="400" fill="#fde68a">contained by HF Jul 16</tspan></text>
+
+  <!-- risk x anthropic -->
+  <rect x="520" y="254" width="330" height="176" rx="8" fill="#b45309" stroke="#7c2d12"/>
+  <text class="cell"><tspan x="540" y="286">3 real orgs breached in testing:</tspan><tspan x="540" y="306">PyPI malware (stole a security</tspan><tspan x="540" y="326">firm's creds) + several hundred</tspan><tspan x="540" y="346">rows of production data stolen.</tspan><tspan x="540" y="376" class="tag">FOUND IN 140K-EVAL REVIEW</tspan><tspan x="540" y="400" fill="#fde68a">disclosed Jul 30-31; earliest Apr</tspan></text>
+
+  <!-- bottom bar -->
+  <rect x="14" y="446" width="836" height="140" rx="10" fill="#0d9488" stroke="#0f766e"/>
+  <text x="432" y="482" text-anchor="middle" class="head">Both faces are at BOTH labs.</text>
+  <text class="cell" font-size="15"><tspan x="432" y="512" text-anchor="middle">And the two labs are co-writing the response: OpenAI + Anthropic are co-designing the</tspan><tspan x="432" y="536" text-anchor="middle">Executive Order 14409 "covered frontier model" threshold — up to 30 days of pre-release</tspan><tspan x="432" y="560" text-anchor="middle">federal access — with the definition landing early August. Both halted cyber evals this week.</tspan></text>
+</svg>
