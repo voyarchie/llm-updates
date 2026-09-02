@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The frozen Artificial Analysis Intelligence Index ceiling breaks: Claude Fable 5.1 scores 66, three points above Claude Opus 5 at 63, the first model over 63 since July 24</title>
+  <desc id="desc">A horizontal bar chart of the Artificial Analysis Intelligence Index. For eight straight briefs the top of the chart was a frozen amber band around 61 to 63: Claude Opus 5 at 63 was number one and uncut, with Claude Fable 5 at 62, GPT-5.6 Sol at 61 and Grok 4.6 at 61 beneath it, and no model had crossed 63 since Opus 5 took the lead on July 24. This window Claude Fable 5.1, released September 1, breaks that ceiling with a teal bar reaching 66 at max effort — the highest score ever measured, plus three over Opus 5 and plus four over Fable 5 — ending the freeze after roughly seven weeks. Below the ceiling band sit the open-weights models measured at 60: GLM-5.3 flagship and Kimi K3 both at 60, with GLM-5.3-Flash at 57. A callout notes that Fable 5.1 keeps Fable 5's ten-dollar and fifty-dollar per million input and output pricing but cuts cache reads seventy-five percent from one dollar to twenty-five cents per million, for roughly twenty-five to forty-five percent lower practical cost, even though its per-task cost of 3.76 dollars is twenty percent above Fable 5 because it emits about 1.7 times the output tokens. A footer states the through-line: the frontier finally moved, and it moved by governing capability by tier rather than gating it wholesale — Fable 5.1 shipped generally available alongside Mythos 5.1, the same model behind vetted cyber and biology safeguards, while Z.ai shipped the GLM-5.3 flagship weights open on August 28 under a bespoke license whose security-review clause triggers only for Model-as-a-Service operators above ten billion dollars in revenue.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .name  { fill:#475569; font-size:13px; font-weight:700; }
+    .meta  { fill:#64748b; font-size:11px; }
+    .val   { font-size:13px; font-weight:700; }
+    .amb   { fill:#b45309; }
+    .teal  { fill:#0f766e; }
+    .tealb { fill:#0d9488; }
+    .slate { fill:#64748b; }
+    .foot  { fill:#64748b; font-size:12px; }
+    .axl   { stroke:#94a3b8; stroke-width:1; opacity:.5; }
+    .grid  { stroke:#94a3b8; stroke-width:1; opacity:.25; stroke-dasharray:3 3; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The frozen ceiling breaks — Fable 5.1 clears 63 to 66, first over the line since Jul 24</text>
+  <text x="40" y="55" class="sub">Artificial Analysis Intelligence Index (max effort). After 8 briefs of no Index-64 model, a new closed #1 finally lands</text>
+
+  <!-- chart geometry: x0=250 is score 50; each point = 12px; score 68 -> x=250+216=466... use scale 20px/pt from 50 -->
+  <!-- axis baseline -->
+  <line x1="250" y1="98" x2="250" y2="404" class="axl"/>
+
+  <!-- gridlines at 55, 60, 63, 66 (x = 250 + (score-50)*18) -->
+  <line x1="340" y1="98" x2="340" y2="404" class="grid"/>
+  <text x="340" y="420" class="meta" text-anchor="middle">55</text>
+  <line x1="430" y1="98" x2="430" y2="404" class="grid"/>
+  <text x="430" y="420" class="meta" text-anchor="middle">60</text>
+  <line x1="484" y1="98" x2="484" y2="404" class="grid"/>
+  <text x="484" y="420" class="meta" text-anchor="middle">63</text>
+  <line x1="538" y1="90" x2="538" y2="404" class="grid" stroke-dasharray="0"/>
+  <text x="538" y="420" class="teal meta" text-anchor="middle" font-weight="700">66</text>
+  <text x="250" y="420" class="meta" text-anchor="middle">50</text>
+
+  <!-- frozen-ceiling band annotation: 61..63 shaded amber -->
+  <rect x="448" y="98" width="36" height="306" fill="#b45309" opacity=".07"/>
+  <text x="466" y="90" class="amb meta" text-anchor="middle" font-weight="700">frozen band 61–63 (8 briefs)</text>
+
+  <!-- ===== BARS ===== bar height 26, gap to 40 -->
+  <!-- Fable 5.1 = 66 (teal, the breakout) -->
+  <rect x="250" y="112" width="288" height="30" rx="4" fill="#0d9488" opacity=".85"/>
+  <text x="240" y="132" class="teal name" text-anchor="end">Claude Fable 5.1</text>
+  <text x="548" y="132" class="teal val">66</text>
+  <text x="240" y="146" class="meta" text-anchor="end">NEW · Sep 1 · new #1</text>
+
+  <!-- Opus 5 = 63 (amber, prior #1) -->
+  <rect x="250" y="158" width="234" height="26" rx="4" fill="#b45309" opacity=".55"/>
+  <text x="240" y="176" class="amb name" text-anchor="end">Claude Opus 5</text>
+  <text x="490" y="176" class="amb val">63</text>
+  <text x="240" y="190" class="meta" text-anchor="end">prior #1 since Jul 24 · uncut</text>
+
+  <!-- Fable 5 = 62 -->
+  <rect x="250" y="202" width="216" height="24" rx="4" fill="#64748b" opacity=".45"/>
+  <text x="240" y="219" class="name" text-anchor="end">Claude Fable 5</text>
+  <text x="472" y="219" class="slate val">62</text>
+
+  <!-- GPT-5.6 Sol = 61 -->
+  <rect x="250" y="234" width="198" height="24" rx="4" fill="#64748b" opacity=".40"/>
+  <text x="240" y="251" class="name" text-anchor="end">GPT-5.6 Sol</text>
+  <text x="454" y="251" class="slate val">61</text>
+
+  <!-- Grok 4.6 = 61 -->
+  <rect x="250" y="266" width="198" height="24" rx="4" fill="#64748b" opacity=".40"/>
+  <text x="240" y="283" class="name" text-anchor="end">Grok 4.6</text>
+  <text x="454" y="283" class="slate val">61</text>
+
+  <!-- GLM-5.3 flagship = 60 (open) -->
+  <rect x="250" y="298" width="180" height="24" rx="4" fill="#0d9488" opacity=".35"/>
+  <text x="240" y="315" class="name" text-anchor="end">GLM-5.3 (flagship)</text>
+  <text x="436" y="315" class="tealb val">60</text>
+  <text x="240" y="329" class="meta" text-anchor="end">open weights · Aug 28</text>
+
+  <!-- Kimi K3 = 60 (open) -->
+  <rect x="250" y="336" width="180" height="24" rx="4" fill="#0d9488" opacity=".35"/>
+  <text x="240" y="353" class="name" text-anchor="end">Kimi K3</text>
+  <text x="436" y="353" class="tealb val">60</text>
+  <text x="240" y="367" class="meta" text-anchor="end">open weights</text>
+
+  <!-- GLM-5.3-Flash = 57 (open) -->
+  <rect x="250" y="374" width="126" height="24" rx="4" fill="#0d9488" opacity=".30"/>
+  <text x="240" y="391" class="name" text-anchor="end">GLM-5.3-Flash</text>
+  <text x="382" y="391" class="tealb val">57</text>
+  <text x="240" y="405" class="meta" text-anchor="end">open · MIT · Aug 26</text>
+
+  <!-- breakout arrow from 63 line to 66 bar -->
+  <path d="M484 127 L 534 127" stroke="#0d9488" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 z" fill="#0d9488"/>
+    </marker>
+  </defs>
+  <text x="600" y="123" class="teal" font-size="12" font-weight="700">+3 over Opus 5</text>
+  <text x="600" y="139" class="slate" font-size="11.5">+4 over Fable 5 · ends the freeze</text>
+
+  <!-- pricing callout -->
+  <rect x="600" y="200" width="292" height="118" rx="10" fill="#0d9488" opacity=".06"/>
+  <rect x="600" y="200" width="292" height="118" rx="10" fill="none" stroke="#0d9488" stroke-width="1.1" opacity=".6"/>
+  <text x="616" y="222" class="teal sect">Cost: cheaper to run, not cheaper on the sticker</text>
+  <text x="616" y="243" class="foot">Sticker unchanged vs Fable 5: <tspan fill="#334155" font-weight="700">$10 / $50</tspan> per 1M</text>
+  <text x="616" y="262" class="foot">Cache reads cut <tspan class="teal" font-weight="700">75%</tspan>: $1 → <tspan class="teal" font-weight="700">$0.25</tspan> / 1M</text>
+  <text x="616" y="281" class="foot">→ ~<tspan fill="#334155" font-weight="700">25–45%</tspan> lower practical cost</text>
+  <text x="616" y="303" class="meta">But per-task cost $3.76 (max) = +20% vs Fable 5</text>
+  <text x="616" y="315" class="meta">— it emits ~1.7× the output tokens</text>
+
+  <!-- ===== FOOTER ===== -->
+  <line x1="40" y1="448" x2="880" y2="448" class="axl"/>
+  <text x="40" y="470" class="sect">The through-line: the frontier moved by governing capability BY TIER, not gating it wholesale</text>
+  <text x="40" y="490" class="foot"><tspan class="teal" font-weight="700">Anthropic</tspan> shipped Fable 5.1 (GA) + <tspan fill="#334155" font-weight="700">Mythos 5.1</tspan> — the SAME model behind vetted cyber/bio safeguards (trusted-access programs)</text>
+  <text x="40" y="510" class="foot"><tspan class="tealb" font-weight="700">Z.ai</tspan> shipped the GLM-5.3 flagship weights open Aug 28 under a bespoke license — security review triggers only for MaaS operators &gt; <tspan fill="#334155" font-weight="700">$10B</tspan> revenue</text>
+  <text x="40" y="532" class="meta">Artificial Analysis Intelligence Index (v4.1.1), max effort · scores third-party (AA) · compiled Wed Sep 2 2026 (Los Angeles)</text>
+</svg>
