@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 588" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Governing frontier cyber capability by tier goes from a two-lab rhyme to a four-lab industry pattern in one window</title>
+  <desc id="desc">A two-column grid. Each of four frontier labs ships an open, general-access tier on the left and a gated cyber tier on the right. The top two rows, Anthropic and Z.ai, were identified in the September 2 brief as a two-lab rhyme: Anthropic shipped Fable 5.1 generally available alongside Mythos 5.1 behind vetted cyber and biology safeguards, and Z.ai shipped GLM-5.3-Flash under MIT alongside the GLM-5.3 flagship weights under a bespoke license whose security review triggers only for Model-as-a-Service operators above ten billion dollars in revenue. The bottom two rows, OpenAI and Google, are new this window. OpenAI declared its next major model Astra to be the first model ever at its Critical cybersecurity tier under the Preparedness Framework, scoring a perfect ExploitBench and finding two zero-day vulnerabilities on its own, and said it will limit access to those cyber capabilities and ship the model soon; Astra is a capability declaration, not yet a released model, and its cyber figures are OpenAI's own. Google shipped Gemini 3.8 Flash at Intelligence Index 59 generally available alongside a 3.8 Flash Cyber variant restricted to Fairwind Program defenders. The footer notes the through-line: four frontier labs now split cyber access by tier, and Google still shipped a Flash rather than the long-overdue Gemini 3.5 Pro, now its roughly fifth missed target and the last frozen frontier thread.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .colh  { fill:#475569; font-size:12.5px; font-weight:700; }
+    .lab   { fill:#334155; font-size:15px; font-weight:700; }
+    .when  { fill:#64748b; font-size:10.5px; }
+    .pillt { font-size:12.5px; font-weight:700; }
+    .pills { font-size:10.5px; }
+    .teal  { fill:#0f766e; }
+    .amb   { fill:#b45309; }
+    .slate { fill:#64748b; }
+    .foot  { fill:#64748b; font-size:12px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .rule  { stroke:#94a3b8; stroke-width:1; opacity:.5; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">Governance-by-tier stops being a rhyme and becomes the pattern — 4 labs, 1 window</text>
+  <text x="40" y="55" class="sub">Each frontier lab now ships an open general-access tier AND a gated cyber tier. Sep-02 saw 2 labs do it; this window adds 2 more.</text>
+
+  <!-- column headers -->
+  <text x="300" y="88" class="colh teal" text-anchor="middle">◀ OPEN / GENERAL-ACCESS TIER</text>
+  <text x="710" y="88" class="colh amb" text-anchor="middle">GATED CYBER TIER (vetted / restricted) ▶</text>
+
+  <!-- left bracket labels for the two groups -->
+  <line x1="26" y1="104" x2="26" y2="240" stroke="#64748b" stroke-width="2" opacity=".5"/>
+  <text x="20" y="176" class="when" text-anchor="middle" transform="rotate(-90 20 176)">SEP-02 · the rhyme</text>
+  <line x1="26" y1="252" x2="26" y2="392" stroke="#0f766e" stroke-width="2.4" opacity=".8"/>
+  <text x="20" y="322" class="teal when" text-anchor="middle" font-weight="700" transform="rotate(-90 20 322)">SEP-03 · NEW</text>
+
+  <!-- ===== ROW 1: Anthropic (Sep-02) ===== y center 138 -->
+  <text x="44" y="134" class="lab">Anthropic</text>
+  <text x="44" y="150" class="when">Sep 1 · shipped</text>
+  <rect x="150" y="112" width="330" height="52" rx="9" fill="#0d9488" opacity=".10"/>
+  <rect x="150" y="112" width="330" height="52" rx="9" fill="none" stroke="#0d9488" stroke-width="1.1" opacity=".55"/>
+  <text x="166" y="134" class="teal pillt">Fable 5.1 — GA</text>
+  <text x="166" y="152" class="slate pills">relaxed-where-safe · Index 66 · may ID vulns</text>
+  <rect x="510" y="112" width="392" height="52" rx="9" fill="#b45309" opacity=".10"/>
+  <rect x="510" y="112" width="392" height="52" rx="9" fill="none" stroke="#b45309" stroke-width="1.1" opacity=".55"/>
+  <text x="526" y="134" class="amb pillt">Mythos 5.1 — same model, vetted access</text>
+  <text x="526" y="152" class="slate pills">Cyber + Life-Sciences Verification Programs only</text>
+
+  <!-- ===== ROW 2: Z.ai (Sep-02) ===== -->
+  <text x="44" y="204" class="lab">Z.ai</text>
+  <text x="44" y="220" class="when">Aug 26 / 28</text>
+  <rect x="150" y="182" width="330" height="52" rx="9" fill="#0d9488" opacity=".10"/>
+  <rect x="150" y="182" width="330" height="52" rx="9" fill="none" stroke="#0d9488" stroke-width="1.1" opacity=".55"/>
+  <text x="166" y="204" class="teal pillt">GLM-5.3-Flash — MIT, fully open</text>
+  <text x="166" y="222" class="slate pills">Index 57 · consumer-tier · no conditions</text>
+  <rect x="510" y="182" width="392" height="52" rx="9" fill="#b45309" opacity=".10"/>
+  <rect x="510" y="182" width="392" height="52" rx="9" fill="none" stroke="#b45309" stroke-width="1.1" opacity=".55"/>
+  <text x="526" y="204" class="amb pillt">GLM-5.3 flagship — open weights + license clause</text>
+  <text x="526" y="222" class="slate pills">Index 60 · security review only if MaaS revenue &gt; $10B</text>
+
+  <!-- divider between the two groups -->
+  <line x1="40" y1="248" x2="902" y2="248" class="rule" stroke-dasharray="4 4"/>
+
+  <!-- ===== ROW 3: OpenAI (Sep-03 NEW) ===== -->
+  <text x="44" y="274" class="lab">OpenAI</text>
+  <text x="44" y="290" class="when">Sep 1 · declared</text>
+  <text x="44" y="304" class="teal when" font-weight="700">★ NEW</text>
+  <rect x="150" y="252" width="330" height="52" rx="9" fill="#0d9488" opacity=".13"/>
+  <rect x="150" y="252" width="330" height="52" rx="9" fill="none" stroke="#0d9488" stroke-width="1.4" opacity=".75"/>
+  <text x="166" y="274" class="teal pillt">Astra (rest of model) — ships "soon"</text>
+  <text x="166" y="292" class="slate pills">"next major model" · not yet released · no AA Index</text>
+  <rect x="510" y="252" width="392" height="52" rx="9" fill="#b45309" opacity=".14"/>
+  <rect x="510" y="252" width="392" height="52" rx="9" fill="none" stroke="#b45309" stroke-width="1.4" opacity=".8"/>
+  <text x="526" y="274" class="amb pillt">Astra cyber — first-ever "CRITICAL" tier, access limited</text>
+  <text x="526" y="292" class="slate pills">Preparedness Framework · perfect ExploitBench · 2 self-found 0-days</text>
+
+  <!-- ===== ROW 4: Google (Sep-03 NEW) ===== -->
+  <text x="44" y="344" class="lab">Google</text>
+  <text x="44" y="360" class="when">Sep 2 · shipped</text>
+  <text x="44" y="374" class="teal when" font-weight="700">★ NEW</text>
+  <rect x="150" y="322" width="330" height="52" rx="9" fill="#0d9488" opacity=".13"/>
+  <rect x="150" y="322" width="330" height="52" rx="9" fill="none" stroke="#0d9488" stroke-width="1.4" opacity=".75"/>
+  <text x="166" y="344" class="teal pillt">Gemini 3.8 Flash — GA · Index 59</text>
+  <text x="166" y="362" class="slate pills">+3 vs 3.7 Flash · Terminal-Bench 2.1 90.8% · $0.75/$3.75</text>
+  <rect x="510" y="322" width="392" height="52" rx="9" fill="#b45309" opacity=".14"/>
+  <rect x="510" y="322" width="392" height="52" rx="9" fill="none" stroke="#b45309" stroke-width="1.4" opacity=".8"/>
+  <text x="526" y="344" class="amb pillt">3.8 Flash Cyber — Fairwind defenders only</text>
+  <text x="526" y="362" class="slate pills">&gt;70% real-world vuln discovery · CWE-Bench Pareto frontier</text>
+
+  <!-- ===== FOOTER ===== -->
+  <line x1="40" y1="404" x2="902" y2="404" class="rule"/>
+  <text x="40" y="426" class="sect">The through-line: 4 frontier labs now split cyber access by tier — the Sep-02 "rhyme" is the industry default</text>
+  <text x="40" y="447" class="foot"><tspan class="amb" font-weight="700">OpenAI Astra</tspan> is a capability <tspan fill="#334155" font-weight="700">declaration</tspan>, not a shipped model — first ever at OpenAI's "Critical" cyber tier; its cyber figures are OpenAI's own (no independent run)</text>
+  <text x="40" y="467" class="foot"><tspan class="slate" font-weight="700">Google still shipped a Flash, not the Pro</tspan> — Gemini 3.8 Flash (Index 59), while <tspan fill="#334155" font-weight="700">Gemini 3.5 Pro</tspan> stays absent: ~5th missed target, the last frozen frontier thread</text>
+  <text x="40" y="487" class="foot"><tspan class="teal" font-weight="700">The broken ceiling holds</tspan> — Fable 5.1 (Index 66) is still #1; no answer yet, though Opus 5.1 shows staging signals (eap identifiers, no card)</text>
+
+  <!-- caveat strip -->
+  <rect x="40" y="506" width="862" height="58" rx="10" fill="#64748b" opacity=".06"/>
+  <rect x="40" y="506" width="862" height="58" rx="10" fill="none" stroke="#94a3b8" stroke-width="1" opacity=".4"/>
+  <text x="56" y="527" class="foot"><tspan fill="#334155" font-weight="700">Measured vs claimed.</tspan>  Third-party (AA): Gemini 3.8 Flash Index 59; Fable 5.1 66; GLM-5.3 60 / Flash 57.  Verifiable events: 3.8 Flash shipped Sep 2; OpenAI's</text>
+  <text x="56" y="545" class="foot">"Critical" classification + gating decision (Sep 1).  Vendor-claimed, no independent run: Astra's ExploitBench/zero-day figures; Google's 3.8 Flash Cyber discovery rate.</text>
+  <text x="56" y="561" class="when">Astra ≠ confirmed GPT-6.  Compiled Wed Sep 3 2026 (Los Angeles time) · advances only items new since the Sep-02 brief.</text>
+</svg>
