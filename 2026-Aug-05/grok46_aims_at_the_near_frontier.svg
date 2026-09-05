@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="A number line of the Artificial Analysis Intelligence Index from 49 to 62 as of August 5 2026, showing where xAI's about-to-ship Grok 4.6 is aimed. The cheap floor holds DeepSeek V4-Flash at index 50 and GPT-5.6 Luna at index 51. Qwen3.8-Max sits in the middle at a preliminary index 53. The top open model Kimi K3 sits at index 57. The static closed ceiling is GPT-5.6 Sol at 59, Claude Fable 5 at 60, and Claude Opus 5 at 61. Grok 4.6, targeted for August 7 and not yet shipped, is drawn as a hollow dashed marker below the line with an arrow pointing up only as far as Kimi K3's 57 — its stated target is to match or beat Kimi K3, not to reach Opus 5's 61. The region from index 57 to 61 is shaded and labeled as the ceiling gap that remains unanswered.">
+  <title>The first challenger to point up the curve in ~10 days — but Grok 4.6 (target Aug 7, not yet shipped) aims at Kimi K3's 57, not Opus 5's 61; the 57-to-61 ceiling gap stays unanswered</title>
+
+  <!-- theme-neutral palette: medium-slate text/axis reads on light and dark; teal = floor, violet = middle, green = near-frontier target, blue/slate = closed ceiling, orange = the incoming Grok 4.6 (hollow = not yet shipped) -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">A challenger finally points up the curve — but only as far as the open near-frontier</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Artificial Analysis Intelligence Index (v4.1, higher = smarter). Orange = Grok 4.6, xAI's stated Aug-7 target (hollow = not yet shipped); green = its named target, Kimi K3; blue/slate = the closed ceiling.</text>
+
+  <!-- ceiling-gap shading: Index 57 -> 61  (x 562.9 -> 784.5) -->
+  <rect x="563" y="86" width="221" height="154" fill="#2563eb" opacity="0.08"/>
+  <text x="673" y="103" font-size="10.5" font-weight="700" fill="#2563eb" text-anchor="middle">THE CEILING GAP — still unanswered (Kimi 57 &#8594; Opus 5 61)</text>
+  <text x="673" y="118" font-size="9.5" fill="#60a5fa" text-anchor="middle">Grok 4.6 is NOT aimed here</text>
+
+  <!-- number line -->
+  <line x1="120" y1="240" x2="840" y2="240" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- ticks: 50,52,54,56,58,60,62  x = 120 + (i-49)*55.385 -->
+  <line x1="175" y1="235" x2="175" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="175" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">50</text>
+  <line x1="286" y1="235" x2="286" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="286" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">52</text>
+  <line x1="397" y1="235" x2="397" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="397" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">54</text>
+  <line x1="508" y1="235" x2="508" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="508" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">56</text>
+  <line x1="618" y1="235" x2="618" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="618" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">58</text>
+  <line x1="729" y1="235" x2="729" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="729" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">60</text>
+  <line x1="840" y1="235" x2="840" y2="245" stroke="#94a3b8" stroke-width="1"/><text x="840" y="262" font-size="10" fill="#94a3b8" text-anchor="middle">62</text>
+  <text x="480" y="284" font-size="11" fill="#94a3b8" text-anchor="middle">Intelligence Index (higher = smarter) &#8594;</text>
+
+  <!-- floor: DeepSeek 50 (x175), Luna 51 (x231) -->
+  <circle cx="175" cy="240" r="6" fill="#0d9488"/>
+  <text x="175" y="197" font-size="10" fill="#0d9488" text-anchor="middle">DeepSeek</text>
+  <text x="175" y="209" font-size="9.5" fill="#0d9488" text-anchor="middle">V4-Flash 50</text>
+  <circle cx="231" cy="240" r="6" fill="#0d9488"/>
+  <text x="231" y="225" font-size="10" fill="#0d9488" text-anchor="middle">Luna 51</text>
+
+  <!-- middle: Qwen 53 (x342) -->
+  <circle cx="342" cy="240" r="6" fill="#7c3aed"/>
+  <text x="342" y="197" font-size="10" fill="#7c3aed" text-anchor="middle">Qwen3.8-Max</text>
+  <text x="342" y="209" font-size="9.5" fill="#7c3aed" text-anchor="middle">53 (prelim.)</text>
+
+  <!-- near-frontier target: Kimi K3 57 (x563) -->
+  <circle cx="563" cy="240" r="8" fill="#16a34a"/>
+  <text x="563" y="163" font-size="11.5" font-weight="700" fill="#16a34a" text-anchor="middle">Kimi K3 · 57</text>
+  <text x="563" y="176" font-size="9.5" fill="#16a34a" text-anchor="middle">top open model — Grok 4.6's stated target</text>
+
+  <!-- ceiling: Sol 59 (x674), Fable 60 (x729), Opus 5 61 (x784) -->
+  <circle cx="674" cy="240" r="6" fill="#64748b"/>
+  <text x="646" y="225" font-size="10" fill="#64748b" text-anchor="middle">Sol 59</text>
+  <circle cx="729" cy="240" r="6" fill="#64748b"/>
+  <text x="729" y="197" font-size="10" fill="#64748b" text-anchor="middle">Fable 5</text>
+  <text x="729" y="209" font-size="9.5" fill="#64748b" text-anchor="middle">60</text>
+  <circle cx="784" cy="240" r="8" fill="#2563eb"/>
+  <text x="792" y="225" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Opus 5 · 61</text>
+  <text x="792" y="212" font-size="9.5" fill="#2563eb" text-anchor="middle">#1, uncut</text>
+
+  <!-- Grok 4.6: incoming, below the line, hollow/dashed = not yet shipped, arrow up to Kimi's 57 -->
+  <circle cx="563" cy="340" r="9" fill="none" stroke="#ea580c" stroke-width="2" stroke-dasharray="4 2"/>
+  <text x="563" y="368" font-size="11.5" font-weight="700" fill="#ea580c" text-anchor="middle">Grok 4.6 — target Aug 7, not yet shipped</text>
+  <text x="563" y="382" font-size="10" fill="#fb923c" text-anchor="middle">1.5T V9 base (same as Grok 4.5) + better SFT/RL · goal: match/beat Kimi K3</text>
+  <!-- arrow from Grok 4.6 up to Kimi's point on the line -->
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#ea580c"/></marker>
+  </defs>
+  <line x1="563" y1="331" x2="563" y2="252" stroke="#ea580c" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ar)"/>
+
+  <!-- footnotes -->
+  <text x="120" y="404" font-size="9.5" fill="#94a3b8">Grok 4.6 has no independent Index, model card, or price at compile time; the Aug-7 date and "match/beat Kimi K3" goal are Musk's Aug-4 statement, and one spec figure ("~2T") conflicts with the 1.5T-base framing.</text>
+</svg>
