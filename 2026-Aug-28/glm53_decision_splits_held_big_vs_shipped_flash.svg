@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The Aug-28 open-weights decision splits in two: Z.ai holds the big GLM-5.3's weights past their own target while shipping GLM-5.3-Flash with open MIT weights the same week, and the closed ceiling stays frozen a ninth straight brief</title>
+  <desc id="desc">A two-branch diagram from a central Aug 28 decision node. The left branch, drawn dashed in amber, is the big GLM-5.3 (744-billion-parameter mixture-of-experts): its open weights were due about August 28 but the target arrived with nothing published — the zai-org GLM-5.3 repository is still only an "upcoming release" placeholder, so the drop slipped. It is held for a stated safety review after an emergent offensive-cyber capability; its general Index of 60 was measured third-party but the download is gated, and its cyber figures remain unreplicated. The right branch, drawn solid in teal, is GLM-5.3-Flash, the viral stealth model that topped OpenRouter for six days as "Ox Alpha": a 320-billion-total, 18-billion-active multimodal mixture-of-experts, shipped with MIT-licensed weights day one, Artificial Analysis Intelligence Index 57 (level with Claude Opus 4.8, above DeepSeek V4 Pro at 53), priced $0.15 and $0.50 per million tokens (about one-hundredth of frontier price), served entirely on roughly one hundred thousand domestically-produced Chinese chips, and the biggest launch in OpenRouter history at more than 11 trillion tokens in three days. A footer strip shows the frozen closed ceiling — Claude Opus 5 at 63 and number one, Fable 5 at 62.1, then GPT-5.6 Sol at 61 tying Grok 4.6 at 60.9 — with the two open leaders (the held GLM-5.3 at 60 and Kimi K3 at 60) just below and GLM-5.3-Flash at 57 in the near-frontier band, no Index-64 model and no flagship price cut since July 24, now 35 days, across a ninth straight brief.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .axis  { stroke:#94a3b8; stroke-width:1; }
+    .tick  { fill:#64748b; font-size:12px; font-weight:600; }
+    .node  { fill:#475569; font-size:12.5px; }
+    .dim   { fill:#94a3b8; font-size:11.5px; }
+    .hi        { fill:#0ea5e9; }
+    .histroke  { stroke:#0284c7; stroke-width:1.6; fill:none; }
+    .hilab     { fill:#0284c7; font-size:12.5px; font-weight:700; }
+    .open      { fill:#0d9488; }
+    .openlab   { fill:#0f766e; font-size:12.5px; font-weight:700; }
+    .opens     { fill:#0f766e; font-size:11.5px; }
+    .amb   { fill:#b45309; font-size:12.5px; font-weight:700; }
+    .ambt  { fill:#92400e; font-size:11.5px; }
+    .base  { fill:#94a3b8; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The open-weights decision splits — one GLM held for danger, another shipped wide open</text>
+  <text x="40" y="55" class="sub">Aug 28 target arrives. Same lab, same week, opposite calls: the 744B GLM-5.3 slips its own date; GLM-5.3-Flash ships MIT weights day one.</text>
+
+  <!-- decision node -->
+  <rect x="360" y="78" width="200" height="40" rx="8" fill="#475569" opacity=".12"/>
+  <rect x="360" y="78" width="200" height="40" rx="8" fill="none" stroke="#64748b" stroke-width="1.4"/>
+  <text x="460" y="98" class="sect" text-anchor="middle">≈ Aug 28 — the decision date</text>
+  <text x="460" y="112" class="dim" text-anchor="middle">the two-week safety clock ends</text>
+
+  <!-- branch connectors -->
+  <path d="M400 118 C 320 150, 250 150, 235 176" class="histroke" stroke="#b45309" stroke-dasharray="4 4" fill="none"/>
+  <path d="M520 118 C 600 150, 680 150, 690 176" class="histroke" stroke="#0d9488" fill="none"/>
+
+  <!-- ============ LEFT: big GLM-5.3 HELD / SLIPPED ============ -->
+  <rect x="42" y="180" width="386" height="196" rx="10" fill="#b45309" opacity=".06"/>
+  <rect x="42" y="180" width="386" height="196" rx="10" fill="none" stroke="#b45309" stroke-width="1.3" stroke-dasharray="5 4" opacity=".8"/>
+  <text x="60" y="206" class="amb" font-size="14">◀ GLM-5.3 · 744B MoE (~40B active)</text>
+  <text x="60" y="226" class="amb" font-size="15">HELD — weights slip their own target</text>
+  <text x="60" y="250" class="ambt">Aug 28 arrives; weights still NOT on Hugging Face.</text>
+  <text x="60" y="267" class="ambt">zai-org/GLM-5.3 = still an "upcoming release" placeholder.</text>
+  <text x="60" y="290" class="node">• Held for safety: emergent exploit-chaining</text>
+  <text x="60" y="308" class="node">• General Index <tspan font-weight="700">60</tspan> — measured, but download gated</text>
+  <text x="60" y="326" class="node">• Cyber figures (CyberGym 84.5) still <tspan font-weight="700">unreplicated</tspan></text>
+  <text x="60" y="352" class="ambt" font-weight="700">Outcome (c): the slip — as Qwen3.8-Max slipped twice</text>
+  <text x="60" y="369" class="dim">the top open model still ships on a timer, not a link</text>
+
+  <!-- ============ RIGHT: GLM-5.3-Flash SHIPPED ============ -->
+  <rect x="494" y="180" width="386" height="196" rx="10" fill="#0d9488" opacity=".07"/>
+  <rect x="494" y="180" width="386" height="196" rx="10" fill="none" stroke="#0d9488" stroke-width="1.5" opacity=".85"/>
+  <text x="512" y="206" class="openlab" font-size="14">▶ GLM-5.3-Flash · 320B-A18B MoE</text>
+  <text x="512" y="226" class="openlab" font-size="15">SHIPPED — open MIT weights, day one</text>
+  <text x="512" y="250" class="opens">Was the stealth "Ox Alpha" — topped OpenRouter 6 days.</text>
+  <text x="512" y="267" class="opens">First natively multimodal model in the GLM-5 series.</text>
+  <text x="512" y="290" class="node">• Index <tspan font-weight="700">57</tspan> — level with Opus 4.8, &gt; DeepSeek V4 Pro 53</text>
+  <text x="512" y="308" class="node">• $0.15 / $0.50 per Mtok — <tspan font-weight="700">~1/100th of frontier</tspan></text>
+  <text x="512" y="326" class="node">• Served on ~100k <tspan font-weight="700">domestic Chinese chips</tspan> (no Nvidia)</text>
+  <text x="512" y="352" class="openlab">Biggest OpenRouter launch ever: 11T+ tokens / 3 days</text>
+  <text x="512" y="369" class="dim">Zhipu HK shares +12% on the reveal</text>
+
+  <!-- ============ FOOTER: frozen ceiling ============ -->
+  <line x1="40" y1="404" x2="880" y2="404" class="axis" opacity=".5"/>
+  <text x="40" y="428" class="sect">Neither reaches the closed ceiling — frozen a 9th straight brief</text>
+
+  <!-- scale: x = 300 + (v-56)*62 ; 56->300, 63->734 -->
+  <g>
+    <rect x="298" y="440" width="440" height="54" rx="7" fill="#b45309" opacity=".07"/>
+    <rect x="298" y="440" width="440" height="54" rx="7" fill="none" stroke="#b45309" stroke-width="1" opacity=".5"/>
+
+    <!-- Opus 5 63 -->
+    <text x="292" y="456" class="node" text-anchor="end" font-weight="700">Opus 5</text>
+    <rect x="300" y="447" width="434" height="11" rx="2" fill="#b45309" opacity=".55"/>
+    <text x="742" y="456" class="node" font-weight="700">63 · #1, uncut</text>
+    <!-- Fable 5 62.1 -->
+    <text x="292" y="471" class="node" text-anchor="end">Fable 5</text>
+    <rect x="300" y="462" width="378" height="11" rx="2" fill="#b45309" opacity=".42"/>
+    <text x="686" y="471" class="node">62.1</text>
+    <!-- Sol 61 / Grok 60.9 -->
+    <text x="292" y="486" class="node" text-anchor="end">GPT-5.6 Sol · Grok 4.6</text>
+    <rect x="300" y="477" width="310" height="11" rx="2" fill="#b45309" opacity=".3"/>
+    <text x="618" y="486" class="node">61 · 60.9  (lower rung)</text>
+  </g>
+
+  <!-- open leaders below the band -->
+  <g>
+    <!-- GLM-5.3 (held) 60 -->
+    <text x="292" y="512" class="hilab" text-anchor="end">GLM-5.3 60 (held) · Kimi K3 60</text>
+    <rect x="300" y="503" width="248" height="11" rx="2" class="hi"/>
+    <rect x="300" y="503" width="248" height="11" rx="2" class="histroke"/>
+    <text x="556" y="512" class="hilab">top open by score — not downloadable</text>
+    <!-- Flash 57 -->
+    <text x="292" y="528" class="open" text-anchor="end" font-weight="700">GLM-5.3-Flash</text>
+    <rect x="300" y="519" width="62" height="11" rx="2" class="open"/>
+    <text x="370" y="528" class="openlab">57 · the open model you can actually download today</text>
+  </g>
+
+  <text x="40" y="556" class="ambt" font-size="12">❄️ No Index-64 model. No flagship price cut since Jul 24 — <tspan font-weight="700">35 days</tspan>. Gemini 3.5 Pro still absent (3 missed targets). Motion stays entirely below the line.</text>
+  <text x="40" y="576" class="dim" font-size="11">Index = Artificial Analysis Intelligence Index. GLM-5.3-Flash figures vendor/press-reported; the big GLM-5.3 general 60 is third-party, its cyber figures and the domestic-chip vendor mix are not independently confirmed.</text>
+</svg>
