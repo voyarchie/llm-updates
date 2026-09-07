@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 512" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The held GLM-5.3 flagship shipped its open weights after all — the gate turned out to be a license, not a hold, and the closed ceiling stayed frozen for a ninth straight brief</title>
+  <desc id="desc">A two-lane diagram showing Z.ai's GLM-5.3 open-weights question resolving fully: both capability tiers are now open, but on divergent licenses. The top lane, shaded amber and marked "shipped, conditioned," is the GLM-5.3 flagship: Artificial Analysis Intelligence Index 60, a roughly 743-billion-parameter mixture-of-experts with about 39 billion active, tagged with vendor-claimed offensive-cyber capability. Its Hugging Face repository went from placeholder to a real downloadable checkpoint — an FP8 build near 756 gigabytes and a BF16 build near 1.5 terabytes — timestamped about 15:22 to 16:00 UTC on August 28, under a custom "glm-5.3" license rather than MIT, with a completed two-week safety review and a clause requiring any Model-as-a-Service operator above 10 billion dollars trailing-twelve-month revenue to pass a Z.ai security review before commercial use; running it needs an eight-GPU Hopper-or-newer node. A correction note states this supersedes the prior brief's "slip" call: the weights did land, essentially on the August 28 target, and the reporting has since caught up. The bottom lane, shaded teal and marked "shipped, MIT," is GLM-5.3-Flash, formerly the anonymous Ox Alpha endpoint: Index 57, a 320-billion-parameter mixture-of-experts with 18 billion active, natively multimodal, one-million-token context, shipped open under MIT on August 26. A center label states the danger gate did not block release — it shaped the license: the safe tier gets MIT, the frontier-adjacent cyber tier gets a bespoke, revenue-gated, safety-conditioned license. A footer notes the closed ceiling stayed frozen for a ninth straight brief — Claude Opus 5 at 63 remains number one and uncut at five and twenty-five dollars, no Index-64 model and no flagship price cut since July 24, now over five weeks — while Gemini 3.5 Pro stays absent on a third missed target and Meta's Watermelon holds an October date with a Hatch consumer-agent platform priced up to 199.99 dollars a month, still unreleased and unverified.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .name  { fill:#475569; font-size:14px; font-weight:700; }
+    .meta  { fill:#64748b; font-size:11.5px; }
+    .val   { font-size:12.5px; font-weight:700; }
+    .amb   { fill:#b45309; }
+    .ambt  { fill:#92400e; font-size:11.5px; }
+    .teal  { fill:#0f766e; }
+    .tealt { fill:#0d9488; font-size:11.5px; }
+    .gate  { font-size:11px; font-weight:700; letter-spacing:.5px; }
+    .out   { fill:#334155; font-size:12px; }
+    .foot  { fill:#64748b; font-size:12px; }
+    .axl   { stroke:#94a3b8; stroke-width:1; opacity:.5; }
+    .flow  { stroke:#94a3b8; stroke-width:1.6; fill:none; }
+    .corr  { fill:#0f766e; font-size:11.5px; font-weight:700; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The held flagship shipped — the gate was a license, not a hold</text>
+  <text x="40" y="55" class="sub">Aug-26 watch-item #1 resolves: both GLM-5.3 tiers are now open, but on divergent licenses — and Aug-29's "slip" call is superseded</text>
+
+  <!-- source node -->
+  <rect x="40" y="98" width="150" height="132" rx="10" fill="#475569" opacity=".07"/>
+  <rect x="40" y="98" width="150" height="132" rx="10" fill="none" stroke="#64748b" stroke-width="1.2" opacity=".7"/>
+  <text x="115" y="134" class="name" text-anchor="middle">GLM-5.3</text>
+  <text x="115" y="152" class="meta" text-anchor="middle">open-weights promise</text>
+  <text x="115" y="168" class="meta" text-anchor="middle">(≈2 wks after Aug 14)</text>
+  <text x="115" y="194" class="meta" text-anchor="middle">both tiers now:</text>
+  <text x="115" y="212" class="teal val" text-anchor="middle">✅ OPEN</text>
+
+  <!-- flow connectors from source to two lanes -->
+  <path d="M190 150 C 224 150, 224 132, 258 132" class="flow"/>
+  <path d="M190 178 C 224 178, 224 302, 258 302" class="flow"/>
+
+  <!-- ========== TOP LANE: flagship SHIPPED, conditioned ========== -->
+  <rect x="258" y="92" width="620" height="92" rx="10" fill="#b45309" opacity=".08"/>
+  <rect x="258" y="92" width="620" height="92" rx="10" fill="none" stroke="#b45309" stroke-width="1.2" opacity=".6"/>
+  <text x="274" y="116" class="amb name">GLM-5.3 (flagship)</text>
+  <text x="274" y="135" class="ambt">Index 60 · ~743B MoE / ~39B active · vendor-claimed cyber</text>
+  <rect x="274" y="144" width="176" height="20" rx="10" fill="#b45309" opacity=".18"/>
+  <text x="362" y="158" class="amb gate" text-anchor="middle">LICENSE: CUSTOM "glm-5.3"</text>
+  <text x="274" y="178" class="ambt">weights ~756GB FP8 / ~1.5TB BF16 · 8-GPU node floor</text>
+  <text x="806" y="114" class="amb val" text-anchor="end">✅ SHIPPED</text>
+  <!-- outcome box -->
+  <line x1="602" y1="104" x2="602" y2="172" class="axl"/>
+  <text x="616" y="126" class="out">HF checkpoint live,</text>
+  <text x="616" y="143" class="out">≈15:22 UTC Aug 28 ·</text>
+  <text x="616" y="160" class="out">$10B-rev MaaS →</text>
+  <text x="616" y="177" class="out"><tspan class="amb val">security review</tspan></text>
+
+  <!-- correction note under top lane -->
+  <text x="274" y="205" class="corr">↳ correction: this supersedes Aug-29's "slip" — the weights did land, ~on target; reporting has caught up</text>
+
+  <!-- ========== BOTTOM LANE: Flash SHIPPED, MIT ========== -->
+  <rect x="258" y="258" width="620" height="88" rx="10" fill="#0d9488" opacity=".10"/>
+  <rect x="258" y="258" width="620" height="88" rx="10" fill="none" stroke="#0d9488" stroke-width="1.2" opacity=".7"/>
+  <text x="274" y="284" class="teal name">GLM-5.3-Flash <tspan class="tealt" font-weight="400">(was "Ox Alpha")</tspan></text>
+  <text x="274" y="303" class="tealt">Index 57 · 320B-A18B MoE · multimodal · 1M ctx</text>
+  <rect x="274" y="312" width="112" height="20" rx="10" fill="#0d9488" opacity=".20"/>
+  <text x="330" y="326" class="teal gate" text-anchor="middle">LICENSE: MIT</text>
+  <text x="806" y="280" class="teal val" text-anchor="end">✅ SHIPPED</text>
+  <!-- outcome box -->
+  <line x1="602" y1="270" x2="602" y2="334" class="axl"/>
+  <text x="616" y="294" class="out">Open on HF, <tspan class="teal val">MIT</tspan>,</text>
+  <text x="616" y="311" class="out">Aug 26 · beats GLM-5.2</text>
+  <text x="616" y="328" class="out">on all 6, ~1/10 the cost</text>
+
+  <!-- center takeaway -->
+  <text x="459" y="238" class="sect" text-anchor="middle">The danger gate didn't block release — it shaped the license: safe tier → MIT, cyber tier → bespoke, revenue-gated terms</text>
+
+  <!-- ========== FOOTER ========== -->
+  <line x1="40" y1="368" x2="880" y2="368" class="axl"/>
+  <text x="40" y="392" class="sect">Above the split, the closed ceiling still hasn't moved — 9th straight brief</text>
+  <text x="40" y="412" class="foot">❄️ <tspan class="amb" font-weight="700">Opus 5 = 63 (#1, uncut, $5/$25)</tspan> · Fable 5 ~62 · GPT-5.6 Sol / Grok 4.6 ~61 · no Index-64 model · no flagship price cut since Jul 24 (>5 wks)</text>
+  <text x="40" y="432" class="foot">Gemini 3.5 Pro still absent (3rd missed target) · Meta "Watermelon" holds an <tspan fill="#334155" font-weight="700">October</tspan> date + "Hatch" agent platform (up to $199.99/mo), still unreleased/unverified</text>
+  <text x="40" y="462" class="meta">Artificial Analysis Intelligence Index (v4.1.1) · figures third-party unless tagged vendor-claimed · compiled Mon Aug 31 2026 (Los Angeles)</text>
+</svg>
