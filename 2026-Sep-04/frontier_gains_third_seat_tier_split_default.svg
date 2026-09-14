@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 574" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The frontier gains a third occupant: Meta's Muse Spark 1.3 reaches Artificial Analysis Intelligence Index 62, third behind Claude Fable 5.1 at 66 and Claude Opus 5 at 63 — but the 62 is a partner-only preview and the generally available variant scores 61</title>
+  <desc id="desc">A horizontal bar chart of the Artificial Analysis Intelligence Index (v4.1.1, max effort) two days after the ceiling broke. Claude Fable 5.1 still leads at 66 at max effort (65.7 on the settled leaderboard after the v4.1.1 grader pass), over Claude Opus 5 at 63. New this window, Meta's Muse Spark 1.3 takes the third seat: its max variant scores 62 but is in limited preview for Meta's partners only, held back until additional safety testing completes, while the generally available xhigh variant scores 61 and ties GPT-5.6 Sol and Grok 4.6. Beneath the frontier band sit the top open-weights models, GLM-5.3 flagship and Kimi K3 at 60. A callout notes that Muse Spark 1.3's best result comes from a model developers cannot broadly use yet, priced at one dollar twenty-five per million input and four dollars twenty-five per million output on the available tier, with a cheaper contributor tier that trains on your traffic, plus open weights and a model codenamed Watermelon promised soon. A footer states the through-line: the tier-split is now the industry default — Anthropic, Z.ai, Meta and even Google's Flash line all ship their strongest or riskiest configuration behind a gate while releasing a slightly weaker tier openly, and Google remains the one empty flagship tier with no Gemini 3.5 Pro while Europe puts its first model on the board with Quasar 438B at 43.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .name  { fill:#475569; font-size:13px; font-weight:700; }
+    .meta  { fill:#64748b; font-size:11px; }
+    .val   { font-size:13px; font-weight:700; }
+    .amb   { fill:#b45309; }
+    .teal  { fill:#0f766e; }
+    .tealb { fill:#0d9488; }
+    .viol  { fill:#7c3aed; }
+    .slate { fill:#64748b; }
+    .foot  { fill:#64748b; font-size:12px; }
+    .axl   { stroke:#94a3b8; stroke-width:1; opacity:.5; }
+    .grid  { stroke:#94a3b8; stroke-width:1; opacity:.25; stroke-dasharray:3 3; }
+  </style>
+
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#7c3aed" opacity=".14"/>
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#7c3aed" stroke-width="1.6" opacity=".55"/>
+    </pattern>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L6 3 L0 6 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">The frontier gains a third occupant — Meta's Muse Spark 1.3 lands at 62 (#3), but only in preview</text>
+  <text x="40" y="55" class="sub">Artificial Analysis Intelligence Index (v4.1.1, max effort). Two days after Fable 5.1 broke the ceiling, the top adds a seat — not a new #1</text>
+
+  <!-- axis: x = 250 + (score-50)*18 -->
+  <line x1="250" y1="86" x2="250" y2="392" class="axl"/>
+  <line x1="340" y1="86" x2="340" y2="392" class="grid"/>
+  <text x="340" y="408" class="meta" text-anchor="middle">55</text>
+  <line x1="430" y1="86" x2="430" y2="392" class="grid"/>
+  <text x="430" y="408" class="meta" text-anchor="middle">60</text>
+  <line x1="484" y1="86" x2="484" y2="392" class="grid"/>
+  <text x="484" y="408" class="meta" text-anchor="middle">63</text>
+  <line x1="538" y1="86" x2="538" y2="392" class="grid" stroke-dasharray="0"/>
+  <text x="538" y="408" class="teal meta" text-anchor="middle" font-weight="700">66</text>
+  <text x="250" y="408" class="meta" text-anchor="middle">50</text>
+
+  <!-- Fable 5.1 = 66 (still #1) -->
+  <rect x="250" y="100" width="288" height="30" rx="4" fill="#0d9488" opacity=".82"/>
+  <text x="240" y="120" class="teal name" text-anchor="end">Claude Fable 5.1</text>
+  <text x="548" y="120" class="teal val">66</text>
+  <text x="240" y="134" class="meta" text-anchor="end">still #1 · 65.7 on settled board</text>
+
+  <!-- Opus 5 = 63 -->
+  <rect x="250" y="146" width="234" height="26" rx="4" fill="#b45309" opacity=".50"/>
+  <text x="240" y="164" class="amb name" text-anchor="end">Claude Opus 5</text>
+  <text x="490" y="164" class="amb val">63</text>
+  <text x="240" y="178" class="meta" text-anchor="end">#2 · uncut $5/$25</text>
+
+  <!-- Muse Spark 1.3 = 62 max (preview) / 61 xhigh (GA) -->
+  <rect x="250" y="190" width="198" height="30" rx="4" fill="#7c3aed" opacity=".42"/>
+  <rect x="448" y="190" width="18" height="30" rx="0" fill="url(#hatch)"/>
+  <rect x="250" y="190" width="216" height="30" rx="4" fill="none" stroke="#7c3aed" stroke-width="1.1" opacity=".55"/>
+  <text x="240" y="209" class="viol name" text-anchor="end">Muse Spark 1.3</text>
+  <text x="476" y="209" class="viol val">62</text>
+  <text x="240" y="223" class="meta" text-anchor="end">NEW · Sep 2 · #3</text>
+  <text x="474" y="223" class="meta">max 62 (partner preview) · xhigh 61 (GA)</text>
+
+  <!-- GPT-5.6 Sol = 61 -->
+  <rect x="250" y="236" width="198" height="22" rx="4" fill="#64748b" opacity=".38"/>
+  <text x="240" y="252" class="name" text-anchor="end">GPT-5.6 Sol</text>
+  <text x="454" y="252" class="slate val">61</text>
+
+  <!-- Grok 4.6 = 61 -->
+  <rect x="250" y="264" width="198" height="22" rx="4" fill="#64748b" opacity=".38"/>
+  <text x="240" y="280" class="name" text-anchor="end">Grok 4.6</text>
+  <text x="454" y="280" class="slate val">61</text>
+
+  <!-- divider: open weights -->
+  <text x="240" y="306" class="meta" text-anchor="end" font-style="italic">top open weights</text>
+
+  <!-- GLM-5.3 flagship = 60 -->
+  <rect x="250" y="312" width="180" height="22" rx="4" fill="#0d9488" opacity=".34"/>
+  <text x="240" y="328" class="name" text-anchor="end">GLM-5.3 (flagship)</text>
+  <text x="436" y="328" class="tealb val">60</text>
+
+  <!-- Kimi K3 = 60 -->
+  <rect x="250" y="340" width="180" height="22" rx="4" fill="#0d9488" opacity=".34"/>
+  <text x="240" y="356" class="name" text-anchor="end">Kimi K3</text>
+  <text x="436" y="356" class="tealb val">60</text>
+
+  <!-- the seat, not the ceiling: annotation arrow from 62 up under 63 line -->
+  <path d="M466 205 L 480 205" stroke="#7c3aed" stroke-width="1.6" fill="none" opacity=".7"/>
+
+  <!-- callout: Muse Spark access split -->
+  <rect x="600" y="96" width="308" height="150" rx="10" fill="#7c3aed" opacity=".055"/>
+  <rect x="600" y="96" width="308" height="150" rx="10" fill="none" stroke="#7c3aed" stroke-width="1.1" opacity=".55"/>
+  <text x="616" y="118" class="viol sect">Meta reaches the frontier — with a catch</text>
+  <text x="616" y="139" class="foot">Best score <tspan class="viol" font-weight="700">62</tspan> = <tspan fill="#334155" font-weight="700">max</tspan>, partner preview only</text>
+  <text x="616" y="157" class="foot">(held until more safety testing)</text>
+  <text x="616" y="176" class="foot">Available now = <tspan class="viol" font-weight="700">xhigh 61</tspan>, on API + Muse Code CLI</text>
+  <text x="616" y="197" class="meta">$1.25 / $4.25 per 1M · 179 tok/s · 1M ctx</text>
+  <text x="616" y="212" class="meta">contributor tier ~$0.10/$0.20 (trains on you)</text>
+  <text x="616" y="231" class="meta">open weights + &quot;Watermelon&quot; promised soon</text>
+
+  <!-- FOOTER -->
+  <line x1="40" y1="438" x2="900" y2="438" class="axl"/>
+  <text x="40" y="460" class="sect">The through-line: the tier-split is now the DEFAULT — ship the strong/risky config behind a gate, release a weaker tier openly</text>
+  <text x="40" y="481" class="foot"><tspan class="viol" font-weight="700">Meta</tspan> Muse Spark 1.3: xhigh 61 GA · max 62 partner-preview &#160;·&#160; <tspan class="teal" font-weight="700">Anthropic</tspan> Fable 5.1 GA · Mythos 5.1 vetted-access (same model)</text>
+  <text x="40" y="501" class="foot"><tspan class="tealb" font-weight="700">Z.ai</tspan> GLM-5.3-Flash MIT · flagship weights open w/ $10B-revenue review &#160;·&#160; <tspan class="amb" font-weight="700">Google</tspan> ships 3.8 Flash + 3.8 Flash Cyber — but no Pro flagship</text>
+  <text x="40" y="521" class="foot"><tspan fill="#334155" font-weight="700">Still frozen:</tspan> Gemini 3.5 Pro absent (Polymarket 69% none by Sep 30) &#160;·&#160; <tspan fill="#334155" font-weight="700">New on the board:</tspan> Europe's Quasar 438B (Multiverse) = Index 43</text>
+  <text x="40" y="552" class="meta">Artificial Analysis Intelligence Index v4.1.1, max effort · scores third-party (AA); Muse Spark max 62 is partner-preview, not broadly runnable · compiled Fri Sep 4 2026 (Los Angeles)</text>
+</svg>
