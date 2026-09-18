@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 560" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Open challengers on two axes: independently measured vs. reproducible by outsiders</title>
+  <desc id="d">A two-by-two map. Horizontal axis: has an independent third-party score (left = no, right = yes). Vertical axis: can outsiders reproduce the score by downloading the weights and rerunning (bottom = no, top = yes). Qwen3.8-27B sits top-right — independently scored (Intelligence Index 52, Agentic 51 by Artificial Analysis) and fully reproducible because its Apache-2.0 weights ship and run on one 24GB GPU. GLM-5.3 sits lower-right — it now has an independent coding score (KingBench 3, 91.25 percent, the highest recorded, versus Fable 5 at 82.5, Qwen3.8-Max 81.25, Opus 4.8 80, Opus 5 and Kimi K3 both 77.5) but its weights are held for a safety review until about August 28, so it is measured yet not reproducible; a dashed arrow shows it moving up into the reproducible quadrant when the weights ship. The closed ceiling (Opus 5 at Index 63, Fable 5 62, GPT-5.6 Sol 61, Grok 4.6 60.9) sits bottom-right in an amber band: measured but never reproducible because it is API-only, and frozen for a sixth straight brief. Qwen3.8-Max sits mid-right as measured with degraded, gated weights.</desc>
+
+  <style>
+    .ax{stroke:#94a3b8;stroke-width:1.5}
+    .grid{stroke:#94a3b8;stroke-width:1;stroke-dasharray:2 5;opacity:.55}
+    .axlbl{fill:#64748b;font-size:13px;font-weight:600}
+    .axend{fill:#94a3b8;font-size:11.5px}
+    .qlbl{fill:#64748b;font-size:11px;font-style:italic;opacity:.9}
+    .name{font-size:14px;font-weight:700}
+    .note{fill:#64748b;font-size:11px}
+    .title{fill:#475569;font-size:16px;font-weight:700}
+    .sub{fill:#64748b;font-size:12px}
+  </style>
+
+  <text x="30" y="30" class="title">Measured, then reproducible — the two-step open-weights promise</text>
+  <text x="30" y="49" class="sub">Where the open challengers sit this window. The prize quadrant is top-right; GLM-5.3 is one step short of it.</text>
+
+  <!-- quadrant background tints (very low opacity, theme-neutral) -->
+  <rect x="470" y="78" width="360" height="192" fill="#10b981" opacity="0.06"/>
+  <text x="486" y="98" class="qlbl" fill="#10b981">fully verifiable: scored AND anyone can rerun it</text>
+
+  <!-- axes -->
+  <line x1="90" y1="80" x2="90" y2="470" class="ax"/>
+  <line x1="90" y1="470" x2="820" y2="470" class="ax"/>
+  <!-- mid dividers -->
+  <line x1="470" y1="80" x2="470" y2="470" class="grid"/>
+  <line x1="90" y1="270" x2="820" y2="270" class="grid"/>
+
+  <!-- axis labels -->
+  <text x="455" y="500" text-anchor="middle" class="axlbl">Has an independent, third-party score?</text>
+  <text x="150" y="500" text-anchor="middle" class="axend">no</text>
+  <text x="770" y="500" text-anchor="middle" class="axend">yes</text>
+
+  <text transform="translate(34,275) rotate(-90)" text-anchor="middle" class="axlbl">Can outsiders reproduce it? (download + rerun)</text>
+  <text transform="translate(70,455) rotate(-90)" text-anchor="middle" class="axend">no</text>
+  <text transform="translate(70,110) rotate(-90)" text-anchor="middle" class="axend">yes</text>
+
+  <!-- ============ TOP-RIGHT: Qwen3.8-27B (the prize quadrant) ============ -->
+  <circle cx="690" cy="150" r="9" fill="#0ea5e9" stroke="#0ea5e9"/>
+  <text x="674" y="140" text-anchor="end" class="name" fill="#0ea5e9">Qwen3.8-27B</text>
+  <text x="674" y="157" text-anchor="end" class="note">AA Index 52 · Agentic 51 (3rd-party, Aug 17)</text>
+  <text x="674" y="172" text-anchor="end" class="note">Apache-2.0 · runs on one 24GB GPU</text>
+
+  <!-- Kimi K3: reproducible in principle, but hardware-gated -->
+  <circle cx="560" cy="205" r="6.5" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="576" y="202" class="note" font-weight="700" fill="#64748b">Kimi K3</text>
+  <text x="576" y="217" class="note">weights out, but needs a datacenter to serve</text>
+
+  <!-- ============ LOWER-RIGHT: GLM-5.3 (measured, not yet reproducible) ============ -->
+  <circle cx="700" cy="345" r="9" fill="#d97706" stroke="#d97706"/>
+  <text x="684" y="335" text-anchor="end" class="name" fill="#d97706">GLM-5.3</text>
+  <text x="684" y="352" text-anchor="end" class="note">KingBench 3 = 91.25% (#1 ever recorded)</text>
+  <text x="684" y="367" text-anchor="end" class="note">but weights held for safety review</text>
+  <!-- arrow up into the reproducible quadrant -->
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#d97706"/>
+    </marker>
+  </defs>
+  <path d="M700,336 C 730,300 730,240 705,175" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+  <text x="742" y="262" class="note" fill="#d97706" font-style="italic">moves up when</text>
+  <text x="742" y="277" class="note" fill="#d97706" font-style="italic">weights ship (~Aug 28)</text>
+
+  <!-- Qwen3.8-Max: measured, degraded/gated weights -->
+  <circle cx="540" cy="392" r="6.5" fill="none" stroke="#64748b" stroke-width="2"/>
+  <text x="524" y="389" text-anchor="end" class="note" font-weight="700" fill="#64748b">Qwen3.8-Max</text>
+  <text x="524" y="404" text-anchor="end" class="note">Index 56 · weights degraded &amp; gated</text>
+
+  <!-- closed ceiling band: measured, NEVER reproducible -->
+  <rect x="600" y="420" width="212" height="40" rx="6" fill="#f59e0b" opacity="0.10" stroke="#d97706" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="706" y="436" text-anchor="middle" class="note" fill="#d97706" font-weight="700">closed ceiling — API-only, never reproducible</text>
+  <text x="706" y="452" text-anchor="middle" class="note" fill="#d97706">Opus 5 63 · Fable 5 62 · Sol 61 · Grok 4.6 60.9 — frozen 6th brief</text>
+
+  <!-- ============ LEFT SIDE: vendor-claim-only (mostly empty) ============ -->
+  <text x="280" y="360" text-anchor="middle" class="note" opacity="0.8">vendor-claim-only</text>
+  <text x="280" y="376" text-anchor="middle" class="note" opacity="0.8">(no outside number yet)</text>
+</svg>
