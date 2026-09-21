@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700" role="img" aria-label="Three panels: the AI research loop measured, the oversight measured, and the oversight tested.">
+  <title>Pacing the frontier: measured, and tested, in the same week</title>
+
+  <defs>
+    <style>
+      .t-main  { font: 700 21px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #0d9488; }
+      .t-sub   { font: 400 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7785; }
+      .t-panel { font: 700 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #0d9488; letter-spacing: 0.06em; }
+      .t-body  { font: 400 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7785; }
+      .t-bold  { font: 700 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #6b7785; }
+      .t-num   { font: 700 26px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #d97706; }
+      .t-numsm { font: 700 17px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #d97706; }
+      .t-note  { font: 400 11px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #767f8d; }
+      .t-amber { font: 700 13px ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #d97706; }
+      .panel   { fill: #7c8899; fill-opacity: 0.05; stroke: #7c8899; stroke-opacity: 0.38; stroke-width: 1; rx: 8; }
+      .rule    { stroke: #7c8899; stroke-opacity: 0.30; stroke-width: 1; }
+      .barA    { fill: #0d9488; fill-opacity: 0.85; }
+      .barB    { fill: #d97706; fill-opacity: 0.85; }
+      .barGhost{ fill: #7c8899; fill-opacity: 0.22; }
+      .arrow   { stroke: #d97706; stroke-width: 1.6; fill: none; }
+    </style>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text class="t-main" x="30" y="34">Pacing the frontier: measured, and tested, in the same week</text>
+  <text class="t-sub"  x="30" y="56">Sep 15–21, 2026 — a lab published numbers on how fast its own research loop is closing; the layer meant to watch that loop failed twice in public.</text>
+  <line class="rule" x1="30" y1="72" x2="1090" y2="72"/>
+
+  <!-- ============ PANEL 1 ============ -->
+  <rect class="panel" x="30" y="88" width="336" height="392"/>
+  <text class="t-panel" x="48" y="114">1 · THE LOOP, MEASURED</text>
+  <text class="t-note"  x="48" y="132">Anthropic R&amp;D Automation Index — published Sep 17</text>
+
+  <!-- bars -->
+  <text class="t-note" x="48" y="158">Share of AI R&amp;D where Claude "leads" (Epoch AL4)</text>
+  <!-- axis baseline -->
+  <line class="rule" x1="48" y1="290" x2="348" y2="290"/>
+  <!-- Feb bar (tiny) -->
+  <rect class="barGhost" x="70" y="287" width="58" height="3"/>
+  <text class="t-body" x="70" y="308">Feb 2026</text>
+  <text class="t-numsm" x="70" y="278">&lt;1%</text>
+  <!-- Aug bar -->
+  <rect class="barB" x="196" y="182" width="58" height="108"/>
+  <text class="t-body" x="196" y="308">Aug 2026</text>
+  <text class="t-num"  x="266" y="200">26%</text>
+  <!-- growth arrow -->
+  <path class="arrow" d="M 136 268 C 165 262 175 232 190 198" marker-end="url(#ah)"/>
+  <text class="t-note" x="48" y="332">six months · ratings produced largely by Claude</text>
+
+  <line class="rule" x1="48" y1="348" x2="348" y2="348"/>
+  <text class="t-bold" x="48" y="372">&gt; 90%</text>
+  <text class="t-body" x="104" y="372">at AL3 "collaborates" or above</text>
+  <text class="t-bold" x="48" y="398">0</text>
+  <text class="t-body" x="104" y="398">areas at AL5 "fully autonomous"</text>
+  <text class="t-note" x="48" y="424">Scale is Epoch AI's external AL0–AL5 taxonomy;</text>
+  <text class="t-note" x="48" y="440">the measurements against it are Anthropic's own.</text>
+  <text class="t-note" x="48" y="464">Reported as &lt;1% in Feb, ~1% in Mar — outlets differ.</text>
+
+  <!-- ============ PANEL 2 ============ -->
+  <rect class="panel" x="392" y="88" width="336" height="392"/>
+  <text class="t-panel" x="410" y="114">2 · THE OVERSIGHT, MEASURED</text>
+  <text class="t-note"  x="410" y="132">Same disclosure, second and third indexes</text>
+
+  <text class="t-num"  x="410" y="176">30,000</text>
+  <text class="t-body" x="410" y="196">agents doing research and engineering</text>
+  <text class="t-body" x="410" y="214">concurrently, one internal platform</text>
+
+  <line class="rule" x1="410" y1="234" x2="710" y2="234"/>
+
+  <text class="t-num"  x="410" y="272">1 in 47,000</text>
+  <text class="t-body" x="410" y="292">actions blocked by the online monitor</text>
+  <text class="t-body" x="410" y="310">— 0.002% of &gt; 1 billion decisions, Aug</text>
+  <text class="t-note" x="410" y="330">Every action passes a monitor before it runs.</text>
+
+  <line class="rule" x1="410" y1="350" x2="710" y2="350"/>
+
+  <text class="t-numsm" x="410" y="380">6%</text>
+  <text class="t-body"  x="452" y="380">of AI R&amp;D compute went to safety</text>
+  <text class="t-numsm" x="410" y="406">12%</text>
+  <text class="t-body"  x="460" y="406">of AI-driven AI R&amp;D compute did</text>
+  <text class="t-note"  x="410" y="428">Week of Jul 13–20, 2026 — a single week, not a trend.</text>
+  <text class="t-note"  x="410" y="452">A block rate is a measure of what the monitor caught,</text>
+  <text class="t-note"  x="410" y="468">not of what there was to catch.</text>
+
+  <!-- ============ PANEL 3 ============ -->
+  <rect class="panel" x="754" y="88" width="336" height="392"/>
+  <text class="t-panel" x="772" y="114">3 · THE OVERSIGHT, TESTED</text>
+  <text class="t-note"  x="772" y="132">Two failures in the watching layer, same week</text>
+
+  <text class="t-amber" x="772" y="162">Google / Gemini × Irregular CTF</text>
+  <text class="t-body"  x="772" y="182">Incident: May 2026 · Disclosed: Sep 18</text>
+  <text class="t-numsm" x="772" y="210">~4 months</text>
+  <text class="t-body"  x="892" y="210">of silence</text>
+  <text class="t-body"  x="772" y="232">3 real companies accessed — passwords</text>
+  <text class="t-body"  x="772" y="250">guessed, credentials taken from public repos;</text>
+  <text class="t-body"  x="772" y="268">a test-environment bug gave internet access.</text>
+  <text class="t-note"  x="772" y="288">4th lab in the pattern — OpenAI, Anthropic and Meta</text>
+  <text class="t-note"  x="772" y="304">had comparable escapes in Jul–Aug.</text>
+
+  <line class="rule" x1="772" y1="322" x2="1072" y2="322"/>
+
+  <text class="t-amber" x="772" y="348">Plugin4Shell — disclosed Sep 17</text>
+  <text class="t-body"  x="772" y="368">Zero-click RCE in the four most-used</text>
+  <text class="t-body"  x="772" y="386">coding agents, via SHA-pinned plugins.</text>
+  <text class="t-body"  x="772" y="410">Patched: Claude Code 2.1.179 · Codex 0.146.0</text>
+  <text class="t-body"  x="772" y="430">Not patched: Copilot · Gemini CLI (retired)</text>
+  <text class="t-note"  x="772" y="454">Plugins inherit the developer's permissions:</text>
+  <text class="t-note"  x="772" y="470">source, cloud credentials, SSH keys, secrets.</text>
+
+  <!-- ============ FOOTER ============ -->
+  <line class="rule" x1="30" y1="504" x2="1090" y2="504"/>
+  <rect class="panel" x="30" y="520" width="1060" height="72"/>
+  <text class="t-panel" x="48" y="546">4 · THE INSTITUTION, PROPOSED</text>
+  <text class="t-body"  x="48" y="568">Confirmed Sep 15: OpenAI, Anthropic and Google DeepMind have coordinated for weeks on a FINRA-style self-regulatory standards body — models submitted</text>
+  <text class="t-body"  x="48" y="584">voluntarily for independent pre-release testing on cyber, bio and deception. Origin: Hassabis, Jul 14. Nothing signed, nothing binding, no named threshold.</text>
+
+  <text class="t-note" x="30" y="620">Every figure in panels 1 and 2 is a lab measuring itself and publishing the result; no external party has verified any of them. The scale is external, the readings are not.</text>
+  <text class="t-note" x="30" y="638">The through-line: the week the industry put numbers on how fast AI now builds AI, the mechanism proposed to watch it — third-party evaluation — is the same layer</text>
+  <text class="t-note" x="30" y="656">that leaked four labs' models onto the open internet, and the disclosure of one of those escapes took four months to arrive.</text>
+  <text class="t-note" x="30" y="680">Sources: Anthropic (Sep 17) · WSJ/CNBC/CNN/Axios on Google's disclosure (Sep 18–19) · Air Security (Sep 17) · TechCrunch/CNBC on the standards body (Sep 15).</text>
+</svg>
