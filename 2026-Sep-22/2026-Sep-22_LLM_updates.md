@@ -1,7 +1,10 @@
 # LLM Updates — 2026-Sep-22
 
 Compiled Tue Sep 22 2026 (Los Angeles time), covering **Sep 20 → Sep 22**, plus three items dated **Sep 18** that
-broke too late for the Sep-20 brief and define this one. A 48-hour window with an unusual amount in it.
+neither the Sep-20 nor the Sep-21 brief caught, and which define this one. A 48-hour window with an unusual amount
+in it. Where the **Sep-21** brief already covered something — StepFun Step 5 Preview, Plugin4Shell, MonitorBench,
+the FINRA-style standards body, and its two corrections to the running ledger — this brief points to it rather
+than re-deriving it, and adopts its corrections.
 
 The **Sep-20** brief closed with a question at the top of its watch-list: *does "pace the frontier" survive contact
 with a release calendar?* It set the bar explicitly — "watch for anything binding: a signed access arrangement, an
@@ -172,7 +175,16 @@ consumers paying for frontier-model access receive an artificially degraded prod
    not to unilaterally slow."
 
 Every item the safety community treated as progress — public agreement, cross-lab coordination, candid admissions
-of competitive pressure — is repurposed as evidence of concerted action. **Anthropic, OpenAI, Google and SpaceXAI
+of competitive pressure — is repurposed as evidence of concerted action.
+
+**And the coordination is older than the essays, which makes the exposure larger, not smaller.** Sep-21 §2
+established that Hassabis proposed a US-led **FINRA-style standards body on Jul 14**, that a working group of
+OpenAI, Anthropic and Google DeepMind met periodically **through the summer**, and that Pachocki published on
+coordinated slowdown on **Sep 6** — so Amodei's Sep-12 essay was "less a starting gun than a public surfacing of a
+private process." For a safety narrative that is reassuring: the agreement was considered, not impulsive. For a
+§1 complaint it is the opposite, because it converts a week of public statements into **a months-long course of
+dealing among competitors**. The standards body itself — voluntary submission, no signed instrument, no named
+threshold, no enforcement — clears none of Sep-20's four bars, and now has to clear a legal one too. **Anthropic, OpenAI, Google and SpaceXAI
 all declined to comment** as of Sep 20.
 
 Sources: [CNN](https://www.cnn.com/2026/09/19/business/ai-slowdown-lawsuit-antitrust) ·
@@ -444,8 +456,12 @@ Sources: [TechNode](https://technode.com/2026/09/22/xiaomi-open-sources-mimo-v2-
 
 **What it does to the board:**
 
-- **Open-weights ceiling: 44 → 46.** It displaces GLM-5.3 and Kimi K3 (both 44) as open-weights leader. The rest of
-  the open table is intact: GLM-5.3-Flash 42, Qwen3.8 2.4T 40, DeepSeek V4 Pro 36.
+- **Open-weights ceiling: 44 → 46.** It displaces a *three-way* tie at 44 — GLM-5.3, Kimi K3, and **StepFun's
+  Step 5 Preview**, which landed on **Sep 20** (Sep-21 §7) at 44 with its weights scheduled for **Oct 15**. Three
+  labs had converged on the same ceiling; MiMo cleared it two days later. The rest of the open table is intact:
+  GLM-5.3-Flash 42, Qwen3.8 2.4T 40, DeepSeek V4 Pro 36.
+- **And it shipped its weights on day one**, which Step 5 Preview did not. Against Meta's undated promise (§14)
+  and StepFun's dated one, MiMo is the only member of this group whose openness is a fact rather than a schedule.
 - **Closed-vs-open gap: 9 points → 7** (53 vs 46). Sep-20 reported this gap *widening* under the more agentic ruler.
   One model reversed two points of that in a day.
 - **It finishes 0.13 points behind Grok 4.7** (46.32 vs 46.45) — a tie at display precision — **at roughly 1/29th
@@ -560,7 +576,7 @@ longer distinguishes, and the leaderboards do not track license terms at all.
 
 ---
 
-## 9. Governance-by-tier reaches a fourth lab — inside Grok 4.7's safety stack
+## 9. Governance-by-tier reaches a fifth lab — inside Grok 4.7's safety stack
 
 Grok 4.7 shipped **with a model card** (Revision 2026-09-21), which is itself the news: **Grok 4.5 shipped with no
 model card and no safety benchmarks at all.** Everything below is **vendor-reported and unverified externally**.
@@ -580,15 +596,21 @@ model card and no safety benchmarks at all.** Everything below is **vendor-repor
 [SQ Magazine](https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/).
 
 **The structural item: invite-only red-team access to Grok 4.7's offensive-cyber capabilities** for selected
-cybersecurity partners and defence research. That is the **fourth instance** of the pattern this brief has tracked
-since Sep-02 — capability governed by *tier of access* rather than gated wholesale:
+cybersecurity partners and defence research. **Sep-21 §8 corrected the running count** — governance-by-tier was
+already at *four* labs, not three, because Google shipped **Gemini 3.8 Flash Cyber** behind its **Fairwind**
+program on Sep 2. Grok 4.7 makes it **five**, and the shape is identical every time:
 
 | Lab | Open / general tier | Gated tier |
 |---|---|---|
-| Anthropic | Claude Fable 5.1 | **Mythos 5.1** vetted sibling |
+| Anthropic | Claude Fable 5.1 | **Mythos 5.1** vetted sibling (now also via LSVP — §13) |
 | Z.ai | GLM-5.3-Flash (MIT) | flagship under bespoke license |
 | OpenAI | GPT-6 Astra GA, offensive cyber refused | **Daybreak** vetted program |
+| Google | Gemini 3.8 Flash | **Gemini 3.8 Flash Cyber** via **Fairwind** |
 | **SpaceXAI** | **Grok 4.7 GA** | **invite-only offensive-cyber red-team access** |
+
+Five labs, arrived at independently inside a month, with **no shared eligibility standard, no reciprocity and no
+external audit of who gets in** — the gap Sep-21 §8 named, and one that §1–§3 of this brief shows is now entangled
+with an antitrust question about labs coordinating anything at all.
 
 **What is missing, and it matters.** No **risk-level classification** analogous to OpenAI's Preparedness "Critical"
 or DeepMind's Critical Capability Levels surfaced for Grok 4.7, and no evidence of any government or AISI
@@ -646,9 +668,13 @@ corroborated** and are not reported here as fact.
 
 ## 11. Monitorability — and the first hard evidence that latent reasoning resists control
 
-Sep-20 called independent monitorability measurement "the board's largest missing number." **It is still missing** —
-**no new third-party or academic measurement of chain-of-thought monitorability or faithfulness appeared
-Sep 20–22.** But the literature delivered something adjacent and arguably more useful.
+Sep-20 called independent monitorability measurement "the board's largest missing number," and **Sep-21 §6 already
+corrected that**: the instrument exists. **MonitorBench** ([arXiv:2603.28590](https://arxiv.org/abs/2603.28590),
+COLM 2026, 1,514 instances across 19 tasks) is a third-party, peer-reviewed benchmark wired into Inspect Evals and
+runnable today. What is missing is narrower and more damning: **a published MonitorBench run on GPT-6 Astra** — the
+one model whose vendor self-reports a monitorability decline. Nothing closed that gap in this window, and **no new
+third-party measurement of monitorability or CoT faithfulness appeared Sep 20–22**. But the literature delivered
+something adjacent and arguably more useful.
 
 ### The window's most consequential paper
 
@@ -855,8 +881,9 @@ that Anthropic has set up a **Bay Area wet lab** where Claude directs robotic eq
 intervention, which Anthropic says is not specifically for drug discovery
 ([CNBC](https://www.cnbc.com/2026/09/18/anthropic-quietly-sets-up-biology-lab-as-it-ramps-ai-drug-program-report.html) ·
 [Engadget](https://www.engadget.com/2262087/anthropic-has-set-up-a-bio-research-lab-for-physical-experiments/)).
-Note the LSVP is a **fifth** instance of governance-by-tier (§9), and the first where the gated tier is opened to
-outsiders under a *named verification programme* rather than an invite list.
+Note what the LSVP does to §9: it is the first case anywhere in the pattern where a gated tier is opened to
+outsiders under a **named verification programme with published tiers** rather than an invite list — which is, so
+far, the closest thing to the shared eligibility standard that five labs of governance-by-tier still lack.
 
 **Meta / Amazon, Sep 21–22 — Amazon blocked Meta's Muse agent from shopping on amazon.com.** Reported rather than
 confirmed at source, but if it holds it is the **first significant agentic-commerce access fight**: the question of
@@ -871,12 +898,9 @@ remains "in pre-training,"** last officially referenced on **Jul 21, 2026**; the
 are Antigravity's `antigravity-preview-09-2026` (Sep 17, with a breaking tool-API change and an **Oct 5** hard
 cutoff for the May preview) and Gemini 3.8 Live GA around Sep 15. Sep-20's watch-item #7 stands entirely unmoved.
 
-**Developer tooling — one security event worth flagging.** **Plugin4Shell**, disclosed **Sep 18**: a **zero-click
-RCE** via swapped plugin code affecting **Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI**. Patched in
-Claude Code 2.1.179 and Codex 0.146.0; **Google deprecated Gemini CLI** in response
-([The Hacker News](https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html)). Four major coding
-agents sharing one plugin-supply-chain vulnerability is a structural fact about the agentic tooling layer, not an
-incident at one vendor. Anthropic also shipped **Claude Code 2.1.275–2.1.278** through Sep 17–19 (AGENTS.md
+**Developer tooling.** **Plugin4Shell** — the zero-click plugin-supply-chain RCE affecting Claude Code, OpenAI
+Codex, GitHub Copilot and Gemini CLI — is covered in **Sep-21 §4** and not re-derived here; nothing new on it
+surfaced Sep 20–22. Anthropic shipped **Claude Code 2.1.275–2.1.278** through Sep 17–19 (AGENTS.md
 support, server-side classifier default for API/Enterprise auto mode, claude.ai→terminal skills sync) and reported
 a **Claude API incident, "elevated errors for multiple models," on Sep 22**
 ([changelog](https://code.claude.com/docs/en/changelog) · [status](https://status.claude.com/incidents/7g1qpkyz5gxh)).
@@ -891,7 +915,7 @@ not be pinned.
 
 ---
 
-## 14. Unchanged since Sep-20 (not re-derived here)
+## 14. Unchanged since Sep-20 / Sep-21 (not re-derived here)
 
 - **AA Intelligence Index v5 has not shipped.** Live version is **v4.3.2**; composition and category weights
   (Agents 30% / Coding 20% / General 30% / Scientific Reasoning 20%) unchanged from v4.3. AA's messaging is
@@ -921,7 +945,13 @@ not be pinned.
 - **Open-weights table** otherwise intact below the new leader: GLM-5.3 44, Kimi K3 44, GLM-5.3-Flash 42, Qwen3.8
   2.4T 40, DeepSeek V4 Pro 36.
 - **No new open-weights LLM** from DeepSeek, Moonshot, Z.ai, MiniMax, Tencent, ByteDance, Baidu, Shanghai AI Lab,
-  Mistral, Allen AI, Nvidia, IBM, Microsoft or Google in the window — Xiaomi's MiMo (§7) is the sole exception.
+  Mistral, Allen AI, Nvidia, IBM, Microsoft or Google in the window. **Xiaomi's MiMo (§7) is the only lab that
+  actually released weights.** Two adjacent launches are not counter-examples: **StepFun Step 5 Preview** (Sep 20,
+  Sep-21 §7) is API-only with weights promised **Oct 15**, and **Qwen-Image-2.1** (§8) published weights under a
+  license that forbids commercial use.
+- **StepFun Step 5 Preview** — covered in Sep-21 §7 and not re-derived: ~600B/27B MoE, 1M context, $1.00/$2.70,
+  Index 44, Terminal-Bench 4.0 33%. Its **Oct 15 weights date** is now the open tier's nearest falsifiable
+  commitment, and the Aug-29 GLM-5.3 episode is the precedent for such a date slipping quietly.
 - **No new price cuts or inference-efficiency announcements** dated Sep 20–22. Context unchanged: DeepSeek's Sep 10
   cuts of up to 60%, and Zhipu's Sep 9 *increase* as promotional pricing ended.
 - **No new AA Index scores** in the window other than Grok 4.7 and MiMo-V2.6-Pro.
@@ -973,7 +1003,10 @@ table needs correcting. Not resolved here; the sources conflict and primary page
 
 - **Compiled** Tue Sep 22 2026 (Los Angeles time), covering **Sep 20 – Sep 22**, with three **Sep 18** items
   (Accenture, the evaluator letter, the *Buist* filing) that post-dated the Sep-20 brief's reporting and are new
-  here. Advances only items new since Sep-20; unchanged threads are in §14 with pointers rather than re-derived.
+  here. Advances only items new since the **Sep-20 and Sep-21** briefs, adopts Sep-21's two corrections (the
+  monitorability instrument exists; governance-by-tier was already at four labs), and points to Sep-21 for
+  StepFun Step 5 Preview, Plugin4Shell, MonitorBench and the FINRA-style standards body rather than re-deriving
+  them. Other unchanged threads are in §14.
 - **Index versions are not interchangeable.** Every Index figure here is on **v4.3.2** unless stated. Absolute
   scores from v4.1.x and v4.2 are **not comparable** — Fable 5.1 reads 66, 57 and 53 across three rulers without
   changing. Several widely-read mirrors are currently serving **v4.1.x numbers under September datelines** and
@@ -1002,7 +1035,7 @@ table needs correcting. Not resolved here; the sources conflict and primary page
   measurement; no new recurrent-depth or looped-transformer paper; no NCP follow-up; no METR/Apollo/AISI report on
   Grok 4.7; no third-party replication of any Grok 4.7 or MiMo vendor number; no RSP/Preparedness/FSF update; no
   new incident dated in window; no OpenAI safety evaluator; no lab comment on *Buist*; no Muse Spark weights; no
-  new open-weights LLM from any lab except Xiaomi; no new price cuts; no China, EU, California or UK AISI
+  new open-weights *release* from any lab except Xiaomi; no new price cuts; no China, EU, California or UK AISI
   regulatory action; **no Google announcement of any kind**; no funding round, acquisition or datacentre deal; no
   personnel news from OpenAI, Anthropic or Meta Superintelligence Labs; no Daybreak news — all dated Sep 20–22.
   Each is stated in place.
@@ -1048,6 +1081,9 @@ table needs correcting. Not resolved here; the sources conflict and primary page
 - **Multilateral governance** — [Al Jazeera](https://www.aljazeera.com/economy/2026/9/22/20-countries-propose-global-oversight-body-to-manage-ai-dangers) · [NBC News, 20 countries](https://www.nbcnews.com/tech/tech-news/20-countries-call-global-ai-oversight-rcna599062) · [Washington Examiner](https://www.washingtonexaminer.com/news/world/4736887/global-oversight-body-ai-united-nations/) · [SBS](https://news.sbs.co.kr/english/article.do?news_id=N1008765240) · [NBC News, UNGA red lines](https://www.nbcnews.com/tech/tech-news/un-general-assembly-opens-plea-binding-ai-safeguards-red-lines-nobel-rcna231973) · [UN News, AI agents](https://news.un.org/en/story/2026/09/1168380) · [Fortune, roadmap op-ed](https://fortune.com/2026/09/21/ai-safety-regulation-roadmap/) · [Global call for AI red lines](https://en.wikipedia.org/wiki/Global_call_for_AI_red_lines) · [UK JCHR on AISI](https://aifront-page.com/uk-ai-regulation-parliament-committee-ai-safety-institute/) · [UK AISI Frontier AI Trends Report](https://www.aisi.gov.uk/frontier-ai-trends-report)
 - **Monitorability and incidents** — [OpenAI deployment safety, Apollo](https://deploymentsafety.openai.com/gpt-6-astra/external-evaluations-for-alignment---apollo-research) · [The Verge coverage summary, Apollo's three days](https://aiweekly.co/alerts/verge-metr-apollo-got-days-not-weeks-for-openai-safety-audits) · [ProgressiveRobot](https://www.progressiverobot.com/2026/09/17/ai-safety-researchers-metr-apollo-redwood-warning/) · [Zvi Mowshowitz, "Astra Is Hard to Monitor"](https://thezvi.wordpress.com/2026/09/08/astra-is-hard-to-monitor/) · [implicator.ai](https://www.implicator.ai/openai-says-its-own-tests-found-gpt-6-astra-harder-to-monitor/) · [OpenAI, evaluating CoT monitorability](https://openai.com/index/evaluating-chain-of-thought-monitorability/) · [Anthropic threat-intelligence report, Sep 2026](https://www.anthropic.com/threat-intelligence-report-september-2026) · [Axios, OpenAI–Hugging Face agent incident](https://www.axios.com/2026/09/01/openai-hugging-face-ai-agent-security) · [Rappler, running incident tally](https://www.rappler.com/technology/features/big-tech-ai-agents-security-incidents-list/) · *prior latent-reasoning interpretability:* [Readout Blind Spot in Looped LMs (2606.24898)](https://arxiv.org/pdf/2606.24898) · [Unlocking the Black Box of Latent Reasoning (2606.01243)](https://arxiv.org/pdf/2606.01243) · [LOTUS (2606.31779)](https://arxiv.org/abs/2606.31779)
 - **Meta / open-weights status** — [The Register, weights "soon"](https://www.theregister.com/ai-and-ml/2026/09/02/zucks-muse-to-spark-joy-with-open-weights-release-soon/5294093) · [VentureBeat, Muse Spark 1.3](https://venturebeat.com/technology/meta-says-muse-spark-1-3-has-frontier-performance-but-its-best-results-come-from-a-model-developers-cant-broadly-use-yet) · [CNBC, Muse Glimmer](https://www.cnbc.com/2026/08/10/meta-muse-glimmer-open-weight-ai.html) · [HF: DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) · [Interconnects, balance of power in open models](https://www.interconnects.ai/p/the-current-balance-of-power-in-open)
+- **Monitorability instrument (via Sep-21 §6)** — [MonitorBench (arXiv:2603.28590)](https://arxiv.org/abs/2603.28590) · [code](https://github.com/ASTRAL-Group/MonitorBench)
+- **Governance-by-tier, Google row (via Sep-21 §8)** — [Google, Gemini 3.8 Flash and 3.8 Flash Cyber / Fairwind](https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/)
+- **StepFun Step 5 Preview (via Sep-21 §7)** — [MarkTechPost](https://www.marktechpost.com/2026/09/20/stepfun-launches-step-5-preview/) · [Pandaily](https://pandaily.com/stepfun-step-5-preview-600b-moe-1m-context)
 - **Research — latent reasoning and control** — [When Steering Fails in Latent Reasoning (2609.21662)](https://arxiv.org/abs/2609.21662) · [detailed community read](https://github.com/jjakimoto/research-issues/issues/1666) · [SPS, state-conditioned latent steering (2609.24066)](https://arxiv.org/abs/2609.24066) · *prior context:* [T-LoopFormer (2609.15160)](https://arxiv.org/abs/2609.15160) · [Looped Transformers under the Jacobian Lens (2609.01924)](https://arxiv.org/abs/2609.01924) · [NCP-ArchPreview (2609.10715)](https://arxiv.org/abs/2609.10715) · [NCP 64M replication](https://github.com/tachytelicdetonation/NCP-64M)
 - **Research — efficiency, architecture and post-training** — [DeepSeek-V4.1-Flash: KV Cache Compression (2609.19969)](https://arxiv.org/abs/2609.19969) · [SoL-Pi (2609.20519)](https://arxiv.org/abs/2609.20519) and [project page](https://nvlabs.github.io/SoL-Pi/) · [Harness Design for Coding Agents (2609.20804)](https://arxiv.org/abs/2609.20804) · [When EOS Tokens Disagree (2609.20511)](https://arxiv.org/abs/2609.20511) · [RetireOPD (2609.20784)](https://arxiv.org/abs/2609.20784) · [Privileged Information in On-Policy Self-Distillation (2609.20612)](https://arxiv.org/abs/2609.20612) · [1% of Tokens Can Be Enough (2609.24432)](https://arxiv.org/abs/2609.24432) · [When2Think (2609.19671)](https://arxiv.org/abs/2609.19671) · [dQwen3.5 (2609.20751)](https://arxiv.org/abs/2609.20751) · [IntBMoE (2609.21346)](https://arxiv.org/abs/2609.21346) · [On-Demand Attention (2609.20734)](https://arxiv.org/abs/2609.20734) · [ARM (2609.24417)](https://arxiv.org/abs/2609.24417) · [SwitchSD (2609.20186)](https://arxiv.org/abs/2609.20186) · [Rethinking Critic Learning in PPO (2609.18708)](https://arxiv.org/abs/2609.18708) · [ScienceIDE (2609.19134)](https://arxiv.org/abs/2609.19134) · [CodeMidas (2609.22068)](https://arxiv.org/abs/2609.22068) · [ProgramDistill (2609.18805)](https://arxiv.org/abs/2609.18805) · [RecreationWorld (2609.22000)](https://arxiv.org/abs/2609.22000) · *aggregators used in place of blocked arXiv:* [HF daily mirror](https://github.com/hyeonseo2/daily-huggingface/issues/241) · [arXiv AI daily](https://github.com/howe12/agents-radar/issues/559)
 - **OpenAI — mathematics advisory group** — [OpenAI](https://openai.com/index/advisory-group-on-mathematics-and-ai/) · [TechCrunch](https://techcrunch.com/2026/09/21/openai-forms-math-advisory-group-as-its-ai-resolves-more-than-100-open-problems/) · [Terence Tao](https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/) · [Mezha](https://mezha.net/eng/news/881f27ad_openai_creates_independent/) · [OpenAI DevDay 2026](https://openai.com/index/devday-2026/)
