@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Four models score 46 on the same index at costs ranging from 13 cents to 3 dollars 74 per task, with the cheapest-listed model producing the dearest answers because it emits three times the tokens; and the same model scores 26, 33 or 38 percent on one coding benchmark depending on whose harness runs it</title>
+  <desc id="desc">A three-panel figure covering September 20 to 22, 2026. Panel one, headed the same score of 46, four ways, plots score on the Artificial Analysis Intelligence Index version 4.3 point 2 against the measured cost of running one Index task. Four entries all score 46. Xiaomi MiMo-V2.6-Pro, released September 22 under an MIT licence with open weights, costs 13 cents per task. GPT-6 Astra at its lowest effort setting costs 82 cents. SpaceXAI's Grok 4.7 at high effort costs 2 dollars 73, and Grok 4.7 at its maximum xhigh effort costs 3 dollars 74 while still scoring 46, so the top effort setting buys zero points for 37 percent more money. Above them, two models score 53: GPT-6 Astra at maximum effort for 3 dollars 26, and Claude Fable 5.1 at maximum for a figure reported as 5 dollars 98 in this window against 7 dollars 63 two weeks earlier. The panel's conclusion is that Grok 4.7 at maximum effort costs more than GPT-6 Astra at maximum effort while scoring seven points lower, and costs roughly 29 times what an MIT-licensed open-weights model costs for the identical score. A note records that list prices run the opposite way: Grok 4.7 lists at 2 dollars per million input tokens and 6 per million output, the cheapest at the frontier, against 4 and 20 for GPT-5.6 Sol and 10 and 50 for Claude Fable 5.1, yet per finished task GPT-5.6 Sol lands about 20 percent cheaper than Grok 4.7 despite listing at 3.3 times the token price. Panel two, headed the cause is token count, not token price, shows output tokens emitted per Index task as horizontal bars: GPT-6 Astra at maximum uses 27 thousand, GPT-5.6 Sol uses 29 thousand, Grok 4.6 at high uses 36 thousand, and Grok 4.7 at xhigh uses 81 thousand, which is 125 percent more than its own predecessor and 196 percent more than Astra. Artificial Analysis flagged Grok 4.7 as very verbose, consuming 200 million tokens at high effort and 240 million at xhigh across the whole Index against a median of 94 million. A note explains that Grok 4.7 scales a 2.1 trillion parameter base, up 40 percent from Grok 4.6's 1.5 trillion, with a longer reinforcement learning run on multi-hour tasks, and that this bought two Index points, from 44 to 46, for 2.25 times the tokens and roughly double the wall clock, 39.2 minutes against 19.5 in Artificial Analysis's coding agent tests, with two component scores actually regressing: AA-LCR down 3.7 points and AutomationBench-AA down 1.1. It contrasts this token-denominated bet with GPT-6 Astra's reported recurrent depth, which loops a shared transformer stack in latent space and emits fewer tokens. Panel three, headed one model, one benchmark, three scores, shows Terminal-Bench 4.0 results for Grok 4.7 that differ by who ran it and in which harness: 38.0 percent as reported by SpaceXAI running its own Grok Build harness, 33 percent as measured by Artificial Analysis also running Grok Build, and 26 percent as measured by Artificial Analysis in its standardized cross-model harness. The peer scores in that same standardized harness are 60 percent for GPT-6 Astra and 55 percent for Claude Fable 5.1, so the honest standardized gap is about 34 points while the vendor chart shows a near doubling from Grok 4.6's 20.3 percent. A 12-point spread on one benchmark is driven entirely by harness choice, and the harness is chosen by the party being measured. A footer states the through-line: the September 20 brief found that the ruler had moved toward agentic work and that token efficiency, not list price, decided cost. Grok 4.7 is the control experiment for both findings and fails both, buying its gains with tokens rather than architecture and posting its best coding numbers only in its own harness.</desc>
+
+  <style>
+    .hd    { fill:#708098; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .sect  { fill:#708098; font-size:13px; font-weight:700; }
+    .name  { fill:#708098; font-size:12px; font-weight:700; }
+    .meta  { fill:#64748b; font-size:11px; }
+    .metai { fill:#64748b; font-size:10.5px; font-style:italic; }
+    .val   { font-size:12.5px; font-weight:700; }
+    .amb   { fill:#b45309; }
+    .teal  { fill:#0d9488; }
+    .slate { fill:#64748b; }
+    .foot  { fill:#64748b; font-size:12px; }
+    .footb { fill:#708098; font-size:12px; font-weight:700; }
+    .axl   { stroke:#94a3b8; stroke-width:1; opacity:.6; }
+    .grid  { stroke:#94a3b8; stroke-width:1; opacity:.22; stroke-dasharray:3 3; }
+    .boxs  { fill:none; stroke:#94a3b8; stroke-width:1.2; opacity:.65; }
+    .boxa  { fill:none; stroke:#b45309; stroke-width:1.4; opacity:.75; }
+    .lead  { stroke:#b45309; stroke-width:1.2; opacity:.5; stroke-dasharray:2 3; }
+  </style>
+
+  <!-- ================= header ================= -->
+  <text x="34" y="32" class="hd">The same score of 46, four ways — from 13 cents to $3.74 a task</text>
+  <text x="34" y="52" class="sub">Artificial Analysis Intelligence Index v4.3.2, Sep 20–22 2026. Cost is AA's measured $/task (input + cache + reasoning + answer tokens), not list price.</text>
+
+  <!-- ================= PANEL 1 ================= -->
+  <text x="34" y="88" class="sect">1 · Score vs. what it actually costs to produce</text>
+
+  <!-- axes: x = 100 + dollars*58 ; y: 53 -> 142, 46 -> 240 -->
+  <line x1="100" y1="255" x2="470" y2="255" class="axl"/>
+  <line x1="100" y1="112" x2="100" y2="255" class="axl"/>
+  <text x="40" y="118" class="meta">Index</text>
+  <text x="40" y="132" class="meta">score</text>
+
+  <line x1="100" y1="240" x2="470" y2="240" class="grid"/>
+  <line x1="100" y1="142" x2="470" y2="142" class="grid"/>
+  <text x="90" y="244" class="meta" text-anchor="end">46</text>
+  <text x="90" y="146" class="meta" text-anchor="end">53</text>
+
+  <text x="100" y="280" class="meta" text-anchor="middle">$0</text>
+  <text x="216" y="280" class="meta" text-anchor="middle">$2</text>
+  <text x="332" y="280" class="meta" text-anchor="middle">$4</text>
+  <text x="448" y="280" class="meta" text-anchor="middle">$6</text>
+  <text x="285" y="298" class="meta" text-anchor="middle">measured cost per Index task →</text>
+
+  <!-- 46-point row connector -->
+  <line x1="108" y1="240" x2="317" y2="240" class="lead"/>
+
+  <!-- MiMo 46 @ 0.13 -> x=108 -->
+  <circle cx="108" cy="240" r="6" fill="#0d9488" opacity=".95"/>
+  <text x="112" y="228" class="val teal">$0.13</text>
+  <text x="112" y="215" class="name">MiMo-V2.6-Pro</text>
+  <text x="112" y="203" class="metai">Xiaomi · MIT · open weights</text>
+
+  <!-- Astra low 46 @ 0.82 -> x=148 -->
+  <circle cx="148" cy="240" r="6" fill="#b45309" opacity=".9"/>
+  <text x="152" y="256" class="val amb">$0.82</text>
+  <text x="152" y="269" class="metai">Astra (low)</text>
+
+  <!-- Grok high 46 @ 2.73 -> x=258 -->
+  <circle cx="258" cy="240" r="6" fill="#64748b" opacity=".9"/>
+  <text x="262" y="228" class="val slate" text-anchor="middle">$2.73</text>
+  <text x="262" y="215" class="name" text-anchor="middle">Grok 4.7 (high)</text>
+
+  <!-- Grok xhigh 46 @ 3.74 -> x=317 -->
+  <circle cx="317" cy="240" r="6" fill="#64748b" opacity=".95"/>
+  <text x="330" y="245" class="val slate">$3.74 · xhigh — still 46</text>
+
+  <!-- 53 row -->
+  <!-- Astra max 53 @ 3.26 -> x=289 -->
+  <circle cx="289" cy="142" r="6" fill="#b45309" opacity=".9"/>
+  <text x="289" y="130" class="val amb" text-anchor="middle">$3.26</text>
+  <text x="289" y="117" class="name" text-anchor="middle">GPT-6 Astra (max)</text>
+
+  <!-- Fable 5.1 max 53 @ 5.98 -> x=447 -->
+  <circle cx="447" cy="142" r="6" fill="#0d9488" opacity=".9"/>
+  <text x="447" y="130" class="val teal" text-anchor="middle">$5.98</text>
+  <text x="447" y="117" class="name" text-anchor="middle">Fable 5.1 (max)</text>
+
+  <path d="M317 232 L297 154" class="boxa" fill="none"/>
+  <text x="350" y="180" class="meta">Astra at MAX (53) costs LESS</text>
+  <text x="350" y="194" class="meta">than Grok at MAX (46).</text>
+
+  <!-- panel 1 note box -->
+  <rect x="500" y="100" width="450" height="192" rx="6" class="boxs"/>
+  <text x="516" y="122" class="sect">List price runs the other way</text>
+  <text x="516" y="142" class="meta">Vendor list, per 1M tokens (input / output):</text>
+  <text x="516" y="162" class="name">Grok 4.7</text><text x="646" y="162" class="val slate">$2 / $6</text><text x="742" y="162" class="metai">cheapest listed</text>
+  <text x="516" y="181" class="name">GPT-5.6 Sol</text><text x="646" y="181" class="val slate">$4 / $20</text>
+  <text x="516" y="200" class="name">Claude Fable 5.1</text><text x="646" y="200" class="val teal">$10 / $50</text><text x="742" y="200" class="metai">dearest listed</text>
+  <line x1="516" y1="213" x2="934" y2="213" class="grid"/>
+  <text x="516" y="233" class="meta">Per finished Index task, GPT-5.6 Sol (29k tokens out) lands</text>
+  <text x="516" y="248" class="meta">about 20% CHEAPER than Grok 4.7 (81k tokens out) — a</text>
+  <text x="516" y="263" class="meta">3.3× list-price gap reversed by token count alone.</text>
+  <text x="516" y="283" class="metai">And an MIT-licensed open model matches Grok's score for ~1/29th the cost.</text>
+
+  <!-- ================= PANEL 2 ================= -->
+  <text x="34" y="338" class="sect">2 · The cause is token count, not token price — output tokens per Index task</text>
+
+  <!-- bars: x start 210, 90k -> 300px -->
+  <text x="196" y="368" class="name" text-anchor="end">GPT-6 Astra (max)</text>
+  <rect x="210" y="357" width="90" height="14" rx="2" fill="#b45309" opacity=".85"/>
+  <text x="310" y="368" class="val amb">27k</text>
+  <text x="362" y="368" class="metai">reported recurrent depth — loops in latent space, emits less</text>
+
+  <text x="196" y="393" class="name" text-anchor="end">GPT-5.6 Sol</text>
+  <rect x="210" y="382" width="97" height="14" rx="2" fill="#94a3b8" opacity=".85"/>
+  <text x="317" y="393" class="val slate">29k</text>
+
+  <text x="196" y="418" class="name" text-anchor="end">Grok 4.6 (high)</text>
+  <rect x="210" y="407" width="120" height="14" rx="2" fill="#94a3b8" opacity=".85"/>
+  <text x="340" y="418" class="val slate">36k</text>
+
+  <text x="196" y="443" class="name" text-anchor="end">Grok 4.7 (xhigh)</text>
+  <rect x="210" y="432" width="270" height="14" rx="2" fill="#64748b" opacity=".95"/>
+  <text x="490" y="443" class="val slate">81k</text>
+  <text x="532" y="443" class="metai">+125% vs its own predecessor · +196% vs Astra</text>
+
+  <rect x="34" y="460" width="916" height="80" rx="6" class="boxs"/>
+  <text x="50" y="480" class="meta"><tspan class="footb">What the extra tokens bought:</tspan> a 2.1T-parameter base (up 40% from Grok 4.6's 1.5T) plus a longer RL run on multi-hour tasks yielded</text>
+  <text x="50" y="497" class="meta"><tspan class="val amb">+2 Index points</tspan> (44 → 46) for <tspan class="val slate">2.25× the tokens</tspan> and roughly <tspan class="val slate">double the wall clock</tspan> (39.2 min vs 19.5 in AA's coding-agent tests) —</text>
+  <text x="50" y="514" class="meta">with <tspan class="val slate">two components going backwards</tspan>: AA-LCR −3.7pp and AutomationBench-AA −1.1pp. AA flagged the model "very verbose."</text>
+  <text x="50" y="531" class="metai">Scale-and-think-longer is a token-denominated bet. Astra's architecture-denominated bet moves cost the other way at 5× the list price.</text>
+
+  <!-- ================= PANEL 3 ================= -->
+  <text x="34" y="576" class="sect">3 · One model, one benchmark, three scores — Terminal-Bench 4.0, Grok 4.7</text>
+
+  <!-- bars: x start 300, 70% -> 340px -->
+  <text x="286" y="602" class="name" text-anchor="end">SpaceXAI, own Grok Build harness</text>
+  <rect x="300" y="591" width="185" height="14" rx="2" fill="#64748b" opacity=".95"/>
+  <text x="495" y="602" class="val slate">38.0%</text>
+  <text x="548" y="602" class="metai">vendor-run · headline "nearly doubled from 20.3%"</text>
+
+  <text x="286" y="627" class="name" text-anchor="end">Artificial Analysis, Grok Build harness</text>
+  <rect x="300" y="616" width="160" height="14" rx="2" fill="#94a3b8" opacity=".9"/>
+  <text x="470" y="627" class="val slate">33%</text>
+  <text x="548" y="627" class="metai">third-party run, vendor harness (Coding Agent Index)</text>
+
+  <text x="286" y="652" class="name" text-anchor="end">Artificial Analysis, standardized harness</text>
+  <rect x="300" y="641" width="126" height="14" rx="2" fill="#b45309" opacity=".9"/>
+  <text x="436" y="652" class="val amb">26%</text>
+  <text x="548" y="652" class="metai">third-party run, cross-model harness (Intelligence Index)</text>
+
+  <text x="300" y="676" class="meta">Peers in that same standardized harness: <tspan class="val amb">GPT-6 Astra 60%</tspan> · <tspan class="val teal">Claude Fable 5.1 55%</tspan> — a ~34-point gap, not a near-doubling.</text>
+
+  <line x1="34" y1="692" x2="950" y2="692" class="grid"/>
+  <text x="34" y="710" class="foot"><tspan class="footb">Through-line:</tspan> Sep-20 found the ruler had moved toward agentic work and that token efficiency, not list price, decided cost. Grok 4.7 tests both — and fails both.</text>
+</svg>
