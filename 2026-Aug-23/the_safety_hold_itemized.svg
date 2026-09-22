@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3's safety hold, itemized: top open score above, a coordinated-disclosure ledger below, both on a five-day timer to open weights</title>
+  <desc id="desc">A split diagram organised around a horizontal timeline. The timeline runs from August 14, when GLM-5.3 launched with its weights held, through today, August 23, to about August 28, the promised open-weights drop, now roughly five days away. Above the timeline sits the reason to want the model open: it scores Intelligence Index 60 on Artificial Analysis, tying Kimi K3 as the top open model and landing just 3 points below the frozen closed ceiling of Claude Opus 5 at 63, and the plus-7 jump over GLM-5.2 came from post-training alone on the same 743-billion-parameter base. A dashed amber band across the very top marks that closed ceiling, frozen for a seventh straight brief with no Index-64 model and no flagship price cut since July 24. Below the timeline sits the reason the weights are held: a public coordinated-vulnerability-disclosure ledger at cvd.z.ai recording 2,436 vulnerabilities across 269 open-source projects after review and deduplication, of which 1,097 are critical in Linux, WebKit and FreeBSD; 53 CVEs are already assigned while 2,383 remain under embargo; the oldest flaw dates to 1981 and the mean time the bugs sat undiscovered is 26.6 years. A central caption states the tension: the same post-training that rebuilt the coding ladder also produced emergent exploit-chain capability, so the best open score on the board is also a prolific real-world vulnerability finder, and that dual-use capability is exactly what a weight release cannot be taken back.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:12.5px; }
+    .tick  { fill:#64748b; font-size:12px; }
+    .lab   { fill:#475569; font-size:13px; }
+    .small { fill:#64748b; font-size:11.5px; }
+
+    .axis  { stroke:#94a3b8; stroke-width:1.4; }
+    .node  { fill:#94a3b8; }
+    .nodehi{ fill:#0ea5e9; }
+
+    .ceil     { stroke:#f59e0b; stroke-width:1.4; stroke-dasharray:6 5; opacity:.9; }
+    .ceilfill { fill:#f59e0b; opacity:.07; }
+    .amb      { fill:#b45309; font-size:12px; }
+    .ambh     { fill:#b45309; font-size:12.5px; font-weight:700; }
+
+    .capbox   { fill:#0ea5e9; opacity:.08; stroke:#0ea5e9; stroke-width:1.2; }
+    .caph     { fill:#0369a1; font-size:14px; font-weight:700; }
+    .capt     { fill:#0369a1; font-size:12.5px; }
+    .caphi    { fill:#0369a1; font-size:12.5px; font-weight:700; }
+
+    .riskbox  { fill:#e11d48; opacity:.07; stroke:#e11d48; stroke-width:1.2; }
+    .riskh    { fill:#be123c; font-size:14px; font-weight:700; }
+    .riskt    { fill:#be123c; font-size:12.5px; }
+    .riskhi   { fill:#be123c; font-size:12.5px; font-weight:700; }
+
+    .midh     { fill:#334155; font-size:12.5px; font-weight:700; }
+    .midt     { fill:#475569; font-size:12px; }
+    .arrow    { stroke:#64748b; stroke-width:1.4; fill:none; }
+    .take     { fill:#334155; font-size:13px; font-weight:700; }
+  </style>
+
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- header -->
+  <text x="30" y="34" class="hd">GLM-5.3: the safety hold, itemized</text>
+  <text x="30" y="54" class="sub">Top open score on the board — held behind a public vulnerability-disclosure ledger, ~5 days from an open-weights drop</text>
+
+  <!-- frozen ceiling band -->
+  <rect x="30" y="70" width="880" height="30" class="ceilfill"/>
+  <line x1="30" y1="70" x2="910" y2="70" class="ceil"/>
+  <line x1="30" y1="100" x2="910" y2="100" class="ceil"/>
+  <text x="42" y="89" class="ambh">CLOSED CEILING — frozen 7th brief:</text>
+  <text x="285" y="89" class="amb">Opus 5 63 (#1, uncut $5/$25) · Fable 5 62.1 · Grok 4.6 60.9 · no Index-64 · no flagship cut since Jul 24</text>
+
+  <!-- capability box (reason to want it open) -->
+  <rect x="30" y="118" width="880" height="86" rx="6" class="capbox"/>
+  <text x="46" y="140" class="caph">▲ Why you want it open — capability</text>
+  <text x="46" y="162" class="capt">Artificial Analysis Intelligence Index (v4.1.1, max): <tspan class="caphi">60</tspan> — ties Kimi K3 as the top OPEN model, just <tspan class="caphi">3 below Opus 5 (63)</tspan></text>
+  <text x="46" y="182" class="capt"><tspan class="caphi">+7 over GLM-5.2 (53) from POST-TRAINING alone</tspan> — same 743B MoE base, ~40B active · ~93 tok/s vs Kimi K3's ~41 (743B vs 2.8T)</text>
+  <text x="46" y="199" class="small">Aggregate Index is third-party measured; component coding/cyber benches remain vendor-reported.</text>
+
+  <!-- timeline -->
+  <line x1="70" y1="250" x2="880" y2="250" class="axis" marker-end="url(#ah)"/>
+  <!-- launch node -->
+  <circle cx="130" cy="250" r="6" class="node"/>
+  <text x="130" y="232" class="lab" text-anchor="middle">Aug 14</text>
+  <text x="130" y="272" class="small" text-anchor="middle">launch — weights HELD</text>
+  <!-- today node -->
+  <circle cx="470" cy="250" r="8" class="nodehi"/>
+  <text x="470" y="230" class="lab" text-anchor="middle" font-weight="700">Aug 23 · TODAY</text>
+  <text x="470" y="272" class="small" text-anchor="middle">ledger public · timer holds</text>
+  <!-- drop node -->
+  <circle cx="820" cy="250" r="6" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <text x="820" y="232" class="lab" text-anchor="middle">~Aug 28</text>
+  <text x="820" y="272" class="small" text-anchor="middle">promised open-weights drop?</text>
+
+  <!-- risk box (reason it is held) -->
+  <rect x="30" y="300" width="880" height="118" rx="6" class="riskbox"/>
+  <text x="46" y="322" class="riskh">▼ Why it's held — a public coordinated-disclosure ledger (cvd.z.ai)</text>
+  <text x="46" y="344" class="riskt"><tspan class="riskhi">2,436</tspan> vulnerabilities across <tspan class="riskhi">269</tspan> open-source projects (after expert review + dedup) — <tspan class="riskhi">1,097 critical</tspan> in Linux, WebKit, FreeBSD</text>
+  <text x="46" y="364" class="riskt"><tspan class="riskhi">53 CVEs assigned</tspan> so far · <tspan class="riskhi">2,383 under embargo</tspan> in coordinated disclosure — e.g. Linux 6lowpan UAF, WebKit memory, FreeBSD ptrace, GStreamer, Suricata, Joomla</text>
+  <text x="46" y="384" class="riskt">Oldest flaw dates to <tspan class="riskhi">1981</tspan> · mean latency <tspan class="riskhi">26.6 years</tspan> undiscovered · ExploitBench 54.4%, 105 ExploitGym tasks in 2 hrs (vendor-reported)</text>
+  <text x="46" y="405" class="small">Z.ai says its "most extensive risk review to date" hardens the model before release — the concrete content of the ~Aug-28 hold.</text>
+
+  <!-- tension / takeaway -->
+  <text x="30" y="452" class="midh">The dual-use crux, made concrete:</text>
+  <path d="M250 447 C 330 447, 330 447, 410 447" class="arrow" marker-end="url(#ah)"/>
+  <text x="30" y="472" class="midt">the same post-training pass that rebuilt the coding ladder (+7) also produced emergent exploit-chain capability.</text>
+
+  <rect x="30" y="500" width="880" height="72" rx="6" fill="#334155" opacity="0.06"/>
+  <text x="46" y="524" class="take">Takeaway: the best OPEN score on the board is also a prolific real-world vulnerability finder —</text>
+  <text x="46" y="546" class="take">and that capability is exactly what a weight release can't take back. The frontier is still approached from below;</text>
+  <text x="46" y="566" class="midt">this window the story is not a new number but the itemized reason the top open model ships on a timer rather than a link.</text>
+</svg>
