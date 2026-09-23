@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Opus 5.5 opens a five point lead on the Artificial Analysis Intelligence Index v4.3 ten days after Anthropic called for pacing the frontier, while every lab that shipped competed on cost</title>
+  <desc id="desc">Horizontal bar chart of Artificial Analysis Intelligence Index v4.3 scores as of September 23, 2026. Claude Opus 5.5, released September 22, scores 58 and leads alone, five points ahead of Claude Fable 5.1 and GPT-6 Astra, tied at 53. Then Claude Opus 5 at 51, GPT-6 Sol (new, September 22) at 48, GPT-5.6 Sol at 47, Grok 4.7 (new, September 21) at 46, Xiaomi MiMo-V2.6-Pro (new, September 22, MIT open weights) at 46 as the top open model, GLM-5.3 and Kimi K3 at 44, and GPT-6 Luna (new) at 37. Where Artificial Analysis published it, the cost to run one Index task is annotated: Opus 5.5 5.98 dollars, Fable 5.1 7.63, Astra 3.26, Opus 5 5.86, GPT-6 Sol 1.06, GPT-5.6 Sol 1.99, GPT-6 Luna 0.07. New models this window carry an amber outline. A side panel explains how Opus 5.5 kept cost per task flat: it uses about 119 thousand output tokens per task against 73 thousand for Opus 5, which alone would raise cost from 5.86 to 10.51 dollars; the 20 percent list-price cut brings that to 8.41, and the cache-read cut from 50 to 20 cents per million brings it to 5.98. So Anthropic matched on cost by cutting price while emitting more visible reasoning, not fewer tokens, which is the opposite route from GPT-6 Astra's latent recurrent depth. A footer tracks the open versus closed gap on the Index: 6 points on v4.1.1 at the start of September, 9 on v4.3 on September 20, and 12 now, 58 against 46, even though the top open model improved by two points.</desc>
+  <style>
+    .hd{fill:#708098;font-size:19px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12.5px}
+    .lbl{fill:#708098;font-size:12.5px;font-weight:600}
+    .val{fill:#708098;font-size:12.5px;font-weight:700}
+    .cost{fill:#7c8aa0;font-size:11.5px}
+    .new{fill:#d97706;font-size:10.5px;font-weight:700}
+    .ph{fill:#708098;font-size:13.5px;font-weight:700}
+    .pt{fill:#7c8aa0;font-size:12px}
+    .pk{fill:#d97706;font-size:12px;font-weight:700}
+    .ax{stroke:#94a3b8;stroke-width:1;opacity:.45}
+  </style>
+  <text x="30" y="36" class="hd">Opus 5.5 takes a sole #1 — ten days after "We Must Pace the Frontier"</text>
+  <text x="30" y="58" class="sub">Artificial Analysis Intelligence Index v4.3 (as of Sep 23, 2026) · cost to run one Index task where AA published it</text>
+  <rect x="30" y="76" width="12" height="12" rx="2" fill="#0d9488"/><text x="48" y="86" class="cost">closed</text>
+  <rect x="100" y="76" width="12" height="12" rx="2" fill="#6b8fd6"/><text x="118" y="86" class="cost">open weights</text>
+  <rect x="210" y="76" width="12" height="12" rx="2" fill="none" stroke="#d97706" stroke-width="2"/><text x="228" y="86" class="cost">shipped Sep 21–22</text>
+
+  <line x1="250" y1="98" x2="250" y2="414" class="ax"/>
+  <text x="250" y="430" class="cost" text-anchor="middle">30</text>
+  <line x1="350" y1="98" x2="350" y2="414" class="ax"/>
+  <text x="350" y="430" class="cost" text-anchor="middle">40</text>
+  <line x1="450" y1="98" x2="450" y2="414" class="ax"/>
+  <text x="450" y="430" class="cost" text-anchor="middle">50</text>
+  <line x1="550" y1="98" x2="550" y2="414" class="ax"/>
+  <text x="550" y="430" class="cost" text-anchor="middle">60</text>
+  <text x="240" y="117" class="lbl" text-anchor="end">Claude Opus 5.5 (max)</text>
+  <rect x="250" y="103" width="280" height="18" rx="3" fill="#0d9488" stroke="#d97706" stroke-width="2.5"/>
+  <text x="538" y="117" class="val">58</text>
+  <text x="562" y="117" class="cost">$5.98/task</text>
+  <text x="240" y="129" class="new" text-anchor="end">NEW</text>
+  <text x="240" y="148" class="lbl" text-anchor="end">Claude Fable 5.1 (max)</text>
+  <rect x="250" y="134" width="230" height="18" rx="3" fill="#0d9488"/>
+  <text x="488" y="148" class="val">53</text>
+  <text x="512" y="148" class="cost">$7.63/task</text>
+  <text x="240" y="179" class="lbl" text-anchor="end">GPT-6 Astra (max)</text>
+  <rect x="250" y="165" width="230" height="18" rx="3" fill="#0d9488"/>
+  <text x="488" y="179" class="val">53</text>
+  <text x="512" y="179" class="cost">$3.26/task</text>
+  <text x="240" y="210" class="lbl" text-anchor="end">Claude Opus 5 (max)</text>
+  <rect x="250" y="196" width="210" height="18" rx="3" fill="#0d9488"/>
+  <text x="468" y="210" class="val">51</text>
+  <text x="492" y="210" class="cost">$5.86/task</text>
+  <text x="240" y="241" class="lbl" text-anchor="end">GPT-6 Sol (max)</text>
+  <rect x="250" y="227" width="180" height="18" rx="3" fill="#0d9488" stroke="#d97706" stroke-width="2.5"/>
+  <text x="438" y="241" class="val">48</text>
+  <text x="462" y="241" class="cost">$1.06/task</text>
+  <text x="240" y="253" class="new" text-anchor="end">NEW</text>
+  <text x="240" y="272" class="lbl" text-anchor="end">GPT-5.6 Sol (max)</text>
+  <rect x="250" y="258" width="170" height="18" rx="3" fill="#0d9488"/>
+  <text x="428" y="272" class="val">47</text>
+  <text x="452" y="272" class="cost">$1.99/task</text>
+  <text x="240" y="303" class="lbl" text-anchor="end">Grok 4.7 (xhigh)</text>
+  <rect x="250" y="289" width="160" height="18" rx="3" fill="#0d9488" stroke="#d97706" stroke-width="2.5"/>
+  <text x="418" y="303" class="val">46</text>
+  <text x="442" y="303" class="cost">81k out-tok/task</text>
+  <text x="240" y="315" class="new" text-anchor="end">NEW</text>
+  <text x="240" y="334" class="lbl" text-anchor="end">MiMo-V2.6-Pro (MIT)</text>
+  <rect x="250" y="320" width="160" height="18" rx="3" fill="#6b8fd6" stroke="#d97706" stroke-width="2.5"/>
+  <text x="418" y="334" class="val">46</text>
+  <text x="442" y="334" class="cost">1.02T / 42B active</text>
+  <text x="240" y="346" class="new" text-anchor="end">NEW</text>
+  <text x="240" y="365" class="lbl" text-anchor="end">GLM-5.3 · Kimi K3</text>
+  <rect x="250" y="351" width="140" height="18" rx="3" fill="#6b8fd6"/>
+  <text x="398" y="365" class="val">44</text>
+  <text x="240" y="396" class="lbl" text-anchor="end">GPT-6 Luna (max)</text>
+  <rect x="250" y="382" width="70" height="18" rx="3" fill="#0d9488" stroke="#d97706" stroke-width="2.5"/>
+  <text x="328" y="396" class="val">37</text>
+  <text x="352" y="396" class="cost">$0.07/task</text>
+  <text x="240" y="408" class="new" text-anchor="end">NEW</text>
+  <text x="250" y="448" class="cost">axis truncated at 30 · scores comparable only within v4.3</text>
+  <rect x="640" y="100" width="275" height="300" rx="10" fill="#94a3b8" fill-opacity=".09" stroke="#94a3b8" stroke-opacity=".5"/>
+  <text x="656" y="126" class="ph">How Opus 5.5 held cost flat</text>
+  <text x="656" y="146" class="pt">Output tokens per Index task</text>
+  <rect x="656" y="156" width="110" height="14" rx="2" fill="#0d9488" fill-opacity=".55"/>
+  <text x="772" y="167" class="pt">Opus 5 · 73k</text>
+  <rect x="656" y="176" width="179" height="14" rx="2" fill="#0d9488"/>
+  <text x="845" y="187" class="pk">119k</text>
+  <text x="656" y="204" class="pt">Opus 5.5 · +63% more visible reasoning</text>
+  <text x="656" y="232" class="pt">Cost per task, step by step (AA):</text>
+  <text x="656" y="254" class="pt">Opus 5 baseline</text><text x="900" y="254" class="pt" text-anchor="end">$5.86</text>
+  <text x="656" y="274" class="pt">+ Opus 5.5 token usage</text><text x="900" y="274" class="pt" text-anchor="end">$10.51</text>
+  <text x="656" y="294" class="pt">− 20% list cut ($4/$20)</text><text x="900" y="294" class="pt" text-anchor="end">$8.41</text>
+  <text x="656" y="314" class="pt">− cache reads $0.50→$0.20</text><text x="900" y="314" class="pk" text-anchor="end">$5.98</text>
+  <line x1="656" y1="328" x2="899" y2="328" class="ax"/>
+  <text x="656" y="348" class="pt">Parity bought with PRICE, not hidden tokens —</text>
+  <text x="656" y="366" class="pt">the opposite route from Astra's latent</text>
+  <text x="656" y="384" class="pt">recurrent depth ($3.26 at 53).</text>
+
+  <rect x="30" y="470" width="885" height="104" rx="10" fill="#94a3b8" fill-opacity=".07" stroke="#94a3b8" stroke-opacity=".4"/>
+  <text x="48" y="496" class="ph">Open vs closed gap keeps widening on the agentic ruler</text>
+  <text x="48" y="522" class="pt">v4.1.1 · Sep 1 · 66 vs 60</text>
+  <rect x="48" y="532" width="108" height="16" rx="3" fill="#d97706" fill-opacity="0.45"/>
+  <text x="164" y="545" class="pk">6 pts</text>
+  <text x="338" y="522" class="pt">v4.3 · Sep 20 · 53 vs 44</text>
+  <rect x="338" y="532" width="162" height="16" rx="3" fill="#d97706" fill-opacity="0.70"/>
+  <text x="508" y="545" class="pk">9 pts</text>
+  <text x="628" y="522" class="pt">v4.3 · Sep 23 · 58 vs 46</text>
+  <rect x="628" y="532" width="216" height="16" rx="3" fill="#d97706" fill-opacity="0.95"/>
+  <text x="852" y="545" class="pk">12 pts</text>
+  <text x="48" y="566" class="cost">Top open model rose 44 → 46 (MiMo-V2.6-Pro), but the closed top rose 53 → 58. v4.1.1 and v4.3 absolute scores are not comparable; gaps are.</text>
+</svg>
