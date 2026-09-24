@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Pacing goes to the UN: who asked for what, September 22 to 23, 2026, and which mechanisms actually exist</title>
+  <desc id="desc">A horizontal spectrum runs from "accelerate, no international oversight" on the left to "slow down, license frontier AI" on the right. Five positions stated at the United Nations on September 22 and 23, 2026 are placed on it. Far left, President Trump at the General Assembly on September 22 rejects "any attempt to construct a globalist scheme to control" AI. Left of centre, Hugging Face CEO Clement Delangue tells the Security Council "it's not time to slow down but to accelerate" and launches an Open Alignment Initiative. Right of centre, OpenAI CEO Sam Altman says industry must not accept too much risk just because the benefits are great, calls for democratic accountability, and endorses Anthropic's embedded evaluator proposal. Further right, Anthropic CEO Dario Amodei says "we will slow down as much as necessary" so that every release is safe. Far right, Yoshua Bengio calls for licensing frontier AI like medicine, aviation and nuclear energy, with mandatory insurance and incident reporting. Below the spectrum, a second panel lists the mechanisms that exist or were proposed in the same window: a US proposal to China for an AI incident alert channel, with a follow-up meeting in Shenzhen in about two months; Claude Opus 5.5's capability classifiers that reroute cyber requests to Opus 4.8 and biology or frontier-LLM-development requests to Opus 5; METR's pre-deployment evaluation of Opus 5.5, which found no sustained doubling of AI R and D pace but relied on an undisclosed source and was reviewed by Anthropic before publication; and OpenAI extending its Daybreak cyber-defence programme to Ukraine. A footer counts releases delayed and attributed to pacing: zero, unchanged since September 12.</desc>
+  <style>
+    .hd{fill:#708098;font-size:19px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12.5px}
+    .end{fill:#7c8aa0;font-size:11.5px;font-weight:700}
+    .who{fill:#708098;font-size:13px;font-weight:700}
+    .q{fill:#7c8aa0;font-size:11.5px}
+    .dt{fill:#d97706;font-size:10.5px;font-weight:700}
+    .ph{fill:#708098;font-size:13.5px;font-weight:700}
+    .pt{fill:#7c8aa0;font-size:12px}
+    .pk{fill:#0d9488;font-size:12px;font-weight:700}
+    .ft{fill:#d97706;font-size:13px;font-weight:700}
+    .ax{stroke:#94a3b8;stroke-width:2;opacity:.6}
+    .tk{stroke:#94a3b8;stroke-width:1;opacity:.45}
+    .box{fill:none;stroke:#94a3b8;stroke-width:1;opacity:.5}
+  </style>
+
+  <text x="30" y="36" class="hd">"Pace the frontier" reaches the UN Security Council</text>
+  <text x="30" y="58" class="sub">Positions stated Sep 22 (UN General Assembly) and Sep 23 (first UNSC high-level briefing on frontier AI safety)</text>
+
+  <!-- spectrum axis -->
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#6b8fd6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#0d9488" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="96" width="860" height="8" rx="4" fill="url(#g)"/>
+  <text x="40" y="88" class="end">◀ accelerate · no global oversight</text>
+  <text x="900" y="88" class="end" text-anchor="end">slow down · license frontier AI ▶</text>
+
+  <!-- markers -->
+  <circle cx="70" cy="100" r="8" fill="#6b8fd6"/>
+  <line x1="70" y1="108" x2="70" y2="128" class="tk"/>
+  <circle cx="290" cy="100" r="8" fill="#6b8fd6"/>
+  <line x1="290" y1="108" x2="290" y2="128" class="tk"/>
+  <circle cx="560" cy="100" r="8" fill="#0d9488"/>
+  <line x1="560" y1="108" x2="560" y2="128" class="tk"/>
+  <circle cx="720" cy="100" r="8" fill="#0d9488"/>
+  <line x1="720" y1="108" x2="720" y2="128" class="tk"/>
+  <circle cx="880" cy="100" r="8" fill="#0d9488"/>
+  <line x1="880" y1="108" x2="880" y2="128" class="tk"/>
+
+  <!-- labels, staggered rows -->
+  <text x="40" y="146" class="who">Trump</text>
+  <text x="40" y="160" class="dt">UNGA · SEP 22</text>
+  <text x="40" y="177" class="q">rejects "any attempt to</text>
+  <text x="40" y="192" class="q">construct a globalist</text>
+  <text x="40" y="207" class="q">scheme to control" AI</text>
+
+  <text x="230" y="146" class="who">Delangue (Hugging Face)</text>
+  <text x="230" y="160" class="dt">UNSC · SEP 23</text>
+  <text x="230" y="177" class="q">"not time to slow down</text>
+  <text x="230" y="192" class="q">but to accelerate";</text>
+  <text x="230" y="207" class="q">Open Alignment Initiative</text>
+
+  <text x="470" y="146" class="who">Altman (OpenAI)</text>
+  <text x="470" y="160" class="dt">UNSC · SEP 23</text>
+  <text x="470" y="177" class="q">"must not accept too much</text>
+  <text x="470" y="192" class="q">risk" · democratic control ·</text>
+  <text x="470" y="207" class="q">backs embedded evaluators</text>
+
+  <text x="660" y="146" class="who">Amodei (Anthropic)</text>
+  <text x="660" y="160" class="dt">UNSC · SEP 23</text>
+  <text x="660" y="177" class="q">"We will slow down as</text>
+  <text x="660" y="192" class="q">much as necessary" so</text>
+  <text x="660" y="207" class="q">each release is safe</text>
+
+  <text x="900" y="232" class="who" text-anchor="end">Bengio (IISP-AI co-chair)</text>
+  <text x="900" y="246" class="dt" text-anchor="end">UNSC · SEP 23</text>
+  <text x="900" y="263" class="q" text-anchor="end">license frontier AI like medicine,</text>
+  <text x="900" y="278" class="q" text-anchor="end">aviation, nuclear · insurance + incident reports</text>
+  <line x1="880" y1="128" x2="880" y2="218" class="tk"/>
+
+  <!-- mechanisms panel -->
+  <rect x="30" y="300" width="880" height="232" rx="10" class="box"/>
+  <text x="50" y="326" class="ph">What exists or was proposed in the same window (mechanisms, not statements)</text>
+
+  <text x="50" y="356" class="pk">Incident channel</text>
+  <text x="200" y="356" class="pt">US proposes a US–China AI incident-alert mechanism (NY talks, Sep 20–21); next round in Shenzhen in ~2 months.</text>
+  <text x="200" y="373" class="pt">Export controls explicitly out of scope. Xi arrives in Washington Sep 23.</text>
+
+  <text x="50" y="403" class="pk">Capability routing</text>
+  <text x="200" y="403" class="pt">Claude Opus 5.5 classifiers reroute requests to older models: cyber → Opus 4.8; bio and a narrow set of</text>
+  <text x="200" y="420" class="pt">frontier-LLM-development tasks (e.g. accelerator kernels) → Opus 5. Governance by tier, inside one product.</text>
+
+  <text x="50" y="450" class="pk">Outside evaluation</text>
+  <text x="200" y="450" class="pt">METR pre-deployment eval of Opus 5.5: no sustained doubling of AI R&amp;D pace found — but it relied on an</text>
+  <text x="200" y="467" class="pt">undisclosed source, used restricted access, and Anthropic could review and edit the text before publication.</text>
+
+  <text x="50" y="497" class="pk">Defender access</text>
+  <text x="200" y="497" class="pt">OpenAI extends Daybreak cyber-defence access to Ukraine (Sep 23), after France, Germany and Poland.</text>
+  <text x="200" y="514" class="pt">Tiered access to offensive-grade capability is now a foreign-policy instrument.</text>
+
+  <text x="30" y="566" class="ft">Releases delayed and attributed to pacing since Sep 12: 0</text>
+  <text x="30" y="586" class="sub">Stated positions from UN News, CNBC, France 24, Fortune, TNW, Policy Magazine; mechanisms from WaPo, NBC, Claude Help Center, METR, OpenAI.</text>
+</svg>
