@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Three layers of frontier-AI oversight took shape on September 24, 2026, and none of them limits development</title>
+  <desc id="desc">Three cards side by side. Card one, between governments: the US–China AI incident line. The US side, through Treasury Secretary Scott Bessent, says both countries agreed to a formal AI dialogue including an incident line for runaway agents, cyberattacks and bioweapons development. China's foreign ministry readout of the September 24 White House summit says only that the two sides can continue dialogue and jointly prevent misuse, and that AI must stay under human control. Follow-up talks are planned in Shenzhen in about two months. Card two, between labs: the Standards Authority for Frontier AI, or SAFA, a self-regulatory body being set up by Google, OpenAI and Anthropic without government oversight, targeting launch at the end of 2026 or early 2027. It would set pre-deployment testing, incident reporting and auditor qualification standards. Candidates reported for chief executive are Sriram Krishnan and Arati Prabhakar; for chair, Condoleezza Rice and David Friedberg. Card three, inside products: access tiers. OpenAI's GPT-6 Cyber is already in alpha with its application-only Daybreak Red program and is expected to be previewed at DevDay on September 29 with a dedicated deployment product. Claude Opus 5.5 reroutes cyber requests to Opus 4.8 and biology or frontier-LLM-development requests to Opus 5. A footer reads: binding limits on frontier development agreed in this window: none. Releases delayed and attributed to pacing since September 12: zero.</desc>
+  <style>
+    .hd{fill:#708098;font-size:19px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12.5px}
+    .lvl{font-size:11px;font-weight:700;letter-spacing:.06em}
+    .ct{fill:#708098;font-size:15px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:12px}
+    .k{fill:#708098;font-size:12px;font-weight:700}
+    .ft{fill:#d97706;font-size:13px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:12px}
+  </style>
+  <text x="30" y="38" class="hd">Sep 24: three layers of oversight take shape, none limits development</text>
+  <text x="30" y="60" class="sub">Governments agree to talk, labs design a self-regulator, and access gets tiered inside products</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="82" width="280" height="370" rx="10" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.6"/>
+  <text x="48" y="106" class="lvl" fill="#2563eb">BETWEEN GOVERNMENTS</text>
+  <text x="48" y="130" class="ct">US–China AI incident line</text>
+  <text x="48" y="158" class="k">US account (Bessent)</text>
+  <text x="48" y="176" class="tx">Formal AI dialogue agreed, incl.</text>
+  <text x="48" y="192" class="tx">an incident line for runaway agents,</text>
+  <text x="48" y="208" class="tx">cyberattacks, bioweapons work</text>
+  <text x="48" y="236" class="k">China readout (MFA, Sep 25)</text>
+  <text x="48" y="254" class="tx">"Continue dialogue", "jointly</text>
+  <text x="48" y="270" class="tx">prevent misuse", AI "always under</text>
+  <text x="48" y="286" class="tx">human control". No mechanism named</text>
+  <text x="48" y="314" class="k">Next step</text>
+  <text x="48" y="332" class="tx">Shenzhen talks in ~2 months</text>
+  <text x="48" y="360" class="k">Not on the table</text>
+  <text x="48" y="378" class="tx">Limits on capability; chip controls</text>
+  <text x="48" y="394" class="tx">and "distillation" still disputed</text>
+  <text x="48" y="430" class="lvl" fill="#d97706">STATUS: AGREED IN PRINCIPLE (US)</text>
+
+  <!-- Card 2 -->
+  <rect x="330" y="82" width="280" height="370" rx="10" fill="#0d9488" fill-opacity="0.08" stroke="#0d9488" stroke-opacity="0.6"/>
+  <text x="348" y="106" class="lvl" fill="#0d9488">BETWEEN LABS</text>
+  <text x="348" y="130" class="ct">SAFA standards body</text>
+  <text x="348" y="158" class="k">Google, OpenAI, Anthropic</text>
+  <text x="348" y="176" class="tx">Self-regulator modelled on FINRA,</text>
+  <text x="348" y="192" class="tx">no government oversight after a</text>
+  <text x="348" y="208" class="tx">public–private version stalled</text>
+  <text x="348" y="236" class="k">Would define</text>
+  <text x="348" y="254" class="tx">Pre-deployment testing, incident</text>
+  <text x="348" y="270" class="tx">reporting, voluntary commitments,</text>
+  <text x="348" y="286" class="tx">auditor qualifications</text>
+  <text x="348" y="314" class="k">Reported shortlists</text>
+  <text x="348" y="332" class="tx">CEO: Krishnan, Prabhakar</text>
+  <text x="348" y="348" class="tx">Chair: Rice, Friedberg</text>
+  <text x="348" y="376" class="k">Timeline</text>
+  <text x="348" y="394" class="tx">End-2026 or early 2027</text>
+  <text x="348" y="430" class="lvl" fill="#d97706">STATUS: REPORTED, NOT ANNOUNCED</text>
+
+  <!-- Card 3 -->
+  <rect x="630" y="82" width="280" height="370" rx="10" fill="#9333ea" fill-opacity="0.08" stroke="#9333ea" stroke-opacity="0.6"/>
+  <text x="648" y="106" class="lvl" fill="#9333ea">INSIDE PRODUCTS</text>
+  <text x="648" y="130" class="ct">Access tiers</text>
+  <text x="648" y="158" class="k">OpenAI GPT-6 Cyber</text>
+  <text x="648" y="176" class="tx">Alpha with Daybreak Red (vetted</text>
+  <text x="648" y="192" class="tx">defenders); DevDay preview Sep 29</text>
+  <text x="648" y="208" class="tx">with its own deployment product</text>
+  <text x="648" y="236" class="k">Claude Opus 5.5</text>
+  <text x="648" y="254" class="tx">Cyber requests → Opus 4.8</text>
+  <text x="648" y="270" class="tx">Bio / frontier-LLM dev → Opus 5</text>
+  <text x="648" y="286" class="tx">Chip list still unconfirmed</text>
+  <text x="648" y="314" class="k">4th OpenAI cyber model of 2026</text>
+  <text x="648" y="332" class="tx">5.4 Cyber (Apr), 5.5 Cyber (Jun),</text>
+  <text x="648" y="348" class="tx">5.6 Cyber (Aug), 6 Cyber (Sep)</text>
+  <text x="648" y="430" class="lvl" fill="#d97706">STATUS: LIVE OR IN ALPHA</text>
+
+  <line x1="30" y1="476" x2="910" y2="476" stroke="#7c8aa0" stroke-opacity="0.4"/>
+  <text x="30" y="504" class="ft">Binding limits on frontier development agreed in this window: none</text>
+  <text x="30" y="526" class="fs">Releases delayed and attributed to pacing since Sep 12: zero (unchanged). Sources in the report.</text>
+</svg>
