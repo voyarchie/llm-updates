@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 430" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="LongCat-2.0 was trained entirely on domestic Chinese accelerators with no Nvidia H100/A100 or AMD MI300X, and reaches near-frontier coding: SWE-bench Pro 59.5 edging GPT-5.5's 58.6, and Terminal-Bench 2.1 at 70.8, all on vendor-reported benchmarks">
+  <title>LongCat-2.0 near-frontier coding, trained without Western silicon</title>
+
+  <!-- theme-neutral palette: saturated fills + white text render on both light and dark; labels in mid-slate read on both -->
+  <text x="24" y="34" font-size="19" font-weight="700" fill="#64748b">The export wall runs both ways</text>
+  <text x="24" y="56" font-size="13" fill="#94a3b8">LongCat-2.0 (Meituan, Jun 30): 1.6T MoE, ~48B active/token, 1M context. Vendor-reported scores.</text>
+
+  <!-- LEFT PANEL: training hardware fact -->
+  <rect x="24" y="82" width="300" height="300" rx="10" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="44" y="112" font-size="14" font-weight="700" fill="#64748b">Trained on domestic silicon</text>
+
+  <rect x="44" y="128" width="260" height="52" rx="6" fill="#7c3aed"/>
+  <text x="174" y="150" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">~50,000-card cluster</text>
+  <text x="174" y="169" font-size="12" fill="#ffffff" text-anchor="middle">Chinese-made accelerators only</text>
+
+  <rect x="44" y="192" width="260" height="40" rx="6" fill="#dc2626"/>
+  <text x="174" y="217" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">No Nvidia H100 / A100</text>
+
+  <rect x="44" y="244" width="260" height="40" rx="6" fill="#dc2626"/>
+  <text x="174" y="269" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">No AMD MI300X</text>
+
+  <text x="44" y="316" font-size="12" fill="#94a3b8">Pretraining: 35T+ tokens</text>
+  <text x="44" y="338" font-size="12" fill="#94a3b8">License: MIT (weights "coming soon")</text>
+  <text x="44" y="360" font-size="12" fill="#94a3b8">Ran as "Owl Alpha" on OpenRouter</text>
+  <text x="44" y="376" font-size="12" fill="#94a3b8">~10.1T tokens/month before reveal</text>
+
+  <!-- RIGHT PANEL: benchmark bars -->
+  <text x="372" y="112" font-size="14" font-weight="700" fill="#64748b">Near-frontier coding (vendor)</text>
+
+  <!-- baseline + gridlines 0/25/50/75/100 over plot area x=460..800, y baseline=340, top=140 (100 units = 200px) -->
+  <line x1="460" y1="340" x2="800" y2="340" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="460" y1="290" x2="800" y2="290" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="460" y1="240" x2="800" y2="240" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="460" y1="190" x2="800" y2="190" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <line x1="460" y1="140" x2="800" y2="140" stroke="#94a3b8" stroke-width="0.5" stroke-dasharray="4 4"/>
+  <text x="452" y="344" font-size="10" fill="#94a3b8" text-anchor="end">0</text>
+  <text x="452" y="294" font-size="10" fill="#94a3b8" text-anchor="end">25</text>
+  <text x="452" y="244" font-size="10" fill="#94a3b8" text-anchor="end">50</text>
+  <text x="452" y="194" font-size="10" fill="#94a3b8" text-anchor="end">75</text>
+  <text x="452" y="144" font-size="10" fill="#94a3b8" text-anchor="end">100</text>
+
+  <!-- SWE-bench Pro: LongCat 59.5 vs GPT-5.5 58.6 -->
+  <rect x="484" y="221" width="52" height="119" rx="4" fill="#16a34a"/>
+  <text x="510" y="213" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">59.5</text>
+  <rect x="544" y="222.8" width="52" height="117.2" rx="4" fill="#64748b"/>
+  <text x="570" y="215" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">58.6</text>
+  <text x="540" y="360" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">SWE-bench Pro</text>
+
+  <!-- Terminal-Bench 2.1: LongCat 70.8 -->
+  <rect x="668" y="198.4" width="52" height="141.6" rx="4" fill="#16a34a"/>
+  <text x="694" y="190" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">70.8</text>
+  <text x="694" y="360" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle">Terminal-Bench 2.1</text>
+
+  <!-- legend -->
+  <rect x="484" y="392" width="14" height="14" rx="3" fill="#16a34a"/>
+  <text x="504" y="404" font-size="12" fill="#94a3b8">LongCat-2.0</text>
+  <rect x="620" y="392" width="14" height="14" rx="3" fill="#64748b"/>
+  <text x="640" y="404" font-size="12" fill="#94a3b8">GPT-5.5</text>
+</svg>
