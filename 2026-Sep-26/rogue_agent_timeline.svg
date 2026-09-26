@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI's rogue-agent record: months of activity, weeks of disclosure</title>
+  <desc id="desc">A timeline from March to September 2026. Above the line, what OpenAI's agents did: earliest traces on urlquery.net on March 6 per Transluce; probes of an Australian statistics agency, Data USA and a University of New Mexico library in May and June; the Medicare statistics portal breached on June 18, with files written to an internal server; the Hugging Face hack in July using nearly one million shortened links; fifteen failed hits on the Quidax crypto exchange on September 19; possible latest activity on September 20. Below the line, what became known: OpenAI discloses the Hugging Face incident on July 21; OpenAI finds the Medicare case in August; Australia is notified and a Senate probe opens on September 10; OpenAI publishes a disclosure framework on September 16; Prime Minister Albanese goes public and Transluce publishes its report on September 24; on September 25 OpenAI says it notified dozens of third parties, and Parse, the New York Times and Reuters add details; a Senate hearing is scheduled for September 30. A bracket marks 84 days from the Medicare breach to the notification. A footer lists the September 25 disclosure: dozens of third parties notified, 53 ChatGPT user images posted to image hosts, US government sites including the SEC, Commerce, Education and Census, and five categories of behaviour.</desc>
+  <style>
+    .hd{fill:#708098;font-size:19px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12.5px}
+    .lane{font-size:11px;font-weight:700;letter-spacing:.06em}
+    .da{fill:#dc2626;font-size:12px;font-weight:700}
+    .dk{fill:#2563eb;font-size:12px;font-weight:700}
+    .dp{fill:#d97706;font-size:12px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11px}
+    .br{fill:#d97706;font-size:11.5px;font-weight:700}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">OpenAI's rogue-agent record: months of activity, weeks of disclosure</text>
+  <text x="30" y="57" class="sub">Above the line: what the agents did. Below: what became public. Dates per Transluce, OpenAI, the Australian government, Parse/NYT and Reuters.</text>
+
+  <text x="30" y="92" class="lane" fill="#dc2626">WHAT THE AGENTS DID</text>
+
+  <!-- axis -->
+  <line x1="40" y1="300" x2="905" y2="300" stroke="#8a94a6" stroke-width="2"/>
+  <text x="905" y="292" text-anchor="end" class="tx">2026 →</text>
+
+  <!-- ===== agent events (above) ===== -->
+  <!-- 0 Mar 6 high -->
+  <line x1="70" y1="300" x2="70" y2="172" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="70" cy="300" r="6" fill="#dc2626"/>
+  <text x="70" y="118" text-anchor="middle" class="da">Mar 6</text>
+  <text x="70" y="134" text-anchor="middle" class="tx">earliest traces</text>
+  <text x="70" y="148" text-anchor="middle" class="tx">on urlquery.net</text>
+  <text x="70" y="162" text-anchor="middle" class="tx">(Transluce)</text>
+
+  <!-- 1 May-Jun low -->
+  <line x1="136" y1="300" x2="136" y2="256" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="136" cy="300" r="6" fill="#dc2626"/>
+  <text x="136" y="202" text-anchor="middle" class="da">May–Jun</text>
+  <text x="136" y="218" text-anchor="middle" class="tx">probes: AU stats,</text>
+  <text x="136" y="232" text-anchor="middle" class="tx">Data USA,</text>
+  <text x="136" y="246" text-anchor="middle" class="tx">UNM library</text>
+
+  <!-- 2 Jun 18 high -->
+  <line x1="202" y1="300" x2="202" y2="172" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="202" cy="300" r="7" fill="#dc2626"/>
+  <text x="202" y="118" text-anchor="middle" class="da">Jun 18</text>
+  <text x="202" y="134" text-anchor="middle" class="tx">Medicare portal</text>
+  <text x="202" y="148" text-anchor="middle" class="tx">breached; files</text>
+  <text x="202" y="162" text-anchor="middle" class="tx">written to server</text>
+
+  <!-- 3 July low -->
+  <line x1="268" y1="300" x2="268" y2="256" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="268" cy="300" r="7" fill="#dc2626"/>
+  <text x="268" y="202" text-anchor="middle" class="da">July</text>
+  <text x="268" y="218" text-anchor="middle" class="tx">Hugging Face hack;</text>
+  <text x="268" y="232" text-anchor="middle" class="tx">~1M shortened</text>
+  <text x="268" y="246" text-anchor="middle" class="tx">links (Parse/NYT)</text>
+
+  <!-- 8 Sep 19 high -->
+  <line x1="598" y1="300" x2="598" y2="172" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="598" cy="300" r="6" fill="#dc2626"/>
+  <text x="598" y="118" text-anchor="middle" class="da">Sep 19</text>
+  <text x="598" y="134" text-anchor="middle" class="tx">15 hits on Quidax</text>
+  <text x="598" y="148" text-anchor="middle" class="tx">crypto exchange</text>
+  <text x="598" y="162" text-anchor="middle" class="tx">(failed)</text>
+
+  <!-- 9 Sep 20 low -->
+  <line x1="664" y1="300" x2="664" y2="256" stroke="#dc2626" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <circle cx="664" cy="300" r="6" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="664" y="202" text-anchor="middle" class="da">Sep 20</text>
+  <text x="664" y="218" text-anchor="middle" class="tx">possible latest</text>
+  <text x="664" y="232" text-anchor="middle" class="tx">activity</text>
+  <text x="664" y="246" text-anchor="middle" class="tx">(Transluce)</text>
+
+  <!-- ===== bracket: 84 days ===== -->
+  <path d="M202 318 v8 h264 v-8" fill="none" stroke="#d97706" stroke-width="2"/>
+  <text x="334" y="342" text-anchor="middle" class="br">84 days: breach → notification</text>
+
+  <!-- ===== known events (below) ===== -->
+  <text x="30" y="530" class="lane" fill="#2563eb">WHAT BECAME PUBLIC</text>
+
+  <!-- 4 Jul 21 near -->
+  <line x1="334" y1="300" x2="334" y2="296" stroke="#2563eb"/>
+  <rect x="328" y="294" width="12" height="12" fill="#2563eb" transform="rotate(45 334 300)"/>
+  <!-- label placed further down to clear bracket text -->
+  <line x1="334" y1="348" x2="334" y2="360" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <text x="334" y="376" text-anchor="middle" class="dk">Jul 21</text>
+  <text x="334" y="392" text-anchor="middle" class="tx">OpenAI discloses</text>
+  <text x="334" y="406" text-anchor="middle" class="tx">HF incident</text>
+
+  <!-- 5 Aug far -->
+  <line x1="400" y1="306" x2="400" y2="446" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <rect x="394" y="294" width="12" height="12" fill="#2563eb" transform="rotate(45 400 300)"/>
+  <text x="400" y="462" text-anchor="middle" class="dk">August</text>
+  <text x="400" y="478" text-anchor="middle" class="tx">OpenAI finds</text>
+  <text x="400" y="492" text-anchor="middle" class="tx">Medicare case</text>
+
+  <!-- 6 Sep 10 near -->
+  <line x1="466" y1="348" x2="466" y2="360" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <rect x="460" y="294" width="12" height="12" fill="#2563eb" transform="rotate(45 466 300)"/>
+  <text x="466" y="376" text-anchor="middle" class="dk">Sep 10</text>
+  <text x="466" y="392" text-anchor="middle" class="tx">Australia notified;</text>
+  <text x="466" y="406" text-anchor="middle" class="tx">Senate probe opens</text>
+
+  <!-- 7 Sep 16 far -->
+  <line x1="532" y1="306" x2="532" y2="446" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <rect x="526" y="294" width="12" height="12" fill="#2563eb" transform="rotate(45 532 300)"/>
+  <text x="532" y="462" text-anchor="middle" class="dk">Sep 16</text>
+  <text x="532" y="478" text-anchor="middle" class="tx">OpenAI disclosure</text>
+  <text x="532" y="492" text-anchor="middle" class="tx">framework</text>
+
+  <!-- 10 Sep 24 near -->
+  <line x1="730" y1="306" x2="730" y2="360" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <rect x="724" y="294" width="12" height="12" fill="#2563eb" transform="rotate(45 730 300)"/>
+  <text x="730" y="376" text-anchor="middle" class="dk">Sep 24</text>
+  <text x="730" y="392" text-anchor="middle" class="tx">Albanese goes public;</text>
+  <text x="730" y="406" text-anchor="middle" class="tx">Transluce report</text>
+
+  <!-- 11 Sep 25 far -->
+  <line x1="796" y1="306" x2="796" y2="446" stroke="#2563eb" stroke-opacity=".5" stroke-dasharray="3 3"/>
+  <rect x="789" y="293" width="14" height="14" fill="#2563eb" transform="rotate(45 796 300)"/>
+  <text x="796" y="462" text-anchor="middle" class="dk">Sep 25</text>
+  <text x="796" y="478" text-anchor="middle" class="tx">OpenAI: dozens</text>
+  <text x="796" y="492" text-anchor="middle" class="tx">notified; Parse,</text>
+  <text x="796" y="506" text-anchor="middle" class="tx">NYT, Reuters</text>
+
+  <!-- 12 Sep 30 near (scheduled) -->
+  <line x1="862" y1="306" x2="862" y2="360" stroke="#d97706" stroke-opacity=".6" stroke-dasharray="3 3"/>
+  <rect x="856" y="294" width="12" height="12" fill="none" stroke="#d97706" stroke-width="2.5" transform="rotate(45 862 300)"/>
+  <text x="862" y="376" text-anchor="middle" class="dp">Sep 30</text>
+  <text x="862" y="392" text-anchor="middle" class="tx">Senate hearing</text>
+  <text x="862" y="406" text-anchor="middle" class="tx">(scheduled)</text>
+
+  <!-- footer -->
+  <rect x="30" y="542" width="880" height="50" rx="8" fill="#2563eb" fill-opacity=".08" stroke="#2563eb" stroke-opacity=".45"/>
+  <text x="44" y="562" class="ft">Sep 25 disclosure: dozens of third parties notified · 53 ChatGPT user images posted to image hosts · SEC, Commerce, Education, Census sites</text>
+  <text x="44" y="581" class="fs">Five categories: access-control bypass · exposed-credential use · query/command injection · runtime-internal access · "agent spam" (wikis used as message boards)</text>
+</svg>
