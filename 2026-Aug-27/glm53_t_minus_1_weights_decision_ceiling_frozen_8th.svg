@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">T-1 to the GLM-5.3 open-weights decision: everything staged, weights still held on the eve of the target, and the closed ceiling frozen an eighth straight brief</title>
+  <desc id="desc">A horizontal timeline of the GLM-5.3 two-week open-weights clock. Aug 14: launched API-only, weights held for a stated safety review. Aug 24: Z.ai's offensive-cyber finding surfaces, but no independent general number yet. Aug 26: Artificial Analysis measures the general Index at 60, tying Kimi K3 as joint top open-weights model, three points under the closed frontier. Aug 27, today, marked T-minus-1: weights still not on Hugging Face; the zai-org GLM-5.3 repo is only an "upcoming release" placeholder; during the hold, access is limited to vetted security partners via the GLM Coding Plan. Aug 28 is the decision point, branching three ways: full weights ship on time; a capability-restricted or hardened checkpoint ships; or the drop slips. A footer strip shows the frozen closed ceiling — Claude Opus 5 at 63 and number one, Fable 5 at 62.1, then a lower rung of GPT-5.6 Sol at 61 tying Grok 4.6 at 60.9 — with GLM-5.3's measured 60 knocking just below it, and notes no Index-64 model and no flagship price cut since July 24, now 34 days, across an eighth straight brief.</desc>
+
+  <style>
+    .hd    { fill:#334155; font-size:19px; font-weight:700; }
+    .sub   { fill:#64748b; font-size:13px; }
+    .sect  { fill:#334155; font-size:13px; font-weight:700; }
+    .axis  { stroke:#94a3b8; stroke-width:1; }
+    .tick  { fill:#64748b; font-size:12px; font-weight:600; }
+    .node  { fill:#475569; font-size:12.5px; }
+    .nodeb { fill:#475569; font-size:12.5px; font-weight:700; }
+    .dim   { fill:#94a3b8; font-size:11.5px; }
+    .hi        { fill:#0ea5e9; }
+    .histroke  { stroke:#0284c7; stroke-width:1.6; fill:none; }
+    .hilab     { fill:#0284c7; font-size:12.5px; font-weight:700; }
+    .hilabs    { fill:#0284c7; font-size:11px; font-weight:700; }
+    .open      { fill:#0d9488; }
+    .openlab   { fill:#0f766e; font-size:12px; font-weight:700; }
+    .amb   { fill:#b45309; font-size:12px; font-weight:700; }
+    .ambt  { fill:#92400e; font-size:11.5px; }
+    .base  { fill:#94a3b8; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">T-1 to the GLM-5.3 open-weights decision — everything staged, ceiling frozen an 8th brief</text>
+  <text x="40" y="55" class="sub">The measurement is in (Aug 26, Index 60). The two-week safety clock ends ≈Aug 28. As of today the weights are still not on Hugging Face.</text>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <!-- axis from x=70 (Aug 14) to x=850 (Aug 28) -->
+  <line x1="70" y1="150" x2="850" y2="150" class="axis"/>
+  <!-- arrowhead -->
+  <path d="M850 150 l-9 -5 v10 z" fill="#94a3b8"/>
+
+  <!-- Aug 14 -->
+  <circle cx="70" cy="150" r="5" class="base"/>
+  <text x="70" y="128" class="tick" text-anchor="middle">Aug 14</text>
+  <text x="70" y="176" class="node" text-anchor="middle">launch, API-only</text>
+  <text x="70" y="192" class="dim" text-anchor="middle">weights held</text>
+  <text x="70" y="206" class="dim" text-anchor="middle">for safety review</text>
+
+  <!-- Aug 24 -->
+  <circle cx="270" cy="150" r="5" class="base"/>
+  <text x="270" y="128" class="tick" text-anchor="middle">Aug 24</text>
+  <text x="270" y="176" class="node" text-anchor="middle">cyber finding surfaces</text>
+  <text x="270" y="192" class="dim" text-anchor="middle">CyberGym 84.5 (vendor)</text>
+  <text x="270" y="206" class="dim" text-anchor="middle">— no independent № yet</text>
+
+  <!-- Aug 26 -->
+  <circle cx="470" cy="150" r="5.5" class="open"/>
+  <text x="470" y="128" class="tick" text-anchor="middle">Aug 26</text>
+  <text x="470" y="176" class="openlab" text-anchor="middle">Index 60 MEASURED</text>
+  <text x="470" y="192" class="dim" text-anchor="middle">ties Kimi K3, joint-top open</text>
+  <text x="470" y="206" class="dim" text-anchor="middle">−3 vs Opus 5 (third-party)</text>
+
+  <!-- Aug 27 TODAY (T-1) -->
+  <line x1="640" y1="96" x2="640" y2="150" class="histroke" stroke-dasharray="3 3"/>
+  <circle cx="640" cy="150" r="7" class="hi"/>
+  <circle cx="640" cy="150" r="7" class="histroke"/>
+  <text x="640" y="88" class="hilab" text-anchor="middle">TODAY · Aug 27 · T-1</text>
+  <text x="640" y="176" class="hilab" text-anchor="middle">weights still NOT on HF</text>
+  <text x="640" y="192" class="hilabs" text-anchor="middle">zai-org/GLM-5.3 = placeholder</text>
+  <text x="640" y="206" class="dim" text-anchor="middle">hold = vetted partners only</text>
+
+  <!-- Aug 28 DECISION -->
+  <circle cx="820" cy="150" r="6" class="amb"/>
+  <text x="820" y="128" class="tick" text-anchor="middle" fill="#b45309">Aug 28</text>
+  <text x="820" y="176" class="amb" text-anchor="middle">DECISION</text>
+
+  <!-- decision branches from Aug 28 -->
+  <g>
+    <path d="M820 156 C 820 230, 780 235, 720 250" class="histroke" fill="none" opacity=".6"/>
+    <path d="M820 158 C 820 250, 800 270, 770 300" class="histroke" fill="none" opacity=".6"/>
+    <path d="M820 158 C 820 300, 810 330, 790 352" class="histroke" fill="none" opacity=".6"/>
+    <rect x="560" y="240" width="200" height="24" rx="5" fill="#0d9488" opacity=".12"/>
+    <text x="568" y="256" class="openlab" font-size="11.5">(a) full weights on time → open lands −3 of #1</text>
+    <rect x="560" y="290" width="230" height="24" rx="5" fill="#b45309" opacity=".12"/>
+    <text x="568" y="306" class="ambt" font-size="11.5" font-weight="700">(b) restricted / hardened checkpoint (a first)</text>
+    <rect x="560" y="340" width="235" height="24" rx="5" fill="#94a3b8" opacity=".18"/>
+    <text x="568" y="356" class="node" font-size="11.5" font-weight="700">(c) slip — as Qwen3.8-Max's open drop slipped twice</text>
+  </g>
+
+  <!-- ===================== FOOTER: frozen ceiling ===================== -->
+  <line x1="40" y1="404" x2="880" y2="404" class="axis" opacity=".5"/>
+  <text x="40" y="428" class="sect">The closed ceiling it's climbing toward — frozen an 8th straight brief</text>
+
+  <!-- mini bar strip: scale v-> x = 300 + (v-58)*88 ; 58->300, 63->740 -->
+  <g>
+    <!-- ceiling band box behind top rungs -->
+    <rect x="298" y="440" width="452" height="70" rx="7" fill="#b45309" opacity=".07"/>
+    <rect x="298" y="440" width="452" height="70" rx="7" fill="none" stroke="#b45309" stroke-width="1" opacity=".5"/>
+
+    <!-- Opus 5 63 -->
+    <text x="292" y="456" class="node" text-anchor="end" font-weight="700">Opus 5</text>
+    <rect x="300" y="447" width="440" height="12" rx="2" fill="#b45309" opacity=".55"/>
+    <text x="748" y="457" class="node" font-weight="700">63 · #1, uncut</text>
+    <!-- Fable 5 62.1 -->
+    <text x="292" y="472" class="node" text-anchor="end">Fable 5</text>
+    <rect x="300" y="463" width="449" height="12" rx="2" fill="#b45309" opacity=".42"/>
+    <text x="748" y="473" class="node">62.1</text>
+    <!-- GPT-5.6 Sol 61 / Grok 4.6 60.9 (lower rung) -->
+    <text x="292" y="488" class="node" text-anchor="end">GPT-5.6 Sol · Grok 4.6</text>
+    <rect x="300" y="479" width="264" height="12" rx="2" fill="#b45309" opacity=".3"/>
+    <text x="572" y="489" class="node">61 · 60.9  (lower rung)</text>
+    <!-- GLM-5.3 60 knocking (below band) -->
+    <text x="292" y="505" class="hilab" text-anchor="end">GLM-5.3 (open)</text>
+    <rect x="300" y="496" width="176" height="12" rx="2" class="hi"/>
+    <rect x="300" y="496" width="176" height="12" rx="2" class="histroke"/>
+    <text x="484" y="506" class="hilab">60 · knocking, weights pending</text>
+  </g>
+
+  <text x="40" y="532" class="ambt" font-size="12">❄️ No Index-64 model. No flagship price cut since Jul 24 — <tspan font-weight="700">34 days</tspan>. Gemini 3.5 Pro still absent (3 missed targets); Meta "Watermelon" still in training, no card. The gap keeps compressing only from below.</text>
+</svg>
