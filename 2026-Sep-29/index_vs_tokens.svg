@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Sonnet 5.5 takes #2 on the Artificial Analysis Intelligence Index, at the highest token use measured</title>
+  <desc id="desc">Horizontal bars of Artificial Analysis Intelligence Index scores as of September 28, 2026. Claude Opus 5.5 at max effort scores 58, number one, using about 120 thousand output tokens per task, a figure derived from Artificial Analysis's statement that Sonnet 5.5 uses about 60 percent more. Claude Sonnet 5.5 at max effort scores 56, number two, using about 193 thousand output tokens per task, the most Artificial Analysis has measured, at 7.60 dollars per task. GPT-6 Astra at max effort scores 53 using about 27 thousand tokens per task at 3.26 dollars per task. Claude Fable 5.1 scores 53 using about 78 thousand tokens. Sonnet 5.5 at lower efforts scores 47 at high, 41 at medium and 36 at low. Footer: same list price as Sonnet 5, two dollars in and ten dollars out per million tokens, but about 50 percent higher cost per task at max effort than Sonnet 5 because of token use.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .lb{fill:#708098;font-size:13px;font-weight:700}
+    .ls{fill:#7c8aa0;font-size:11px}
+    .sc{font-size:14px;font-weight:700}
+    .tk{fill:#7c8aa0;font-size:12px}
+    .ax{fill:#7c8aa0;font-size:11px}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">Score vs. tokens: where Sonnet 5.5 lands</text>
+  <text x="30" y="57" class="sub">Artificial Analysis Intelligence Index (current version), Sep 28, 2026. Right column: output tokens per Index task.</text>
+
+  <!-- axis: x=220 is score 30, x=720 is score 60 ; 1 pt = 16.667 px -->
+  <g stroke="#7c8aa0" stroke-opacity="0.35" stroke-width="1">
+    <line x1="220" y1="80" x2="220" y2="392"/>
+    <line x1="386.7" y1="80" x2="386.7" y2="392" stroke-dasharray="3 4"/>
+    <line x1="553.3" y1="80" x2="553.3" y2="392" stroke-dasharray="3 4"/>
+    <line x1="720" y1="80" x2="720" y2="392" stroke-dasharray="3 4"/>
+  </g>
+  <text x="220" y="408" text-anchor="middle" class="ax">30</text>
+  <text x="386.7" y="408" text-anchor="middle" class="ax">40</text>
+  <text x="553.3" y="408" text-anchor="middle" class="ax">50</text>
+  <text x="720" y="408" text-anchor="middle" class="ax">60</text>
+  <text x="840" y="76" text-anchor="middle" class="ls">tokens / task</text>
+
+  <!-- rows: y centres 100,142,184,226,268,310,352 ; bar height 26 -->
+  <text x="30" y="98" class="lb">Opus 5.5 (max)</text><text x="30" y="112" class="ls">#1</text>
+  <rect x="220" y="87" width="466.7" height="26" rx="4" fill="#2563eb" fill-opacity="0.75"/>
+  <text x="694" y="105" class="sc" fill="#2563eb">58</text>
+  <text x="840" y="105" text-anchor="middle" class="tk">~120k*</text>
+
+  <text x="30" y="140" class="lb">Sonnet 5.5 (max)</text><text x="30" y="154" class="ls">#2 · new Sep 28 · $7.60/task</text>
+  <rect x="220" y="129" width="433.3" height="26" rx="4" fill="#d97706" fill-opacity="0.85"/>
+  <text x="661" y="147" class="sc" fill="#d97706">56</text>
+  <text x="840" y="147" text-anchor="middle" class="tk" style="font-weight:700;fill:#d97706">~193k (highest)</text>
+
+  <text x="30" y="182" class="lb">GPT-6 Astra (max)</text><text x="30" y="196" class="ls">$3.26/task</text>
+  <rect x="220" y="171" width="383.3" height="26" rx="4" fill="#059669" fill-opacity="0.75"/>
+  <text x="611" y="189" class="sc" fill="#059669">53</text>
+  <text x="840" y="189" text-anchor="middle" class="tk">~27k</text>
+
+  <text x="30" y="224" class="lb">Fable 5.1 (max)</text><text x="30" y="238" class="ls">Sep-23 figure</text>
+  <rect x="220" y="213" width="383.3" height="26" rx="4" fill="#7c3aed" fill-opacity="0.7"/>
+  <text x="611" y="231" class="sc" fill="#7c3aed">53</text>
+  <text x="840" y="231" text-anchor="middle" class="tk">~78k</text>
+
+  <text x="30" y="266" class="lb">Sonnet 5.5 (high)</text><text x="30" y="280" class="ls">API default effort</text>
+  <rect x="220" y="255" width="283.3" height="26" rx="4" fill="#d97706" fill-opacity="0.55"/>
+  <text x="511" y="273" class="sc" fill="#d97706">47</text>
+
+  <text x="30" y="308" class="lb">Sonnet 5.5 (medium)</text>
+  <rect x="220" y="297" width="183.3" height="26" rx="4" fill="#d97706" fill-opacity="0.4"/>
+  <text x="411" y="315" class="sc" fill="#d97706">41</text>
+
+  <text x="30" y="350" class="lb">Sonnet 5.5 (low)</text>
+  <rect x="220" y="339" width="100" height="26" rx="4" fill="#d97706" fill-opacity="0.28"/>
+  <text x="328" y="357" class="sc" fill="#d97706">36</text>
+
+  <line x1="30" y1="428" x2="910" y2="428" stroke="#7c8aa0" stroke-opacity="0.45"/>
+  <text x="30" y="450" class="ft">Same list price as Sonnet 5 ($2 in / $10 out per M tokens), but ~50% higher cost per task at max effort.</text>
+  <text x="30" y="470" class="fs">The 20-point spread from low to max effort is larger than the gap between #1 and #4. Effort is now the main price knob, not the model name.</text>
+  <text x="30" y="489" class="fs">* Opus 5.5 tokens derived from AA's "~60% higher" statement. Axis starts at 30. Sources: Artificial Analysis on X and article; OfficeChai; Orcarouter.</text>
+</svg>
