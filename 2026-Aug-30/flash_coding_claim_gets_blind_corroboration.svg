@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3-Flash verification ledger, August 30: the coding claim gets its first blind independent corroboration while the rest of the table stays vendor-reported, under a frozen closed ceiling</title>
+  <desc id="desc">A verification ledger for the open-weights model GLM-5.3-Flash, showing which of its benchmark claims now have independent backing as of August 30, 2026. Row one: the Artificial Analysis Intelligence Index score of 57 is third-party measured, marked with a teal check. Row two, highlighted as new this window: the DeepSWE coding benchmark, where Z.ai self-reports 63.4, the official DeepSWE leaderboard now carries a glm-5.3-flash entry at about 63, and crucially a StealthModelWatch community run against the anonymous Ox Alpha endpoint before the reveal scored 58.4 percent Pass at 1, 66 of 113 tasks solved, 95 percent confidence interval 49.2 to 67.1 percent — a blind measurement inside the same band, marked with a teal check and labelled blind-corroborated. Row three: Terminal-Bench 2.1 at 84.3 is vendor-reported, and on the public Terminal-Bench leaderboard Flash actually sits below three larger open models, Kimi K3 at 88.3, DeepSeek V4 Pro at 87.9, and Qwen3.8 at 86.6 — marked amber as vendor plus context. Row four: SWE-bench Verified, LiveCodeBench, and Agents Last Exam have no independent Flash number yet — marked slate as not yet measured. A note records that Artificial Analysis measures Flash as slow at about 50 tokens per second with a 1.47 second time-to-first-token, and very verbose. A footer states the closed ceiling stayed frozen for a ninth straight brief with Claude Opus 5 at 63 still number one and uncut, Fable 5 at 62.1 and Grok 4.6 at 60.9, no Index-64 model and no flagship price cut since July 24; the GLM-5.3 flagship weights are still slipped with no new date; and the flagship's cyber figures still have zero independent replication.</desc>
+
+  <style>
+    .hd   { fill:#475569; font-size:19px; font-weight:700; }
+    .sub  { fill:#64748b; font-size:12.5px; }
+    .name { fill:#475569; font-size:13.5px; font-weight:700; }
+    .meta { fill:#64748b; font-size:11.5px; }
+    .teal { fill:#0f766e; font-size:11.5px; font-weight:700; }
+    .amb  { fill:#b45309; font-size:11.5px; font-weight:700; }
+    .slate{ fill:#64748b; font-size:11.5px; font-weight:700; }
+    .foot { fill:#64748b; font-size:11.5px; }
+    .footh{ fill:#475569; font-size:12px; font-weight:700; }
+    .tag  { font-size:10.5px; font-weight:700; letter-spacing:.4px; }
+  </style>
+
+  <!-- header -->
+  <text x="40" y="34" class="hd">GLM-5.3-Flash — the verification ledger tips one row</text>
+  <text x="40" y="55" class="sub">New since Aug-29: the coding claim gets its first BLIND independent check. The rest of the table is still vendor-only.</text>
+
+  <!-- legend -->
+  <circle cx="600" cy="30" r="5" fill="#0f766e"/>
+  <text x="611" y="34" class="meta">independent</text>
+  <circle cx="695" cy="30" r="5" fill="#b45309"/>
+  <text x="706" y="34" class="meta">vendor + context</text>
+  <circle cx="815" cy="30" r="5" fill="#94a3b8"/>
+  <text x="826" y="34" class="meta">unmeasured</text>
+
+  <!-- ROW 1: AA Index -->
+  <rect x="40" y="80" width="820" height="58" rx="9" fill="#475569" opacity=".06"/>
+  <rect x="40" y="80" width="6" height="58" rx="3" fill="#0f766e"/>
+  <text x="62" y="104" class="name">AA Intelligence Index</text>
+  <text x="62" y="124" class="meta">57 — frontier-adjacent for the price; measured directly by Artificial Analysis</text>
+  <rect x="712" y="98" width="130" height="22" rx="11" fill="#0f766e" opacity=".12"/>
+  <text x="777" y="113" class="tag" fill="#0f766e" text-anchor="middle">THIRD-PARTY ✓</text>
+
+  <!-- ROW 2: DeepSWE (highlighted new) -->
+  <rect x="40" y="150" width="820" height="86" rx="9" fill="#0f766e" opacity=".08"/>
+  <rect x="40" y="150" width="820" height="86" rx="9" fill="none" stroke="#0f766e" stroke-width="1.3" opacity=".55"/>
+  <rect x="40" y="150" width="6" height="86" rx="3" fill="#0f766e"/>
+  <text x="62" y="174" class="name">DeepSWE (coding / SWE agent)</text>
+  <text x="62" y="194" class="meta">vendor self-report 63.4  ·  official DeepSWE leaderboard entry now ~63 (within margin)</text>
+  <text x="62" y="212" class="teal">BLIND run on "Ox Alpha" (pre-reveal): 58.4% Pass@1 — 66/113, 95% CI 49.2–67.1</text>
+  <text x="62" y="228" class="meta">measured before anyone knew the model, so no target-gaming — the strongest kind of corroboration</text>
+  <rect x="712" y="168" width="130" height="22" rx="11" fill="#0f766e" opacity=".18"/>
+  <text x="777" y="183" class="tag" fill="#0f766e" text-anchor="middle">BLIND ✓ · NEW</text>
+
+  <!-- ROW 3: Terminal-Bench -->
+  <rect x="40" y="248" width="820" height="72" rx="9" fill="#b45309" opacity=".06"/>
+  <rect x="40" y="248" width="6" height="72" rx="3" fill="#b45309"/>
+  <text x="62" y="272" class="name">Terminal-Bench 2.1</text>
+  <text x="62" y="292" class="meta">84.3 (vendor). "Near Opus 4.8 / Terra" is a curated comparison —</text>
+  <text x="62" y="310" class="amb">on the public board it sits BELOW Kimi K3 88.3 · DeepSeek V4 Pro 87.9 · Qwen3.8 86.6</text>
+  <rect x="712" y="266" width="130" height="22" rx="11" fill="#b45309" opacity=".14"/>
+  <text x="777" y="281" class="tag" fill="#b45309" text-anchor="middle">VENDOR + CONTEXT</text>
+
+  <!-- ROW 4: unmeasured -->
+  <rect x="40" y="332" width="820" height="58" rx="9" fill="#475569" opacity=".05"/>
+  <rect x="40" y="332" width="6" height="58" rx="3" fill="#94a3b8"/>
+  <text x="62" y="356" class="name">SWE-bench Verified · LiveCodeBench · Agents' Last Exam</text>
+  <text x="62" y="376" class="meta">no independent GLM-5.3-Flash figure published yet — the full table is not reproduced</text>
+  <rect x="712" y="350" width="130" height="22" rx="11" fill="#94a3b8" opacity=".16"/>
+  <text x="777" y="365" class="tag" fill="#64748b" text-anchor="middle">NOT YET MEASURED</text>
+
+  <!-- speed note -->
+  <text x="40" y="412" class="meta">AA also measures Flash <tspan font-weight="700">slow (~50 tok/s, 1.47s TTFT) and very verbose</tspan> — the summer's recurring open-model tax at the task level.</text>
+
+  <!-- divider -->
+  <line x1="40" y1="430" x2="860" y2="430" stroke="#94a3b8" stroke-width="1" opacity=".45"/>
+
+  <!-- footer: frozen -->
+  <text x="40" y="454" class="footh">Everything above the open tier HELD:</text>
+  <text x="40" y="474" class="foot">❄️  Closed ceiling frozen a <tspan font-weight="700">9th brief</tspan> — Opus 5 <tspan font-weight="700">63</tspan> #1 uncut · Fable 62.1 · Grok 60.9 · no Index-64 · no flagship cut since Jul 24 (&gt;5 wk)</text>
+  <text x="40" y="492" class="foot">⏸️  GLM-5.3 <tspan font-weight="700">flagship</tspan> weights still slipped — no new date  ·  cyber figures (CyberGym 84.5 …) still <tspan font-weight="700">zero independent runs</tspan></text>
+  <text x="40" y="510" class="foot">🕳️  Gemini 3.5 Pro still absent (3rd missed target)  ·  Meta "Watermelon" → October, still no card</text>
+</svg>
