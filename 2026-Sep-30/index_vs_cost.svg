@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GPT-6.1 Sol lands one point below GPT-6 Astra at under a quarter of the cost per task</title>
+  <desc id="desc">Horizontal bars of Artificial Analysis Intelligence Index scores at maximum effort as of September 29, 2026, with cost per Index task on the right. Claude Opus 5.5 scores 58, number one, at 5.98 dollars per task. Claude Sonnet 5.5 scores 56 at 7.60 dollars. GPT-6 Astra scores 53 at 3.26 dollars. GPT-6.1 Sol, new on September 29, scores 52 at 0.72 dollars. GPT-6 Sol, released September 22 and replaced seven days later, scored 48 at 1.05 dollars. GPT-6.1 Sol at lower efforts scores 51 at xhigh, 50 at high, 48 at medium and 42 at low. Footer: list price two dollars in and ten dollars out per million tokens, the same as GPT-6 Sol and Sonnet 5.5; the cache-read discount rises from 90 to 95 percent.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .lb{fill:#708098;font-size:13px;font-weight:700}
+    .ls{fill:#7c8aa0;font-size:11px}
+    .sc{font-size:14px;font-weight:700}
+    .tk{fill:#7c8aa0;font-size:12.5px;font-weight:700}
+    .ax{fill:#7c8aa0;font-size:11px}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">Score vs. cost per task: where GPT-6.1 Sol lands</text>
+  <text x="30" y="57" class="sub">Artificial Analysis Intelligence Index, max effort, Sep 29, 2026. Right column: cost to run one Index task.</text>
+
+  <!-- axis: x=220 is 30, x=720 is 60 ; 1 pt = 16.667 px -->
+  <g stroke="#7c8aa0" stroke-opacity="0.35" stroke-width="1">
+    <line x1="220" y1="80" x2="220" y2="352"/>
+    <line x1="386.7" y1="80" x2="386.7" y2="352" stroke-dasharray="3 4"/>
+    <line x1="553.3" y1="80" x2="553.3" y2="352" stroke-dasharray="3 4"/>
+    <line x1="720" y1="80" x2="720" y2="352" stroke-dasharray="3 4"/>
+  </g>
+  <text x="220" y="368" text-anchor="middle" class="ax">30</text>
+  <text x="386.7" y="368" text-anchor="middle" class="ax">40</text>
+  <text x="553.3" y="368" text-anchor="middle" class="ax">50</text>
+  <text x="720" y="368" text-anchor="middle" class="ax">60</text>
+  <text x="840" y="76" text-anchor="middle" class="ls">$ / task</text>
+
+  <text x="30" y="98" class="lb">Opus 5.5</text><text x="30" y="112" class="ls">#1</text>
+  <rect x="220" y="87" width="466.7" height="26" rx="4" fill="#2563eb" fill-opacity="0.75"/>
+  <text x="694" y="105" class="sc" fill="#2563eb">58</text>
+  <text x="840" y="105" text-anchor="middle" class="tk">$5.98</text>
+
+  <text x="30" y="150" class="lb">Sonnet 5.5</text><text x="30" y="164" class="ls">#2 · Sep 28</text>
+  <rect x="220" y="139" width="433.3" height="26" rx="4" fill="#2563eb" fill-opacity="0.55"/>
+  <text x="661" y="157" class="sc" fill="#2563eb">56</text>
+  <text x="840" y="157" text-anchor="middle" class="tk">$7.60</text>
+
+  <text x="30" y="202" class="lb">GPT-6 Astra</text><text x="30" y="216" class="ls">#3=</text>
+  <rect x="220" y="191" width="383.3" height="26" rx="4" fill="#059669" fill-opacity="0.6"/>
+  <text x="611" y="209" class="sc" fill="#059669">53</text>
+  <text x="840" y="209" text-anchor="middle" class="tk">$3.26</text>
+
+  <text x="30" y="254" class="lb">GPT-6.1 Sol</text><text x="30" y="268" class="ls">new Sep 29 · 51 / 50 / 48 / 42 lower efforts</text>
+  <rect x="220" y="243" width="366.7" height="26" rx="4" fill="#d97706" fill-opacity="0.85"/>
+  <text x="594" y="261" class="sc" fill="#d97706">52</text>
+  <text x="840" y="261" text-anchor="middle" class="tk" fill="#d97706" style="fill:#d97706">$0.72</text>
+
+  <text x="30" y="306" class="lb">GPT-6 Sol</text><text x="30" y="320" class="ls">Sep 22 · replaced after 7 days</text>
+  <rect x="220" y="295" width="300" height="26" rx="4" fill="#7c8aa0" fill-opacity="0.45" stroke="#7c8aa0" stroke-dasharray="4 3"/>
+  <text x="528" y="313" class="sc" fill="#7c8aa0">48</text>
+  <text x="840" y="313" text-anchor="middle" class="tk">$1.05</text>
+
+  <line x1="30" y1="392" x2="910" y2="392" stroke="#7c8aa0" stroke-opacity="0.35"/>
+  <text x="30" y="416" class="ft">1 point below Astra at 22% of its cost per task</text>
+  <text x="30" y="436" class="fs">List price $2 / $10 per million input / output tokens, unchanged from GPT-6 Sol; cache reads $0.10 (95% off, was 90%).</text>
+  <text x="30" y="454" class="fs">Opus 5.5 cost from Sep-23; others from Artificial Analysis, Sep 28–29. Fable 5.1 (53) omitted: no comparable cost figure.</text>
+</svg>
