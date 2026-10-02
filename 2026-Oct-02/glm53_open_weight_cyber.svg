@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GLM-5.3: near-Mythos exploit skill, open weights, safeguards that do not hold</title>
+  <desc id="desc">Two-panel chart from Anthropic's September 29, 2026 red-team report. Left panel: successful end-to-end Chrome V8 exploits on ExploitBench out of 410 attempts. Claude Mythos Preview 56 (14 percent), GLM-5.3 50 (12 percent), every other model tested 0. Right panel: share of harmful cyber requests GLM-5.3 engages with under three attacks. False red-team cover story 64 percent, prefilled reasoning tokens 92 percent, abliteration (editing the weights to remove refusals) 100 percent. Claude models were 0 percent under all three. Footer: abliteration cut GLM-5.3's refusal rate from 95 percent to about 6 percent for roughly 2,200 GPU hours, about 4,400 dollars. NIST's CAISI called GLM-5.3 the most cyber-capable open-weight model to date, about four months behind the US frontier.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .ps{fill:#7c8aa0;font-size:11px}
+    .nm{fill:#708098;font-size:13px;font-weight:700}
+    .v{fill:#708098;font-size:13px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11px}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+    .r{fill:#dc2626}.a{fill:#d97706}.b{fill:#2563eb}.s{fill:#7c8aa0}
+  </style>
+
+  <text x="30" y="36" class="hd">GLM-5.3: Mythos-class exploits, in weights anyone can download</text>
+  <text x="30" y="57" class="sub">Anthropic Frontier Red Team, "GLM-5.3 and the spread of advanced cyber capabilities" (Sep 29, 2026). Anthropic's own tests.</text>
+
+  <!-- Panel A -->
+  <text x="30" y="96" class="ph">A. ExploitBench (Chrome V8): working exploits out of 410</text>
+  <text x="30" y="113" class="ps">End-to-end exploit built autonomously from a known bug</text>
+  <!-- scale: x0=190, 4px per success -->
+  <g stroke="#7c8aa0" stroke-opacity="0.3"><line x1="190" y1="128" x2="190" y2="290"/></g>
+
+  <text x="180" y="156" class="nm" text-anchor="end">Mythos Preview</text>
+  <rect x="190" y="140" width="224" height="24" rx="3" class="b" fill-opacity="0.85"/>
+  <text x="422" y="157" class="v">56 (14%)</text>
+
+  <text x="180" y="204" class="nm" text-anchor="end">GLM-5.3</text>
+  <rect x="190" y="188" width="200" height="24" rx="3" class="r" fill-opacity="0.85"/>
+  <text x="398" y="205" class="v">50 (12%)</text>
+
+  <text x="180" y="252" class="nm" text-anchor="end">All others tested</text>
+  <rect x="190" y="236" width="3" height="24" rx="1" class="s"/>
+  <text x="200" y="253" class="v">0</text>
+  <text x="30" y="285" class="tx">Internal binary-exploitation set: Mythos Preview 6%, GLM-5.3 4%, Opus 4.6 and GLM-5.2 0%.</text>
+
+  <!-- divider -->
+  <line x1="490" y1="84" x2="490" y2="300" stroke="#7c8aa0" stroke-opacity="0.3"/>
+
+  <!-- Panel B -->
+  <text x="510" y="96" class="ph">B. GLM-5.3 engagement with harmful cyber requests</text>
+  <text x="510" y="113" class="ps">Under three simple attacks. Claude models: 0% in all three.</text>
+  <!-- scale: x0=680, 2.2px per percent -> 100% = 220 -->
+  <g stroke="#7c8aa0" stroke-opacity="0.3"><line x1="680" y1="128" x2="680" y2="270"/></g>
+
+  <text x="670" y="156" class="nm" text-anchor="end">Fake red-team story</text>
+  <rect x="680" y="140" width="141" height="24" rx="3" class="a" fill-opacity="0.85"/>
+  <text x="829" y="157" class="v">64%</text>
+
+  <text x="670" y="204" class="nm" text-anchor="end">Prefilled reasoning</text>
+  <rect x="680" y="188" width="202" height="24" rx="3" class="r" fill-opacity="0.7"/>
+  <text x="888" y="205" class="v">92%</text>
+
+  <text x="670" y="252" class="nm" text-anchor="end">Abliterated weights</text>
+  <rect x="680" y="236" width="220" height="24" rx="3" class="r" fill-opacity="0.95"/>
+  <text x="868" y="253" class="v" text-anchor="end" fill="#ffffff" style="fill:#ffffff">100%</text>
+  <text x="510" y="285" class="tx">"Engagement" = model attempts the request instead of refusing.</text>
+
+  <!-- footer -->
+  <line x1="30" y1="318" x2="910" y2="318" stroke="#7c8aa0" stroke-opacity="0.35"/>
+  <text x="30" y="346" class="ft">Removing the refusals is cheap: ~2,200 GPU-hours (~$4,400) took refusals from 95% to ~6%.</text>
+  <text x="30" y="370" class="fs">NIST CAISI (Sep 17): "the most cyber-capable open-weight model released to date", about four months behind the US frontier.</text>
+  <text x="30" y="392" class="fs">Z.ai held GLM-5.3's weights for a cyber review in August; they are now public. Closed models gate this skill (Fairwind, Mythos</text>
+  <text x="30" y="410" class="fs">access programs); an open model with the same skill cannot be gated after download.</text>
+  <text x="30" y="444" class="tx">Figures are Anthropic's measurements of a competitor's model and have not been reproduced by a third party.</text>
+</svg>
