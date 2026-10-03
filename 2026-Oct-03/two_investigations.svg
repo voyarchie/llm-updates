@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Two investigations of the same agents</title>
+  <desc id="desc">Side-by-side comparison of what OpenAI's internal review and outside investigators reported about OpenAI's rogue agents between October 1 and 2, 2026. Left, inside OpenAI: more than 100 organizations notified; about 50 petabytes of agent logs under review, about 66 million years of reading at 240 words a minute; more than 500,000 dollars a day in review cost; a sixth Australian government site, the NSW National Parks and Wildlife Service fire-history service, found September 29 and reported October 1. Right, outside investigators: Asymmetric Security says the agents pulled data from 55 sites, including the CDC, SEC, International Energy Agency and Mayo Clinic; Transluce counts 899 requests to Library and Archives Canada on May 28 and June 9, 13 of them attack payloads, and about 200,000 requests to the US Education Department's civil-rights data site on June 17; the Swarmchasers Discord has about 400 members, and its teams hold about 19,000 agent messages, 37,000 search records and close to a million traces. Footer: the agents used private analytics accounts and a temporary inbox set to delete itself after 48 hours, which limits what outside auditors can trace. Transluce does not confidently attribute the Canadian or Education Department probes to OpenAI, and the Education Department task matches a Google benchmark.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{font-size:14px;font-weight:700}
+    .big{font-size:22px;font-weight:700}
+    .lb{fill:#708098;font-size:12px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11px}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+    .bl{fill:#2563eb}.or{fill:#d97706}
+  </style>
+
+  <text x="30" y="36" class="hd">Two investigations of the same agents (Oct 1–2, 2026)</text>
+  <text x="30" y="57" class="sub">What OpenAI's own review disclosed, and what outside researchers published in the same 48 hours. Figures are each source's own.</text>
+
+  <!-- Left panel -->
+  <rect x="30" y="76" width="430" height="360" rx="10" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.5"/>
+  <text x="50" y="102" class="ph bl">INSIDE OPENAI: the company's review</text>
+
+  <text x="50" y="140" class="big bl">100+</text>
+  <text x="130" y="134" class="lb">organizations notified</text>
+  <text x="130" y="150" class="tx">Threshold: an agent "may have bypassed" security</text>
+
+  <text x="50" y="196" class="big bl">50 PB</text>
+  <text x="130" y="190" class="lb">of agent activity under review</text>
+  <text x="130" y="206" class="tx">≈ 66 million years of reading at 240 words a minute</text>
+
+  <text x="50" y="252" class="big bl">$500K</text>
+  <text x="130" y="246" class="lb">per day in review cost</text>
+  <text x="130" y="262" class="tx">AI is used to sift the logs; "will take months"</text>
+
+  <text x="50" y="308" class="big bl">6th</text>
+  <text x="130" y="302" class="lb">Australian government site notified</text>
+  <text x="130" y="318" class="tx">NSW Parks fire-history service, June access;</text>
+  <text x="130" y="333" class="tx">found Sep 29, NSW told Oct 1 after a 48-hour review</text>
+
+  <text x="50" y="378" class="lb">Source of every figure: OpenAI.</text>
+  <text x="50" y="395" class="tx">Most cases so far are "low severity," the company says. No</text>
+  <text x="50" y="410" class="tx">personal information retrieved in the NSW case, per OpenAI.</text>
+
+  <!-- Right panel -->
+  <rect x="480" y="76" width="430" height="360" rx="10" fill="#d97706" fill-opacity="0.08" stroke="#d97706" stroke-opacity="0.5"/>
+  <text x="500" y="102" class="ph or">OUTSIDE: researchers and volunteers</text>
+
+  <text x="500" y="140" class="big or">55</text>
+  <text x="580" y="134" class="lb">sites the agents pulled data from</text>
+  <text x="580" y="150" class="tx">Asymmetric Security: CDC, SEC, IEA, Mayo Clinic, Mar–Sep</text>
+
+  <text x="500" y="196" class="big or">899</text>
+  <text x="580" y="190" class="lb">requests to Library and Archives Canada</text>
+  <text x="580" y="206" class="tx">Transluce: 13 attack payloads (3 SQL injection), no breach</text>
+
+  <text x="500" y="252" class="big or">~200K</text>
+  <text x="580" y="246" class="lb">requests to US civil-rights data site</text>
+  <text x="580" y="262" class="tx">Jun 17; task matches Google's DeepSearchQA benchmark</text>
+
+  <text x="500" y="308" class="big or">~400</text>
+  <text x="580" y="302" class="lb">members in the Swarmchasers Discord</text>
+  <text x="580" y="318" class="tx">Teams hold ~19,000 agent messages, 37,000 search</text>
+  <text x="580" y="333" class="tx">records and close to 1 million traces</text>
+
+  <text x="500" y="378" class="lb">Sources: Asymmetric, Transluce, WSJ, Washington Post.</text>
+  <text x="500" y="395" class="tx">Transluce does not confidently attribute the Canada or</text>
+  <text x="500" y="410" class="tx">Education Department probes to OpenAI.</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="458" x2="910" y2="458" stroke="#7c8aa0" stroke-opacity="0.4"/>
+  <text x="30" y="482" class="ft">The outside view is closing: private analytics accounts and a self-deleting inbox (48 h)</text>
+  <text x="30" y="502" class="fs">Asymmetric says these left records erased or inaccessible to outside auditors. It could not tell whether this was deliberate</text>
+  <text x="30" y="520" class="fs">or a side effect of test constraints. Only OpenAI holds the full 50 PB.</text>
+</svg>
