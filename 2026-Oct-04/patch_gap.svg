@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The patch gap in Microsoft's 2026 Digital Defense Report</title>
+  <desc id="desc">Two panels drawn from Microsoft's 2026 Digital Defense Report. Top panel, on a logarithmic time axis from one hour to sixty days: the median time from a vulnerability being discovered in the wild to being weaponized is now well below 24 hours, while Microsoft estimates enterprise remediation of critical external vulnerabilities takes 30 to 60 days; the space between is the exposure window. Bottom panel: phishing was the entry vector for 23 percent of intrusions Microsoft's incident responders investigated from July 2025 to June 2026, up from 7 percent a year earlier. Footer: in a test against an emulated enterprise with no defenders, Anthropic's Mythos and OpenAI's GPT-5.5 each completed a 32-step attack chain to full domain compromise, the first models Microsoft saw do this autonomously.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .lb{fill:#708098;font-size:12px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11px}
+    .ax{stroke:#94a3b8;stroke-width:1}
+    .gr{stroke:#94a3b8;stroke-opacity:0.35;stroke-dasharray:3 3}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">The patch gap: attackers in hours, defenders in weeks</text>
+  <text x="30" y="57" class="sub">Microsoft 2026 Digital Defense Report (published Oct 1–2, 2026). Figures are Microsoft's own; time axis is logarithmic.</text>
+
+  <!-- Panel 1 -->
+  <text x="30" y="92" class="ph">Time to act on a newly exploited vulnerability</text>
+  <!-- gridlines at 1h, 1d, 1wk, 30d, 60d -->
+  <line x1="200" y1="105" x2="200" y2="215" class="gr"/>
+  <line x1="451" y1="105" x2="451" y2="215" class="gr"/>
+  <line x1="604" y1="105" x2="604" y2="215" class="gr"/>
+  <line x1="719" y1="105" x2="719" y2="215" class="gr"/>
+  <line x1="774" y1="105" x2="774" y2="215" class="gr"/>
+  <!-- exposure window -->
+  <rect x="451" y="105" width="323" height="110" fill="#dc2626" fill-opacity="0.08"/>
+  <text x="612" y="210" text-anchor="middle" class="tx" style="fill:#dc2626">exposure window</text>
+
+  <text x="190" y="135" text-anchor="end" class="lb">Weaponization (median)</text>
+  <rect x="200" y="120" width="235" height="22" rx="4" fill="#dc2626" fill-opacity="0.75"/>
+  <path d="M435 120 L451 131 L435 142 Z" fill="#dc2626" fill-opacity="0.75"/>
+  <text x="461" y="136" class="lb" style="fill:#dc2626">well below 24 h</text>
+
+  <text x="190" y="179" text-anchor="end" class="lb">Enterprise remediation</text>
+  <rect x="200" y="164" width="519" height="22" rx="4" fill="#2563eb" fill-opacity="0.7"/>
+  <rect x="719" y="164" width="55" height="22" fill="#2563eb" fill-opacity="0.35"/>
+  <text x="784" y="180" class="lb" style="fill:#2563eb">30–60 days</text>
+
+  <line x1="200" y1="222" x2="800" y2="222" class="ax"/>
+  <text x="200" y="238" text-anchor="middle" class="tx">1 h</text>
+  <text x="451" y="238" text-anchor="middle" class="tx">1 day</text>
+  <text x="604" y="238" text-anchor="middle" class="tx">1 week</text>
+  <text x="719" y="238" text-anchor="middle" class="tx">30 d</text>
+  <text x="774" y="238" text-anchor="middle" class="tx">60 d</text>
+
+  <!-- Panel 2 -->
+  <text x="30" y="280" class="ph">Share of investigated intrusions that began with phishing</text>
+  <text x="190" y="313" text-anchor="end" class="lb">Jul 2024 – Jun 2025</text>
+  <rect x="200" y="298" width="140" height="22" rx="4" fill="#d97706" fill-opacity="0.45"/>
+  <text x="350" y="314" class="lb" style="fill:#d97706">7%</text>
+  <text x="190" y="351" text-anchor="end" class="lb">Jul 2025 – Jun 2026</text>
+  <rect x="200" y="336" width="460" height="22" rx="4" fill="#d97706" fill-opacity="0.8"/>
+  <text x="670" y="352" class="lb" style="fill:#d97706">23%  (≈3.3×)</text>
+  <text x="200" y="378" class="tx">Bar length proportional to share (20 px per percentage point).</text>
+
+  <!-- Footer -->
+  <line x1="30" y1="398" x2="910" y2="398" class="ax" stroke-opacity="0.5"/>
+  <text x="30" y="420" class="ft">First fully autonomous domain takeover in Microsoft's testing: Mythos and GPT-5.5, 32 steps, emulated enterprise, no defenders.</text>
+  <text x="30" y="440" class="fs">Microsoft also expects a multi-year spike in known-but-unpatched vulnerabilities, and says it has seen state actors experiment with</text>
+  <text x="30" y="456" class="fs">agentic AI, though "not yet observed at scale." Sources: Microsoft 2026 DDR; BleepingComputer; Help Net Security.</text>
+</svg>
