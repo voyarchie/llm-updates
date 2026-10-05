@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Anthropic's leaked IPO prospectus in three numbers</title>
+  <desc id="desc">Three panels of figures from Anthropic's IPO prospectus as reported by Reuters on September 28 and 29, 2026; the document is not yet public on EDGAR. Panel one: 518 billion dollars of compute commitments, most of them non-cancellable over seven to ten years, of which 111.1 billion is with Google, 110 billion with Amazon, 31.4 billion with Microsoft, and the remaining roughly 265.5 billion with other or unnamed counterparties (a derived figure). Separately, Nvidia said on September 28 that Anthropic's contracted value for Nvidia-based cloud capacity exceeds 180 billion dollars; that figure overlaps with the commitments and is not additive. Panel two: of the prospectus's 261-page main section, 80 pages are risk factors and 48 pages describe the business; the risk factors warn of catastrophic or existential risk and of model behaviours such as resisting shutdown, concealing information and behaviour resembling blackmail. Panel three: the 2025 net loss of about 42 billion dollars was mostly a roughly 34 billion dollar non-cash charge on financing that may convert into shares; the operating loss was 8.06 billion dollars, up from 2.98 billion in 2024, while 2025 revenue grew about twelve-fold to nearly 4.6 billion dollars and second-quarter 2026 revenue alone reached 11.5 billion.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .lb{fill:#708098;font-size:12px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11px}
+    .wt{fill:#ffffff;font-size:12px;font-weight:700}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">Anthropic's prospectus: a $518B compute bill and 80 pages of risk</text>
+  <text x="30" y="57" class="sub">Figures from the IPO prospectus as reviewed by Reuters (Sep 28–29, 2026). Not yet public on EDGAR. Dollar figures in billions.</text>
+
+  <!-- Panel 1: compute commitments -->
+  <text x="30" y="92" class="ph">1 · Compute commitments: $518B, mostly non-cancellable, over 7–10 years</text>
+  <rect x="60" y="106" width="176" height="40" fill="#2563eb" fill-opacity="0.85"/>
+  <rect x="236" y="106" width="174" height="40" fill="#d97706" fill-opacity="0.85"/>
+  <rect x="410" y="106" width="50" height="40" fill="#16a34a" fill-opacity="0.85"/>
+  <rect x="460" y="106" width="420" height="40" fill="#94a3b8" fill-opacity="0.45"/>
+  <text x="148" y="131" text-anchor="middle" class="wt">Google $111.1</text>
+  <text x="323" y="131" text-anchor="middle" class="wt">Amazon $110.0</text>
+  <text x="435" y="164" text-anchor="middle" class="tx">Microsoft $31.4</text>
+  <text x="670" y="131" text-anchor="middle" class="lb">Other / unnamed ≈ $265.5 (derived)</text>
+  <text x="60" y="182" class="tx">Separately, Nvidia (Sep 28): Anthropic's contracted value for Nvidia-based cloud capacity exceeds $180B,</text>
+  <text x="60" y="197" class="tx">plus 2.5 GW of Nvidia capacity through 2028. That figure overlaps with the commitments above and is not additive.</text>
+
+  <!-- Panel 2: page counts -->
+  <text x="30" y="226" class="ph">2 · Pages in the 261-page main section</text>
+  <text x="190" y="257" text-anchor="end" class="lb">Risk factors</text>
+  <rect x="200" y="242" width="240" height="22" fill="#dc2626" fill-opacity="0.8"/>
+  <text x="448" y="258" class="lb">80</text>
+  <text x="190" y="289" text-anchor="end" class="lb">Business</text>
+  <rect x="200" y="274" width="144" height="22" fill="#2563eb" fill-opacity="0.8"/>
+  <text x="352" y="290" class="lb">48</text>
+  <text x="520" y="252" class="tx">Quoted risks: "catastrophic or existential risks to humanity";</text>
+  <text x="520" y="268" class="tx">models that "resist shutdown", "conceal or manipulate</text>
+  <text x="520" y="284" class="tx">information", and behaviour "resembling blackmail".</text>
+  <text x="520" y="300" class="tx">Customer concentration: two clients ≈ ¼ of 2025 revenue.</text>
+
+  <!-- Panel 3: loss decomposition -->
+  <text x="30" y="344" class="ph">3 · The $42B 2025 net loss is mostly a non-cash charge</text>
+  <text x="190" y="377" text-anchor="end" class="lb">2025 net loss</text>
+  <rect x="200" y="362" width="476" height="24" fill="#94a3b8" fill-opacity="0.45"/>
+  <rect x="676" y="362" width="113" height="24" fill="#dc2626" fill-opacity="0.8"/>
+  <text x="438" y="379" text-anchor="middle" class="lb">≈ $34 non-cash charge on convertible financing</text>
+  <text x="732" y="379" text-anchor="middle" class="wt">$8.06 op.</text>
+  <text x="797" y="379" class="lb">≈ $42</text>
+  <text x="190" y="411" text-anchor="end" class="lb">2024 op. loss</text>
+  <rect x="200" y="396" width="42" height="24" fill="#dc2626" fill-opacity="0.55"/>
+  <text x="250" y="413" class="lb">$2.98</text>
+  <text x="190" y="445" text-anchor="end" class="lb">Revenue</text>
+  <rect x="200" y="430" width="64" height="24" fill="#16a34a" fill-opacity="0.8"/>
+  <text x="272" y="447" class="lb">2025 ≈ $4.6 (≈12× 2024)</text>
+  <rect x="440" y="430" width="161" height="24" fill="#16a34a" fill-opacity="0.55"/>
+  <text x="609" y="447" class="lb">Q2 2026 alone: $11.5</text>
+  <text x="200" y="470" class="tx">Same scale in panel 3: 14 px per $1B. Compute and infrastructure opex in 2025: $7.33B, three times 2024.</text>
+
+  <text x="30" y="506" class="ft">Watch-item 31, partly answered: the filing calls its own product potentially existential, and commits $518B to build more.</text>
+  <text x="30" y="526" class="fs">Sources: Reuters via Yahoo Finance and CNBC; TechCrunch; Fortune; InvestmentNews; The Next Web; Seeking Alpha (Nvidia). Prospectus text not read directly.</text>
+</svg>
