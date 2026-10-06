@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Reflection's Beam against two Chinese open-weight models on coding-agent benchmarks</title>
+  <desc id="desc">Grouped bar chart of self-reported scores from Reflection AI's Beam launch on October 5, 2026, on a 0 to 100 scale. Terminal-Bench v2.1: Beam 80.1, GLM-5.2 81.0, Qwen 3.8-Max 86.6. SWE-Bench Pro v1: Beam 65.5, GLM-5.2 62.1, Qwen 3.8-Max 67.7. Beam is a sparse mixture-of-experts model with 501 billion total and 23 billion active parameters, a 1 million token context and 23.8 trillion pretraining tokens; Reflection claims reasoning parity with GLM-5.2 at 3 to 4 times less inference compute. Weights under Apache 2.0 are promised later in October. Scores are Reflection's own and have not been independently verified.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .lb{fill:#708098;font-size:12.5px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .ax{stroke:#94a3b8;stroke-opacity:0.5;stroke-width:1}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">Beam: a US open-weight model, close behind China's best</text>
+  <text x="30" y="57" class="sub">Self-reported scores from Reflection AI's launch, Oct 5, 2026. Scale 0–100, same for both panels. Not independently verified.</text>
+
+  <!-- gridlines: x=230 is 0, 5 px per point, x=730 is 100 -->
+  <line x1="230" y1="80" x2="230" y2="340" class="ax"/>
+  <line x1="480" y1="80" x2="480" y2="340" class="ax" stroke-dasharray="3 4"/>
+  <line x1="730" y1="80" x2="730" y2="340" class="ax" stroke-dasharray="3 4"/>
+  <text x="230" y="356" text-anchor="middle" class="tx">0</text>
+  <text x="480" y="356" text-anchor="middle" class="tx">50</text>
+  <text x="730" y="356" text-anchor="middle" class="tx">100</text>
+
+  <!-- Panel 1: Terminal-Bench v2.1 -->
+  <text x="30" y="96" class="ph">Terminal-Bench v2.1</text>
+  <text x="220" y="124" text-anchor="end" class="lb">Beam (Reflection, US)</text>
+  <rect x="230" y="108" width="400.5" height="22" fill="#2563eb" fill-opacity="0.85"/>
+  <text x="638" y="124" class="lb">80.1</text>
+  <text x="220" y="154" text-anchor="end" class="lb">GLM-5.2 (Z.ai)</text>
+  <rect x="230" y="138" width="405" height="22" fill="#d97706" fill-opacity="0.75"/>
+  <text x="643" y="154" class="lb">81.0</text>
+  <text x="220" y="184" text-anchor="end" class="lb">Qwen 3.8-Max (Alibaba)</text>
+  <rect x="230" y="168" width="433" height="22" fill="#16a34a" fill-opacity="0.75"/>
+  <text x="671" y="184" class="lb">86.6</text>
+
+  <!-- Panel 2: SWE-Bench Pro v1 -->
+  <text x="30" y="226" class="ph">SWE-Bench Pro v1</text>
+  <text x="220" y="254" text-anchor="end" class="lb">Beam (Reflection, US)</text>
+  <rect x="230" y="238" width="327.5" height="22" fill="#2563eb" fill-opacity="0.85"/>
+  <text x="565" y="254" class="lb">65.5</text>
+  <text x="220" y="284" text-anchor="end" class="lb">GLM-5.2 (Z.ai)</text>
+  <rect x="230" y="268" width="310.5" height="22" fill="#d97706" fill-opacity="0.75"/>
+  <text x="548" y="284" class="lb">62.1</text>
+  <text x="220" y="314" text-anchor="end" class="lb">Qwen 3.8-Max (Alibaba)</text>
+  <rect x="230" y="298" width="338.5" height="22" fill="#16a34a" fill-opacity="0.75"/>
+  <text x="576" y="314" class="lb">67.7</text>
+
+  <!-- spec box -->
+  <rect x="752" y="86" width="168" height="236" rx="8" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-opacity="0.5"/>
+  <text x="766" y="110" class="lb">Beam at a glance</text>
+  <text x="766" y="136" class="tx">501B total params</text>
+  <text x="766" y="155" class="tx">23B active (sparse MoE)</text>
+  <text x="766" y="174" class="tx">1M-token context</text>
+  <text x="766" y="193" class="tx">23.8T pretraining tokens</text>
+  <text x="766" y="212" class="tx">RL: 4 weeks, ~10.5k GB300</text>
+  <text x="766" y="231" class="tx">Text only</text>
+  <text x="766" y="250" class="tx">Apache 2.0 weights:</text>
+  <text x="766" y="269" class="tx">"later this month"</text>
+  <text x="766" y="288" class="tx">Now: early-access API</text>
+  <text x="766" y="307" class="tx">Claim: 3–4× less compute</text>
+
+  <text x="30" y="396" class="ft">Beam trails Qwen 3.8-Max on both and splits with GLM-5.2, but does so with 23B active parameters.</text>
+  <text x="30" y="416" class="fs">It also reports 80.9 on SWE-Bench Verified and 77.2 on SWE-Bench Pro v2-Hard (no competitor figures given for those).</text>
+  <text x="30" y="446" class="fs">Sources: Reflection AI blog (via SiliconANGLE, MarkTechPost, Wccftech); per-benchmark comparisons from Neoteric's summary of the launch table.</text>
+</svg>
