@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Mistral Large 4 against Chinese open-weight models</title>
+  <desc id="desc">Horizontal bar chart on a common 0 to 80 scale. Panel 1, Vals Index v2.1 (independent): Mistral Large 4 48.05, Kimi K3 50.30, GLM-5.3 53.51. Panel 2, Harvey Legal Agent Benchmark, percent of tasks completed (independent): Mistral Large 4 15.83, Kimi K3 12.92, GLM-5.3 8.33. Panel 3, coding head-to-heads from Mistral's own preliminary launch comparisons: DeepSWE v1.1 Mistral Large 4 62 versus Kimi K3 68; SWE-Atlas-QnA Mistral Large 4 59 versus DeepSeek V4 Pro 66; Terminal-Bench 4 Mistral Large 4 28 versus GLM-5.3 40. Footer: Artificial Analysis Intelligence Index 38, the top open model outside China but behind seven Chinese models; Claude Opus 5.5 leads at 58. Cyber Index 50. Weights and licence promised by end of October 2026.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .lb{fill:#708098;font-size:12.5px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .ax{stroke:#94a3b8;stroke-opacity:0.5;stroke-width:1}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+
+  <text x="30" y="36" class="hd">Mistral Large 4: strongest Western open model, still behind China's best</text>
+  <text x="30" y="57" class="sub">Common 0–80 scale for all panels. Panels 1–2 are independent evaluations; panel 3 is Mistral's own preliminary launch comparison.</text>
+
+  <!-- gridlines: x=250 is 0, 5 px per point, x=650 is 80 -->
+  <line x1="250" y1="80" x2="250" y2="505" class="ax"/>
+  <line x1="350" y1="80" x2="350" y2="505" class="ax" stroke-dasharray="3 4"/>
+  <line x1="450" y1="80" x2="450" y2="505" class="ax" stroke-dasharray="3 4"/>
+  <line x1="550" y1="80" x2="550" y2="505" class="ax" stroke-dasharray="3 4"/>
+  <line x1="650" y1="80" x2="650" y2="505" class="ax" stroke-dasharray="3 4"/>
+  <text x="250" y="521" text-anchor="middle" class="tx">0</text>
+  <text x="350" y="521" text-anchor="middle" class="tx">20</text>
+  <text x="450" y="521" text-anchor="middle" class="tx">40</text>
+  <text x="550" y="521" text-anchor="middle" class="tx">60</text>
+  <text x="650" y="521" text-anchor="middle" class="tx">80</text>
+
+  <!-- Panel 1: Vals Index v2.1 -->
+  <text x="30" y="92" class="ph">Vals Index v2.1 (independent)</text>
+  <text x="240" y="117" text-anchor="end" class="lb">Mistral Large 4</text>
+  <rect x="250" y="102" width="240.25" height="20" fill="#d97706" fill-opacity="0.85"/>
+  <text x="498" y="117" class="lb">48.05</text>
+  <text x="240" y="145" text-anchor="end" class="lb">Kimi K3 (Moonshot)</text>
+  <rect x="250" y="130" width="251.5" height="20" fill="#2563eb" fill-opacity="0.85"/>
+  <text x="509" y="145" class="lb">50.30</text>
+  <text x="240" y="173" text-anchor="end" class="lb">GLM-5.3 (Z.ai)</text>
+  <rect x="250" y="158" width="267.55" height="20" fill="#16a34a" fill-opacity="0.85"/>
+  <text x="525" y="173" class="lb">53.51</text>
+
+  <!-- Panel 2: Harvey Legal Agent Benchmark -->
+  <text x="30" y="206" class="ph">Harvey Legal Agent Benchmark, % tasks completed (independent)</text>
+  <text x="240" y="231" text-anchor="end" class="lb">Mistral Large 4</text>
+  <rect x="250" y="216" width="79.15" height="20" fill="#d97706" fill-opacity="0.85"/>
+  <text x="337" y="231" class="lb">15.83</text>
+  <text x="240" y="259" text-anchor="end" class="lb">Kimi K3</text>
+  <rect x="250" y="244" width="64.6" height="20" fill="#2563eb" fill-opacity="0.85"/>
+  <text x="322" y="259" class="lb">12.92</text>
+  <text x="240" y="287" text-anchor="end" class="lb">GLM-5.3</text>
+  <rect x="250" y="272" width="41.65" height="20" fill="#16a34a" fill-opacity="0.85"/>
+  <text x="299" y="287" class="lb">8.33</text>
+
+  <!-- Panel 3: coding head-to-heads (Mistral-supplied) -->
+  <text x="30" y="320" class="ph">Coding head-to-heads (Mistral's preliminary numbers)</text>
+  <text x="240" y="345" text-anchor="end" class="lb">DeepSWE v1.1 · Large 4</text>
+  <rect x="250" y="330" width="310" height="20" fill="#d97706" fill-opacity="0.85"/>
+  <text x="568" y="345" class="lb">62</text>
+  <text x="240" y="369" text-anchor="end" class="tx">Kimi K3</text>
+  <rect x="250" y="354" width="340" height="20" fill="#2563eb" fill-opacity="0.85"/>
+  <text x="598" y="369" class="lb">68</text>
+
+  <text x="240" y="407" text-anchor="end" class="lb">SWE-Atlas-QnA · Large 4</text>
+  <rect x="250" y="392" width="295" height="20" fill="#d97706" fill-opacity="0.85"/>
+  <text x="553" y="407" class="lb">59</text>
+  <text x="240" y="431" text-anchor="end" class="tx">DeepSeek V4 Pro</text>
+  <rect x="250" y="416" width="330" height="20" fill="#7c3aed" fill-opacity="0.85"/>
+  <text x="588" y="431" class="lb">66</text>
+
+  <text x="240" y="469" text-anchor="end" class="lb">Terminal-Bench 4 · Large 4</text>
+  <rect x="250" y="454" width="140" height="20" fill="#d97706" fill-opacity="0.85"/>
+  <text x="398" y="469" class="lb">28</text>
+  <text x="240" y="493" text-anchor="end" class="tx">GLM-5.3</text>
+  <rect x="250" y="478" width="200" height="20" fill="#16a34a" fill-opacity="0.85"/>
+  <text x="458" y="493" class="lb">40</text>
+
+  <!-- side panel -->
+  <text x="690" y="117" class="ft">Large 4 ("Le Chonk")</text>
+  <text x="690" y="139" class="fs">1T total / 49B active MoE</text>
+  <text x="690" y="157" class="fs">Image + text in, text out</text>
+  <text x="690" y="175" class="fs">1.6B vision encoder</text>
+  <text x="690" y="193" class="fs">1M-token context</text>
+  <text x="690" y="211" class="fs">~3,800 Grace Blackwell GPUs</text>
+  <text x="690" y="237" class="ft">Preview price / 1M tokens</text>
+  <text x="690" y="259" class="fs">$0.68 in · $2.09 out</text>
+  <text x="690" y="277" class="fs">(list: $1.36 · $4.18)</text>
+  <text x="690" y="303" class="ft">Weights</text>
+  <text x="690" y="325" class="fs">Promised by end of October</text>
+  <text x="690" y="343" class="fs">Licence not yet published</text>
+
+  <text x="30" y="552" class="ft">Artificial Analysis Intelligence Index: Large 4 = 38, behind seven Chinese open models; Opus 5.5 leads at 58</text>
+  <text x="30" y="574" class="fs">Cyber Index 50 (level with GLM-5.3-Flash). Sources: Vals AI, Harvey and Mistral figures via launch coverage, Oct 6–7, 2026; Artificial Analysis.</text>
+</svg>
