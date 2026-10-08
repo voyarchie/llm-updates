@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Haiku 5.5 against small-model rivals</title>
+  <desc id="desc">Two horizontal bar charts on a common 0 to 80 scale. Panel 1, Artificial Analysis Intelligence Index v4.3, independent: Claude Sonnet 5.5 max 56 as a reference, Kimi K3 44, Claude Haiku 5.5 max 43, GLM-5.3-Flash 42, Gemini 3.8 Flash 41, GPT-6 Luna max 38. Panel 2, Terminal-Bench 4.0 percent of tasks solved, from Anthropic's launch table: Claude Sonnet 5.5 70.6, Claude Haiku 5.5 39.2, GPT-6 Luna 16.4, Claude Haiku 4.5 0. Footer: Haiku 5.5 costs 0.10 dollars input and 0.50 dollars output per million tokens for prompts up to 100 thousand tokens, versus 1 and 5 dollars for Haiku 4.5; Index score by effort level is 29 low, 34 medium, 38 high, 41 xhigh, 43 max; at max effort it uses about 162 thousand output tokens per Index task, about three times GPT-6 Luna's 50 thousand.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ph{fill:#708098;font-size:14px;font-weight:700}
+    .lb{fill:#708098;font-size:12.5px;font-weight:700}
+    .val{fill:#708098;font-size:12.5px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .ax{stroke:#94a3b8;stroke-opacity:0.5;stroke-width:1}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+    .fs{fill:#7c8aa0;font-size:11.5px}
+  </style>
+  <text x="30" y="36" class="hd">Claude Haiku 5.5: top of the small-model class at a tenth of the price</text>
+  <text x="30" y="57" class="sub">Common 0–80 scale. Amber = new Oct 7 · green = Chinese open weights · blue = Google · teal = OpenAI · grey = Anthropic references.</text>
+  <text x="30" y="96" class="ph">1 · Artificial Analysis Intelligence Index v4.3 (independent) — small-model class</text>
+  <line x1="270" y1="106" x2="270" y2="280" class="ax"/>
+  <text x="270" y="294" text-anchor="middle" class="tx">0</text>
+  <line x1="370" y1="106" x2="370" y2="280" class="ax" stroke-dasharray="3 4"/>
+  <text x="370" y="294" text-anchor="middle" class="tx">20</text>
+  <line x1="470" y1="106" x2="470" y2="280" class="ax" stroke-dasharray="3 4"/>
+  <text x="470" y="294" text-anchor="middle" class="tx">40</text>
+  <line x1="570" y1="106" x2="570" y2="280" class="ax" stroke-dasharray="3 4"/>
+  <text x="570" y="294" text-anchor="middle" class="tx">60</text>
+  <line x1="670" y1="106" x2="670" y2="280" class="ax" stroke-dasharray="3 4"/>
+  <text x="670" y="294" text-anchor="middle" class="tx">80</text>
+  <text x="260" y="125" text-anchor="end" class="lb">Claude Sonnet 5.5 (max) · reference</text>
+  <rect x="270" y="112" width="280.0" height="18" rx="3" fill="#94a3b8" fill-opacity="0.55"/>
+  <text x="558.0" y="126" class="val">56</text>
+  <text x="260" y="153" text-anchor="end" class="lb">Kimi K3 (open, 2.8T)</text>
+  <rect x="270" y="140" width="220.0" height="18" rx="3" fill="#16a34a" fill-opacity="0.9"/>
+  <text x="498.0" y="154" class="val">44</text>
+  <text x="260" y="181" text-anchor="end" class="lb">Claude Haiku 5.5 (max) · NEW</text>
+  <rect x="270" y="168" width="215.0" height="18" rx="3" fill="#d97706" fill-opacity="0.9"/>
+  <text x="493.0" y="182" class="val">43</text>
+  <text x="260" y="209" text-anchor="end" class="lb">GLM-5.3-Flash (open)</text>
+  <rect x="270" y="196" width="210.0" height="18" rx="3" fill="#16a34a" fill-opacity="0.9"/>
+  <text x="488.0" y="210" class="val">42</text>
+  <text x="260" y="237" text-anchor="end" class="lb">Gemini 3.8 Flash</text>
+  <rect x="270" y="224" width="205.0" height="18" rx="3" fill="#2563eb" fill-opacity="0.9"/>
+  <text x="483.0" y="238" class="val">41</text>
+  <text x="260" y="265" text-anchor="end" class="lb">GPT-6 Luna (max)</text>
+  <rect x="270" y="252" width="190.0" height="18" rx="3" fill="#0d9488" fill-opacity="0.9"/>
+  <text x="468.0" y="266" class="val">38</text>
+  <text x="30" y="332" class="ph">2 · Terminal-Bench 4.0, % tasks solved (Anthropic launch table)</text>
+  <line x1="270" y1="342" x2="270" y2="460" class="ax"/>
+  <text x="270" y="474" text-anchor="middle" class="tx">0</text>
+  <line x1="370" y1="342" x2="370" y2="460" class="ax" stroke-dasharray="3 4"/>
+  <text x="370" y="474" text-anchor="middle" class="tx">20</text>
+  <line x1="470" y1="342" x2="470" y2="460" class="ax" stroke-dasharray="3 4"/>
+  <text x="470" y="474" text-anchor="middle" class="tx">40</text>
+  <line x1="570" y1="342" x2="570" y2="460" class="ax" stroke-dasharray="3 4"/>
+  <text x="570" y="474" text-anchor="middle" class="tx">60</text>
+  <line x1="670" y1="342" x2="670" y2="460" class="ax" stroke-dasharray="3 4"/>
+  <text x="670" y="474" text-anchor="middle" class="tx">80</text>
+  <text x="260" y="361" text-anchor="end" class="lb">Claude Sonnet 5.5</text>
+  <rect x="270" y="348" width="353.0" height="18" rx="3" fill="#94a3b8" fill-opacity="0.55"/>
+  <text x="631.0" y="362" class="val">70.6%</text>
+  <text x="260" y="389" text-anchor="end" class="lb">Claude Haiku 5.5 · NEW</text>
+  <rect x="270" y="376" width="196.0" height="18" rx="3" fill="#d97706" fill-opacity="0.9"/>
+  <text x="474.0" y="390" class="val">39.2%</text>
+  <text x="260" y="417" text-anchor="end" class="lb">GPT-6 Luna</text>
+  <rect x="270" y="404" width="82.0" height="18" rx="3" fill="#0d9488" fill-opacity="0.9"/>
+  <text x="360.0" y="418" class="val">16.4%</text>
+  <text x="260" y="445" text-anchor="end" class="lb">Claude Haiku 4.5</text>
+  <rect x="270" y="432" width="2.0" height="18" rx="3" fill="#94a3b8" fill-opacity="0.55"/>
+  <text x="280.0" y="446" class="val">0%</text>
+  <line x1="30" y1="500" x2="910" y2="500" class="ax"/>
+  <text x="30" y="524" class="ft">Price per 1M tokens, prompts ≤100K: Haiku 5.5 $0.10 in / $0.50 out · Haiku 4.5 was $1 / $5 · above 100K: $0.50 / $2.50</text>
+  <text x="30" y="546" class="fs">Haiku 5.5 Index score by effort: low 29 · medium 34 · high 38 · xhigh 41 · max 43. Context 1M tokens, 128K max output.</text>
+  <text x="30" y="566" class="fs">Token-hungry at max effort: ~162K output tokens per Index task, ~3× GPT-6 Luna (~50K); Artificial Analysis puts it at ~$0.21 per task.</text>
+  <text x="30" y="586" class="fs">Sources: Artificial Analysis and Anthropic launch table, read via search index (direct fetches were blocked); VentureBeat; MarkTechPost.</text>
+</svg>
