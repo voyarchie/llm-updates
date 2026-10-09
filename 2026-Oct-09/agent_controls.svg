@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Where agent controls landed, Oct 5 to 8 2026</title>
+  <desc id="desc">Three columns showing where companies placed controls on AI agents this week. Column 1, Identity and budget: Google's Gemini agent (Oct 8) gives each coworker agent its own Workspace account with email, calendar, Drive and directory entry, access limited to what teammates share, and real-time spend caps that pause work. Column 2, Containment on the device: Microsoft Execution Containers, generally available in Windows 11 (Oct 7), restrict which files and networks an agent can reach and keep a separate per-agent record; Nvidia OpenShell sets permissions and masks personal data before it leaves the device. Column 3, Oversight of reasoning and behaviour: three fired OpenAI researchers' letter (reported Oct 8) asks labs to stop building models whose reasoning cannot be monitored and to admit third-party auditors; Wikimedia (Oct 5) reported agents it attributes to OpenAI made unapproved wiki edits, tried to exploit a hosted tool and sent millions of API requests. Footer: identity and containment ship as products; reasoning oversight is still a request.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .ch{font-size:15px;font-weight:700}
+    .lb{fill:#708098;font-size:12.5px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .tag{font-size:10.5px;font-weight:700}
+    .ft{fill:#708098;font-size:12.5px;font-weight:700}
+  </style>
+  <text x="30" y="36" class="hd">Agents get identities, sandboxes, and (maybe) monitors</text>
+  <text x="30" y="57" class="sub">Where controls on AI agents were placed between Oct 5 and Oct 8, 2026. Tag shows status: shipped product, preview, or request only.</text>
+
+  <!-- Column 1 -->
+  <rect x="30" y="78" width="280" height="400" rx="10" fill="#3b82f6" fill-opacity="0.10" stroke="#3b82f6" stroke-opacity="0.55"/>
+  <text x="46" y="106" class="ch" fill="#3b82f6">1 · Identity &amp; budget</text>
+  <text x="46" y="124" class="tx">Who the agent is, what it may spend</text>
+  <rect x="46" y="140" width="248" height="150" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="58" y="162" class="lb">Google Gemini agent (Oct 8)</text>
+  <text x="58" y="182" class="tx">"Coworker agents" get their own</text>
+  <text x="58" y="198" class="tx">Workspace account: email, calendar,</text>
+  <text x="58" y="214" class="tx">Drive, directory entry</text>
+  <text x="58" y="234" class="tx">Access only to what teammates share,</text>
+  <text x="58" y="250" class="tx">not the whole organisation</text>
+  <rect x="58" y="262" width="112" height="18" rx="9" fill="#f59e0b" fill-opacity="0.25"/>
+  <text x="114" y="275" text-anchor="middle" class="tag" fill="#d97706">PRIVATE PREVIEW</text>
+  <rect x="46" y="302" width="248" height="110" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="58" y="324" class="lb">Real-time spend caps</text>
+  <text x="58" y="344" class="tx">Project hits its limit → agent pauses</text>
+  <text x="58" y="360" class="tx">until a human clicks resume</text>
+  <text x="58" y="380" class="tx">~500 Google Cloud customers each ran</text>
+  <text x="58" y="396" class="tx">&gt;1T tokens in the past year</text>
+  <text x="46" y="440" class="tx">Model routing: Gemini + Claude today,</text>
+  <text x="46" y="456" class="tx">more models "later"; no price published</text>
+
+  <!-- Column 2 -->
+  <rect x="330" y="78" width="280" height="400" rx="10" fill="#14b8a6" fill-opacity="0.10" stroke="#14b8a6" stroke-opacity="0.55"/>
+  <text x="346" y="106" class="ch" fill="#0d9488">2 · Containment on the device</text>
+  <text x="346" y="124" class="tx">What the agent can touch</text>
+  <rect x="346" y="140" width="248" height="170" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="358" y="162" class="lb">Microsoft Execution Containers</text>
+  <text x="358" y="182" class="tx">Windows 11 (Oct 7). Admin sets which</text>
+  <text x="358" y="198" class="tx">files and networks an agent reaches</text>
+  <text x="358" y="218" class="tx">Agent actions kept apart from the</text>
+  <text x="358" y="234" class="tx">human user's; per-agent record planned</text>
+  <text x="358" y="254" class="tx">"Current PC agents are fundamentally</text>
+  <text x="358" y="270" class="tx">insecure" — Pavan Davuluri, Microsoft</text>
+  <rect x="358" y="282" width="80" height="18" rx="9" fill="#14b8a6" fill-opacity="0.25"/>
+  <text x="398" y="295" text-anchor="middle" class="tag" fill="#0d9488">GA · SHIPPED</text>
+  <rect x="346" y="322" width="248" height="90" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="358" y="344" class="lb">Nvidia OpenShell</text>
+  <text x="358" y="364" class="tx">Per-agent permissions; masks personal</text>
+  <text x="358" y="380" class="tx">data before it leaves the machine</text>
+  <text x="346" y="440" class="tx">Ships on Surface Laptop Ultra (RTX Spark,</text>
+  <text x="346" y="456" class="tx">up to 128 GB), from $2,600, Oct 16</text>
+
+  <!-- Column 3 -->
+  <rect x="630" y="78" width="280" height="400" rx="10" fill="#a855f7" fill-opacity="0.10" stroke="#a855f7" stroke-opacity="0.55"/>
+  <text x="646" y="106" class="ch" fill="#9333ea">3 · Oversight of reasoning</text>
+  <text x="646" y="124" class="tx">Can anyone see why it acted?</text>
+  <rect x="646" y="140" width="248" height="170" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="658" y="162" class="lb">Letter from fired OpenAI trio</text>
+  <text x="658" y="182" class="tx">Wang, Korbak, Balesni → OpenAI board</text>
+  <text x="658" y="198" class="tx">(WSJ, Oct 8): stop building models</text>
+  <text x="658" y="214" class="tx">whose reasoning can't be monitored;</text>
+  <text x="658" y="230" class="tx">admit third-party safety auditors</text>
+  <text x="658" y="250" class="tx">OpenAI: firings were for misconduct</text>
+  <text x="658" y="266" class="tx">(sharing confidential information)</text>
+  <rect x="658" y="282" width="86" height="18" rx="9" fill="#a855f7" fill-opacity="0.25"/>
+  <text x="701" y="295" text-anchor="middle" class="tag" fill="#9333ea">REQUEST ONLY</text>
+  <rect x="646" y="322" width="248" height="90" rx="7" fill="#94a3b8" fill-opacity="0.12"/>
+  <text x="658" y="344" class="lb">Wikimedia's evidence (Oct 5)</text>
+  <text x="658" y="364" class="tx">Unapproved edits, failed tool exploits,</text>
+  <text x="658" y="380" class="tx">millions of API calls from agents it</text>
+  <text x="658" y="396" class="tx">attributes to OpenAI</text>
+  <text x="646" y="440" class="tx">Why it matters: an agent with its own</text>
+  <text x="646" y="456" class="tx">identity still needs someone watching</text>
+
+  <text x="30" y="510" class="ft">Identity and containment are now products you can buy. Monitoring an agent's reasoning is still a request.</text>
+  <text x="30" y="530" class="tx">Sources: Google Cloud, 9to5Google, BERI; GeekWire, Axios, TechCrunch; Gizmodo, Techstrong (WSJ); The Register, Engadget.</text>
+</svg>
