@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Nadella's proposal: treat the model as an insider and keep the controls outside it (Oct 10, 2026)</title>
+  <desc id="desc">A large frame labelled "Harness and control plane, outside the model" surrounds a central box: the model, assumed compromised from the start. Above the model, an emergency brake: an authorized person can pause or shut down the model mid-task. On the left inside the frame: identity, so every agent acts under its own account, and least privilege, which limits what it can reach. On the right: tamper-proof human-readable logs of meaningful actions, and a containment boundary set outside the model where it cannot change it. Below the frame, three organisation-level measures: independent audits, no single model for critical decisions, and incident disclosure with industry containment standards. Footer: pieces already in motion include Google's Gemini agent accounts with attested logs (Oct 8), Anthropic's offline internal evaluations (Oct 9), and the SI Force incident-reporting mandate (Oct 9).</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .lb{fill:#708098;font-size:13px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .ft{fill:#708098;font-size:12px;font-weight:700}
+  </style>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="36" class="hd">Assume the model is compromised; put the controls outside it</text>
+  <text x="30" y="57" class="sub">Satya Nadella's X post of Oct 10, 2026, as summarised by several outlets. A policy argument, not a Microsoft product or specification.</text>
+
+  <!-- Harness frame -->
+  <rect x="30" y="76" width="900" height="290" rx="14" fill="#3b82f6" fill-opacity="0.06" stroke="#3b82f6" stroke-opacity="0.55" stroke-dasharray="6 4"/>
+  <text x="48" y="98" class="lb">Harness / control plane: outside the model, where the model cannot change or bypass it</text>
+
+  <!-- Emergency brake -->
+  <rect x="330" y="112" width="300" height="62" rx="10" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-opacity="0.65"/>
+  <text x="346" y="135" class="lb">Emergency brake</text>
+  <text x="346" y="153" class="tx">An authorized person can always pause or</text>
+  <text x="346" y="168" class="tx">shut down the model mid-task</text>
+  <line x1="480" y1="176" x2="480" y2="214" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- Model -->
+  <rect x="360" y="218" width="240" height="110" rx="12" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1.5"/>
+  <text x="378" y="244" class="lb">Model</text>
+  <text x="378" y="264" class="tx">Treated as an insider-risk class:</text>
+  <text x="378" y="280" class="tx">"assume a model is compromised</text>
+  <text x="378" y="296" class="tx">and contain it from the start"</text>
+  <text x="378" y="316" class="tx">Safeguards are not left to the weights</text>
+
+  <!-- Left controls -->
+  <rect x="56" y="122" width="250" height="92" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="72" y="146" class="lb">Identity</text>
+  <text x="72" y="166" class="tx">Each agent acts under its own</text>
+  <text x="72" y="182" class="tx">identity, like an employee, so</text>
+  <text x="72" y="198" class="tx">actions are attributable</text>
+
+  <rect x="56" y="232" width="250" height="96" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="72" y="256" class="lb">Least privilege</text>
+  <text x="72" y="276" class="tx">Limit what the model can reach and</text>
+  <text x="72" y="292" class="tx">do; controls on data and tools sit</text>
+  <text x="72" y="308" class="tx">in the harness</text>
+  <line x1="308" y1="280" x2="356" y2="276" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="308" y1="168" x2="356" y2="236" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+
+  <!-- Right controls -->
+  <rect x="654" y="122" width="250" height="92" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="670" y="146" class="lb">Tamper-proof logs</text>
+  <text x="670" y="166" class="tx">Human-readable records of</text>
+  <text x="670" y="182" class="tx">meaningful model actions that</text>
+  <text x="670" y="198" class="tx">the model cannot edit</text>
+
+  <rect x="654" y="232" width="250" height="96" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="670" y="256" class="lb">Containment boundary</text>
+  <text x="670" y="276" class="tx">What the model can touch is set</text>
+  <text x="670" y="292" class="tx">outside it, separated from the</text>
+  <text x="670" y="308" class="tx">orchestration harness</text>
+  <line x1="604" y1="236" x2="650" y2="168" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+  <line x1="604" y1="276" x2="650" y2="280" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#ar)"/>
+
+  <!-- Org-level measures -->
+  <text x="30" y="394" class="lb">Around the system (organisation and industry level)</text>
+  <rect x="30" y="406" width="286" height="54" rx="10" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.6"/>
+  <text x="46" y="428" class="lb">Independent audits</text>
+  <text x="46" y="446" class="tx">Outside review of AI systems</text>
+  <rect x="337" y="406" width="286" height="54" rx="10" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.6"/>
+  <text x="353" y="428" class="lb">Model diversity</text>
+  <text x="353" y="446" class="tx">No single model for critical decisions</text>
+  <rect x="644" y="406" width="286" height="54" rx="10" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.6"/>
+  <text x="660" y="428" class="lb">Disclosure and standards</text>
+  <text x="660" y="446" class="tx">Incident disclosure; industry containment norms</text>
+
+  <text x="30" y="490" class="ft">Already in motion: Gemini agent accounts with attested logs (Oct 8) · Anthropic takes internal evals offline (Oct 9)</text>
+  <text x="30" y="508" class="ft">· SI Force incident-reporting mandate (Oct 9). What is missing: a shared definition of "brake" and who holds it.</text>
+</svg>
