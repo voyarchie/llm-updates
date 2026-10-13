@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Anthropic Frontier Red Team: how close small open models are to self-replicating on IoT devices (Oct 12, 2026)</title>
+  <desc id="desc">A four-step replication chain runs left to right: 1 network enumeration, 2 initial access and payload delivery (the cyber-exploit step, kept trivial in the study, so results are upper bounds), 3 inference setup on the compromised device (the study's focus), and 4 propagation from the new host, with an arrow looping back to step 1. Below, three result panels. Left: what works today. GLM-5.2 spread to 8 of 8 nodes in 4 of 5 trials in the simplified setup; Qwen3.5-9B set up inference on 8 of 9 hardware types; Gemma4-26B-A4B ran across 15 Android TV boxes costing about 55 dollars each at 0.39 tokens per second. Middle: what is still slow. Full inference setup took 28 to 51 hours for Qwen3.5-9B and 71 to 150 hours for Gemma4-26B-A4B; other open models failed end to end; a frontier advisor gave no significant gain. Right: forecast and defence. Small models of 30B or fewer gain about 13.7 Epoch Capabilities Index points a year; extrapolating from GLM-5.2 puts a small replicator at that level by the end of 2026. A Kimwolf-sized fleet of about 2 million boxes could host about 133 thousand replicas, roughly 40 H100-equivalents. Defences: ISP flow monitoring, honeypots, quarantine, and no default passwords, aiming to push R0 below 1.</desc>
+  <style>
+    .hd{fill:#64748b;font-size:20px;font-weight:700}
+    .sub{fill:#7c8aa0;font-size:12px}
+    .lb{fill:#708098;font-size:13px;font-weight:700}
+    .tx{fill:#7c8aa0;font-size:11.5px}
+    .num{fill:#708098;font-size:20px;font-weight:700}
+    .ft{fill:#708098;font-size:12px;font-weight:700}
+  </style>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="36" class="hd">Small open models and self-replication: where the chain stands</text>
+  <text x="30" y="57" class="sub">Anthropic Frontier Red Team (Zhou &amp; Freeman), Oct 12, 2026. Controlled emulator and lab-hardware tests; exploit step kept trivial, so results are upper bounds.</text>
+
+  <!-- Chain -->
+  <rect x="30" y="80" width="200" height="92" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="46" y="106" class="lb">1  Enumerate network</text>
+  <text x="46" y="126" class="tx">Find reachable devices</text>
+  <text x="46" y="142" class="tx">(e.g. open ADB ports on</text>
+  <text x="46" y="158" class="tx">off-brand Android TV boxes)</text>
+
+  <rect x="262" y="80" width="200" height="92" rx="10" fill="#94a3b8" fill-opacity="0.06" stroke="#94a3b8" stroke-opacity="0.7" stroke-dasharray="5 4"/>
+  <text x="278" y="106" class="lb">2  Access + payload</text>
+  <text x="278" y="126" class="tx">Cyber-exploit step.</text>
+  <text x="278" y="142" class="tx">Kept trivial in the study:</text>
+  <text x="278" y="158" class="tx">not what is being measured</text>
+
+  <rect x="494" y="80" width="200" height="92" rx="10" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-opacity="0.75" stroke-width="1.6"/>
+  <text x="510" y="106" class="lb">3  Inference setup</text>
+  <text x="510" y="126" class="tx">Get the model running on</text>
+  <text x="510" y="142" class="tx">weak hardware, sharded</text>
+  <text x="510" y="158" class="tx">across devices. The focus</text>
+
+  <rect x="726" y="80" width="200" height="92" rx="10" fill="#94a3b8" fill-opacity="0.12" stroke="#94a3b8" stroke-opacity="0.7"/>
+  <text x="742" y="106" class="lb">4  Propagate</text>
+  <text x="742" y="126" class="tx">The new host repeats the</text>
+  <text x="742" y="142" class="tx">chain. No central server</text>
+  <text x="742" y="158" class="tx">to switch off</text>
+
+  <line x1="232" y1="126" x2="258" y2="126" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="464" y1="126" x2="490" y2="126" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="696" y1="126" x2="722" y2="126" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M826,174 L826,196 L130,196 L130,178" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text x="400" y="212" class="tx">doubling time measured in days: a slow "digital slime mold", not fast malware</text>
+
+  <!-- Panels -->
+  <rect x="30" y="232" width="290" height="230" rx="10" fill="#22c55e" fill-opacity="0.08" stroke="#22c55e" stroke-opacity="0.6"/>
+  <text x="46" y="256" class="lb">Works today (simplified setups)</text>
+  <text x="46" y="286" class="num">8/8 nodes</text>
+  <text x="46" y="304" class="tx">GLM-5.2, in 4 of 5 trials (7/8 in the</text>
+  <text x="46" y="319" class="tx">fifth): the only open model end to end</text>
+  <text x="46" y="350" class="num">8 of 9</text>
+  <text x="46" y="368" class="tx">hardware types where Qwen3.5-9B got</text>
+  <text x="46" y="383" class="tx">inference running (Jetson Nano to 4090)</text>
+  <text x="46" y="414" class="num">0.39 tok/s</text>
+  <text x="46" y="432" class="tx">Gemma4-26B-A4B sharded over 15 TV</text>
+  <text x="46" y="447" class="tx">boxes (~$55 each, 4 GB RAM)</text>
+
+  <rect x="335" y="232" width="290" height="230" rx="10" fill="#ef4444" fill-opacity="0.07" stroke="#ef4444" stroke-opacity="0.55"/>
+  <text x="351" y="256" class="lb">Still slow or failing</text>
+  <text x="351" y="286" class="num">28–51 h</text>
+  <text x="351" y="304" class="tx">full inference setup, Qwen3.5-9B</text>
+  <text x="351" y="319" class="tx">(71–150 h for Gemma4-26B-A4B)</text>
+  <text x="351" y="350" class="num">Most models fail</text>
+  <text x="351" y="368" class="tx">≤30B models pass single steps but</text>
+  <text x="351" y="383" class="tx">cannot chain them end to end</text>
+  <text x="351" y="414" class="num">No gain</text>
+  <text x="351" y="432" class="tx">from giving the small model a frontier</text>
+  <text x="351" y="447" class="tx">advisor (Opus 4.8) as a tool</text>
+
+  <rect x="640" y="232" width="290" height="230" rx="10" fill="#3b82f6" fill-opacity="0.08" stroke="#3b82f6" stroke-opacity="0.6"/>
+  <text x="656" y="256" class="lb">Forecast and defence</text>
+  <text x="656" y="286" class="num">+13.7 ECI / yr</text>
+  <text x="656" y="304" class="tx">trend for open models ≤30B (R² 0.95):</text>
+  <text x="656" y="319" class="tx">GLM-5.2 level reached by end of 2026</text>
+  <text x="656" y="350" class="num">~133k replicas</text>
+  <text x="656" y="368" class="tx">on a Kimwolf-sized fleet (~2M boxes),</text>
+  <text x="656" y="383" class="tx">yet only ~40 H100-equivalents</text>
+  <text x="656" y="414" class="num">Push R₀ below 1</text>
+  <text x="656" y="432" class="tx">ISP flow monitoring, honeypots,</text>
+  <text x="656" y="447" class="tx">quarantine, no default passwords</text>
+
+  <text x="30" y="494" class="ft">Reading: the bottleneck is step 3, and it is shrinking by about a year's worth of small-model progress.</text>
+  <text x="30" y="514" class="tx">Anthropic calls these "signs of life", not a working rogue replicator. Figures are from the Oct 12 post; no third-party replication yet.</text>
+</svg>
