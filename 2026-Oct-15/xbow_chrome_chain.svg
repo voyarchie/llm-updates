@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">XBOW's Chrome full chain built with GPT-5.6 Sol, August 2 to 7, 2026</title>
+  <desc id="desc">Three reported bugs chained left to right: a V8 Maglev compiler bug, an animated WebP decoder bug (CVE-2026-85045), and a Crashpad memory-safety bug, ending in code execution outside Chrome's renderer sandbox on Windows. Below, a split of roles: four named human researchers chose targets, supplied context, rejected weak results and assembled the chain; GPT-5.6 Sol agents running in Codex did most of the vulnerability search and exploit implementation in parallel campaigns. Bottom strip: about 40,000 dollars in API charges reconstructed from Codex logs, against a 250,000 dollar Google full-chain reward; XBOW estimates about one billion Windows Chrome users were exposed; Google reportedly patched all three and found no in-the-wild use. For comparison, Hacktron's July lab test had GPT-5.6 Sol Ultra build a V8 chain from public patch commits for about 1,597 dollars in compute.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .line { stroke: #9ca3af; }
+    .card { fill: #f9fafb; stroke: #d1d5db; }
+    .bug { fill: #ef44441a; stroke: #ef4444; }
+    .goal { fill: #8b5cf61f; stroke: #8b5cf6; }
+    .human { fill: #f59e0b1f; stroke: #f59e0b; }
+    .model { fill: #3b82f61f; stroke: #3b82f6; }
+    .arrow { stroke: #6b7280; fill: none; }
+    .arrowhead { fill: #6b7280; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .line { stroke: #64748b; }
+      .card { fill: #1e293b; stroke: #475569; }
+      .bug { fill: #ef444429; }
+      .goal { fill: #8b5cf62e; }
+      .human { fill: #f59e0b26; }
+      .model { fill: #3b82f62e; }
+      .arrow { stroke: #94a3b8; }
+      .arrowhead { fill: #94a3b8; }
+    }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="arrowhead" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="500" rx="12"/>
+  <text class="ink" x="32" y="40" font-size="21" font-weight="700">XBOW's Chrome full chain: three bugs, six days, GPT-5.6 Sol</text>
+  <text class="muted" x="32" y="64" font-size="14">Built Aug 2–7 2026 at Black Hat / DEF CON; disclosed Oct 13 after Google's fix. Bug roles as reported in secondary coverage</text>
+
+  <!-- chain -->
+  <rect class="bug" x="32" y="88" width="200" height="96" rx="10"/>
+  <text class="ink" x="48" y="114" font-size="15" font-weight="700">1 · V8 Maglev</text>
+  <text class="muted" x="48" y="136" font-size="13">JIT compiler bug</text>
+  <text class="muted" x="48" y="156" font-size="13">→ memory corruption in</text>
+  <text class="muted" x="48" y="174" font-size="13">the renderer</text>
+
+  <rect class="bug" x="270" y="88" width="200" height="96" rx="10"/>
+  <text class="ink" x="286" y="114" font-size="15" font-weight="700">2 · Animated WebP</text>
+  <text class="muted" x="286" y="136" font-size="13">decoder bug</text>
+  <text class="muted" x="286" y="156" font-size="13">CVE-2026-85045</text>
+
+  <rect class="bug" x="508" y="88" width="200" height="96" rx="10"/>
+  <text class="ink" x="524" y="114" font-size="15" font-weight="700">3 · Crashpad</text>
+  <text class="muted" x="524" y="136" font-size="13">memory-safety bug in</text>
+  <text class="muted" x="524" y="156" font-size="13">the crash reporter</text>
+
+  <rect class="goal" x="746" y="88" width="182" height="96" rx="10"/>
+  <text class="ink" x="762" y="114" font-size="15" font-weight="700">Code execution</text>
+  <text class="muted" x="762" y="136" font-size="13">outside the renderer</text>
+  <text class="muted" x="762" y="156" font-size="13">sandbox (Windows)</text>
+  <text class="muted" x="762" y="174" font-size="13">"zero to calc"</text>
+
+  <line class="arrow" x1="234" y1="136" x2="266" y2="136" stroke-width="2" marker-end="url(#ah)"/>
+  <line class="arrow" x1="472" y1="136" x2="504" y2="136" stroke-width="2" marker-end="url(#ah)"/>
+  <line class="arrow" x1="710" y1="136" x2="742" y2="136" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- roles -->
+  <text class="ink" x="32" y="222" font-size="16" font-weight="700">Who did what (XBOW's account)</text>
+  <rect class="human" x="32" y="236" width="440" height="118" rx="10"/>
+  <text class="ink" x="48" y="262" font-size="15" font-weight="700">4 named human researchers</text>
+  <text class="muted" x="48" y="284" font-size="13">• chose targets and supplied context</text>
+  <text class="muted" x="48" y="304" font-size="13">• rejected weak leads, picked which bugs to combine</text>
+  <text class="muted" x="48" y="324" font-size="13">• integrated and assembled the final chain</text>
+  <text class="muted" x="48" y="344" font-size="13">"Not reproducible by any user" without this expertise</text>
+
+  <rect class="model" x="488" y="236" width="440" height="118" rx="10"/>
+  <text class="ink" x="504" y="262" font-size="15" font-weight="700">GPT-5.6 Sol agents in Codex</text>
+  <text class="muted" x="504" y="284" font-size="13">• parallel bounded campaigns: bug search, V8 memory</text>
+  <text class="muted" x="504" y="304" font-size="13">  corruption, V8 sandbox escape, renderer escape</text>
+  <text class="muted" x="504" y="324" font-size="13">• most of the search and exploit implementation</text>
+  <text class="muted" x="504" y="344" font-size="13">Public API model; OpenAI rates it High, below Critical</text>
+
+  <!-- numbers strip -->
+  <rect class="card" x="32" y="376" width="896" height="100" rx="10"/>
+  <text class="ink" x="52" y="406" font-size="22" font-weight="700">~$40K</text>
+  <text class="muted" x="52" y="428" font-size="12">API charges, rebuilt</text>
+  <text class="muted" x="52" y="444" font-size="12">from Codex logs (unaudited)</text>
+  <text class="ink" x="236" y="406" font-size="22" font-weight="700">$250K</text>
+  <text class="muted" x="236" y="428" font-size="12">Google's first maximum</text>
+  <text class="muted" x="236" y="444" font-size="12">full-chain reward (reported)</text>
+  <text class="ink" x="420" y="406" font-size="22" font-weight="700">~1B</text>
+  <text class="muted" x="420" y="428" font-size="12">Windows Chrome users</text>
+  <text class="muted" x="420" y="444" font-size="12">exposed (XBOW estimate)</text>
+  <text class="ink" x="604" y="406" font-size="22" font-weight="700">$1,597</text>
+  <text class="muted" x="604" y="428" font-size="12">Hacktron July lab test: Sol</text>
+  <text class="muted" x="604" y="444" font-size="12">Ultra V8 chain from patches</text>
+  <text class="ink" x="788" y="406" font-size="22" font-weight="700">0</text>
+  <text class="muted" x="788" y="428" font-size="12">in-the-wild uses found;</text>
+  <text class="muted" x="788" y="444" font-size="12">all 3 bugs patched</text>
+  <text class="muted" x="52" y="466" font-size="11">Sources: XBOW blog and Labs post; Forbes, The Register, The Hacker News, Hacktron. Figures are XBOW's or Hacktron's unless stated.</text>
+</svg>
