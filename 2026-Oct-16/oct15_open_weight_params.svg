@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Open-weight releases on October 15, 2026: total versus active parameters</title>
+  <desc id="desc">Horizontal bars for five open-weight models released October 15, 2026. Meta Muse Spark Open, 816 billion total and 42 billion active parameters. StepFun Step 5 Preview, 600 billion total and 27 billion active. Jais 3 largest model, 375 billion total, active count not stated. NVIDIA Nemotron 3.5 Super VL, 120 billion total and 12 billion active. NVIDIA Nemotron 3.5 Bolt, 74 billion total and 9 billion active. Footnote: Microsoft's MAI-Base-2, 2.8 trillion total and 80 billion active, finished pre-training the same day but is not open weights and is not drawn to scale.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .tot { fill: #3b82f62e; stroke: #3b82f6; stroke-width: 1.2; }
+    .act { fill: #f59e0b; }
+    .note { fill: #f9fafb; stroke: #d1d5db; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .tot { fill: #60a5fa33; stroke: #60a5fa; }
+      .act { fill: #fbbf24; }
+      .note { fill: #1e293b; stroke: #334155; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .b { font-size: 15px; font-weight: 600; }
+    .s { font-size: 12.5px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="560" rx="10"/>
+  <text class="ink h" x="40" y="38">Oct 15 open-weight releases: total vs active parameters</text>
+  <rect class="tot" x="40" y="54" width="18" height="12" rx="2"/><text class="muted s" x="64" y="65">total parameters</text>
+  <rect class="act" x="190" y="54" width="18" height="12" rx="2"/><text class="muted s" x="214" y="65">active per token (MoE)</text>
+  <text class="muted s" x="380" y="65">bars to scale · vendor-reported figures</text>
+  <text class="ink b" x="40" y="96">Meta Muse Spark Open</text><text class="muted s" x="40" y="112">816B / 42B active · 1M ctx · Muse Model License</text>
+  <rect class="tot" x="40" y="120" width="505.9" height="22" rx="4"/>
+  <rect class="act" x="40" y="120" width="26.0" height="22" rx="3"/>
+  <text class="ink s" x="555.9" y="136">816B total · 42B active (5.1%)</text>
+  <text class="ink b" x="40" y="174">StepFun Step 5 Preview</text><text class="muted s" x="40" y="190">600B / 27B active · 1M ctx · StepFun licence (name disputed)</text>
+  <rect class="tot" x="40" y="198" width="372.0" height="22" rx="4"/>
+  <rect class="act" x="40" y="198" width="16.7" height="22" rx="3"/>
+  <text class="ink s" x="422.0" y="214">600B total · 27B active (4.5%)</text>
+  <text class="ink b" x="40" y="252">MBZUAI/Inception42 Jais 3 (largest)</text><text class="muted s" x="40" y="268">375B · active not stated · 512K ctx · six sizes 0.9B–375B</text>
+  <rect class="tot" x="40" y="276" width="232.5" height="22" rx="4"/>
+  <text class="ink s" x="282.5" y="292">375B total · active n/a</text>
+  <text class="ink b" x="40" y="330">NVIDIA Nemotron 3.5 Super VL</text><text class="muted s" x="40" y="346">120B / 12B active · 1M ctx · OpenMDW-1.1 · text+image+video</text>
+  <rect class="tot" x="40" y="354" width="74.4" height="22" rx="4"/>
+  <rect class="act" x="40" y="354" width="7.4" height="22" rx="3"/>
+  <text class="ink s" x="124.4" y="370">120B total · 12B active (10.0%)</text>
+  <text class="ink b" x="40" y="408">NVIDIA Nemotron 3.5 Bolt</text><text class="muted s" x="40" y="424">74B / 9B active · 24 GB edge build</text>
+  <rect class="tot" x="40" y="432" width="45.9" height="22" rx="4"/>
+  <rect class="act" x="40" y="432" width="5.6" height="22" rx="3"/>
+  <text class="ink s" x="95.9" y="448">74B total · 9B active (12.2%)</text>
+  <rect class="note" x="40" y="492" width="880" height="48" rx="6"/>
+  <text class="ink s" x="54" y="512">Not open, not to scale: Microsoft MAI-Base-2 finished pre-training Oct 15: 2.8T total / 80B active, 7 of 512 experts + 1 shared,</text>
+  <text class="ink s" x="54" y="530">50T tokens on 16k GB200s in 38 days. Weights to be licensed to "trusted partners" via Foundry; no release date.</text>
+</svg>
