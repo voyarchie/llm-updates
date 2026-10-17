@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">The AI expectations gap: US adults versus Anthropic staff</title>
+  <desc id="desc">Paired horizontal bars from Anthropic's October 16, 2026 survey report. Expect a Nobel-level AI discovery by 2030: US adults 39 percent, Anthropic staff 91 percent. Expect AI to design, run and publish scientific studies by next year: US adults 38 percent, staff 90 percent. Expected share of AI-capable tasks actually using AI in 2030: US adults 42 percent, staff 65 percent. Expected share of own current work hours done by AI in 2030: US workers 28 percent, staff 75 percent. Footnote: median answers imply 2030 GDP growth of 5.4 percent for US adults and 17.1 percent for staff.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .pub { fill: #3b82f6; }
+    .stf { fill: #f59e0b; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .note { fill: #f9fafb; stroke: #d1d5db; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .pub { fill: #60a5fa; }
+      .stf { fill: #fbbf24; }
+      .grid { stroke: #334155; }
+      .note { fill: #1e293b; stroke: #334155; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .b { font-size: 15px; font-weight: 600; }
+    .s { font-size: 12.5px; }
+    .v { font-size: 13px; font-weight: 700; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="500" rx="10"/>
+  <text class="ink h" x="40" y="38">The AI expectations gap (Anthropic survey, Oct 16)</text>
+  <rect class="pub" x="40" y="54" width="18" height="12" rx="2"/><text class="muted s" x="64" y="65">US adults (Morning Consult, N = 10,980, weighted)</text>
+  <rect class="stf" x="400" y="54" width="18" height="12" rx="2"/><text class="muted s" x="424" y="65">Anthropic staff (internal poll, N = 1,334, unweighted)</text>
+  <line class="grid" x1="40" y1="84" x2="40" y2="420"/>
+  <line class="grid" x1="420" y1="84" x2="420" y2="420"/>
+  <line class="grid" x1="800" y1="84" x2="800" y2="420"/>
+  <text class="muted s" x="36" y="80">0%</text><text class="muted s" x="408" y="80">50%</text><text class="muted s" x="782" y="80">100%</text>
+
+  <text class="ink b" x="48" y="106">Expect a Nobel-level AI discovery by 2030</text>
+  <rect class="pub" x="40" y="114" width="296.4" height="20" rx="3"/><text class="ink v" x="344" y="129">39%</text>
+  <rect class="stf" x="40" y="138" width="691.6" height="20" rx="3"/><text class="ink v" x="740" y="153">91%</text>
+
+  <text class="ink b" x="48" y="188">Expect AI to design, run and publish studies by next year</text>
+  <rect class="pub" x="40" y="196" width="288.8" height="20" rx="3"/><text class="ink v" x="337" y="211">38%</text>
+  <rect class="stf" x="40" y="220" width="684" height="20" rx="3"/><text class="ink v" x="732" y="235">90%</text>
+
+  <text class="ink b" x="48" y="270">Share of AI-capable tasks expected to use AI in 2030</text>
+  <rect class="pub" x="40" y="278" width="319.2" height="20" rx="3"/><text class="ink v" x="367" y="293">42%</text>
+  <rect class="stf" x="40" y="302" width="494" height="20" rx="3"/><text class="ink v" x="542" y="317">65%</text>
+
+  <text class="ink b" x="48" y="352">Share of own work hours expected to be done by AI in 2030</text>
+  <rect class="pub" x="40" y="360" width="212.8" height="20" rx="3"/><text class="ink v" x="261" y="375">28%</text>
+  <rect class="stf" x="40" y="384" width="570" height="20" rx="3"/><text class="ink v" x="618" y="399">75%</text>
+
+  <rect class="note" x="40" y="436" width="880" height="48" rx="6"/>
+  <text class="muted s" x="56" y="456">Median answers imply 2030 US GDP growth of 5.4% (public) vs 17.1% (staff); scenario benchmarks 2.4% / 5.4% / 15.4%.</text>
+  <text class="muted s" x="56" y="474">Last row: US workers only. Staff figures are personal views, not company forecasts. Source: anthropic.com/research/ai-expectations-gap</text>
+</svg>
