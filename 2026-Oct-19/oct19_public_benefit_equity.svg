@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Anthropic shares earmarked for public benefit, as announced October 18, 2026</title>
+  <desc id="desc">A horizontal bar on a scale of 0 to 30 percent of Anthropic's shares. The first segment, 5 percent, is the new Anthropic Public Benefit Fund, committed subject to stockholder approval. The second segment, about 15 percent, is the co-founders' pledge to donate 80 percent of their equity plus the employee equity donation match, in which about half of staff take part; Anthropic gives only the combined total of roughly 20 percent and does not split it. Dashed segments after 20 percent show the Fund growing by 2 percent at the board's discretion for each 50 percent rise in company value above a baseline that has not been disclosed. Notes: the Fund is a wholly owned LLC, not a 501(c)(3); its equity may not be used for lobbying or political giving; governance details are due in the coming months.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .fund { fill: #f59e0b; }
+    .prior { fill: #3b82f6; }
+    .future { fill: none; stroke: #f59e0b; stroke-width: 2; stroke-dasharray: 6 4; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .note { fill: #f9fafb; stroke: #d1d5db; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .fund { fill: #fbbf24; }
+      .prior { fill: #60a5fa; }
+      .future { stroke: #fbbf24; }
+      .grid { stroke: #334155; }
+      .note { fill: #1e293b; stroke: #334155; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .b { font-size: 15px; font-weight: 600; }
+    .s { font-size: 12.5px; }
+    .v { font-size: 14px; font-weight: 700; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="400" rx="10"/>
+  <text class="ink h" x="40" y="40">Anthropic equity earmarked for public benefit (announced Oct 18)</text>
+  <text class="muted s" x="40" y="62">Share of Anthropic's stock. Scale: 0–30%. 1 percentage point = 28 px.</text>
+
+  <!-- grid: x0 = 40, 28px per point -->
+  <line class="grid" x1="40" y1="90" x2="40" y2="200"/>
+  <line class="grid" x1="180" y1="90" x2="180" y2="200"/>
+  <line class="grid" x1="320" y1="90" x2="320" y2="200"/>
+  <line class="grid" x1="460" y1="90" x2="460" y2="200"/>
+  <line class="grid" x1="600" y1="90" x2="600" y2="200"/>
+  <line class="grid" x1="740" y1="90" x2="740" y2="200"/>
+  <line class="grid" x1="880" y1="90" x2="880" y2="200"/>
+  <text class="muted s" x="40" y="218" text-anchor="middle">0%</text>
+  <text class="muted s" x="180" y="218" text-anchor="middle">5%</text>
+  <text class="muted s" x="320" y="218" text-anchor="middle">10%</text>
+  <text class="muted s" x="460" y="218" text-anchor="middle">15%</text>
+  <text class="muted s" x="600" y="218" text-anchor="middle">20%</text>
+  <text class="muted s" x="740" y="218" text-anchor="middle">25%</text>
+  <text class="muted s" x="880" y="218" text-anchor="middle">30%</text>
+
+  <!-- bar -->
+  <rect class="fund" x="40" y="120" width="140" height="56" rx="3"/>
+  <rect class="prior" x="180" y="120" width="420" height="56"/>
+  <rect class="future" x="602" y="122" width="54" height="52"/>
+  <rect class="future" x="658" y="122" width="54" height="52"/>
+  <rect class="future" x="714" y="122" width="54" height="52"/>
+
+  <text class="ink v" x="110" y="108" text-anchor="middle">5% · new Fund</text>
+  <text class="ink v" x="390" y="108" text-anchor="middle">≈15% · earlier pledges (≈20% in all)</text>
+  <text class="ink v" x="685" y="108" text-anchor="middle">+2% per step</text>
+  <text class="muted s" x="685" y="194" text-anchor="middle">each +50% in value</text>
+
+  <!-- legend / notes -->
+  <rect class="fund" x="40" y="246" width="16" height="12" rx="2"/>
+  <text class="ink b" x="64" y="257">Anthropic Public Benefit Fund</text>
+  <text class="muted s" x="64" y="276">5% now, subject to stockholder approval. Wholly owned LLC, not a 501(c)(3). No lobbying or political giving.</text>
+
+  <rect class="prior" x="40" y="294" width="16" height="12" rx="2"/>
+  <text class="ink b" x="64" y="305">Co-founders' 80%-of-equity pledge + employee donation match (≈half of staff)</text>
+  <text class="muted s" x="64" y="324">Anthropic gives only the combined ≈20% total, so the ≈15% here is that total minus the Fund.</text>
+
+  <rect class="future" x="41" y="343" width="14" height="10"/>
+  <text class="ink b" x="64" y="353">Future top-ups</text>
+  <text class="muted s" x="64" y="372">Board's discretion, for each 50% rise above a baseline not yet disclosed. Three steps drawn for illustration only.</text>
+</svg>
