@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">One operator, many agents: the campaign Reuters reported on October 19, 2026</title>
+  <desc id="desc">Flow from left to right. Step 1, the operator: a Chinese-speaking operator gives instructions of fewer than 100 Chinese characters. Step 2, the agents: commercially available coding agents coordinated through exposed instances of Cairn, an open-source agent platform; Reuters says the tools appeared to include DeepSeek models and Claude Code, which is not confirmed. Step 3, targets: more than 1,200 sites tried from September 25, mostly online stores in the US, Canada, Australia and Japan. Step 4, outcome: sites tied to more than 100 companies compromised, including Deere, SharkNinja and Cummins; how much data was taken is unknown. Bottom strip: researcher Snorre Fagerland of NorForge found about two dozen exposed Cairn control panels and estimates roughly 23 hours and about 50 dollars in tokens per successful intrusion, about 5,000 dollars in all, without access to real usage data.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .op { fill: #8b5cf6; }
+    .ag { fill: #3b82f6; }
+    .tg { fill: #f59e0b; }
+    .out { fill: #ef4444; }
+    .arrow { stroke: #6b7280; stroke-width: 2.2; fill: none; }
+    .head { fill: #6b7280; }
+    .note { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.2; }
+    .noteink { fill: #78350f; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .op { fill: #a78bfa; }
+      .ag { fill: #60a5fa; }
+      .tg { fill: #fbbf24; }
+      .out { fill: #f87171; }
+      .arrow { stroke: #94a3b8; }
+      .head { fill: #94a3b8; }
+      .note { fill: #422006; stroke: #b45309; }
+      .noteink { fill: #fde68a; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .b { font-size: 15px; font-weight: 700; }
+    .s { font-size: 12.5px; }
+    .big { font-size: 26px; font-weight: 800; }
+    .tag { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; fill: #ffffff; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="560" rx="10"/>
+  <text class="ink h" x="40" y="40">One operator, many agents: the campaign Reuters reported (Oct 19)</text>
+  <text class="muted s" x="40" y="62">Figures are a researcher's estimates via secondary coverage of Reuters; model attribution is unconfirmed.</text>
+
+  <!-- Card 1: operator -->
+  <rect class="card" x="40" y="90" width="196" height="270" rx="10"/>
+  <rect class="op" x="40" y="90" width="196" height="30" rx="10"/>
+  <rect class="op" x="40" y="108" width="196" height="12"/>
+  <text class="tag" x="56" y="110">1 · OPERATOR</text>
+  <text class="ink big" x="56" y="162">&lt;100</text>
+  <text class="ink b" x="56" y="186">Chinese characters</text>
+  <text class="muted s" x="56" y="214">of instructions from one</text>
+  <text class="muted s" x="56" y="232">Chinese-speaking operator</text>
+  <text class="muted s" x="56" y="264">Agents then ran for hours</text>
+  <text class="muted s" x="56" y="282">with little human direction</text>
+
+  <!-- Card 2: agents -->
+  <rect class="card" x="276" y="90" width="196" height="270" rx="10"/>
+  <rect class="ag" x="276" y="90" width="196" height="30" rx="10"/>
+  <rect class="ag" x="276" y="108" width="196" height="12"/>
+  <text class="tag" x="292" y="110">2 · AGENTS</text>
+  <text class="ink big" x="292" y="162">~24</text>
+  <text class="ink b" x="292" y="186">exposed Cairn panels</text>
+  <text class="muted s" x="292" y="214">Cairn: open-source platform</text>
+  <text class="muted s" x="292" y="232">for coordinating AI agents</text>
+  <text class="muted s" x="292" y="264">Tools "appeared" to include</text>
+  <text class="muted s" x="292" y="282">DeepSeek and Claude Code</text>
+  <text class="muted s" x="292" y="300">(Reuters; unconfirmed)</text>
+
+  <!-- Card 3: targets -->
+  <rect class="card" x="512" y="90" width="196" height="270" rx="10"/>
+  <rect class="tg" x="512" y="90" width="196" height="30" rx="10"/>
+  <rect class="tg" x="512" y="108" width="196" height="12"/>
+  <text class="tag" x="528" y="110">3 · TARGETS</text>
+  <text class="ink big" x="528" y="162">1,200+</text>
+  <text class="ink b" x="528" y="186">sites tried</text>
+  <text class="muted s" x="528" y="214">from Sep 25, mostly online</text>
+  <text class="muted s" x="528" y="232">stores in the US, Canada,</text>
+  <text class="muted s" x="528" y="250">Australia and Japan</text>
+
+  <!-- Card 4: outcome -->
+  <rect class="card" x="748" y="90" width="172" height="270" rx="10"/>
+  <rect class="out" x="748" y="90" width="172" height="30" rx="10"/>
+  <rect class="out" x="748" y="108" width="172" height="12"/>
+  <text class="tag" x="764" y="110">4 · OUTCOME</text>
+  <text class="ink big" x="764" y="162">100+</text>
+  <text class="ink b" x="764" y="186">companies hit</text>
+  <text class="muted s" x="764" y="214">incl. Deere, SharkNinja,</text>
+  <text class="muted s" x="764" y="232">Cummins (vendor site)</text>
+  <text class="muted s" x="764" y="264">Data taken: unknown</text>
+  <text class="muted s" x="764" y="282">(Reuters could not</text>
+  <text class="muted s" x="764" y="300">establish it)</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M238 225 H268"/><path class="head" d="M274 225 l-9 -6 v12 z"/>
+  <path class="arrow" d="M474 225 H504"/><path class="head" d="M510 225 l-9 -6 v12 z"/>
+  <path class="arrow" d="M710 225 H740"/><path class="head" d="M746 225 l-9 -6 v12 z"/>
+
+  <!-- Cost strip -->
+  <rect class="note" x="40" y="390" width="880" height="130" rx="10"/>
+  <text class="noteink b" x="60" y="420">Cost estimate (Snorre Fagerland, NorForge; no real token-usage data)</text>
+  <text class="noteink big" x="60" y="466">~$50</text>
+  <text class="noteink s" x="60" y="490">in tokens per successful intrusion</text>
+  <text class="noteink big" x="340" y="466">~23 h</text>
+  <text class="noteink s" x="340" y="490">of agent time per intrusion</text>
+  <text class="noteink big" x="620" y="466">~$5,000</text>
+  <text class="noteink s" x="620" y="490">for the whole campaign</text>
+</svg>
