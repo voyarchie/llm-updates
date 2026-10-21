@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Two labs, two routes into life sciences (October 20, 2026)</title>
+  <desc id="desc">Two columns. Left, Anthropic: a research demonstration published October 20 in which an internal Claude research model, working mainly autonomously under supervision with four follow-up prompts over about 64 hours, ran a protein-design campaign for antivenom research; 211 candidates were tested by two outside contract labs and 17 met the binding criteria, about 8 percent; all designs and binding data were released publicly; Anthropic states the work is early-stage and not a treatment. Right, OpenAI: an acquisition announced October 20 of Orchestra Bio, a San Francisco start-up founded in 2022 with about 20 million dollars raised, whose agents handle drug-development operations such as study monitoring, finance tracking and clinical-trial scheduling; the team joins OpenAI's Rosalind life-sciences unit and the price was not disclosed. A bottom strip notes the contrast: Anthropic is publishing results from its own models doing science, while OpenAI is buying the workflow layer around trials; neither has shown a clinical outcome.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .hA { fill: #8b5cf6; }
+    .hB { fill: #10b981; }
+    .chip { fill: #eef2ff; stroke: #c7d2fe; stroke-width: 1; }
+    .chipink { fill: #3730a3; }
+    .note { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.2; }
+    .noteink { fill: #78350f; }
+    .white { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .hA { fill: #a78bfa; }
+      .hB { fill: #34d399; }
+      .chip { fill: #1e1b4b; stroke: #4338ca; }
+      .chipink { fill: #c7d2fe; }
+      .note { fill: #422006; stroke: #b45309; }
+      .noteink { fill: #fde68a; }
+      .white { fill: #0f172a; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .b { font-size: 15px; font-weight: 700; }
+    .s { font-size: 12.5px; }
+    .num { font-size: 24px; font-weight: 800; }
+    .tag { font-size: 12px; font-weight: 700; letter-spacing: 0.4px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="520" rx="10"/>
+  <text class="ink h" x="40" y="42">Two labs, two routes into life sciences — Oct 20, 2026</text>
+  <text class="muted s" x="40" y="64">Anthropic publishes a research demonstration; OpenAI buys the operations layer around drug trials.</text>
+
+  <!-- Left card -->
+  <rect class="card" x="30" y="84" width="440" height="330" rx="10"/>
+  <rect class="hA" x="30" y="84" width="440" height="34" rx="10"/>
+  <rect class="hA" x="30" y="104" width="440" height="14"/>
+  <text class="white tag" x="50" y="107" style="fill:#ffffff">ANTHROPIC — RESEARCH POST</text>
+  <text class="ink b" x="50" y="146">Claude runs a protein-design campaign</text>
+  <text class="muted s" x="50" y="168">Internal research model in Claude Science, mainly autonomous</text>
+  <text class="muted s" x="50" y="186">under supervision; four follow-up prompts; ~64 hours.</text>
+
+  <rect class="chip" x="50" y="202" width="180" height="62" rx="8"/>
+  <text class="chipink num" x="140" y="232" text-anchor="middle">211</text>
+  <text class="chipink s" x="140" y="252" text-anchor="middle">candidates lab-tested</text>
+
+  <rect class="chip" x="248" y="202" width="180" height="62" rx="8"/>
+  <text class="chipink num" x="338" y="232" text-anchor="middle">17 (~8%)</text>
+  <text class="chipink s" x="338" y="252" text-anchor="middle">met binding criteria</text>
+
+  <text class="muted s" x="50" y="292">• Tested by two independent contract labs.</text>
+  <text class="muted s" x="50" y="312">• All designs and binding data released publicly.</text>
+  <text class="muted s" x="50" y="332">• Early-stage result only; Anthropic does not claim a treatment,</text>
+  <text class="muted s" x="50" y="350">  and reports no efficacy testing beyond binding.</text>
+  <text class="muted s" x="50" y="378">• Follows its August binder campaign and the enzyme and</text>
+  <text class="muted s" x="50" y="396">  quantum-circuit posts (Sep-24, Oct-17 briefs).</text>
+
+  <!-- Right card -->
+  <rect class="card" x="490" y="84" width="440" height="330" rx="10"/>
+  <rect class="hB" x="490" y="84" width="440" height="34" rx="10"/>
+  <rect class="hB" x="490" y="104" width="440" height="14"/>
+  <text class="tag" x="510" y="107" style="fill:#ffffff">OPENAI — ACQUISITION</text>
+  <text class="ink b" x="510" y="146">OpenAI acquires Orchestra Bio</text>
+  <text class="muted s" x="510" y="168">San Francisco, founded 2022, ~$20M raised (a16z, 8VC,</text>
+  <text class="muted s" x="510" y="186">Insight). Price not disclosed. Reported first by Axios.</text>
+
+  <rect class="chip" x="510" y="202" width="180" height="62" rx="8"/>
+  <text class="chipink num" x="600" y="232" text-anchor="middle">Rosalind</text>
+  <text class="chipink s" x="600" y="252" text-anchor="middle">team joins this unit</text>
+
+  <rect class="chip" x="708" y="202" width="180" height="62" rx="8"/>
+  <text class="chipink num" x="798" y="232" text-anchor="middle">10–15 yrs</text>
+  <text class="chipink s" x="798" y="252" text-anchor="middle">drug approval timeline cited</text>
+
+  <text class="muted s" x="510" y="292">• Agents for drug-development operations: study monitoring,</text>
+  <text class="muted s" x="510" y="310">  finance tracking, clinical-trial scheduling.</text>
+  <text class="muted s" x="510" y="334">• Slots in behind GPT-Rosalind (April) and the Rosalind</text>
+  <text class="muted s" x="510" y="352">  Academic Plan (Oct 15).</text>
+  <text class="muted s" x="510" y="378">• Compare: Anthropic bought Coefficient Bio for ~$400M</text>
+  <text class="muted s" x="510" y="396">  in April.</text>
+
+  <!-- Note -->
+  <rect class="note" x="30" y="430" width="900" height="70" rx="10"/>
+  <text class="noteink b" x="50" y="458">The contrast</text>
+  <text class="noteink s" x="50" y="482">Anthropic is publishing what its own models can do in science; OpenAI is buying the workflow layer around trials. Neither has shown a clinical outcome.</text>
+</svg>
