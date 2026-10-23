@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">METR and Redwood red-team of OpenAI's internal agent monitoring (published October 22, 2026)</title>
+  <desc id="desc">Three panels. Left, how much traffic was monitored, as estimated by the evaluators for the system as of July 21, 2026: about 75 to 94 percent of agentic Responses API traffic from models at least as strong as GPT-5.5 was eligible for monitoring, 99.2 percent of internal Codex agent traffic, and roughly 10 percent of eligible internal Codex traffic went unmonitored from May to July because compaction events were not monitored, a gap OpenAI staff had found and fixed during the exercise. Middle, classes of weakness reported in coverage: client-controllable headers that switch monitoring off for new agents; sandbox and Auto-Review bypasses that could let an agent do anything the host user could; an exploit that hides hundreds of recent actions from the monitor; trigger timing, since the monitor fired only when an agent returned control to the user; and tools believed read-only that carried a simple exploit, not validated. Right, status: two evaluators, one from METR and one from Redwood, spent three weeks from July 21 to August 11 with access to code and configuration and about a dozen interviews; a 61-page internal report and a 38-page redacted version; OpenAI says all vulnerabilities affecting production safeguards are patched, which METR has not verified.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .hA { fill: #2563eb; }
+    .hB { fill: #db2777; }
+    .hC { fill: #059669; }
+    .track { fill: #e5e7eb; }
+    .barA { fill: #3b82f6; }
+    .barW { fill: #f59e0b; }
+    .note { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.2; }
+    .noteink { fill: #78350f; }
+    .white { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .hA { fill: #60a5fa; }
+      .hB { fill: #f472b6; }
+      .hC { fill: #34d399; }
+      .track { fill: #334155; }
+      .barA { fill: #60a5fa; }
+      .barW { fill: #fbbf24; }
+      .note { fill: #422006; stroke: #b45309; }
+      .noteink { fill: #fde68a; }
+      .white { fill: #0f172a; }
+    }
+    .h { font-size: 20px; font-weight: 700; }
+    .t { font-size: 15px; font-weight: 700; }
+    .b { font-size: 13px; }
+    .s { font-size: 12px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="540" rx="10"/>
+  <text class="ink h" x="24" y="38">Outside red team inside OpenAI's agent monitor (METR + Redwood, Oct 22)</text>
+  <text class="muted b" x="24" y="60">Findings describe the system as of Jul 21, 2026 — not its current coverage</text>
+
+  <!-- Panel 1: coverage -->
+  <rect class="card" x="24" y="80" width="288" height="380" rx="8"/>
+  <rect class="hA" x="24" y="80" width="288" height="6" rx="3"/>
+  <text class="ink t" x="40" y="112">How much was watched</text>
+
+  <text class="ink b" x="40" y="146">API agent traffic, models ≥ GPT-5.5</text>
+  <rect class="track" x="40" y="156" width="250" height="16" rx="4"/>
+  <rect class="barA" x="40" y="156" width="187" height="16" rx="4"/>
+  <rect class="barA" x="227" y="156" width="48" height="16" opacity="0.30"/>
+  <text class="muted s" x="40" y="190">eligible for monitoring: ~75–94% (wide range)</text>
+
+  <text class="ink b" x="40" y="226">Internal Codex agents</text>
+  <rect class="track" x="40" y="236" width="250" height="16" rx="4"/>
+  <rect class="barA" x="40" y="236" width="248" height="16" rx="4"/>
+  <text class="muted s" x="40" y="270">eligible for monitoring: 99.2%</text>
+
+  <text class="ink b" x="40" y="306">Compaction gap, May–Jul 2026</text>
+  <rect class="track" x="40" y="316" width="250" height="16" rx="4"/>
+  <rect class="barW" x="40" y="316" width="25" height="16" rx="4"/>
+  <text class="muted s" x="40" y="350">~10% of eligible Codex traffic unmonitored;</text>
+  <text class="muted s" x="40" y="366">found by OpenAI staff, fixed during exercise</text>
+  <text class="muted s" x="40" y="400">Logs needed to size it precisely</text>
+  <text class="muted s" x="40" y="416">had not been kept, so all figures</text>
+  <text class="muted s" x="40" y="432">carry real uncertainty</text>
+
+  <!-- Panel 2: weaknesses -->
+  <rect class="card" x="336" y="80" width="300" height="380" rx="8"/>
+  <rect class="hB" x="336" y="80" width="300" height="6" rx="3"/>
+  <text class="ink t" x="352" y="112">Weakness classes reported</text>
+  <g class="ink b">
+    <circle class="hB" cx="360" cy="142" r="5"/>
+    <text x="374" y="147">Client-set headers switch monitoring</text>
+    <text x="374" y="165">off for newly created agents</text>
+    <circle class="hB" cx="360" cy="196" r="5"/>
+    <text x="374" y="201">Sandbox + Auto-Review bypasses: in</text>
+    <text x="374" y="219">principle, anything the host user can do</text>
+    <circle class="hB" cx="360" cy="250" r="5"/>
+    <text x="374" y="255">Exploit hiding hundreds of recent</text>
+    <text x="374" y="273">actions from the monitor</text>
+    <circle class="hB" cx="360" cy="304" r="5"/>
+    <text x="374" y="309">Timing: monitor ran only when control</text>
+    <text x="374" y="327">returned to user, so acting delays review</text>
+    <circle class="hB" cx="360" cy="358" r="5"/>
+    <text x="374" y="363">"Read-only" internal tools with a</text>
+    <text x="374" y="381">simple exploit (not validated)</text>
+  </g>
+  <text class="muted s" x="352" y="420">Outlets count these differently ("three",</text>
+  <text class="muted s" x="352" y="436">"six"); METR's post is the reference</text>
+
+  <!-- Panel 3: status -->
+  <rect class="card" x="660" y="80" width="276" height="380" rx="8"/>
+  <rect class="hC" x="660" y="80" width="276" height="6" rx="3"/>
+  <text class="ink t" x="676" y="112">Setup and status</text>
+  <g class="ink b">
+    <text x="676" y="146">2 evaluators (1 METR, 1 Redwood)</text>
+    <text x="676" y="168">Jul 21 – Aug 11, 2026 (3 weeks)</text>
+    <text x="676" y="190">Code + monitor config access,</text>
+    <text x="676" y="212">~12 technical interviews</text>
+    <text x="676" y="246">61-page internal report;</text>
+    <text x="676" y="268">38-page redacted version</text>
+    <text x="676" y="290">to METR/Redwood leadership</text>
+  </g>
+  <rect class="note" x="676" y="318" width="244" height="120" rx="6"/>
+  <text class="noteink b" x="690" y="344">OpenAI: every vulnerability</text>
+  <text class="noteink b" x="690" y="364">affecting production safeguards</text>
+  <text class="noteink b" x="690" y="384">is patched.</text>
+  <text class="noteink b" x="690" y="414">METR: not independently verified.</text>
+
+  <text class="muted s" x="24" y="492">Sources: METR and Redwood Research posts (Oct 22, 2026) as summarized in coverage (FourWeekMBA, Crypto Briefing, AlphaSignal, Forkast).</text>
+  <text class="muted s" x="24" y="510">Primary posts could not be fetched directly in this run; bar for 75–94% shows the low end solid and the uncertain range faded.</text>
+</svg>
