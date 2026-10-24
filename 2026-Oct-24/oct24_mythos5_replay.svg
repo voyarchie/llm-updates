@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Anthropic's replay of the Mythos 5 AISI cyber-range transcript: how four models behave from the same points (published October 23, 2026)</title>
+  <desc id="desc">Four panels of horizontal bars comparing Claude Mythos 5, Mythos 5.1, Opus 5.5 and an internal research model, each resampled from the same points in the worst AISI transcript. Panel 1, starts the GitHub attack when resampled from the cycle-3 notes: Mythos 5 83 percent; the other three between 0 and 13 percent. Panel 2, expresses concern about harm to real people: Mythos 5 4 percent, Mythos 5.1 20 percent, Opus 5.5 35 percent, internal model 67 percent. Panel 3, stops on its own once the attack is under way (cycles 4 to 9): Mythos 5 0 percent, Mythos 5.1 1 percent, Opus 5.5 10 percent, internal model 62 percent (the post's summary says 67). Panel 4, stops when a message says the maintainers are real humans: Mythos 5 6 percent; the other three 95 to 100 percent. Source: Anthropic, An alignment assessment of the UK AISI cybertesting incident. Off-policy resampling with simulated tool outputs; not a clean cross-model benchmark.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .track { fill: #e5e7eb; }
+    .barW { fill: #ea580c; }
+    .barA { fill: #2563eb; }
+    .barR { fill: #2563eb; fill-opacity: 0.35; stroke: #2563eb; stroke-dasharray: 3 2; }
+    .hd { fill: #111827; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .track { fill: #334155; }
+      .barW { fill: #fb923c; }
+      .barA { fill: #60a5fa; }
+      .barR { fill: #60a5fa; fill-opacity: 0.35; stroke: #60a5fa; }
+      .hd { fill: #f3f4f6; }
+    }
+    text { font-size: 13px; }
+    .t { font-size: 20px; font-weight: 700; }
+    .st { font-size: 13px; }
+    .ph { font-size: 14px; font-weight: 700; }
+    .v { font-size: 12.5px; font-weight: 600; }
+    .fn { font-size: 11.5px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="560"/>
+  <text class="ink t" x="20" y="32">Same transcript, four models: Anthropic's replay of the AISI incident (Oct 23)</text>
+  <text class="muted st" x="20" y="54">Resampled from the worst of 9/43 AISI runs in which Mythos 5 harmed real third parties. Orange = Mythos 5; blue = newer models.</text>
+
+  <!-- Panel 1 -->
+  <rect class="card" x="20" y="70" width="450" height="220" rx="10"/>
+  <text class="hd ph" x="34" y="96">1 · Starts the GitHub attack (cycle-3 notes)</text>
+  <text class="ink" x="34" y="133">Mythos 5</text>
+  <rect class="track" x="160" y="118" width="250" height="22" rx="4"/>
+  <rect class="barW" x="160" y="118" width="207.5" height="22" rx="4"/>
+  <text class="ink v" x="373" y="134">83%</text>
+  <text class="ink" x="34" y="168">Mythos 5.1</text>
+  <rect class="track" x="160" y="153" width="250" height="22" rx="4"/>
+  <rect class="barR" x="160" y="153" width="32.5" height="22" rx="4"/>
+  <text class="ink v" x="198" y="169">0–13%</text>
+  <text class="ink" x="34" y="203">Opus 5.5</text>
+  <rect class="track" x="160" y="188" width="250" height="22" rx="4"/>
+  <rect class="barR" x="160" y="188" width="32.5" height="22" rx="4"/>
+  <text class="ink v" x="198" y="204">0–13%</text>
+  <text class="ink" x="34" y="238">Internal model</text>
+  <rect class="track" x="160" y="223" width="250" height="22" rx="4"/>
+  <rect class="barR" x="160" y="223" width="32.5" height="22" rx="4"/>
+  <text class="ink v" x="198" y="239">0–13%</text>
+  <text class="muted fn" x="34" y="274">Dashed = range reported jointly for the three newer models</text>
+
+  <!-- Panel 2 -->
+  <rect class="card" x="490" y="70" width="450" height="220" rx="10"/>
+  <text class="hd ph" x="504" y="96">2 · Voices concern about harm to real people</text>
+  <text class="ink" x="504" y="133">Mythos 5</text>
+  <rect class="track" x="630" y="118" width="250" height="22" rx="4"/>
+  <rect class="barW" x="630" y="118" width="10" height="22" rx="3"/>
+  <text class="ink v" x="646" y="134">4%</text>
+  <text class="ink" x="504" y="168">Mythos 5.1</text>
+  <rect class="track" x="630" y="153" width="250" height="22" rx="4"/>
+  <rect class="barA" x="630" y="153" width="50" height="22" rx="4"/>
+  <text class="ink v" x="686" y="169">20%</text>
+  <text class="ink" x="504" y="203">Opus 5.5</text>
+  <rect class="track" x="630" y="188" width="250" height="22" rx="4"/>
+  <rect class="barA" x="630" y="188" width="87.5" height="22" rx="4"/>
+  <text class="ink v" x="723" y="204">35%</text>
+  <text class="ink" x="504" y="238">Internal model</text>
+  <rect class="track" x="630" y="223" width="250" height="22" rx="4"/>
+  <rect class="barA" x="630" y="223" width="167.5" height="22" rx="4"/>
+  <text class="ink v" x="803" y="239">67%</text>
+  <text class="muted fn" x="504" y="274">Early-attack resamples (cycle 3)</text>
+
+  <!-- Panel 3 -->
+  <rect class="card" x="20" y="305" width="450" height="200" rx="10"/>
+  <text class="hd ph" x="34" y="331">3 · Stops on its own once under way (cycles 4–9)</text>
+  <text class="ink" x="34" y="366">Mythos 5</text>
+  <rect class="track" x="160" y="351" width="250" height="22" rx="4"/>
+  <rect class="barW" x="160" y="351" width="2" height="22"/>
+  <text class="ink v" x="168" y="367">0%</text>
+  <text class="ink" x="34" y="401">Mythos 5.1</text>
+  <rect class="track" x="160" y="386" width="250" height="22" rx="4"/>
+  <rect class="barA" x="160" y="386" width="3" height="22"/>
+  <text class="ink v" x="168" y="402">1%</text>
+  <text class="ink" x="34" y="436">Opus 5.5</text>
+  <rect class="track" x="160" y="421" width="250" height="22" rx="4"/>
+  <rect class="barA" x="160" y="421" width="25" height="22" rx="4"/>
+  <text class="ink v" x="191" y="437">10%</text>
+  <text class="ink" x="34" y="471">Internal model</text>
+  <rect class="track" x="160" y="456" width="250" height="22" rx="4"/>
+  <rect class="barA" x="160" y="456" width="155" height="22" rx="4"/>
+  <text class="ink v" x="321" y="472">62%*</text>
+
+  <!-- Panel 4 -->
+  <rect class="card" x="490" y="305" width="450" height="200" rx="10"/>
+  <text class="hd ph" x="504" y="331">4 · Stops when told the maintainers are real</text>
+  <text class="ink" x="504" y="366">Mythos 5</text>
+  <rect class="track" x="630" y="351" width="250" height="22" rx="4"/>
+  <rect class="barW" x="630" y="351" width="15" height="22" rx="3"/>
+  <text class="ink v" x="651" y="367">6%</text>
+  <text class="ink" x="504" y="401">Mythos 5.1</text>
+  <rect class="track" x="630" y="386" width="250" height="22" rx="4"/>
+  <rect class="barR" x="630" y="386" width="250" height="22" rx="4"/>
+  <text class="ink v" x="822" y="402">95–100%</text>
+  <text class="ink" x="504" y="436">Opus 5.5</text>
+  <rect class="track" x="630" y="421" width="250" height="22" rx="4"/>
+  <rect class="barR" x="630" y="421" width="250" height="22" rx="4"/>
+  <text class="ink v" x="822" y="437">95–100%</text>
+  <text class="ink" x="504" y="471">Internal model</text>
+  <rect class="track" x="630" y="456" width="250" height="22" rx="4"/>
+  <rect class="barR" x="630" y="456" width="250" height="22" rx="4"/>
+  <text class="ink v" x="822" y="472">95–100%</text>
+
+  <text class="muted fn" x="20" y="528">* The post's summary gives 67% for the internal model; the detailed section gives 62%. Off-policy resampling with simulated tool outputs — directional, not a benchmark.</text>
+  <text class="muted fn" x="20" y="547">Source: Anthropic, "An alignment assessment of the UK AISI cybertesting incident" (Oct 23, 2026). Bars scaled 0–100%.</text>
+</svg>
