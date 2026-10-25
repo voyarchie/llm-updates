@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">LiteLLM 1.107.0 supply-chain compromise: from a leaked key to a two-hour poisoned release (May 27 to Oct 21, 2026)</title>
+  <desc id="desc">Two timelines. Top, the backstory per LiteLLM's attack-chain post: on May 27, 2026 a config file containing a LiteLLM Agent Platform master key was committed to a public repository and the key was never revoked; on Oct 10 the attacker used it to get a GitHub CLI token belonging to a GitHub organisation owner; GitHub tokens from engineers' accounts were then used to run the private release workflow against a lookalike fork, Berri-AI/litellm. Bottom, October 21 in UTC: 11:39 malicious 1.107.0 published to PyPI and Docker; 13:20 PyPI quarantines it; 13:53 Docker images removed. About 49,000 downloads per Wiz. Safe version 1.106.2.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .axis { stroke: #9ca3af; stroke-width: 2; }
+    .bad { fill: #ea580c; }
+    .badW { fill: #ea580c; fill-opacity: 0.22; stroke: #ea580c; stroke-width: 1.2; }
+    .ok { fill: #2563eb; }
+    .hd { fill: #111827; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .axis { stroke: #64748b; }
+      .bad { fill: #fb923c; }
+      .badW { fill: #fb923c; fill-opacity: 0.22; stroke: #fb923c; }
+      .ok { fill: #60a5fa; }
+      .hd { fill: #f3f4f6; }
+    }
+    text { font-size: 13px; }
+    .t { font-size: 20px; font-weight: 700; }
+    .ph { font-size: 14px; font-weight: 700; }
+    .v { font-size: 12.5px; font-weight: 600; }
+    .fn { font-size: 11.5px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="400"/>
+  <text class="hd t" x="20" y="32">LiteLLM 1.107.0: a leaked key, then a two-hour poisoned release</text>
+  <text class="muted" x="20" y="54">Per LiteLLM's attack-chain post, Datadog Security Labs and Microsoft (Oct 21–23, 2026)</text>
+
+  <!-- Panel 1: backstory -->
+  <rect class="card" x="20" y="70" width="920" height="130" rx="8"/>
+  <text class="hd ph" x="36" y="94">Backstory (months)</text>
+  <line class="axis" x1="60" y1="140" x2="900" y2="140"/>
+  <circle class="bad" cx="160" cy="140" r="8"/>
+  <text class="ink v" x="160" y="122" text-anchor="middle">May 27</text>
+  <text class="muted fn" x="160" y="166" text-anchor="middle">Agent Platform master key</text>
+  <text class="muted fn" x="160" y="181" text-anchor="middle">committed to public repo; never revoked</text>
+  <circle class="bad" cx="470" cy="140" r="8"/>
+  <text class="ink v" x="470" y="122" text-anchor="middle">Oct 10</text>
+  <text class="muted fn" x="470" y="166" text-anchor="middle">Key used to pull an org owner's</text>
+  <text class="muted fn" x="470" y="181" text-anchor="middle">GitHub CLI token via the platform API</text>
+  <circle class="bad" cx="820" cy="140" r="8"/>
+  <text class="ink v" x="820" y="122" text-anchor="middle">Oct 21</text>
+  <text class="muted fn" x="820" y="166" text-anchor="middle">Release workflow run from lookalike</text>
+  <text class="muted fn" x="820" y="181" text-anchor="middle">fork "Berri-AI/litellm", self-approved</text>
+
+  <!-- Panel 2: Oct 21 window -->
+  <rect class="card" x="20" y="214" width="920" height="150" rx="8"/>
+  <text class="hd ph" x="36" y="238">October 21 (UTC): exposure window</text>
+  <!-- scale 11:00 -> x=80, 14:30 -> x=880 ; 1 min = 800/210 = 3.81 px -->
+  <line class="axis" x1="80" y1="290" x2="880" y2="290"/>
+  <rect class="badW" x="228" y="276" width="388" height="28" rx="4"/>
+  <rect class="badW" x="616" y="276" width="126" height="28" rx="4" fill-opacity="0.12"/>
+  <circle class="bad" cx="228" cy="290" r="7"/>
+  <text class="ink v" x="228" y="266" text-anchor="middle">11:39 published</text>
+  <text class="muted fn" x="228" y="324" text-anchor="middle">PyPI wheels + Docker tags</text>
+  <text class="muted fn" x="228" y="339" text-anchor="middle">(v1.107.0, latest, main-*)</text>
+  <circle class="ok" cx="616" cy="290" r="7"/>
+  <text class="ink v" x="616" y="266" text-anchor="middle">13:20 PyPI quarantine</text>
+  <circle class="ok" cx="742" cy="290" r="7"/>
+  <text class="ink v" x="790" y="266" text-anchor="middle">13:53 images pulled</text>
+  <text class="ink v" x="422" y="295" text-anchor="middle">~1 h 41 min on PyPI</text>
+  <text class="muted fn" x="616" y="324" text-anchor="middle">~49,000 downloads (Wiz, ClickPy)</text>
+  <text class="muted fn" x="616" y="339" text-anchor="middle">safe pin: 1.106.2</text>
+  <text class="muted fn" x="36" y="384">Payload: .pth / sitecustomize.py startup hooks run on any Python start, steal cloud, AI-tool, Git, SSH and browser secrets; hourly remote-code loader.</text>
+</svg>
