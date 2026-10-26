@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Why a 75% cut in cache-read prices cuts an agentic-coding bill by about 72%</title>
+  <desc id="desc">Illustrative arithmetic based on Max Woolf's estimate that cache reads are 96 to 99 percent of agentic-coding token spend. Before: a bill of 100 units, 96 of them cache reads and 4 everything else (input, output, cache writes). After a 75 percent cut to cache-read prices only: cache reads cost 24 units and everything else still 4, for a total of 28 units, 72 percent lower. At a 99 percent cache share the drop is about 74 percent.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .cache { fill: #2563eb; }
+    .other { fill: #ea580c; }
+    .ghost { fill: none; stroke: #9ca3af; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .hd { fill: #111827; }
+    .onbar { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .cache { fill: #60a5fa; }
+      .other { fill: #fb923c; }
+      .ghost { stroke: #64748b; }
+      .hd { fill: #f3f4f6; }
+      .onbar { fill: #0f172a; }
+    }
+    text { font-size: 13px; }
+    .t { font-size: 20px; font-weight: 700; }
+    .lb { font-size: 14px; font-weight: 700; }
+    .v { font-size: 13px; font-weight: 600; }
+    .fn { font-size: 11.5px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="360"/>
+  <text class="hd t" x="20" y="32">Cache reads are most of an agent's bill, so cutting them cuts the bill</text>
+  <text class="muted" x="20" y="54">Illustrative arithmetic on Max Woolf's estimate (Oct 25, 2026): cache reads = 96–99% of agentic-coding token spend</text>
+
+  <rect class="card" x="20" y="70" width="920" height="230" rx="8"/>
+
+  <!-- Before: scale 100 units = 768 px, x0 = 140 -->
+  <text class="ink lb" x="36" y="122">Before</text>
+  <rect class="cache" x="140" y="100" width="737" height="36" rx="3"/>
+  <rect class="other" x="877" y="100" width="31" height="36" rx="3"/>
+  <text class="onbar v" x="156" y="123">Cache reads: 96</text>
+  <text class="muted fn" x="760" y="154">Other (input, output, writes): 4</text>
+  <text class="ink v" x="140" y="172">Total = 100 units</text>
+
+  <!-- After: cache 24 = 184 px, other 4 = 31 px -->
+  <text class="ink lb" x="36" y="232">After 75%</text>
+  <text class="ink lb" x="36" y="250">cache cut</text>
+  <rect class="cache" x="140" y="210" width="184" height="36" rx="3"/>
+  <rect class="other" x="324" y="210" width="31" height="36" rx="3"/>
+  <rect class="ghost" x="355" y="210" width="553" height="36" rx="3"/>
+  <text class="onbar v" x="152" y="233">Cache: 24</text>
+  <text class="muted fn" x="324" y="264">Other: 4 (unchanged)</text>
+  <text class="ink v" x="140" y="282">Total = 28 units → 72% lower (≈74% if cache share is 99%)</text>
+  <text class="muted fn" x="520" y="233">saved: 72 units</text>
+
+  <text class="muted fn" x="20" y="326">Assumes only the cache-read price changes. Woolf cites Anthropic's Sept 1 cut of cache reads from $1 to $0.25 per million tokens (75%)</text>
+  <text class="muted fn" x="20" y="344">and estimates a ~70–75% drop in real agent costs. His 96–99% figure is an estimate; coverage disagrees on whether it is tokens or dollars.</text>
+</svg>
