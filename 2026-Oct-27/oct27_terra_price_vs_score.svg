@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">GPT-6.1 Terra: less than half the price of GPT-5.6 Terra, near GPT-6.1 Sol on Terminal-Bench</title>
+  <desc id="desc">Left panel: API list price per million tokens. GPT-5.6 Terra (after its earlier cut) 2 dollars input and 12 dollars output; GPT-6.1 Terra 1 dollar input and 5 dollars output. Right panel: Artificial Analysis's own Terminal-Bench runs at max reasoning effort: GPT-5.6 Terra 35.4 percent, GPT-6.1 Terra 55.6 percent, GPT-6.1 Sol 56.1 percent. OpenAI's own figures are 21.5 and 50.3 percent for the two Terra models.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .old { fill: #9ca3af; }
+    .new { fill: #2563eb; }
+    .sol { fill: #ea580c; }
+    .hd { fill: #111827; }
+    .axis { stroke: #9ca3af; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .old { fill: #64748b; }
+      .new { fill: #60a5fa; }
+      .sol { fill: #fb923c; }
+      .hd { fill: #f3f4f6; }
+      .axis { stroke: #475569; }
+    }
+    text { font-size: 13px; }
+    .t { font-size: 18px; font-weight: 600; }
+    .h { font-size: 15px; font-weight: 600; }
+    .v { font-size: 13px; font-weight: 600; }
+    .s { font-size: 12px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="380" rx="10"/>
+  <text class="t hd" x="24" y="34">GPT-6.1 Terra (Oct 26): cheaper than the old Terra, close to Sol on agentic coding</text>
+
+  <!-- Left: price -->
+  <rect class="card" x="24" y="52" width="440" height="292" rx="8"/>
+  <text class="h ink" x="44" y="80">List price, $ per million tokens</text>
+  <line class="axis" x1="60" y1="300" x2="440" y2="300"/>
+  <!-- scale: $12 = 180px -->
+  <rect class="old" x="90"  y="270" width="50" height="30"/>
+  <text class="v ink" x="115" y="262" text-anchor="middle">$2</text>
+  <rect class="new" x="150" y="285" width="50" height="15"/>
+  <text class="v ink" x="175" y="277" text-anchor="middle">$1</text>
+  <text class="s muted" x="145" y="320" text-anchor="middle">Input</text>
+
+  <rect class="old" x="270" y="120" width="50" height="180"/>
+  <text class="v ink" x="295" y="112" text-anchor="middle">$12</text>
+  <rect class="new" x="330" y="225" width="50" height="75"/>
+  <text class="v ink" x="355" y="217" text-anchor="middle">$5</text>
+  <text class="s muted" x="325" y="320" text-anchor="middle">Output</text>
+
+  <rect class="old" x="300" y="64" width="12" height="12"/>
+  <text class="s ink" x="318" y="75">GPT-5.6 Terra</text>
+  <rect class="new" x="300" y="84" width="12" height="12"/>
+  <text class="s ink" x="318" y="95">GPT-6.1 Terra</text>
+  <text class="s muted" x="44" y="338">Cached input $0.05. Prompts over 272K tokens bill at 2x input, 1.5x output.</text>
+
+  <!-- Right: Terminal-Bench (AA) -->
+  <rect class="card" x="496" y="52" width="440" height="292" rx="8"/>
+  <text class="h ink" x="516" y="80">Terminal-Bench, max effort (Artificial Analysis runs)</text>
+  <line class="axis" x1="530" y1="300" x2="916" y2="300"/>
+  <!-- scale: 100% = 300px; 60% = 180px -->
+  <rect class="old" x="560" y="193.8" width="80" height="106.2"/>
+  <text class="v ink" x="600" y="186" text-anchor="middle">35.4%</text>
+  <text class="s muted" x="600" y="320" text-anchor="middle">GPT-5.6 Terra</text>
+  <rect class="new" x="680" y="133.2" width="80" height="166.8"/>
+  <text class="v ink" x="720" y="125" text-anchor="middle">55.6%</text>
+  <text class="s muted" x="720" y="320" text-anchor="middle">GPT-6.1 Terra</text>
+  <rect class="sol" x="800" y="131.7" width="80" height="168.3"/>
+  <text class="v ink" x="840" y="123" text-anchor="middle">56.1%</text>
+  <text class="s muted" x="840" y="320" text-anchor="middle">GPT-6.1 Sol</text>
+  <text class="s muted" x="516" y="338">OpenAI's own numbers: 21.5% → 50.3% for the two Terra models.</text>
+
+  <text class="s muted" x="24" y="368">Sources: OpenAI via BleepingComputer and MarkTechPost; Artificial Analysis on X. Prices are list rates; real agent bills depend mostly on cache reads.</text>
+</svg>
