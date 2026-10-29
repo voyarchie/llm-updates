@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Gemini 4 Carbon leads the Artificial Analysis Intelligence Index v5 by one point</title>
+  <desc id="desc">Left panel: Artificial Analysis Intelligence Index v5 scores: Gemini 4 Carbon (high) 59, Claude Opus 5.5 (max) 58, GPT-6 Astra (max) 57, GPT-6.1 Sol (max) 55, Gemini 4 Argon 50, Kimi K3.1 Pro 46 (open weights pending), best released open-weight models (DeepSeek V4.1 Flash 1017 and GLM-5.3) 32. Right panel: where Carbon does not lead: Artificial Analysis Coding Agent Index, Opus 5.5 with Claude Code 62 vs Carbon with Antigravity CLI 59; FrontierSWE 2 in Google's table, GPT-6 Astra 65.5 percent, Opus 5.5 62.3, Carbon 61.2; hallucination rate on AA-Omniscience, Argon 4 percent vs Carbon 11 percent. Sources: Artificial Analysis and Google, Oct 27-28 2026, via coverage.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .card { fill: #f9fafb; stroke: #d1d5db; stroke-width: 1.2; }
+    .old { fill: #9ca3af; }
+    .new { fill: #2563eb; }
+    .open { fill: #0d9488; }
+    .hd { fill: #111827; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .card { fill: #1e293b; stroke: #334155; }
+      .old { fill: #64748b; }
+      .new { fill: #60a5fa; }
+      .open { fill: #2dd4bf; }
+      .hd { fill: #f3f4f6; }
+    }
+    text { font-size: 13px; }
+    .t { font-size: 18px; font-weight: 600; }
+    .h { font-size: 15px; font-weight: 600; }
+    .v { font-size: 13px; font-weight: 600; }
+    .s { font-size: 12px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="960" height="470" rx="10"/>
+  <text class="t hd" x="24" y="34">Gemini 4 Carbon tops Artificial Analysis Index v5 by one point, but not everywhere (Oct 28)</text>
+  <rect class="card" x="24" y="52" width="452" height="370" rx="8"/>
+  <text class="h ink" x="44" y="80">AA Intelligence Index v5 (new series, Oct 27)</text>
+  <text class="ink s" x="44" y="127">Gemini 4 Carbon (high)</text>
+  <rect class="new" x="250" y="112" width="189" height="22" rx="3"/>
+  <text class="v ink" x="445" y="128">59</text>
+  <text class="ink s" x="44" y="167">Claude Opus 5.5 (max)</text>
+  <rect class="old" x="250" y="152" width="186" height="22" rx="3"/>
+  <text class="v ink" x="442" y="168">58</text>
+  <text class="ink s" x="44" y="207">GPT-6 Astra (max)</text>
+  <rect class="old" x="250" y="192" width="182" height="22" rx="3"/>
+  <text class="v ink" x="438" y="208">57</text>
+  <text class="ink s" x="44" y="247">GPT-6.1 Sol (max)</text>
+  <rect class="old" x="250" y="232" width="176" height="22" rx="3"/>
+  <text class="v ink" x="432" y="248">55</text>
+  <text class="ink s" x="44" y="287">Gemini 4 Argon</text>
+  <rect class="old" x="250" y="272" width="160" height="22" rx="3"/>
+  <text class="v ink" x="416" y="288">50</text>
+  <text class="ink s" x="44" y="327">Kimi K3.1 Pro (weights pending)</text>
+  <rect class="open" x="250" y="312" width="147" height="22" rx="3"/>
+  <text class="v ink" x="403" y="328">46</text>
+  <text class="ink s" x="44" y="367">Best released open weights*</text>
+  <rect class="open" x="250" y="352" width="102" height="22" rx="3"/>
+  <text class="v ink" x="358" y="368">32</text>
+  <text class="muted s" x="44" y="400">* DeepSeek V4.1 Flash 1017 and GLM-5.3 (tied). Closed-vs-open gap: 12 pts.</text>
+  <rect class="card" x="492" y="52" width="444" height="370" rx="8"/>
+  <text class="h ink" x="512" y="80">Where Carbon does not lead</text>
+  <text class="muted s" x="512" y="114">Coding Agent Index (AA)</text>
+  <text class="ink s" x="512" y="138">Opus 5.5 + Claude Code</text>
+  <rect class="old" x="680" y="124" width="186" height="18" rx="3"/>
+  <text class="v ink" x="872" y="138">62</text>
+  <text class="ink s" x="512" y="164">Carbon + Antigravity CLI</text>
+  <rect class="new" x="680" y="150" width="177" height="18" rx="3"/>
+  <text class="v ink" x="863" y="164">59</text>
+  <text class="muted s" x="512" y="200">FrontierSWE 2 (Google table)</text>
+  <text class="ink s" x="512" y="224">GPT-6 Astra</text>
+  <rect class="old" x="680" y="210" width="196" height="18" rx="3"/>
+  <text class="v ink" x="882" y="224">65.5%</text>
+  <text class="ink s" x="512" y="250">Opus 5.5</text>
+  <rect class="old" x="680" y="236" width="187" height="18" rx="3"/>
+  <text class="v ink" x="873" y="250">62.3%</text>
+  <text class="ink s" x="512" y="276">Carbon</text>
+  <rect class="new" x="680" y="262" width="184" height="18" rx="3"/>
+  <text class="v ink" x="870" y="276">61.2%</text>
+  <text class="muted s" x="512" y="312">AA-Omniscience hallucination rate (lower is better)</text>
+  <text class="ink s" x="512" y="336">Gemini 4 Argon</text>
+  <rect class="old" x="680" y="322" width="12" height="18" rx="3"/>
+  <text class="v ink" x="698" y="336">4%</text>
+  <text class="ink s" x="512" y="362">Carbon</text>
+  <rect class="new" x="680" y="348" width="33" height="18" rx="3"/>
+  <text class="v ink" x="719" y="362">11%</text>
+  <text class="muted s" x="24" y="446">Sources: Artificial Analysis (Index v5, Carbon write-up); Google's Carbon benchmark table, via coverage. Vendor and AA numbers not independently reproduced.</text>
+</svg>
