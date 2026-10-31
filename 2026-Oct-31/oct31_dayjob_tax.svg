@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">DAYJOB: Tax, pass@1 at a 95% rubric threshold</title>
+  <desc id="desc">Horizontal bar chart of Surge AI's DAYJOB: Tax benchmark, 50 expert-built professional tax assignments, pass@1 at a 95 percent rubric threshold. Claude Sonnet 5.5 10.8 percent, Fable 5.1 9.6 percent, Claude Opus 5.5 9.2 percent, Muse Wonder 1.0 6.0 percent, Grok 4.7 5.0 percent, GPT-6 Astra 4.8 percent. The last three come from a leaderboard snippet and are drawn hatched as less certain. Every model fails at least 89 percent of assignments. Source: Surge AI, self-reported, late October 2026.</desc>
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" class="hbg"/>
+      <line x1="0" y1="0" x2="0" y2="6" class="hline" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .bar { fill: #2563eb; }
+    .hbg { fill: #dbeafe; }
+    .hline { stroke: #2563eb; }
+    .fail { fill: #f3f4f6; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .grid { stroke: #334155; }
+      .bar { fill: #60a5fa; }
+      .hbg { fill: #1e3a5f; }
+      .hline { stroke: #60a5fa; }
+      .fail { fill: #1e293b; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="400" rx="8"/>
+  <text class="ink" x="24" y="34" font-size="18" font-weight="700">DAYJOB: Tax: frontier agents fail ~9 in 10 professional tax assignments</text>
+  <text class="muted" x="24" y="56" font-size="13">50 expert-built tasks · pass@1 at ≥95% of rubric criteria · Surge AI (self-reported), late Oct 2026</text>
+
+  <!-- axis: x from 190 to 710 represents 0..20% -->
+  <g>
+    <line class="grid" x1="190" y1="76" x2="190" y2="326"/>
+    <line class="grid" x1="320" y1="76" x2="320" y2="326"/>
+    <line class="grid" x1="450" y1="76" x2="450" y2="326"/>
+    <line class="grid" x1="580" y1="76" x2="580" y2="326"/>
+    <line class="grid" x1="710" y1="76" x2="710" y2="326"/>
+    <text class="muted" x="190" y="344" font-size="12" text-anchor="middle">0%</text>
+    <text class="muted" x="320" y="344" font-size="12" text-anchor="middle">5%</text>
+    <text class="muted" x="450" y="344" font-size="12" text-anchor="middle">10%</text>
+    <text class="muted" x="580" y="344" font-size="12" text-anchor="middle">15%</text>
+    <text class="muted" x="710" y="344" font-size="12" text-anchor="middle">20%</text>
+  </g>
+
+  <!-- scale: 26 px per percentage point -->
+  <g font-size="14">
+    <text class="ink" x="180" y="104" text-anchor="end">Claude Sonnet 5.5</text>
+    <rect class="bar" x="190" y="88" width="280.8" height="24" rx="3"/>
+    <text class="ink" x="478" y="105" font-weight="700">10.8%</text>
+
+    <text class="ink" x="180" y="144" text-anchor="end">Fable 5.1</text>
+    <rect class="bar" x="190" y="128" width="249.6" height="24" rx="3"/>
+    <text class="ink" x="447" y="145" font-weight="700">9.6%</text>
+
+    <text class="ink" x="180" y="184" text-anchor="end">Claude Opus 5.5</text>
+    <rect class="bar" x="190" y="168" width="239.2" height="24" rx="3"/>
+    <text class="ink" x="437" y="185" font-weight="700">9.2%</text>
+
+    <text class="ink" x="180" y="224" text-anchor="end">Muse Wonder 1.0</text>
+    <rect fill="url(#hatch)" x="190" y="208" width="156" height="24" rx="3"/>
+    <text class="ink" x="354" y="225" font-weight="700">6.0%</text>
+
+    <text class="ink" x="180" y="264" text-anchor="end">Grok 4.7</text>
+    <rect fill="url(#hatch)" x="190" y="248" width="130" height="24" rx="3"/>
+    <text class="ink" x="328" y="265" font-weight="700">5.0%</text>
+
+    <text class="ink" x="180" y="304" text-anchor="end">GPT-6 Astra</text>
+    <rect fill="url(#hatch)" x="190" y="288" width="124.8" height="24" rx="3"/>
+    <text class="ink" x="323" y="305" font-weight="700">4.8%</text>
+  </g>
+
+  <rect class="bar" x="24" y="362" width="14" height="12" rx="2"/>
+  <text class="muted" x="44" y="373" font-size="12">From Surge's write-up</text>
+  <rect fill="url(#hatch)" x="200" y="362" width="14" height="12" rx="2"/>
+  <text class="muted" x="220" y="373" font-size="12">From a leaderboard snippet (less certain)</text>
+  <text class="muted" x="24" y="392" font-size="12">Only 2 of 50 tasks are public (Hugging Face); the rest are held out. Benchmark built and graded by Surge.</text>
+</svg>
