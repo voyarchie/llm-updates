@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Big Sleep vs Fuzzilli on V8, April to September 2026</title>
+  <desc id="desc">Two-panel bar chart from Google Project Zero. Top panel: actionable V8 vulnerabilities found over six months, April to September 2026. Big Sleep, an LLM-based bug finder, 45. Fuzzilli, a generative JavaScript fuzzer, 37. Bottom panel: estimated overlap between the two tools' findings. 25 percent from production bug-tracker data, about 60 percent in a dedicated experiment re-running Big Sleep on historic Fuzzilli bugs, and about 70 percent with tweaked prompts. Project Zero calls the result roughly a tie with a small advantage to Big Sleep.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .ai { fill: #7c3aed; }
+    .fz { fill: #0d9488; }
+    .ov { fill: #d97706; }
+    .ovl { fill: #fde68a; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .grid { stroke: #334155; }
+      .ai { fill: #a78bfa; }
+      .fz { fill: #2dd4bf; }
+      .ov { fill: #fbbf24; }
+      .ovl { fill: #78350f; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="420" rx="8"/>
+  <text class="ink" x="24" y="34" font-size="18" font-weight="700">Project Zero: LLM bug finder vs classic fuzzer on V8 — roughly a tie</text>
+  <text class="muted" x="24" y="56" font-size="13">Actionable vulnerabilities, Apr–Sep 2026, and how much the two tools' findings overlap</text>
+
+  <!-- Panel 1: counts, x 200..680 = 0..50 -->
+  <text class="ink" x="24" y="88" font-size="14" font-weight="600">Actionable vulnerabilities (6 months)</text>
+  <line class="grid" x1="200" y1="100" x2="200" y2="190"/>
+  <line class="grid" x1="296" y1="100" x2="296" y2="190"/>
+  <line class="grid" x1="392" y1="100" x2="392" y2="190"/>
+  <line class="grid" x1="488" y1="100" x2="488" y2="190"/>
+  <line class="grid" x1="584" y1="100" x2="584" y2="190"/>
+  <line class="grid" x1="680" y1="100" x2="680" y2="190"/>
+  <text class="muted" x="200" y="206" font-size="12" text-anchor="middle">0</text>
+  <text class="muted" x="296" y="206" font-size="12" text-anchor="middle">10</text>
+  <text class="muted" x="392" y="206" font-size="12" text-anchor="middle">20</text>
+  <text class="muted" x="488" y="206" font-size="12" text-anchor="middle">30</text>
+  <text class="muted" x="584" y="206" font-size="12" text-anchor="middle">40</text>
+  <text class="muted" x="680" y="206" font-size="12" text-anchor="middle">50</text>
+
+  <text class="ink" x="188" y="128" font-size="14" text-anchor="end">Big Sleep (LLM)</text>
+  <rect class="ai" x="200" y="110" width="432" height="28" rx="3"/>
+  <text class="ink" x="640" y="129" font-size="14" font-weight="700">45</text>
+
+  <text class="ink" x="188" y="172" font-size="14" text-anchor="end">Fuzzilli (fuzzer)</text>
+  <rect class="fz" x="200" y="154" width="355" height="28" rx="3"/>
+  <text class="ink" x="563" y="173" font-size="14" font-weight="700">37</text>
+
+  <!-- Panel 2: overlap, x 200..680 = 0..100% -->
+  <text class="ink" x="24" y="246" font-size="14" font-weight="600">Estimated overlap between the two tools' findings</text>
+  <line class="grid" x1="200" y1="258" x2="200" y2="372"/>
+  <line class="grid" x1="320" y1="258" x2="320" y2="372"/>
+  <line class="grid" x1="440" y1="258" x2="440" y2="372"/>
+  <line class="grid" x1="560" y1="258" x2="560" y2="372"/>
+  <line class="grid" x1="680" y1="258" x2="680" y2="372"/>
+  <text class="muted" x="200" y="388" font-size="12" text-anchor="middle">0%</text>
+  <text class="muted" x="320" y="388" font-size="12" text-anchor="middle">25%</text>
+  <text class="muted" x="440" y="388" font-size="12" text-anchor="middle">50%</text>
+  <text class="muted" x="560" y="388" font-size="12" text-anchor="middle">75%</text>
+  <text class="muted" x="680" y="388" font-size="12" text-anchor="middle">100%</text>
+
+  <text class="ink" x="188" y="281" font-size="13" text-anchor="end">Bug-tracker data</text>
+  <rect class="ovl" x="200" y="266" width="480" height="22" rx="3"/>
+  <rect class="ov" x="200" y="266" width="120" height="22" rx="3"/>
+  <text class="ink" x="328" y="282" font-size="13" font-weight="700">~25%</text>
+
+  <text class="ink" x="188" y="315" font-size="13" text-anchor="end">Re-run experiment</text>
+  <rect class="ovl" x="200" y="300" width="480" height="22" rx="3"/>
+  <rect class="ov" x="200" y="300" width="288" height="22" rx="3"/>
+  <text class="ink" x="496" y="316" font-size="13" font-weight="700">~60%</text>
+
+  <text class="ink" x="188" y="349" font-size="13" text-anchor="end">+ tweaked prompts</text>
+  <rect class="ovl" x="200" y="334" width="480" height="22" rx="3"/>
+  <rect class="ov" x="200" y="334" width="336" height="22" rx="3"/>
+  <text class="ink" x="544" y="350" font-size="13" font-weight="700">~70%</text>
+
+  <text class="muted" x="24" y="410" font-size="11">Source: Google Project Zero, "Fuzzers vs. AI" (Oct 2026), via search snippets and summaries; the post itself could not be fetched directly.</text>
+</svg>
