@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Tencent Hy3 versus Hy4: context window, API price and one vendor benchmark</title>
+  <desc id="desc">Four paired horizontal bars. Context window: Hy3 262 thousand tokens, Hy4 1.05 million tokens (4.0 times). Input price per million tokens on OpenRouter: Hy3 0.13 dollars, Hy4 0.834 dollars (6.4 times). Output price per million tokens: Hy3 0.53 dollars, Hy4 2.501 dollars (4.7 times). Terminal-Bench 2.1, vendor-reported: Hy3 71.7, Hy4 preview 85.4. Bars are scaled so that the larger value in each pair fills the track.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .track { fill: #f1f5f9; }
+    .old { fill: #94a3b8; }
+    .new { fill: #0d9488; }
+    .warn { fill: #b45309; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .track { fill: #1e293b; }
+      .old { fill: #64748b; }
+      .new { fill: #2dd4bf; }
+      .warn { fill: #fbbf24; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="400" rx="8"/>
+  <text class="ink" x="24" y="34" font-size="18" font-weight="700">Hy4 vs Hy3: 4× the context, roughly 5–6× the token price</text>
+  <text class="muted" x="24" y="56" font-size="13">Bars scaled to the larger value in each pair · prices from OpenRouter listings · benchmark is Tencent's own</text>
+
+  <!-- legend -->
+  <rect class="old" x="500" y="70" width="14" height="14" rx="2"/><text class="muted" x="520" y="82" font-size="13">Hy3</text>
+  <rect class="new" x="570" y="70" width="14" height="14" rx="2"/><text class="muted" x="590" y="82" font-size="13">Hy4 (preview → GA)</text>
+
+  <!-- track width 380 from x=220 to 600 -->
+  <!-- Row 1: context -->
+  <text class="ink" x="24" y="122" font-size="14" font-weight="600">Context window</text>
+  <text class="muted" x="24" y="140" font-size="12">tokens</text>
+  <rect class="track" x="220" y="108" width="380" height="14" rx="3"/>
+  <rect class="old" x="220" y="108" width="95" height="14" rx="3"/>
+  <text class="muted" x="608" y="120" font-size="12">262K</text>
+  <rect class="track" x="220" y="126" width="380" height="14" rx="3"/>
+  <rect class="new" x="220" y="126" width="380" height="14" rx="3"/>
+  <text class="ink" x="608" y="138" font-size="12" font-weight="600">1.05M · 4.0×</text>
+
+  <!-- Row 2: input price -->
+  <text class="ink" x="24" y="192" font-size="14" font-weight="600">Input price</text>
+  <text class="muted" x="24" y="210" font-size="12">$ per 1M tokens</text>
+  <rect class="track" x="220" y="178" width="380" height="14" rx="3"/>
+  <rect class="old" x="220" y="178" width="59" height="14" rx="3"/>
+  <text class="muted" x="608" y="190" font-size="12">$0.13</text>
+  <rect class="track" x="220" y="196" width="380" height="14" rx="3"/>
+  <rect class="warn" x="220" y="196" width="380" height="14" rx="3"/>
+  <text class="ink" x="608" y="208" font-size="12" font-weight="600">$0.834 · 6.4×</text>
+
+  <!-- Row 3: output price -->
+  <text class="ink" x="24" y="262" font-size="14" font-weight="600">Output price</text>
+  <text class="muted" x="24" y="280" font-size="12">$ per 1M tokens</text>
+  <rect class="track" x="220" y="248" width="380" height="14" rx="3"/>
+  <rect class="old" x="220" y="248" width="81" height="14" rx="3"/>
+  <text class="muted" x="608" y="260" font-size="12">$0.53</text>
+  <rect class="track" x="220" y="266" width="380" height="14" rx="3"/>
+  <rect class="warn" x="220" y="266" width="380" height="14" rx="3"/>
+  <text class="ink" x="608" y="278" font-size="12" font-weight="600">$2.501 · 4.7×</text>
+
+  <!-- Row 4: Terminal-Bench 2.1 -->
+  <text class="ink" x="24" y="332" font-size="14" font-weight="600">Terminal-Bench 2.1</text>
+  <text class="muted" x="24" y="350" font-size="12">vendor-reported, preview</text>
+  <rect class="track" x="220" y="318" width="380" height="14" rx="3"/>
+  <rect class="old" x="220" y="318" width="319" height="14" rx="3"/>
+  <text class="muted" x="608" y="330" font-size="12">71.7</text>
+  <rect class="track" x="220" y="336" width="380" height="14" rx="3"/>
+  <rect class="new" x="220" y="336" width="380" height="14" rx="3"/>
+  <text class="ink" x="608" y="348" font-size="12" font-weight="600">85.4</text>
+
+  <text class="muted" x="24" y="386" font-size="11">Hy4: 770B total / ~49B active MoE (TechNode via secondary coverage). The GA release shipped without its own benchmark table; independent scores are pending.</text>
+</svg>
