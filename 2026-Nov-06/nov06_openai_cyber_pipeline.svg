@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAI's Linux kernel pipeline funnel and ExploitGym scores, November 2026</title>
+  <desc id="desc">Two panels. Top: a funnel from OpenAI's mid-October Linux kernel run, as reported on November 4: 2,308 candidate findings, 1,724 reproduced dynamically, 1,169 raw working local privilege escalation exploits, 948 unique local privilege escalation bugs after grouping by root cause and patch, plus 291 information-leak proofs of concept, for about 1.2 million dollars in API credits. Bottom: ExploitGym success rates reported by OpenAI on November 5: GPT-5.6 Cyber 32.1 percent, GPT-6 Astra 42.4 percent, GPT-6 Cyber 48.5 percent.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .bar { fill: #c7d2fe; }
+    .bar2 { fill: #818cf8; }
+    .hl { fill: #f59e0b; }
+    .side { fill: #fecaca; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .grid { stroke: #334155; }
+      .bar { fill: #3730a3; }
+      .bar2 { fill: #6366f1; }
+      .hl { fill: #fbbf24; }
+      .side { fill: #7f1d1d; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="490" rx="8"/>
+  <text class="ink" x="24" y="34" font-size="18" font-weight="700">From 2,308 kernel findings to 948 unique root exploits</text>
+  <text class="muted" x="24" y="56" font-size="13">OpenAI kernel pipeline, mid-October run (published Nov 4) · linear scale · ~$1.2M API credits</text>
+
+  <!-- funnel: x 230..710 = 0..2308 (0.208 px/unit) -->
+  <text class="ink" x="218" y="92" font-size="13" text-anchor="end">Candidate findings</text>
+  <rect class="bar" x="230" y="76" width="480" height="24" rx="3"/>
+  <text class="ink" x="238" y="93" font-size="13" font-weight="700">2,308</text>
+
+  <text class="ink" x="218" y="126" font-size="13" text-anchor="end">Reproduced dynamically</text>
+  <rect class="bar" x="230" y="110" width="358.5" height="24" rx="3"/>
+  <text class="ink" x="238" y="127" font-size="13" font-weight="700">1,724</text>
+
+  <text class="ink" x="218" y="160" font-size="13" text-anchor="end">Working LPE exploits (raw)</text>
+  <rect class="bar2" x="230" y="144" width="243.1" height="24" rx="3"/>
+  <text class="ink" x="481" y="161" font-size="13" font-weight="700">1,169</text>
+
+  <text class="ink" x="218" y="194" font-size="13" font-weight="700" text-anchor="end">Unique LPEs (by patch)</text>
+  <rect class="hl" x="230" y="178" width="197.2" height="24" rx="3"/>
+  <text class="ink" x="435" y="195" font-size="13" font-weight="700">948</text>
+
+  <text class="muted" x="218" y="228" font-size="13" text-anchor="end">Info-leak PoCs (side output)</text>
+  <rect class="side" x="230" y="212" width="60.5" height="24" rx="3"/>
+  <text class="ink" x="298" y="229" font-size="13">291</text>
+
+  <text class="muted" x="24" y="258" font-size="11">Upstream during the research window: 61 LPEs patched, 43 with staging patches, 299 under public discussion.</text>
+  <text class="muted" x="24" y="272" font-size="11">Generated fixes are candidates for maintainer review, not merged patches.</text>
+
+  <line class="grid" x1="24" y1="284" x2="736" y2="284"/>
+
+  <text class="ink" x="24" y="310" font-size="16" font-weight="700">ExploitGym success rate (OpenAI-reported)</text>
+  <!-- x 230..710 = 0..60% (8 px per %) -->
+  <line class="grid" x1="230" y1="322" x2="230" y2="430"/>
+  <line class="grid" x1="390" y1="322" x2="390" y2="430"/>
+  <line class="grid" x1="550" y1="322" x2="550" y2="430"/>
+  <line class="grid" x1="710" y1="322" x2="710" y2="430"/>
+  <text class="muted" x="230" y="446" font-size="11" text-anchor="middle">0%</text>
+  <text class="muted" x="390" y="446" font-size="11" text-anchor="middle">20%</text>
+  <text class="muted" x="550" y="446" font-size="11" text-anchor="middle">40%</text>
+  <text class="muted" x="710" y="446" font-size="11" text-anchor="middle">60%</text>
+
+  <text class="ink" x="218" y="345" font-size="13" text-anchor="end">GPT-5.6 Cyber</text>
+  <rect class="bar" x="230" y="330" width="256.8" height="22" rx="3"/>
+  <text class="ink" x="494" y="346" font-size="13">32.1%</text>
+
+  <text class="ink" x="218" y="377" font-size="13" text-anchor="end">GPT-6 Astra</text>
+  <rect class="bar2" x="230" y="362" width="339.2" height="22" rx="3"/>
+  <text class="ink" x="577" y="378" font-size="13">42.4%</text>
+
+  <text class="ink" x="218" y="409" font-size="13" font-weight="700" text-anchor="end">GPT-6 Cyber (Nov 5)</text>
+  <rect class="hl" x="230" y="394" width="388" height="22" rx="3"/>
+  <text class="ink" x="626" y="410" font-size="13" font-weight="700">48.5%</text>
+
+  <text class="muted" x="24" y="466" font-size="11">Sources: OpenAI "A thousand fewer paths to root" via SecurityWeek, Decrypt, Phoronix, Unite.AI;</text>
+  <text class="muted" x="24" y="480" font-size="11">GPT-6 Cyber launch coverage. Vendor-reported figures, not independently verified.</text>
+</svg>
