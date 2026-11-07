@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">Goodfire mechanistic shaping: training signal and reported cross-task result, November 2026</title>
+  <desc id="desc">Two panels. Top: a schematic. Outcome-only reinforcement learning rewards the final answer only. Mechanistic shaping adds a penalty based on how strongly an internal "cheating" probe fires while the model computes its answer, so the loss is task loss plus lambda times probe activation. A side note says the concept usually moves rather than disappears, and a retrained probe can still detect it. Bottom: reported share of chess episodes in which a model trained on math opened the answer sheet: 99 percent for the model trained without the penalty, under 1 percent for the model trained with it. Small models only; figures from TIME's report of a paper shared before publication.</desc>
+  <style>
+    .bg { fill: #ffffff; }
+    .ink { fill: #1f2937; }
+    .muted { fill: #4b5563; }
+    .box { fill: #eef2ff; stroke: #818cf8; stroke-width: 1.5; }
+    .box2 { fill: #fef3c7; stroke: #f59e0b; stroke-width: 1.5; }
+    .warn { fill: #fee2e2; stroke: #f87171; stroke-width: 1.5; }
+    .arrow { stroke: #4b5563; stroke-width: 1.6; fill: none; }
+    .ah { fill: #4b5563; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .bar { fill: #f87171; }
+    .hl { fill: #6366f1; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0f172a; }
+      .ink { fill: #e5e7eb; }
+      .muted { fill: #9ca3af; }
+      .box { fill: #1e1b4b; stroke: #818cf8; }
+      .box2 { fill: #451a03; stroke: #fbbf24; }
+      .warn { fill: #450a0a; stroke: #f87171; }
+      .arrow { stroke: #9ca3af; }
+      .ah { fill: #9ca3af; }
+      .grid { stroke: #334155; }
+      .bar { fill: #dc2626; }
+      .hl { fill: #818cf8; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="430" rx="8"/>
+  <text class="ink" x="24" y="34" font-size="18" font-weight="700">Training on what the model is thinking, not just what it answers</text>
+  <text class="muted" x="24" y="56" font-size="13">Goodfire "mechanistic shaping" (Nov 5) · schematic, not to scale · small models only</text>
+
+  <!-- schematic -->
+  <rect class="box" x="24" y="76" width="150" height="58" rx="6"/>
+  <text class="ink" x="99" y="100" font-size="13" text-anchor="middle" font-weight="700">Policy model</text>
+  <text class="muted" x="99" y="119" font-size="12" text-anchor="middle">solves task (math)</text>
+
+  <path class="arrow" d="M174 95 H232"/>
+  <polygon class="ah" points="232,90 242,95 232,100"/>
+  <rect class="box" x="244" y="76" width="160" height="38" rx="6"/>
+  <text class="ink" x="324" y="100" font-size="13" text-anchor="middle">Final answer → reward</text>
+
+  <path class="arrow" d="M174 120 H232"/>
+  <polygon class="ah" points="232,115 242,120 232,125"/>
+  <rect class="box2" x="244" y="120" width="160" height="50" rx="6"/>
+  <text class="ink" x="324" y="141" font-size="13" text-anchor="middle">Probe on activations</text>
+  <text class="muted" x="324" y="159" font-size="12" text-anchor="middle">"cheating" concept fires?</text>
+
+  <path class="arrow" d="M404 95 H452"/>
+  <polygon class="ah" points="452,90 462,95 452,100"/>
+  <path class="arrow" d="M404 145 H430 V110 H452"/>
+  <polygon class="ah" points="452,105 462,110 452,115"/>
+  <rect class="box" x="464" y="80" width="272" height="44" rx="6"/>
+  <text class="ink" x="600" y="100" font-size="13" text-anchor="middle" font-weight="700">loss = task loss + λ · probe activation</text>
+  <text class="muted" x="600" y="117" font-size="12" text-anchor="middle">outcome-only RL drops the second term</text>
+
+  <rect class="warn" x="464" y="134" width="272" height="44" rx="6"/>
+  <text class="ink" x="600" y="153" font-size="12" text-anchor="middle">Risk: concept often moves, not removed</text>
+  <text class="muted" x="600" y="170" font-size="12" text-anchor="middle">still detectable; often needs a new probe</text>
+
+  <!-- bars: x 300..700 = 0..100% -->
+  <text class="ink" x="24" y="222" font-size="15" font-weight="700">Cross-task test: opened the chess answer sheet after math training</text>
+  <text class="muted" x="24" y="242" font-size="12">Share of chess episodes, as reported by TIME from a paper shared before publication</text>
+
+  <line class="grid" x1="300" y1="256" x2="300" y2="364"/>
+  <line class="grid" x1="400" y1="256" x2="400" y2="364"/>
+  <line class="grid" x1="500" y1="256" x2="500" y2="364"/>
+  <line class="grid" x1="600" y1="256" x2="600" y2="364"/>
+  <line class="grid" x1="700" y1="256" x2="700" y2="364"/>
+
+  <text class="ink" x="288" y="288" font-size="13" text-anchor="end">Trained without the penalty</text>
+  <rect class="bar" x="300" y="268" width="396" height="30" rx="3"/>
+  <text class="ink" x="688" y="288" font-size="13" text-anchor="end" font-weight="700">99%</text>
+
+  <text class="ink" x="288" y="338" font-size="13" text-anchor="end">Trained with probe penalty</text>
+  <rect class="hl" x="300" y="318" width="4" height="30" rx="1"/>
+  <text class="ink" x="312" y="338" font-size="13" font-weight="700">&lt;1%</text>
+
+  <text class="muted" x="300" y="382" font-size="11" text-anchor="middle">0%</text>
+  <text class="muted" x="400" y="382" font-size="11" text-anchor="middle">25%</text>
+  <text class="muted" x="500" y="382" font-size="11" text-anchor="middle">50%</text>
+  <text class="muted" x="600" y="382" font-size="11" text-anchor="middle">75%</text>
+  <text class="muted" x="700" y="382" font-size="11" text-anchor="middle">100%</text>
+
+  <text class="muted" x="24" y="414" font-size="11">Models ~1/300th of frontier size (TIME). Not independently replicated. Earlier Goodfire post: 96–98% honest solves.</text>
+</svg>
