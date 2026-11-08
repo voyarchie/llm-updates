@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Two grouped bar panels comparing a closed frontier model against an open-weight model on capability versus safety, based on SaferAI's August 4 2026 report. Left panel, offensive cyber and biology capability: the closed frontier reference (Claude Opus 4.7 / GPT-5.5) is near the top of the scale at about 95 percent, and the open-weight GLM-5.2 is nearly level at about 88 percent, only a few months behind. Right panel, share of harmful prompts refused: the closed frontier model refused so consistently that the CyberGym benchmark could not be completed, shown near 100 percent, while the open-weight model refused essentially zero percent, completing every offensive cyber and dual-use biology prompt. The visual shows near-parity on capability but an almost total gap on safety.">
+  <title>The capability gap closed; the safety gap didn't — open-weight models now match the frontier on cyber/bio ability but refuse almost none of the harmful prompts a closed model refuses</title>
+
+  <!-- theme-neutral palette: slate text/axes read on light and dark. slate = closed frontier; teal = open-weight. -->
+  <text x="24" y="30" font-size="19" font-weight="700" fill="#64748b">Same ability, opposite guardrails — the open-weight safety gap (SaferAI, Aug 4)</text>
+  <text x="24" y="50" font-size="12.5" fill="#94a3b8">Open-weight GLM-5.2 sits within a few months of the closed frontier on offensive cyber/bio capability — yet refuses almost none of the harmful prompts a closed model refuses. Slate = closed frontier (Claude Opus 4.7 / GPT-5.5); teal = open weight (GLM-5.2).</text>
+
+  <!-- shared 0/50/100% gridlines: y(0%)=390, y(50%)=250, y(100%)=110 -->
+  <line x1="80" y1="110" x2="860" y2="110" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="80" y1="250" x2="860" y2="250" stroke="#cbd5e1" stroke-width="0.5"/>
+  <line x1="80" y1="390" x2="860" y2="390" stroke="#94a3b8" stroke-width="1"/>
+  <text x="72" y="114" font-size="10.5" fill="#94a3b8" text-anchor="end">100%</text>
+  <text x="72" y="254" font-size="10.5" fill="#94a3b8" text-anchor="end">50%</text>
+  <text x="72" y="394" font-size="10.5" fill="#94a3b8" text-anchor="end">0%</text>
+
+  <!-- panel divider -->
+  <line x1="465" y1="80" x2="465" y2="410" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- ===== Panel A: capability ===== -->
+  <text x="255" y="98" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">CAPABILITY — offensive cyber &amp; bio</text>
+
+  <!-- closed bar: 95% -> h=256.5 y=133.5 -->
+  <rect x="150" y="134" width="80" height="256" rx="3" fill="#475569"/>
+  <text x="190" y="152" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">~95%</text>
+  <!-- open bar: 88% -> h=237.6 y=152.4 -->
+  <rect x="280" y="152" width="80" height="238" rx="3" fill="#0d9488"/>
+  <text x="320" y="170" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">~88%</text>
+  <text x="190" y="408" font-size="11" fill="#94a3b8" text-anchor="middle">closed frontier</text>
+  <text x="320" y="408" font-size="11" fill="#0d9488" text-anchor="middle" font-weight="700">GLM-5.2 (open)</text>
+  <text x="255" y="428" font-size="11" fill="#94a3b8" text-anchor="middle" font-style="italic">"only a few months behind" GPT-5.5 &amp; Opus 4.7</text>
+
+  <!-- ===== Panel B: safety ===== -->
+  <text x="660" y="98" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">SAFETY — harmful prompts REFUSED</text>
+
+  <!-- closed bar: ~100% -> h=270 y=120 -->
+  <rect x="555" y="120" width="80" height="270" rx="3" fill="#475569"/>
+  <text x="595" y="138" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">~100%</text>
+  <!-- open bar: ~0% -> sliver -->
+  <rect x="685" y="384" width="80" height="6" rx="2" fill="#0d9488"/>
+  <text x="725" y="378" font-size="13" font-weight="700" fill="#0d9488" text-anchor="middle">~0%</text>
+  <text x="595" y="408" font-size="11" fill="#94a3b8" text-anchor="middle">closed frontier</text>
+  <text x="725" y="408" font-size="11" fill="#0d9488" text-anchor="middle" font-weight="700">GLM-5.2 (open)</text>
+  <text x="660" y="428" font-size="11" fill="#94a3b8" text-anchor="middle" font-style="italic">Opus 4.7 refused so hard CyberGym couldn't run; GLM-5.2 refused none</text>
+
+  <!-- footer -->
+  <text x="24" y="458" font-size="10.5" fill="#94a3b8">Capability bars are indicative of SaferAI's "few months behind" framing (UK AISI cyber range: GLM-5.2 ≈ Opus 4.5); refusal bars are qualitative from SaferAI (open: 0 refusals; closed: CyberGym incompletable). Not a single common numeric scale across both panels.</text>
+</svg>
