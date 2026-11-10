@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 738" width="820" height="738" role="img" aria-labelledby="t d">
+<title id="t">Claude Fable 5.2 launch benchmarks versus Fable 5.1, Opus 5.5 and the best listed rival</title>
+<desc id="d">Grouped horizontal bars, percent. FrontierCode 2.0: Fable 5.2 49.1, Opus 5.5 45.5, best rival GPT-6 Astra 42.8, Fable 5.1 32.4; FrontierSWE v2: Fable 5.2 69.9, Opus 5.5 62.3, best rival GPT-6 Astra 65.5, Fable 5.1 56.3; AutomationBench: Fable 5.2 51.4, Opus 5.5 42.5, best rival Gemini 4 Carbon 53.9, Fable 5.1 31.4; Terminal-Bench-Science 0.1: Fable 5.2 74.6, Opus 5.5 58.7, best rival GPT-6 Astra 68.1, Fable 5.1 52.6; OSWorld 2.1 (offline, partial): Fable 5.2 89.3, Opus 5.5 87.2, best rival Gemini 4 Carbon 81.5, Fable 5.1 83.5; RoboDojo Sim (internal): Fable 5.2 64.9, Opus 5.5 39.4, best rival GPT-6 Astra 29.8, Fable 5.1 27.6; Remote Labor Index: Fable 5.2 41.3, Opus 5.5 21.3, best rival GPT-6 Astra 20.8, Fable 5.1 17.9; Humanity's Last Exam (tools): Fable 5.2 74.2, Opus 5.5 67.7, best rival GPT-6 Astra 57.2, Fable 5.1 65.6; Chartography (no tools): Fable 5.2 73.4, Opus 5.5 64.4, best rival Gemini 4 Carbon 72.5, Fable 5.1 44.8. Source: Anthropic launch post, Nov 9 2026; vendor-reported.</desc>
+<style>
+.bg{fill:#ffffff}.tx{fill:#1f2937;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.mut{fill:#4b5563}
+.grid{stroke:#d1d5db;stroke-width:1}.f52{fill:#c2410c}.o55{fill:#2563eb}.riv{fill:#0f766e}.f51{fill:#94a3b8}
+@media (prefers-color-scheme: dark){.bg{fill:#0f172a}.tx{fill:#e5e7eb}.mut{fill:#9ca3af}.grid{stroke:#334155}
+.f52{fill:#fb923c}.o55{fill:#60a5fa}.riv{fill:#2dd4bf}.f51{fill:#64748b}}
+</style>
+<rect class="bg" x="0" y="0" width="820" height="738" rx="10"/>
+<text class="tx" x="24" y="34" font-size="18" font-weight="700">Claude Fable 5.2: launch benchmarks (%, vendor-reported)</text>
+<text class="tx mut" x="24" y="56" font-size="13">Anthropic, Nov 9 2026. Highest available effort unless noted; rival = best of GPT-6 Astra / Gemini 4 Carbon in Anthropic's table</text>
+<rect class="f52" x="24" y="70" width="14" height="14" rx="2"/><text class="tx" x="44" y="82" font-size="13">Fable 5.2</text>
+<rect class="o55" x="184" y="70" width="14" height="14" rx="2"/><text class="tx" x="204" y="82" font-size="13">Opus 5.5</text>
+<rect class="riv" x="344" y="70" width="14" height="14" rx="2"/><text class="tx" x="364" y="82" font-size="13">Best listed rival</text>
+<rect class="f51" x="504" y="70" width="14" height="14" rx="2"/><text class="tx" x="524" y="82" font-size="13">Fable 5.1</text>
+<line class="grid" x1="250.0" y1="102" x2="250.0" y2="662"/>
+<text class="tx mut" x="250.0" y="678" font-size="11" text-anchor="middle">0</text>
+<line class="grid" x1="352.0" y1="102" x2="352.0" y2="662"/>
+<text class="tx mut" x="352.0" y="678" font-size="11" text-anchor="middle">20</text>
+<line class="grid" x1="454.0" y1="102" x2="454.0" y2="662"/>
+<text class="tx mut" x="454.0" y="678" font-size="11" text-anchor="middle">40</text>
+<line class="grid" x1="556.0" y1="102" x2="556.0" y2="662"/>
+<text class="tx mut" x="556.0" y="678" font-size="11" text-anchor="middle">60</text>
+<line class="grid" x1="658.0" y1="102" x2="658.0" y2="662"/>
+<text class="tx mut" x="658.0" y="678" font-size="11" text-anchor="middle">80</text>
+<line class="grid" x1="760.0" y1="102" x2="760.0" y2="662"/>
+<text class="tx mut" x="760.0" y="678" font-size="11" text-anchor="middle">100</text>
+<text class="tx" x="240" y="134" font-size="13" font-weight="600" text-anchor="end">FrontierCode 2.0</text>
+<text class="tx mut" x="240" y="150" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="110" width="250.4" height="11" rx="2"/>
+<text class="tx mut" x="504.4" y="119.5" font-size="10">49.1</text>
+<rect class="o55" x="250" y="123" width="232.0" height="11" rx="2"/>
+<text class="tx mut" x="486.0" y="132.5" font-size="10">45.5</text>
+<rect class="riv" x="250" y="136" width="218.3" height="11" rx="2"/>
+<text class="tx mut" x="472.3" y="145.5" font-size="10">42.8</text>
+<rect class="f51" x="250" y="149" width="165.2" height="11" rx="2"/>
+<text class="tx mut" x="419.2" y="158.5" font-size="10">32.4</text>
+<text class="tx" x="240" y="196" font-size="13" font-weight="600" text-anchor="end">FrontierSWE v2</text>
+<text class="tx mut" x="240" y="212" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="172" width="356.5" height="11" rx="2"/>
+<text class="tx mut" x="610.5" y="181.5" font-size="10">69.9</text>
+<rect class="o55" x="250" y="185" width="317.7" height="11" rx="2"/>
+<text class="tx mut" x="571.7" y="194.5" font-size="10">62.3</text>
+<rect class="riv" x="250" y="198" width="334.0" height="11" rx="2"/>
+<text class="tx mut" x="588.0" y="207.5" font-size="10">65.5</text>
+<rect class="f51" x="250" y="211" width="287.1" height="11" rx="2"/>
+<text class="tx mut" x="541.1" y="220.5" font-size="10">56.3</text>
+<text class="tx" x="240" y="258" font-size="13" font-weight="600" text-anchor="end">AutomationBench</text>
+<text class="tx mut" x="240" y="274" font-size="11" text-anchor="end">rival: Gemini 4 Carbon</text>
+<rect class="f52" x="250" y="234" width="262.1" height="11" rx="2"/>
+<text class="tx mut" x="516.1" y="243.5" font-size="10">51.4</text>
+<rect class="o55" x="250" y="247" width="216.7" height="11" rx="2"/>
+<text class="tx mut" x="470.8" y="256.5" font-size="10">42.5</text>
+<rect class="riv" x="250" y="260" width="274.9" height="11" rx="2"/>
+<text class="tx mut" x="528.9" y="269.5" font-size="10">53.9</text>
+<rect class="f51" x="250" y="273" width="160.1" height="11" rx="2"/>
+<text class="tx mut" x="414.1" y="282.5" font-size="10">31.4</text>
+<text class="tx" x="240" y="320" font-size="13" font-weight="600" text-anchor="end">Terminal-Bench-Science 0.1</text>
+<text class="tx mut" x="240" y="336" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="296" width="380.5" height="11" rx="2"/>
+<text class="tx mut" x="634.5" y="305.5" font-size="10">74.6</text>
+<rect class="o55" x="250" y="309" width="299.4" height="11" rx="2"/>
+<text class="tx mut" x="553.4" y="318.5" font-size="10">58.7</text>
+<rect class="riv" x="250" y="322" width="347.3" height="11" rx="2"/>
+<text class="tx mut" x="601.3" y="331.5" font-size="10">68.1</text>
+<rect class="f51" x="250" y="335" width="268.3" height="11" rx="2"/>
+<text class="tx mut" x="522.3" y="344.5" font-size="10">52.6</text>
+<text class="tx" x="240" y="382" font-size="13" font-weight="600" text-anchor="end">OSWorld 2.1 (offline, partial)</text>
+<text class="tx mut" x="240" y="398" font-size="11" text-anchor="end">rival: Gemini 4 Carbon</text>
+<rect class="f52" x="250" y="358" width="455.4" height="11" rx="2"/>
+<text class="tx mut" x="709.4" y="367.5" font-size="10">89.3</text>
+<rect class="o55" x="250" y="371" width="444.7" height="11" rx="2"/>
+<text class="tx mut" x="698.7" y="380.5" font-size="10">87.2</text>
+<rect class="riv" x="250" y="384" width="415.6" height="11" rx="2"/>
+<text class="tx mut" x="669.6" y="393.5" font-size="10">81.5</text>
+<rect class="f51" x="250" y="397" width="425.8" height="11" rx="2"/>
+<text class="tx mut" x="679.8" y="406.5" font-size="10">83.5</text>
+<text class="tx" x="240" y="444" font-size="13" font-weight="600" text-anchor="end">RoboDojo Sim (internal)</text>
+<text class="tx mut" x="240" y="460" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="420" width="331.0" height="11" rx="2"/>
+<text class="tx mut" x="585.0" y="429.5" font-size="10">64.9</text>
+<rect class="o55" x="250" y="433" width="200.9" height="11" rx="2"/>
+<text class="tx mut" x="454.9" y="442.5" font-size="10">39.4</text>
+<rect class="riv" x="250" y="446" width="152.0" height="11" rx="2"/>
+<text class="tx mut" x="406.0" y="455.5" font-size="10">29.8</text>
+<rect class="f51" x="250" y="459" width="140.8" height="11" rx="2"/>
+<text class="tx mut" x="394.8" y="468.5" font-size="10">27.6</text>
+<text class="tx" x="240" y="506" font-size="13" font-weight="600" text-anchor="end">Remote Labor Index</text>
+<text class="tx mut" x="240" y="522" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="482" width="210.6" height="11" rx="2"/>
+<text class="tx mut" x="464.6" y="491.5" font-size="10">41.3</text>
+<rect class="o55" x="250" y="495" width="108.6" height="11" rx="2"/>
+<text class="tx mut" x="362.6" y="504.5" font-size="10">21.3</text>
+<rect class="riv" x="250" y="508" width="106.1" height="11" rx="2"/>
+<text class="tx mut" x="360.1" y="517.5" font-size="10">20.8</text>
+<rect class="f51" x="250" y="521" width="91.3" height="11" rx="2"/>
+<text class="tx mut" x="345.3" y="530.5" font-size="10">17.9</text>
+<text class="tx" x="240" y="568" font-size="13" font-weight="600" text-anchor="end">Humanity's Last Exam (tools)</text>
+<text class="tx mut" x="240" y="584" font-size="11" text-anchor="end">rival: GPT-6 Astra</text>
+<rect class="f52" x="250" y="544" width="378.4" height="11" rx="2"/>
+<text class="tx mut" x="632.4" y="553.5" font-size="10">74.2</text>
+<rect class="o55" x="250" y="557" width="345.3" height="11" rx="2"/>
+<text class="tx mut" x="599.3" y="566.5" font-size="10">67.7</text>
+<rect class="riv" x="250" y="570" width="291.7" height="11" rx="2"/>
+<text class="tx mut" x="545.7" y="579.5" font-size="10">57.2</text>
+<rect class="f51" x="250" y="583" width="334.6" height="11" rx="2"/>
+<text class="tx mut" x="588.6" y="592.5" font-size="10">65.6</text>
+<text class="tx" x="240" y="630" font-size="13" font-weight="600" text-anchor="end">Chartography (no tools)</text>
+<text class="tx mut" x="240" y="646" font-size="11" text-anchor="end">rival: Gemini 4 Carbon</text>
+<rect class="f52" x="250" y="606" width="374.3" height="11" rx="2"/>
+<text class="tx mut" x="628.3" y="615.5" font-size="10">73.4</text>
+<rect class="o55" x="250" y="619" width="328.4" height="11" rx="2"/>
+<text class="tx mut" x="582.4" y="628.5" font-size="10">64.4</text>
+<rect class="riv" x="250" y="632" width="369.8" height="11" rx="2"/>
+<text class="tx mut" x="623.8" y="641.5" font-size="10">72.5</text>
+<rect class="f51" x="250" y="645" width="228.5" height="11" rx="2"/>
+<text class="tx mut" x="482.5" y="654.5" font-size="10">44.8</text>
+<text class="tx mut" x="24" y="716" font-size="11">FrontierCode: Fable 5.2/5.1 at xhigh, Gemini at medium. RoboDojo run internally by Anthropic. None independently replicated at publication.</text>
+</svg>
