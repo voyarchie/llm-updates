@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" width="820" height="360" role="img" aria-labelledby="t d">
+<title id="t">Muse Ember: same Intelligence Index score as Claude Haiku 5.5 at about a third of the cost per task</title>
+<desc id="d">Horizontal bars of estimated US dollars per Artificial Analysis Intelligence Index task, with each model's index score. Muse Ember at xhigh effort: score 34, $0.12. Muse Ember at max effort: score 36, $0.14. Claude Haiku 5.5 at max effort: score 36, $0.41. Muse Spark 1.3: score 37, $2.39. Source: Artificial Analysis via coverage, Nov 9-10 2026.</desc>
+<style>
+.bg{fill:#ffffff}.tx{fill:#1f2937;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.mut{fill:#4b5563}
+.grid{stroke:#d1d5db;stroke-width:1}.emb{fill:#c2410c}.hai{fill:#2563eb}.spk{fill:#64748b}
+@media (prefers-color-scheme: dark){.bg{fill:#0f172a}.tx{fill:#e5e7eb}.mut{fill:#9ca3af}.grid{stroke:#334155}
+.emb{fill:#fb923c}.hai{fill:#60a5fa}.spk{fill:#475569}}
+</style>
+<rect class="bg" x="0" y="0" width="820" height="360" rx="10"/>
+<text class="tx" x="24" y="34" font-size="18" font-weight="700">Same score, a third of the cost: Muse Ember vs Claude Haiku 5.5</text>
+<text class="tx mut" x="24" y="56" font-size="13">Estimated US$ per Artificial Analysis Intelligence Index task; index score in brackets (higher is better)</text>
+<g font-size="12">
+<line class="grid" x1="260" y1="78" x2="260" y2="290"/><text class="tx mut" x="260" y="308" text-anchor="middle">$0</text>
+<line class="grid" x1="360" y1="78" x2="360" y2="290"/><text class="tx mut" x="360" y="308" text-anchor="middle">$0.50</text>
+<line class="grid" x1="460" y1="78" x2="460" y2="290"/><text class="tx mut" x="460" y="308" text-anchor="middle">$1.00</text>
+<line class="grid" x1="560" y1="78" x2="560" y2="290"/><text class="tx mut" x="560" y="308" text-anchor="middle">$1.50</text>
+<line class="grid" x1="660" y1="78" x2="660" y2="290"/><text class="tx mut" x="660" y="308" text-anchor="middle">$2.00</text>
+<line class="grid" x1="760" y1="78" x2="760" y2="290"/><text class="tx mut" x="760" y="308" text-anchor="middle">$2.50</text>
+</g>
+<g font-size="14">
+<text class="tx" x="248" y="112" text-anchor="end">Muse Ember, xhigh [34]</text>
+<rect class="emb" x="260" y="94" width="24" height="28" rx="3"/><text class="tx" x="292" y="113">$0.12</text>
+<text class="tx" x="248" y="162" text-anchor="end">Muse Ember, max [36]</text>
+<rect class="emb" x="260" y="144" width="28" height="28" rx="3"/><text class="tx" x="296" y="163">$0.14</text>
+<text class="tx" x="248" y="212" text-anchor="end">Claude Haiku 5.5, max [36]</text>
+<rect class="hai" x="260" y="194" width="82" height="28" rx="3"/><text class="tx" x="350" y="213">$0.41</text>
+<text class="tx" x="248" y="262" text-anchor="end">Muse Spark 1.3 [37]</text>
+<rect class="spk" x="260" y="244" width="478" height="28" rx="3"/><text class="tx" x="730" y="263" text-anchor="end" fill="#ffffff" style="fill:#ffffff">$2.39</text>
+</g>
+<text class="tx mut" x="24" y="338" font-size="12">Source: Artificial Analysis, via OfficeChai / beri.net / shattered.io coverage (Nov 9–10, 2026). Third-party estimates, not vendor claims.</text>
+</svg>
