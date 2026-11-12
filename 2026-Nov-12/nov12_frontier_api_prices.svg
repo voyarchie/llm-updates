@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 380" width="820" height="380" role="img" aria-labelledby="t d">
+<title id="t">Gemini 4 Carbon's introductory API price against other frontier list prices</title>
+<desc id="d">Grouped horizontal bars of US dollars per million tokens, input and output. Gemini 4 Carbon introductory price until Nov 30: $2 input, $10 output. Gemini 4 Carbon from December (reported): $4 input, $20 output. Meta Muse Wonder: $4 input, $20 output. Claude Fable 5.2: $8 input, $40 output. Sources: Google blog and coverage, Nov 10 2026; earlier briefs for Muse Wonder and Fable 5.2.</desc>
+<style>
+.bg{fill:#ffffff}.tx{fill:#1f2937;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.mut{fill:#4b5563}
+.grid{stroke:#d1d5db;stroke-width:1}.in{fill:#93c5fd}.out{fill:#1d4ed8}.cin{fill:#fdba74}.cout{fill:#c2410c}
+@media (prefers-color-scheme: dark){.bg{fill:#0f172a}.tx{fill:#e5e7eb}.mut{fill:#9ca3af}.grid{stroke:#334155}
+.in{fill:#1e3a8a}.out{fill:#60a5fa}.cin{fill:#7c2d12}.cout{fill:#fb923c}}
+</style>
+<rect class="bg" x="0" y="0" width="820" height="380" rx="10"/>
+<text class="tx" x="24" y="34" font-size="18" font-weight="700">Gemini 4 Carbon opens at a quarter of Fable 5.2's list price, for three weeks</text>
+<text class="tx mut" x="24" y="56" font-size="13">US$ per million tokens (list price, standard context). top bar of each pair = input, bottom bar = output</text>
+<g font-size="12">
+<line class="grid" x1="250" y1="76" x2="250" y2="306"/><text class="tx mut" x="250" y="324" text-anchor="middle">$0</text>
+<line class="grid" x1="377.5" y1="76" x2="377.5" y2="306"/><text class="tx mut" x="377.5" y="324" text-anchor="middle">$10</text>
+<line class="grid" x1="505" y1="76" x2="505" y2="306"/><text class="tx mut" x="505" y="324" text-anchor="middle">$20</text>
+<line class="grid" x1="632.5" y1="76" x2="632.5" y2="306"/><text class="tx mut" x="632.5" y="324" text-anchor="middle">$30</text>
+<line class="grid" x1="760" y1="76" x2="760" y2="306"/><text class="tx mut" x="760" y="324" text-anchor="middle">$40</text>
+</g>
+<g font-size="14">
+<text class="tx" x="238" y="100" text-anchor="end">Gemini 4 Carbon, to Nov 30</text>
+<rect class="cin" x="250" y="84" width="25.5" height="18" rx="2"/><text class="tx" x="282" y="98" font-size="12">$2</text>
+<rect class="cout" x="250" y="104" width="127.5" height="18" rx="2"/><text class="tx" x="384" y="118" font-size="12">$10</text>
+<text class="tx" x="238" y="158" text-anchor="end">Gemini 4 Carbon, Dec (reported)</text>
+<rect class="cin" x="250" y="142" width="51" height="18" rx="2"/><text class="tx" x="308" y="156" font-size="12">$4</text>
+<rect class="cout" x="250" y="162" width="255" height="18" rx="2"/><text class="tx" x="512" y="176" font-size="12">$20</text>
+<text class="tx" x="238" y="216" text-anchor="end">Meta Muse Wonder</text>
+<rect class="in" x="250" y="200" width="51" height="18" rx="2"/><text class="tx" x="308" y="214" font-size="12">$4</text>
+<rect class="out" x="250" y="220" width="255" height="18" rx="2"/><text class="tx" x="512" y="234" font-size="12">$20</text>
+<text class="tx" x="238" y="274" text-anchor="end">Claude Fable 5.2</text>
+<rect class="in" x="250" y="258" width="102" height="18" rx="2"/><text class="tx" x="359" y="272" font-size="12">$8</text>
+<rect class="out" x="250" y="278" width="510" height="18" rx="2"/><text class="tx" x="767" y="292" font-size="12">$40</text>
+</g>
+<text class="tx mut" x="24" y="350" font-size="12">Carbon: Google blog (Nov 10) and coverage; the December price comes from coverage, not Google's pricing page.</text>
+<text class="tx mut" x="24" y="368" font-size="12">Carbon thinks longer than Argon and bills thinking tokens, so cost per task can differ from what list prices suggest.</text>
+</svg>
